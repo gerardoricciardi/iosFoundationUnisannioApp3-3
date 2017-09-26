@@ -8,6 +8,7 @@
 
 import UIKit
 
+var prova =  "Prova"
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
