@@ -15,6 +15,7 @@
 		0733E15C1F7AA7840066F286 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0733E15A1F7AA7840066F286 /* LaunchScreen.storyboard */; };
 		0733E1671F7AA7840066F286 /* iosFoundationUnisannioApp3_3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0733E1661F7AA7840066F286 /* iosFoundationUnisannioApp3_3Tests.swift */; };
 		0733E1721F7AA7840066F286 /* iosFoundationUnisannioApp3_3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0733E1711F7AA7840066F286 /* iosFoundationUnisannioApp3_3UITests.swift */; };
+		8F2499DE1F7BF59F001AEA9E /* Esercizio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */; };
 		8F2C49EA1F7BAF3A006EC668 /* Utente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2C49E91F7BAF3A006EC668 /* Utente.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		0733E16D1F7AA7840066F286 /* iosFoundationUnisannioApp3-3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iosFoundationUnisannioApp3-3UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0733E1711F7AA7840066F286 /* iosFoundationUnisannioApp3_3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosFoundationUnisannioApp3_3UITests.swift; sourceTree = "<group>"; };
 		0733E1731F7AA7840066F286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Esercizio.swift; sourceTree = "<group>"; };
 		8F2C49E91F7BAF3A006EC668 /* Utente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utente.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 			children = (
 				0733E14E1F7AA7840066F286 /* AppDelegate.swift */,
 				0733E1501F7AA7840066F286 /* ViewController.swift */,
+				8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */,
 				8F2C49E91F7BAF3A006EC668 /* Utente.swift */,
 				0733E1521F7AA7840066F286 /* Main.storyboard */,
 				0733E1581F7AA7840066F286 /* Assets.xcassets */,
@@ -268,6 +271,7 @@
 				8F2C49EA1F7BAF3A006EC668 /* Utente.swift in Sources */,
 				0733E1511F7AA7840066F286 /* ViewController.swift in Sources */,
 				0733E1571F7AA7840066F286 /* iosFoundationUnisannioApp3_3.xcdatamodeld in Sources */,
+				8F2499DE1F7BF59F001AEA9E /* Esercizio.swift in Sources */,
 				0733E14F1F7AA7840066F286 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
