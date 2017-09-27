@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func saveData(u:Utente){
+    func saveUtente(u:Utente){
         if let appDelegate = (UIApplication.shared.delegate as? AppDelegate){
             let utenti = UtentiMO(context:appDelegate.persistentContainer.viewContext)
             utenti.nome = u.nome
@@ -31,6 +31,9 @@ class ViewController: UIViewController {
             utenti.problemi = u.problemi
             utenti.sesso = u.sesso
             utenti.password = u.password
+            
+            appDelegate.saveContext()
+            
             
         }
     }
