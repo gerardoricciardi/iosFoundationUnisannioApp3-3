@@ -21,6 +21,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func saveData(){
+        if let appDelegate = (UIApplication.shared.delegate as? AppDelegate){
+            let utenti
+        }
+    }
 
 }
 
