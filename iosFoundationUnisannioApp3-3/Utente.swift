@@ -10,45 +10,18 @@ import Foundation
 
 class Utente{
     
-    var livelloAttivita : Int  // 0=principiante 1=intermedio 2=esperto
-    var sesso : Bool        //true= female false= male
-    var problemi: Int   // 0= benessere 1=prob1 2=prob2 3=prob3
-    
-    var nome : String{
-        get{
-            return self.nome
-        }
-        set(nome){
-            self.nome=nome
-        }
-    }
-    
-    var cognome : String{
-        get{
-            return self.cognome
-        }
-        set(cognome){
-            self.cognome=cognome
-        }
-    }
-    var email : String{
-        get{
-            return self.email
-        }
-        set(email){
+    var livelloAttivita : Int!  // 0=principiante 1=intermedio 2=esperto
+    var sesso : Bool!       //true= female false= male
+    var problemi: Int!  // 0= benessere 1=prob1 2=prob2 3=prob3
+    var nome,cognome,email,password : String
+        
+    init(nome:String,cognome : String, email : String, password : String){
+        self.nome=nome
+        self.cognome=cognome
             self.email=email
-        }
-    }
-    var password : String{
-        get{
-            return self.password
-        }
-        set(password){
             self.password=password
         }
         
-        init(String : nome,String : cognome, String :email, String : password)
-        
     }
     
-}
+
