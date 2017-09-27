@@ -23,7 +23,7 @@ class ViewController: UIViewController {
 
     func saveData(){
         if let appDelegate = (UIApplication.shared.delegate as? AppDelegate){
-            let utenti
+            let utenti = Utente(context:appDelegate.persistentContainer.viewContext)
         }
     }
 
