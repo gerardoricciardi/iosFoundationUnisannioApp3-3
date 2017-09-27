@@ -9,7 +9,7 @@
 import Foundation
 
 
-enum tipoEsercizio{
+enum tipoEsercizio : String{
     case R      // riscaldamento
     case C      //core
     case P      //potenziamento
