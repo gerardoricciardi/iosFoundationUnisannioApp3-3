@@ -30,7 +30,7 @@ class ViewController: UIViewController {
             utenti.livelloAttivita = u.livelloAttivita
             utenti.problemi = u.problemi
             utenti.sesso = u.sesso
-            utenti.password u.password
+            utenti.password = u.password
             
         }
     }
