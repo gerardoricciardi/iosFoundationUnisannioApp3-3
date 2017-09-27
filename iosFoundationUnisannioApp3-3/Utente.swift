@@ -10,20 +10,21 @@ import Foundation
 
 class Utente{
     
-    var livelloAttivita : Int!  // 0=principiante 1=intermedio 2=esperto
-    var sesso : Bool!      //true= female false= male
-    var problemi: Int!  // 0= benessere 1=prob1 2=prob2 3=prob3
-    var nome,cognome,email,password : String!
+    var livelloAttivita : Int16  // 0=principiante 1=intermedio 2=esperto
+    var sesso : Bool      //true= female false= male
+    var problemi: Int16  // 0= benessere 1=prob1 2=prob2 3=prob3
+    var nome,cognome,email,password : String
         
-    init(nome:String,cognome : String, email : String, password : String){
-        self.nome=nome
-        self.cognome=cognome
-            self.email=email
-            self.password=password
-        }
+//    init(nome:String,cognome : String, email : String, password : String){
+//        self.nome=nome
+//        self.cognome=cognome
+//            self.email=email
+//            self.password=password
+//        }
     
     
-    init(nome:String,cognome : String, email : String, password : String,livelloAttivita : Int, sesso : Bool, problemi: Int){
+    
+    init(nome:String,cognome : String, email : String, password : String,livelloAttivita : Int16, sesso : Bool, problemi: Int16){
         self.nome=nome
         self.cognome=cognome
         self.email=email
