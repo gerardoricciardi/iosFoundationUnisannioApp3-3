@@ -25,6 +25,10 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor.init(patternImage: UIImage(named: "rtg")!)
         button.backgroundColor = UIColor.gray
         
+        var titolo = self.storyboard?.description
+        titolo = self.storyboard?.value(forKey: "name") as! String
+        print(titolo)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
