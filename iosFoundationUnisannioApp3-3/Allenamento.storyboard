@@ -41,7 +41,7 @@
         <scene sceneID="KhB-Pu-kRt">
             <objects>
                 <navigationController id="DKz-yw-1pD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="exC-6v-rhY"/>
+                    <tabBarItem key="tabBarItem" image="side-bending-posture" id="exC-6v-rhY"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h3t-aW-kuO">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -56,4 +56,8 @@
             <point key="canvasLocation" x="135" y="462"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="side-bending-posture" width="32" height="32"/>
+    </resources>
+    <color key="tintColor" red="0.25449371610238758" green="0.74019084991383133" blue="0.80371589467005078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

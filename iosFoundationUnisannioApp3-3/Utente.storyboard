@@ -37,11 +37,15 @@
             </objects>
             <point key="canvasLocation" x="185" y="99"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Profilo-->
         <scene sceneID="rq9-V0-3gk">
             <objects>
                 <navigationController id="Mal-e5-3X7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="history" id="kdB-um-nZT"/>
+                    <tabBarItem key="tabBarItem" title="Profilo" selectedImage="profilo" id="kdB-um-nZT" userLabel="Profilo">
+                        <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                        <inset key="landscapeImageInsets" minX="0.0" minY="25" maxX="0.0" maxY="0.0"/>
+                        <color key="badgeColor" red="0.28783978291756973" green="0.83717734496458895" blue="0.90902601522842641" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5W4-9l-8iV">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -56,4 +60,7 @@
             <point key="canvasLocation" x="-767" y="99"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="profilo" width="32" height="32"/>
+    </resources>
 </document>
