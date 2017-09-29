@@ -13,6 +13,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+      let  e=Esercizio(nome:"Skip",tipo:"Riscaldamento",foto:"url....",video:"url....",descrizione:"bla bla")
+        
+        EsercizioDAO.saveEsercizio(ese: e)
+        
+        EsercizioDAO.fetchEsercizi()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
