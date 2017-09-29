@@ -10,7 +10,16 @@ import UIKit
 
 var prova =  "Prova"
 class ViewController: UIViewController {
-
+    
+    
+    @IBAction func password(_ sender: UITextField) {
+        
+    }
+    @IBAction func usurname(_ sender: UITextField) {
+    }
+    
+    @IBAction func mail(_ sender: UITextField) {
+    }
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
@@ -37,7 +46,13 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        self.view.endEditing(true)
+        
+        return true
+        
+    }
     func saveUtente(u:Utente){
         if let appDelegate = (UIApplication.shared.delegate as? AppDelegate){
             let utenti = UtentiMO(context:appDelegate.persistentContainer.viewContext)
