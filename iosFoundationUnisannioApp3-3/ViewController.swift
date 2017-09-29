@@ -11,6 +11,8 @@ import UIKit
 var prova =  "Prova"
 class ViewController: UIViewController {
 
+    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,6 +21,13 @@ class ViewController: UIViewController {
         EsercizioDAO.saveEsercizio(ese: e)
         
         EsercizioDAO.fetchEsercizi()
+        label.text = "Benvenuto"
+        self.view.backgroundColor = UIColor.init(patternImage: UIImage(named: "rtg")!)
+        button.backgroundColor = UIColor.gray
+        
+        var titolo = self.storyboard?.description
+        titolo = self.storyboard?.value(forKey: "name") as! String
+        print(titolo)
         
         // Do any additional setup after loading the view, typically from a nib.
     }
