@@ -68,6 +68,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.053937226462296907" green="0.78088780242174372" blue="0.79218685626983643" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.67797273397445679" green="0.79216945171356201" blue="0.79218685626983643" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="YIA-LD-Dcu" kind="relationship" relationship="viewControllers" id="PaS-wz-EyJ"/>
