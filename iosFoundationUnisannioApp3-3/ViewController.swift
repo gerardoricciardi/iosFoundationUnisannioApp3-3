@@ -31,13 +31,14 @@ class ViewController: UIViewController {
         
         EsercizioDAO.fetchEsercizi()
         label.text = "Benvenuto"
-        self.view.backgroundColor = UIColor.init(patternImage: UIImage(named: "rtg")!)
+        //self.view.backgroundColor = UIColor.init(patternImage: UIImage(named: "rtg")!)
         self.view.backgroundColor = UIColor.init(patternImage: UIImage(named: "2")!)
         //button.backgroundColor = UIColor.gray
         
         var titolo = self.storyboard?.description
         titolo = self.storyboard?.value(forKey: "name") as! String
         print(titolo)
+        
         
         // Do any additional setup after loading the view, typically from a nib.
     }
