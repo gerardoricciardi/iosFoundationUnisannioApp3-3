@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Utente-->
+        <!--Profilo-->
         <scene sceneID="86s-hI-Zuc">
             <objects>
                 <tableViewController id="hUs-oS-uQN" customClass="UtenteViewController" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,12 +17,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="lhT-rL-haQ">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="425" id="lhT-rL-haQ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="425"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lhT-rL-haQ" id="dvg-oS-N3l">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="424.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hm5-1w-dyc">
+                                            <rect key="frame" x="94" y="8" width="167" height="122"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.84316647052764893" green="0.84314823150634766" blue="0.84315180778503418" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -31,11 +38,11 @@
                             <outlet property="delegate" destination="hUs-oS-uQN" id="ook-7P-T7p"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Utente" id="PGg-e4-BNB"/>
+                    <navigationItem key="navigationItem" title="Profilo" id="PGg-e4-BNB"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kiu-we-qRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="185" y="99"/>
+            <point key="canvasLocation" x="184.5" y="98.5"/>
         </scene>
         <!--Profilo-->
         <scene sceneID="rq9-V0-3gk">
