@@ -27,8 +27,8 @@ class ViewController: UIViewController {
             utenti.nome = u.nome
             utenti.cognome = u.cognome
             utenti.email = u.email
-            utenti.livelloAttivita = u.livelloAttivita
-            utenti.problemi = u.problemi
+            utenti.livelloAttivita = Int32(u.livelloAttivita)
+            //utenti.problemi = u.problemi
             utenti.sesso = u.sesso
             utenti.password = u.password
             
