@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         EsercizioDAO.fetchEsercizi()
         label.text = "Benvenuto"
         self.view.backgroundColor = UIColor.init(patternImage: UIImage(named: "rtg")!)
-        button.backgroundColor = UIColor.gray
+        //button.backgroundColor = UIColor.gray
         
         var titolo = self.storyboard?.description
         titolo = self.storyboard?.value(forKey: "name") as! String
