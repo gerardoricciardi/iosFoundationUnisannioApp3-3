@@ -37,7 +37,7 @@
                                 <rect key="frame" x="68" y="536" width="238" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Premi per iniziare">
-                                    <color key="titleShadowColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="0.54358411815068497" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="n6m-lQ-URq" kind="presentation" modalTransitionStyle="crossDissolve" id="UB3-un-dvk"/>
@@ -74,6 +74,7 @@
                     <connections>
                         <segue destination="YIA-LD-Dcu" kind="relationship" relationship="viewControllers" id="PaS-wz-EyJ"/>
                         <segue destination="VTM-HZ-hgE" kind="relationship" relationship="viewControllers" id="srF-29-Qdb"/>
+                        <segue destination="nad-bM-QJo" kind="relationship" relationship="viewControllers" id="px2-Yi-Gjs"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="265-ds-K0D" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -89,6 +90,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxI-8f-lXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="344" y="191"/>
+        </scene>
+        <!--Impostazioni-->
+        <scene sceneID="6qG-Hi-pai">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Impostazioni" id="nad-bM-QJo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="J93-XD-9u4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vzf-AZ-twz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="566" y="-22"/>
         </scene>
     </scenes>
 </document>
