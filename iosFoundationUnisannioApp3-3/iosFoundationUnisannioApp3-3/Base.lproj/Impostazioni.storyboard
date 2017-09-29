@@ -12,7 +12,7 @@
         <scene sceneID="t4m-n6-vip">
             <objects>
                 <navigationController id="0wV-ql-ucV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="topRated" id="yhH-VS-Nut"/>
+                    <tabBarItem key="tabBarItem" image="settings" id="yhH-VS-Nut"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WnA-e4-D6W">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -56,4 +56,7 @@
             <point key="canvasLocation" x="1017" y="19"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="settings" width="32" height="32"/>
+    </resources>
 </document>
