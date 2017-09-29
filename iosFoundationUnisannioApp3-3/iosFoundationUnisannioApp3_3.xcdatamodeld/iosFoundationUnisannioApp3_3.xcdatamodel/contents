@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="iosFoundationUnisannioApp3_3">
+    <entity name="Esercizio" representedClassName="EsercizioMO" syncable="YES" codeGenerationType="class">
+        <attribute name="descrizione" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="foto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tipo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="video" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Utenti" representedClassName="UtentiMO" syncable="YES" codeGenerationType="class">
         <attribute name="cognome" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
@@ -11,5 +18,6 @@
     </entity>
     <elements>
         <element name="Utenti" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="Esercizio" positionX="-63" positionY="36" width="128" height="120"/>
     </elements>
 </model>
