@@ -33,15 +33,14 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeV-bP-eQj">
-                                <rect key="frame" x="68" y="536" width="238" height="30"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="ZfS-Zv-hGd">
+                                <rect key="frame" x="-6" y="0.0" width="389" height="667"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7b-Fn-4fH">
+                                <rect key="frame" x="68" y="551" width="249" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Premi per iniziare">
-                                    <color key="titleShadowColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="n6m-lQ-URq" kind="presentation" modalTransitionStyle="crossDissolve" id="UB3-un-dvk"/>
-                                </connections>
+                                <state key="normal" image="registrati"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -54,13 +53,12 @@
                         <viewLayoutGuide key="safeArea" id="ida-5n-IRo"/>
                     </view>
                     <connections>
-                        <outlet property="button" destination="ZeV-bP-eQj" id="wOY-uD-8cI"/>
                         <outlet property="label" destination="oMc-Ey-GKm" id="pOe-L4-nOq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdc-m3-s3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1652" y="-22"/>
+            <point key="canvasLocation" x="-1652" y="-22.03898050974513"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZMY-QZ-uOM">
@@ -91,4 +89,8 @@
             <point key="canvasLocation" x="344" y="191"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="2" width="400" height="710"/>
+        <image name="registrati" width="249" height="76"/>
+    </resources>
 </document>
