@@ -36,10 +36,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="terza" translatesAutoresizingMaskIntoConstraints="NO" id="A0g-u5-IKo">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="677-rl-s5M">
                                 <rect key="frame" x="94" y="332" width="186" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -101,18 +97,14 @@
             </objects>
             <point key="canvasLocation" x="-3314" y="-738"/>
         </scene>
-        <!--View Controller-->
+        <!--Intro View Controller Benvenuto-->
         <scene sceneID="IvE-Yw-nsu">
             <objects>
-                <viewController id="LOQ-z5-Hrg" sceneMemberID="viewController">
+                <viewController id="LOQ-z5-Hrg" customClass="IntroViewControllerBenvenuto" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uFp-oV-oUQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="Schermata 2017-09-29 alle 19.07.23" translatesAutoresizingMaskIntoConstraints="NO" id="Wso-Ta-k15">
-                                <rect key="frame" x="-4" y="0.0" width="379" height="670"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whe-xm-76b">
                                 <rect key="frame" x="8" y="362" width="351" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -147,10 +139,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="Schermata 2017-09-29 alle 19.07.23" translatesAutoresizingMaskIntoConstraints="NO" id="j8f-Lm-Gap">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaI-Qi-mb4">
                                 <rect key="frame" x="111" y="324" width="153" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -431,9 +419,7 @@ permetterò giorno per giorno
         </scene>
     </scenes>
     <resources>
-        <image name="Schermata 2017-09-29 alle 19.07.23" width="400" height="709"/>
         <image name="bott" width="211" height="73"/>
-        <image name="terza" width="400" height="707"/>
         <image name="uomo-1" width="153" height="54"/>
     </resources>
     <inferredMetricsTieBreakers>

@@ -20,6 +20,7 @@
 		076EDB591F7FB61300A15D6D /* IntroViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076EDB581F7FB61300A15D6D /* IntroViewController1.swift */; };
 		076EDB5B1F7FB84B00A15D6D /* IntroViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076EDB5A1F7FB84B00A15D6D /* IntroViewController2.swift */; };
 		076EDB5D1F7FB8E200A15D6D /* IntroViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076EDB5C1F7FB8E200A15D6D /* IntroViewController3.swift */; };
+		078893781F7FF95F001D8059 /* IntroViewControllerBenvenuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078893771F7FF95F001D8059 /* IntroViewControllerBenvenuto.swift */; };
 		0797D1E01F7E71F80062A655 /* Utente.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0797D1DF1F7E71F80062A655 /* Utente.storyboard */; };
 		0797D1E21F7E72290062A655 /* Allenamento.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0797D1E11F7E72290062A655 /* Allenamento.storyboard */; };
 		0797D1E41F7E734C0062A655 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0797D1E31F7E734C0062A655 /* TabBarController.swift */; };
@@ -69,6 +70,7 @@
 		076EDB581F7FB61300A15D6D /* IntroViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController1.swift; sourceTree = "<group>"; };
 		076EDB5A1F7FB84B00A15D6D /* IntroViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController2.swift; sourceTree = "<group>"; };
 		076EDB5C1F7FB8E200A15D6D /* IntroViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController3.swift; sourceTree = "<group>"; };
+		078893771F7FF95F001D8059 /* IntroViewControllerBenvenuto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewControllerBenvenuto.swift; sourceTree = "<group>"; };
 		0797D1DF1F7E71F80062A655 /* Utente.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Utente.storyboard; sourceTree = "<group>"; };
 		0797D1E11F7E72290062A655 /* Allenamento.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Allenamento.storyboard; sourceTree = "<group>"; };
 		0797D1E31F7E734C0062A655 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				076EDB5A1F7FB84B00A15D6D /* IntroViewController2.swift */,
 				076EDB581F7FB61300A15D6D /* IntroViewController1.swift */,
 				0733E1501F7AA7840066F286 /* IntroViewController.swift */,
+				078893771F7FF95F001D8059 /* IntroViewControllerBenvenuto.swift */,
 				0752074F1F7F04FB004EE4FF /* MainViewController.swift */,
 			);
 			path = ViewController;
@@ -340,6 +343,7 @@
 				0733E1511F7AA7840066F286 /* IntroViewController.swift in Sources */,
 				075207501F7F04FB004EE4FF /* MainViewController.swift in Sources */,
 				8F2499E41F7E4732001AEA9E /* WorkoutDAO.swift in Sources */,
+				078893781F7FF95F001D8059 /* IntroViewControllerBenvenuto.swift in Sources */,
 				0797D1E41F7E734C0062A655 /* TabBarController.swift in Sources */,
 				0733E1571F7AA7840066F286 /* iosFoundationUnisannioApp3_3.xcdatamodeld in Sources */,
 				8F2499DE1F7BF59F001AEA9E /* Esercizio.swift in Sources */,
