@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         EsercizioDAO.fetchEsercizi()
         label.text = "Benvenuto"
         //self.view.backgroundColor = UIColor.init(patternImage: UIImage(named: "rtg")!)
-        self.view.backgroundColor = UIColor.init(patternImage: UIImage(named: "2")!)
+        self.view.backgroundColor = UIColor.init(patternImage: UIImage(named: "1")!)
         //button.backgroundColor = UIColor.gray
     
         

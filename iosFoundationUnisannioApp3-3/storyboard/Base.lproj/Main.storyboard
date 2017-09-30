@@ -8,6 +8,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Bodoni72-Book-SmallCaps.ttf">
+            <string>BodoniSvtyTwoSCITCTT-Book</string>
+        </array>
+        <array key="Chalkduster.ttf">
+            <string>Chalkduster</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Utente-->
         <scene sceneID="y7J-C5-O3z">
@@ -42,18 +50,10 @@
                                     <action selector="password:" destination="U19-aa-vN5" eventType="editingDidEnd" id="cKi-GR-xbW"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDw-cj-riw">
-                                <rect key="frame" x="27" y="550" width="303" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="crea account"/>
-                                <connections>
-                                    <segue destination="lQk-U1-Img" kind="presentation" modalTransitionStyle="crossDissolve" id="lsu-yA-qxH"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Usurname" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="dyy-hi-QZ1">
                                 <rect key="frame" x="94" y="131" width="186" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.84316647052764893" green="0.84314823150634766" blue="0.84315180778503418" alpha="0.61643835616438358" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.84316647052764893" green="0.84314823150634766" blue="0.84315180778503418" alpha="0.86844499143835618" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="yes" keyboardType="namePhonePad" returnKeyType="send" enablesReturnKeyAutomatically="YES" textContentType="username"/>
@@ -73,6 +73,17 @@
                                     <action selector="mail:" destination="U19-aa-vN5" eventType="editingDidEnd" id="wzE-X6-Jng"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDw-cj-riw">
+                                <rect key="frame" x="94" y="552" width="211" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
+                                <state key="normal" title="Crea Account" backgroundImage="bott">
+                                    <color key="titleColor" red="0.099409423768520355" green="0.057501830160617828" blue="0.027255097404122353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lQk-U1-Img" kind="presentation" modalTransitionStyle="crossDissolve" id="lsu-yA-qxH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="9HF-xw-RVq"/>
@@ -95,51 +106,61 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R32-pu-uGx">
-                                <rect key="frame" x="175" y="542" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="n6m-lQ-URq" kind="presentation" modalTransitionStyle="crossDissolve" id="A9F-qn-JcJ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaI-Qi-mb4">
-                                <rect key="frame" x="114" y="198" width="146" height="54"/>
+                                <rect key="frame" x="111" y="324" width="153" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <state key="normal" title="M"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="33"/>
+                                <color key="tintColor" red="0.036885924637317657" green="0.030310837551951408" blue="0.073596440255641937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="uomo" backgroundImage="uomo-1"/>
                                 <connections>
-                                    <segue destination="Nbf-q0-RRv" kind="presentation" modalTransitionStyle="crossDissolve" id="nkC-eD-GH6"/>
+                                    <segue destination="Nbf-q0-RRv" kind="show" id="Epb-xX-39E"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Una frase" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwj-pf-Bhx">
-                                <rect key="frame" x="109" y="11" width="157" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwj-pf-Bhx">
+                                <rect key="frame" x="16" y="11" width="323" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bez-qR-Xb5">
-                                <rect key="frame" x="114" y="306" width="146" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <state key="normal" title="F"/>
-                                <connections>
-                                    <segue destination="Nbf-q0-RRv" kind="presentation" modalTransitionStyle="crossDissolve" id="zbF-kO-YNJ"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDo-6m-Mz1">
-                                <rect key="frame" x="57" y="73" width="282" height="183"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Ciao,ti diamo il benvenuto!">
+                                    <fragment content="Ciao, ti diamo il benvenuto!">
                                         <attributes>
-                                            <font key="NSFont" size="24" name="BodoniSvtyTwoSCITCTT-Book"/>
+                                            <font key="NSFont" size="27" name="BodoniSvtyTwoSCITCTT-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bez-qR-Xb5">
+                                <rect key="frame" x="111" y="408" width="153" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                <state key="normal" title="donna" backgroundImage="uomo-1">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="DONNA">
+                                            <attributes>
+                                                <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="22" name="BodoniSvtyTwoSCITCTT-Book"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="Nbf-q0-RRv" kind="show" id="Lmy-x6-ver"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDo-6m-Mz1">
+                                <rect key="frame" x="35" y="136" width="304" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Aiutaci a personalizzare la tua esperienza ">
+                                        <attributes>
+                                            <font key="NSFont" size="30" name="BodoniSvtyTwoSCITCTT-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" red="0.84316647052764893" green="0.84314823150634766" blue="0.84315180778503418" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -187,16 +208,35 @@
                                 <rect key="frame" x="-6" y="0.0" width="389" height="667"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7b-Fn-4fH">
-                                <rect key="frame" x="68" y="551" width="249" height="76"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="7V5-0S-gXs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuQ-Ov-2Sp">
+                                <rect key="frame" x="90" y="557" width="197" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="registrati">
-                                    <color key="titleShadowColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="0.54358411815068497" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="19"/>
+                                <state key="normal" title="Registrati" backgroundImage="bott">
+                                    <color key="titleColor" red="0.07024180144071579" green="0.091585449874401093" blue="0.02827204205095768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="olk-Hv-Kkv" kind="presentation" modalTransitionStyle="crossDissolve" id="fsN-Rx-1ez"/>
+                                    <segue destination="olk-Hv-Kkv" kind="show" id="A99-Cg-9uH"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="21y-1s-Ujk">
+                                <rect key="frame" x="61" y="121" width="255" height="223"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Grazie ai miei workouts
+ ti aiuterò a migliorare 
+il tuo benessere
+fisico in pochi minuti.
+Ti seguirò in ufficio e ti
+permetterò giorno per giorno
+ di aumentare la tua preparazione</string>
+                                <color key="textColor" red="0.052646175026893616" green="0.10013184696435928" blue="0.027402250096201897" alpha="0.68035637842465757" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -213,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdc-m3-s3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3007" y="-22"/>
+            <point key="canvasLocation" x="-3007.1999999999998" y="-22.03898050974513"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZMY-QZ-uOM">
@@ -309,10 +349,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kku-jW-cBN">
-                                <rect key="frame" x="0.0" y="177" width="375" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvz-qK-ifS">
                                 <rect key="frame" x="146" y="435" width="83" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -321,6 +357,10 @@
                                     <segue destination="e7Y-Ch-0NS" kind="presentation" modalTransitionStyle="crossDissolve" id="eOm-mp-4gX"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kku-jW-cBN">
+                                <rect key="frame" x="0.0" y="179" width="375" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="xxd-ni-exK"/>
@@ -332,14 +372,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="400" height="710"/>
         <image name="2" width="400" height="710"/>
         <image name="Schermata 2017-09-29 alle 19.07.23" width="400" height="709"/>
-        <image name="crea account" width="249" height="76"/>
-        <image name="registrati" width="249" height="76"/>
+        <image name="bott" width="211" height="73"/>
         <image name="terza" width="400" height="707"/>
+        <image name="uomo-1" width="153" height="54"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zbF-kO-YNJ"/>
-        <segue reference="oe2-kf-P7f"/>
+        <segue reference="Epb-xX-39E"/>
+        <segue reference="oXD-x2-Cgh"/>
     </inferredMetricsTieBreakers>
 </document>
