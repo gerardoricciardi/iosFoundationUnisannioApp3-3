@@ -81,7 +81,7 @@
                                     <color key="titleColor" red="0.099409423768520355" green="0.057501830160617828" blue="0.027255097404122353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="lQk-U1-Img" kind="presentation" modalTransitionStyle="crossDissolve" id="lsu-yA-qxH"/>
+                                    <segue destination="LOQ-z5-Hrg" kind="presentation" modalTransitionStyle="coverVertical" id="FNA-98-7mA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -93,6 +93,44 @@
                 <exit id="U19-aa-vN5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-2335.1999999999998" y="-22.03898050974513"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IvE-Yw-nsu">
+            <objects>
+                <viewController id="LOQ-z5-Hrg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uFp-oV-oUQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="Schermata 2017-09-29 alle 19.07.23" translatesAutoresizingMaskIntoConstraints="NO" id="Wso-Ta-k15">
+                                <rect key="frame" x="-4" y="0.0" width="379" height="670"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whe-xm-76b">
+                                <rect key="frame" x="8" y="362" width="351" height="127"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
+                                <state key="normal" title="Conosciamoci meglio...">
+                                    <color key="titleColor" red="0.020977526903152466" green="0.011597387492656708" blue="0.0029874038882553577" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lQk-U1-Img" kind="presentation" modalTransitionStyle="crossDissolve" id="uGO-kF-mZX"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Ciao, ti diamo il benvenuto!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r5c-I2-7CL">
+                                <rect key="frame" x="67" y="162" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="jB5-hg-o8e"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3CA-cL-maw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2399.1999999999998" y="-814.54272863568224"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ESv-ka-0Xt">
@@ -116,19 +154,6 @@
                                     <segue destination="Nbf-q0-RRv" kind="presentation" modalTransitionStyle="crossDissolve" id="eiM-jq-X3K"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwj-pf-Bhx">
-                                <rect key="frame" x="16" y="11" width="323" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Ciao, ti diamo il benvenuto!">
-                                        <attributes>
-                                            <font key="NSFont" size="27" name="BodoniSvtyTwoSCITCTT-Book"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bez-qR-Xb5">
                                 <rect key="frame" x="111" y="408" width="153" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
