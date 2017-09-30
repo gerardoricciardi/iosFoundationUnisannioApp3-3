@@ -158,6 +158,7 @@
                                 <color key="tintColor" red="0.036885924637317657" green="0.030310837551951408" blue="0.073596440255641937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="uomo" backgroundImage="uomo-1"/>
                                 <connections>
+                                    <action selector="actionUomo:" destination="lQk-U1-Img" eventType="touchUpInside" id="tX8-8H-Kc9"/>
                                     <segue destination="Nbf-q0-RRv" kind="presentation" modalTransitionStyle="crossDissolve" id="eiM-jq-X3K"/>
                                 </connections>
                             </button>
@@ -177,6 +178,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
+                                    <action selector="actionDonna:" destination="lQk-U1-Img" eventType="touchUpInside" id="H0F-v3-tLa"/>
                                     <segue destination="Nbf-q0-RRv" kind="presentation" modalTransitionStyle="crossDissolve" id="l4P-92-nKC"/>
                                 </connections>
                             </button>
@@ -198,6 +200,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="0tJ-7Z-0XF"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonDonna" destination="bez-qR-Xb5" id="nWl-Dk-gAx"/>
+                        <outlet property="buttonUomo" destination="QaI-Qi-mb4" id="wjz-ij-eGh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oHo-fW-xyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
