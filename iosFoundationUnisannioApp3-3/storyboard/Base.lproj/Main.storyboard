@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -340,58 +341,87 @@ permetterò giorno per giorno
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="Schermata 2017-09-29 alle 19.07.23" translatesAutoresizingMaskIntoConstraints="NO" id="W1o-Zb-Jq4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Kp-nA-eNe">
-                                <rect key="frame" x="4" y="313" width="375" height="90"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ora di fine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcu-hB-Gyk">
-                                <rect key="frame" x="147" y="290" width="91" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Indicami i tuoi orari di lavoro : " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICC-h1-e5r">
-                                <rect key="frame" x="16" y="35" width="352" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indicami i tuoi orari di lavoro : " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICC-h1-e5r">
+                                <rect key="frame" x="16" y="32" width="352" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="E4j-Sc-ceP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kku-jW-cBN">
-                                <rect key="frame" x="0.0" y="202" width="375" height="90"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ora di inizio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A66-EE-4mi">
-                                <rect key="frame" x="146" y="168" width="91" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvz-qK-ifS">
-                                <rect key="frame" x="94" y="526" width="197" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvz-qK-ifS">
+                                <rect key="frame" x="87" y="574" width="211" height="73"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                 <state key="normal" title="Continua" backgroundImage="bott">
                                     <color key="titleColor" red="0.087580464780330658" green="0.045658774673938751" blue="0.020182790234684944" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="n6m-lQ-URq" kind="show" id="ERN-7L-oVr"/>
+                                    <action selector="buttonNext:" destination="Nbf-q0-RRv" eventType="touchUpInside" id="OEJ-Rf-AHQ"/>
+                                    <segue destination="n6m-lQ-URq" kind="show" identifier="showTabBar" id="ERN-7L-oVr"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zwt-OC-6UN">
+                                <rect key="frame" x="32" y="113" width="323" height="472.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ORA INIZIO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtL-iT-BaC">
+                                        <rect key="frame" x="119" y="0.0" width="85" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="qdO-Te-l4z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="s7k-Rv-vRL">
+                                        <rect key="frame" x="2" y="20.5" width="319" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="528475859.02443898">
+                                            <!--2017-09-30 14:50:59 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ORA FINE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WF8-mH-fvW">
+                                        <rect key="frame" x="125" y="236.5" width="73" height="20"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="hcd-FH-rkJ">
+                                        <rect key="frame" x="2" y="256.5" width="319" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="528474038.30334598">
+                                            <!--2017-09-30 14:20:38 +0000-->
+                                        </date>
+                                    </datePicker>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="s7k-Rv-vRL" firstAttribute="leading" secondItem="Zwt-OC-6UN" secondAttribute="leading" constant="2" id="6yL-Kg-hfd"/>
+                                    <constraint firstItem="hcd-FH-rkJ" firstAttribute="top" secondItem="s7k-Rv-vRL" secondAttribute="bottom" constant="20" id="7Hc-0y-vIf"/>
+                                    <constraint firstItem="WF8-mH-fvW" firstAttribute="leading" secondItem="Zwt-OC-6UN" secondAttribute="leading" constant="125" id="Kpi-bl-plp"/>
+                                    <constraint firstItem="s7k-Rv-vRL" firstAttribute="leading" secondItem="hcd-FH-rkJ" secondAttribute="leading" id="hBW-qT-vWD"/>
+                                    <constraint firstItem="CtL-iT-BaC" firstAttribute="leading" secondItem="Zwt-OC-6UN" secondAttribute="leading" constant="119" id="xgc-OB-gCh"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xxd-ni-exK" firstAttribute="bottom" secondItem="rvz-qK-ifS" secondAttribute="bottom" constant="20" id="D9Q-uc-ye3"/>
+                            <constraint firstItem="Zwt-OC-6UN" firstAttribute="top" secondItem="xxd-ni-exK" secondAttribute="top" constant="93" id="Lig-jc-G6B"/>
+                            <constraint firstItem="Zwt-OC-6UN" firstAttribute="leading" secondItem="xxd-ni-exK" secondAttribute="leading" constant="32" id="RQp-yq-TgC"/>
+                            <constraint firstItem="rvz-qK-ifS" firstAttribute="leading" secondItem="xxd-ni-exK" secondAttribute="leading" constant="87" id="Uit-w8-ckf"/>
+                            <constraint firstItem="ICC-h1-e5r" firstAttribute="leading" secondItem="ih8-NL-1OI" secondAttribute="leadingMargin" id="Wmy-Pu-c8I"/>
+                            <constraint firstItem="ICC-h1-e5r" firstAttribute="top" secondItem="xxd-ni-exK" secondAttribute="top" constant="12" id="YUL-az-DjD"/>
+                            <constraint firstItem="xxd-ni-exK" firstAttribute="trailing" secondItem="rvz-qK-ifS" secondAttribute="trailing" constant="77" id="fio-dE-lvd"/>
+                            <constraint firstItem="xxd-ni-exK" firstAttribute="trailing" secondItem="ICC-h1-e5r" secondAttribute="trailing" constant="7" id="zMv-qb-iK7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xxd-ni-exK"/>
                     </view>
+                    <connections>
+                        <outlet property="orarioFine" destination="hcd-FH-rkJ" id="K33-bb-Iyl"/>
+                        <outlet property="orarioInizio" destination="s7k-Rv-vRL" id="0a5-4Q-e4A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zGK-Fy-BEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-457" y="-738"/>
+            <point key="canvasLocation" x="-458.39999999999998" y="-738.08095952023996"/>
         </scene>
     </scenes>
     <resources>
