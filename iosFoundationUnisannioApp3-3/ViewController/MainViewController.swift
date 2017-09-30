@@ -23,10 +23,31 @@ class MainViewController: UIViewController {
             //non ci sta nessuno vai all introduzione
             
         }
-        self.performSegue(withIdentifier: segueFirstView, sender: self)
+        
+        //self.view.backgroundColor = UIColor.init(patternImage: UIImage(named: "1")!)
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        
+        
+        let background = UIImage(named: "rtg")
+        
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIViewContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        view.addSubview(imageView)
+        self.view.sendSubview(toBack: imageView)
+        
+        
         print(segueFirstView)
+        _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
         
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +60,7 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func timeToMoveOn() {
+    @objc func timeToMoveOn() {
         self.performSegue(withIdentifier: segueFirstView, sender: self)
     }
 
