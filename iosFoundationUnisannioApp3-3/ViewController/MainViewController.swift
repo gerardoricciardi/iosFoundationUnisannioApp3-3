@@ -15,13 +15,16 @@ class MainViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         let defaults = UserDefaults.standard
-        if defaults.bool(forKey: "idUser"){
+        
+        if let check = defaults.string(forKey: "Username"){
             //utente gia presente, vai alla tabbar
+            print("Sono nel main chiave username trovata")
+            
             segueFirstView = segueTabBar
         }
         else{
             //non ci sta nessuno vai all introduzione
-            
+            print("Sono nel main chiave username non trovata")
         }
         
         //self.view.backgroundColor = UIColor.init(patternImage: UIImage(named: "1")!)
@@ -43,7 +46,7 @@ class MainViewController: UIViewController {
         self.view.sendSubview(toBack: imageView)
         
         
-        print(segueFirstView)
+        //print(segueFirstView)
         _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
         
     }

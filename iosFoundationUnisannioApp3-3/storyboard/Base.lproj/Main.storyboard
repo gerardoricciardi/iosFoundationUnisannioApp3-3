@@ -36,36 +36,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="677-rl-s5M">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="677-rl-s5M">
                                 <rect key="frame" x="94" y="332" width="186" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.84316647052764893" green="0.84314823150634766" blue="0.84315180778503418" alpha="0.61643835616438358" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" keyboardType="namePhonePad" secureTextEntry="YES" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="continue" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                 <connections>
                                     <action selector="password:" destination="U19-aa-vN5" eventType="editingDidEnd" id="cKi-GR-xbW"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" textAlignment="center" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="dyy-hi-QZ1">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="dyy-hi-QZ1">
                                 <rect key="frame" x="94" y="131" width="186" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.84316647052764893" green="0.84314823150634766" blue="0.84315180778503418" alpha="0.86844499143835618" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="yes" keyboardType="namePhonePad" returnKeyType="send" enablesReturnKeyAutomatically="YES" textContentType="username"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes" keyboardType="namePhonePad" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="username"/>
                                 <connections>
                                     <action selector="usurname:" destination="U19-aa-vN5" eventType="editingDidEnd" id="BHL-ZG-YOb"/>
-                                    <outlet property="delegate" destination="olk-Hv-Kkv" id="Kth-mL-2Wt"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="E-mail" borderStyle="roundedRect" textAlignment="center" minimumFontSize="29" translatesAutoresizingMaskIntoConstraints="NO" id="Pkl-d7-7zn">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="center" minimumFontSize="29" translatesAutoresizingMaskIntoConstraints="NO" id="Pkl-d7-7zn">
                                 <rect key="frame" x="94" y="234" width="186" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.84316647052764893" green="0.84314823150634766" blue="0.84315180778503418" alpha="0.61643835616438358" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="yes" keyboardType="namePhonePad" returnKeyType="send" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes" keyboardType="emailAddress" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                 <connections>
                                     <action selector="mail:" destination="U19-aa-vN5" eventType="editingDidEnd" id="wzE-X6-Jng"/>
                                 </connections>
@@ -87,9 +86,9 @@
                         <viewLayoutGuide key="safeArea" id="9HF-xw-RVq"/>
                     </view>
                     <connections>
-                        <outlet property="emailLabel" destination="Pkl-d7-7zn" id="sgW-4E-6xK"/>
-                        <outlet property="passwordLabel" destination="677-rl-s5M" id="p9f-cn-Mdf"/>
-                        <outlet property="usernameLabel" destination="dyy-hi-QZ1" id="HUY-nn-jIh"/>
+                        <outlet property="emailTF" destination="Pkl-d7-7zn" id="pwZ-o7-qed"/>
+                        <outlet property="passwordTF" destination="677-rl-s5M" id="r22-p1-ySu"/>
+                        <outlet property="usernameTF" destination="dyy-hi-QZ1" id="3FJ-Ef-fJg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wO-NE-fSi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -224,12 +223,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMc-Ey-GKm">
-                                <rect key="frame" x="125" y="323" width="125" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuQ-Ov-2Sp">
                                 <rect key="frame" x="90" y="557" width="197" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -257,17 +250,8 @@ permetterò giorno per giorno
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="oMc-Ey-GKm" firstAttribute="leading" secondItem="ida-5n-IRo" secondAttribute="leading" constant="125" id="GNL-5G-Lm8"/>
-                            <constraint firstItem="ida-5n-IRo" firstAttribute="trailing" secondItem="oMc-Ey-GKm" secondAttribute="trailing" constant="125" id="VOl-mH-IJD"/>
-                            <constraint firstItem="ida-5n-IRo" firstAttribute="bottom" secondItem="oMc-Ey-GKm" secondAttribute="bottom" constant="323" id="dqZ-dX-rKY"/>
-                            <constraint firstItem="oMc-Ey-GKm" firstAttribute="top" secondItem="ida-5n-IRo" secondAttribute="top" constant="303" id="gBb-ci-onP"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ida-5n-IRo"/>
                     </view>
-                    <connections>
-                        <outlet property="label" destination="oMc-Ey-GKm" id="pOe-L4-nOq"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdc-m3-s3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -290,7 +274,7 @@ permetterò giorno per giorno
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="265-ds-K0D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1810" y="356"/>
+            <point key="canvasLocation" x="-1810" y="448"/>
         </scene>
         <!--Allenamento-->
         <scene sceneID="QSa-LJ-DhP">
@@ -325,7 +309,7 @@ permetterò giorno per giorno
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uym-3T-H4k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3615" y="737"/>
+            <point key="canvasLocation" x="-2790" y="449"/>
         </scene>
         <!--Intro View Controller3-->
         <scene sceneID="4Bx-Xu-DiJ">
