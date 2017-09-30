@@ -33,7 +33,19 @@ class ViewController: UIViewController {
         
         label.text = "Benvenuto"
         //self.view.backgroundColor = UIColor.init(patternImage: UIImage(named: "rtg")!)
-        self.view.backgroundColor = UIColor.init(patternImage: UIImage(named: "1")!)
+        //self.view.backgroundColor = UIColor.init(patternImage: UIImage(named: "1")!)
+        
+        let background = UIImage(named: "1")
+        
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIViewContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        view.addSubview(imageView)
+        self.view.sendSubview(toBack: imageView)
+        
         //button.backgroundColor = UIColor.gray
     
         

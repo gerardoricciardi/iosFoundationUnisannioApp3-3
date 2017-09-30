@@ -229,14 +229,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="ZfS-Zv-hGd">
-                                <rect key="frame" x="-6" y="0.0" width="389" height="667"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="7V5-0S-gXs">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuQ-Ov-2Sp">
                                 <rect key="frame" x="90" y="557" width="197" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -440,8 +432,6 @@ e aumenta il tuo livello!</string>
         </scene>
     </scenes>
     <resources>
-        <image name="1" width="400" height="710"/>
-        <image name="2" width="400" height="710"/>
         <image name="Schermata 2017-09-29 alle 19.07.23" width="400" height="709"/>
         <image name="Schermata 2017-09-30 alle 10.30.41" width="930" height="476"/>
         <image name="Schermata 2017-09-30 alle 10.30.50" width="926" height="480"/>
