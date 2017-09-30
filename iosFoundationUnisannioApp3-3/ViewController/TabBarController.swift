@@ -13,6 +13,10 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let defaults = UserDefaults.standard
+        for (key, value) in defaults.dictionaryRepresentation() {
+            print("\(key) = \(value) \n")
+        }
         // Do any additional setup after loading the view.
     }
 

@@ -8,27 +8,17 @@
 
 import UIKit
 
-var prova =  "Prova"
 class IntroViewController: UIViewController {
     
     
-    @IBAction func password(_ sender: UITextField) {
-        
-    }
-    @IBAction func usurname(_ sender: UITextField) {
-    }
-    
-    @IBAction func mail(_ sender: UITextField) {
-    }
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
 //      let  e=Esercizio(nome:"Skip",tipo:"Riscaldamento",foto:"url....",video:"url....",descrizione:"bla bla")
-//
 //        EsercizioDAO.saveEsercizio(ese: e)
-//
 //        EsercizioDAO.fetchEsercizi()
         
         //label.text = "Benvenuto"

@@ -36,24 +36,24 @@ class IntroViewController2: UIViewController {
         
         defaults.set("uomo", forKey: "Sesso")
         defaults.synchronize()
-        
+/*
         //        stampa tutte le coppie
         for (key, value) in defaults.dictionaryRepresentation() {
             print("\(key) = \(value) \n")
         }
-
+*/
         
     }
     
     @IBAction func actionDonna(_ sender: Any) {
         defaults.set("donna", forKey: "Sesso")
         defaults.synchronize()
-        
+ /*
 //        stampa tutte le coppie
         for (key, value) in defaults.dictionaryRepresentation() {
             print("\(key) = \(value) \n")
         }
-
+*/
 
     }
     override func didReceiveMemoryWarning() {

@@ -52,6 +52,7 @@ class IntroViewController3: UIViewController {
         let defaults = UserDefaults.standard
         defaults.set(orarioInizio.date, forKey: "oraInizio")
         defaults.set(orarioFine.date, forKey: "oraFine")
+        defaults.synchronize()
 /*
      Da un DATE ottengo ore e minuti
          

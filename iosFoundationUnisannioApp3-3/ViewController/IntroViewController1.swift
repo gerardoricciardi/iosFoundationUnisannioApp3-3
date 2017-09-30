@@ -11,10 +11,10 @@ import UIKit
 //ViewController per inserire dati utente
 
 class IntroViewController1: UIViewController {
+    @IBOutlet weak var usernameTF: UITextField!
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
     
-    @IBOutlet weak var usernameLabel: UITextField!
-    @IBOutlet weak var passwordLabel: UITextField!
-    @IBOutlet weak var emailLabel: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +30,26 @@ class IntroViewController1: UIViewController {
         self.view.sendSubview(toBack: imageView)
         
         
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)
+    
+    
+    
+        
 
         // Do any additional setup after loading the view.
     }
 
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -43,9 +59,9 @@ class IntroViewController1: UIViewController {
         //salva in let defaults = UserDefaults.standard le tre label
         //e va alla view successiva
         
-        let username:String = usernameLabel.text!
-        let password:String = passwordLabel.text!
-        let email:String = emailLabel.text!
+        let username:String = usernameTF.text!
+        let password:String = passwordTF.text!
+        let email:String = emailTF.text!
   
         let defaults = UserDefaults.standard
         defaults.set(username, forKey: "Username")
@@ -58,11 +74,6 @@ class IntroViewController1: UIViewController {
 //        print(defaults.string(forKey: "Password"))
 //        print(defaults.string(forKey: "Email"))
         
-        for (key, value) in defaults.dictionaryRepresentation() {
-            print("\(key) = \(value) \n")
-        }
-
-
     }
     
     /*
