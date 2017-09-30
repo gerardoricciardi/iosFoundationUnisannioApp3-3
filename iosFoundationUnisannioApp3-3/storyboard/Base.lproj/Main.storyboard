@@ -113,7 +113,7 @@
                                 <color key="tintColor" red="0.036885924637317657" green="0.030310837551951408" blue="0.073596440255641937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="uomo" backgroundImage="uomo-1"/>
                                 <connections>
-                                    <segue destination="Nbf-q0-RRv" kind="show" id="Epb-xX-39E"/>
+                                    <segue destination="Nbf-q0-RRv" kind="presentation" modalTransitionStyle="crossDissolve" id="eiM-jq-X3K"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwj-pf-Bhx">
@@ -145,7 +145,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="Nbf-q0-RRv" kind="show" id="Lmy-x6-ver"/>
+                                    <segue destination="Nbf-q0-RRv" kind="presentation" modalTransitionStyle="crossDissolve" id="l4P-92-nKC"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDo-6m-Mz1">
@@ -301,27 +301,6 @@ permetterò giorno per giorno
                     <view key="view" contentMode="scaleToFill" id="VSH-Q1-582">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="Schermata 2017-09-29 alle 19.07.23" translatesAutoresizingMaskIntoConstraints="NO" id="Mit-fr-LcP">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLJ-uK-ulM">
-                                <rect key="frame" x="175" y="542" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="n6m-lQ-URq" kind="presentation" modalTransitionStyle="flipHorizontal" id="oXD-x2-Cgh"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Un altra frase" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zu-tW-EhK">
-                                <rect key="frame" x="134" y="180" width="129" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="f85-5O-Knu"/>
                     </view>
@@ -401,7 +380,6 @@ permetterò giorno per giorno
         <image name="uomo-1" width="153" height="54"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Epb-xX-39E"/>
-        <segue reference="oXD-x2-Cgh"/>
+        <segue reference="eiM-jq-X3K"/>
     </inferredMetricsTieBreakers>
 </document>
