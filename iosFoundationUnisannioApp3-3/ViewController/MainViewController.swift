@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         let defaults = UserDefaults.standard
         
-        if let check = defaults.string(forKey: "Username"){
+        if let check = defaults.string(forKey: "scrivi Username"){
             //utente gia presente, vai alla tabbar
             print("Sono nel main chiave username trovata")
             
