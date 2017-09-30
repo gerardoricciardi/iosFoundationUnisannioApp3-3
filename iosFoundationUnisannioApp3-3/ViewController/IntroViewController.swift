@@ -9,7 +9,7 @@
 import UIKit
 
 var prova =  "Prova"
-class ViewController: UIViewController {
+class IntroViewController: UIViewController {
     
     
     @IBAction func password(_ sender: UITextField) {
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
 //
 //        EsercizioDAO.fetchEsercizi()
         
-        label.text = "Benvenuto"
+        //label.text = "Benvenuto"
         //self.view.backgroundColor = UIColor.init(patternImage: UIImage(named: "rtg")!)
         //self.view.backgroundColor = UIColor.init(patternImage: UIImage(named: "1")!)
         

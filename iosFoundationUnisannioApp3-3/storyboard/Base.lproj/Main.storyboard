@@ -25,12 +25,12 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYm-ls-tfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="334" y="-497"/>
+            <point key="canvasLocation" x="362" y="26"/>
         </scene>
-        <!--View Controller-->
+        <!--Intro View Controller1-->
         <scene sceneID="veT-Ye-FgW">
             <objects>
-                <viewController id="olk-Hv-Kkv" sceneMemberID="viewController">
+                <viewController id="olk-Hv-Kkv" customClass="IntroViewController1" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XCB-C6-wrb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,7 +50,7 @@
                                     <action selector="password:" destination="U19-aa-vN5" eventType="editingDidEnd" id="cKi-GR-xbW"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Usurname" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="dyy-hi-QZ1">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" textAlignment="center" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="dyy-hi-QZ1">
                                 <rect key="frame" x="94" y="131" width="186" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.84316647052764893" green="0.84314823150634766" blue="0.84315180778503418" alpha="0.86844499143835618" colorSpace="custom" customColorSpace="displayP3"/>
@@ -62,7 +62,7 @@
                                     <outlet property="delegate" destination="olk-Hv-Kkv" id="Kth-mL-2Wt"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="E-mail" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="29" translatesAutoresizingMaskIntoConstraints="NO" id="Pkl-d7-7zn">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="E-mail" borderStyle="roundedRect" textAlignment="center" minimumFontSize="29" translatesAutoresizingMaskIntoConstraints="NO" id="Pkl-d7-7zn">
                                 <rect key="frame" x="94" y="234" width="186" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.84316647052764893" green="0.84314823150634766" blue="0.84315180778503418" alpha="0.61643835616438358" colorSpace="custom" customColorSpace="displayP3"/>
@@ -81,6 +81,7 @@
                                     <color key="titleColor" red="0.099409423768520355" green="0.057501830160617828" blue="0.027255097404122353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="newAccountButton:" destination="olk-Hv-Kkv" eventType="touchUpInside" id="N4g-Ci-cOs"/>
                                     <segue destination="LOQ-z5-Hrg" kind="presentation" modalTransitionStyle="coverVertical" id="FNA-98-7mA"/>
                                 </connections>
                             </button>
@@ -88,11 +89,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="9HF-xw-RVq"/>
                     </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="Pkl-d7-7zn" id="sgW-4E-6xK"/>
+                        <outlet property="passwordLabel" destination="677-rl-s5M" id="p9f-cn-Mdf"/>
+                        <outlet property="usernameLabel" destination="dyy-hi-QZ1" id="HUY-nn-jIh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wO-NE-fSi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="U19-aa-vN5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-2335.1999999999998" y="-22.03898050974513"/>
+            <point key="canvasLocation" x="-3314" y="-738"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="IvE-Yw-nsu">
@@ -130,12 +136,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3CA-cL-maw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2399.1999999999998" y="-814.54272863568224"/>
+            <point key="canvasLocation" x="-2482" y="-738"/>
         </scene>
-        <!--View Controller-->
+        <!--Intro View Controller2-->
         <scene sceneID="ESv-ka-0Xt">
             <objects>
-                <viewController id="lQk-U1-Img" sceneMemberID="viewController">
+                <viewController id="lQk-U1-Img" customClass="IntroViewController2" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dEZ-E6-7WH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -213,12 +219,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wqc-dk-Nf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3839" y="-9"/>
+            <point key="canvasLocation" x="-5058" y="-719"/>
         </scene>
-        <!--View Controller-->
+        <!--Intro View Controller-->
         <scene sceneID="3aR-h0-tBe">
             <objects>
-                <viewController id="a0G-gE-Jjw" customClass="ViewController" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="a0G-gE-Jjw" customClass="IntroViewController" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6XX-2N-1qH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -270,7 +276,7 @@ permetterò giorno per giorno
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdc-m3-s3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3007.1999999999998" y="-22.03898050974513"/>
+            <point key="canvasLocation" x="-4226" y="-732"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZMY-QZ-uOM">
@@ -289,7 +295,7 @@ permetterò giorno per giorno
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="265-ds-K0D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-462" y="894"/>
+            <point key="canvasLocation" x="-1810" y="356"/>
         </scene>
         <!--Allenamento-->
         <scene sceneID="QSa-LJ-DhP">
@@ -299,7 +305,7 @@ permetterò giorno per giorno
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxI-8f-lXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="344" y="191"/>
+            <point key="canvasLocation" x="362" y="589"/>
         </scene>
         <!--Impostazioni-->
         <scene sceneID="6qG-Hi-pai">
@@ -309,7 +315,7 @@ permetterò giorno per giorno
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzf-AZ-twz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="566" y="-22"/>
+            <point key="canvasLocation" x="363" y="297"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="R9x-9G-HTp">
@@ -324,12 +330,12 @@ permetterò giorno per giorno
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uym-3T-H4k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1431" y="914"/>
+            <point key="canvasLocation" x="-3615" y="737"/>
         </scene>
-        <!--View Controller-->
+        <!--Intro View Controller3-->
         <scene sceneID="4Bx-Xu-DiJ">
             <objects>
-                <viewController id="Nbf-q0-RRv" sceneMemberID="viewController">
+                <viewController id="Nbf-q0-RRv" customClass="IntroViewController3" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ih8-NL-1OI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -375,7 +381,7 @@ permetterò giorno per giorno
                                     <color key="titleColor" red="0.087580464780330658" green="0.045658774673938751" blue="0.020182790234684944" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="e7Y-Ch-0NS" kind="presentation" modalTransitionStyle="crossDissolve" id="eOm-mp-4gX"/>
+                                    <segue destination="n6m-lQ-URq" kind="show" id="ERN-7L-oVr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -385,7 +391,7 @@ permetterò giorno per giorno
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zGK-Fy-BEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1455.2" y="78.710644677661179"/>
+            <point key="canvasLocation" x="-457" y="-738"/>
         </scene>
     </scenes>
     <resources>
@@ -396,5 +402,6 @@ permetterò giorno per giorno
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eiM-jq-X3K"/>
+        <segue reference="ERN-7L-oVr"/>
     </inferredMetricsTieBreakers>
 </document>
