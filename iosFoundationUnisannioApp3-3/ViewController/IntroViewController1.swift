@@ -18,6 +18,8 @@ class IntroViewController1: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -30,6 +32,27 @@ class IntroViewController1: UIViewController {
     @IBAction func newAccountButton(_ sender: UIButton) {
         //salva in let defaults = UserDefaults.standard le tre label
         //e va alla view successiva
+        
+        let username:String = usernameLabel.text!
+        let password:String = passwordLabel.text!
+        let email:String = emailLabel.text!
+  
+        let defaults = UserDefaults.standard
+        defaults.set(username, forKey: "Username")
+        defaults.set(password, forKey: "Password")
+        defaults.set(email, forKey: "Email")
+        defaults.synchronize()
+        
+//        verifica del salvataggio in defaults dei dati dalle label
+//        print(defaults.string(forKey: "Username"))
+//        print(defaults.string(forKey: "Password"))
+//        print(defaults.string(forKey: "Email"))
+        
+        for (key, value) in defaults.dictionaryRepresentation() {
+            print("\(key) = \(value) \n")
+        }
+
+
     }
     
     /*
