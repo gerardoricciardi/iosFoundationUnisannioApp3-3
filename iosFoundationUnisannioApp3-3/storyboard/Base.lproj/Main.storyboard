@@ -138,10 +138,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="Schermata 2017-09-29 alle 19.07.23" translatesAutoresizingMaskIntoConstraints="NO" id="j8f-Lm-Gap">
-                                <rect key="frame" x="-2" y="0.0" width="377" height="667"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaI-Qi-mb4">
                                 <rect key="frame" x="111" y="324" width="153" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -366,36 +362,8 @@ e aumenta il tuo livello!</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Kp-nA-eNe">
-                                <rect key="frame" x="4" y="313" width="414" height="90"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ora di fine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcu-hB-Gyk">
-                                <rect key="frame" x="147" y="290" width="91" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Indicami i tuoi orari di lavoro : " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICC-h1-e5r">
-                                <rect key="frame" x="16" y="35" width="352" height="72"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kku-jW-cBN">
-                                <rect key="frame" x="0.0" y="202" width="414" height="90"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ora di inizio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A66-EE-4mi">
-                                <rect key="frame" x="146" y="168" width="91" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvz-qK-ifS">
-                                <rect key="frame" x="94" y="526" width="197" height="74"/>
+                                <rect key="frame" x="109" y="642" width="197" height="74"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                 <state key="normal" title="Continua" backgroundImage="bott">
                                     <color key="titleColor" red="0.087580464780330658" green="0.045658774673938751" blue="0.020182790234684944" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -405,7 +373,7 @@ e aumenta il tuo livello!</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zwt-OC-6UN">
-                                <rect key="frame" x="32" y="113" width="323" height="472.66666666666663"/>
+                                <rect key="frame" x="46" y="141" width="323" height="472.66666666666663"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ORA INIZIO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtL-iT-BaC">
                                         <rect key="frame" x="119" y="0.0" width="85" height="20.666666666666657"/>
@@ -446,17 +414,23 @@ e aumenta il tuo livello!</string>
                                     <constraint firstItem="CtL-iT-BaC" firstAttribute="leading" secondItem="Zwt-OC-6UN" secondAttribute="leading" constant="119" id="xgc-OB-gCh"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indicami i tuoi orari di lavoro : " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICC-h1-e5r">
+                                <rect key="frame" x="31" y="34" width="352" height="72"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xxd-ni-exK" firstAttribute="bottom" secondItem="rvz-qK-ifS" secondAttribute="bottom" constant="20" id="D9Q-uc-ye3"/>
-                            <constraint firstItem="Zwt-OC-6UN" firstAttribute="top" secondItem="xxd-ni-exK" secondAttribute="top" constant="93" id="Lig-jc-G6B"/>
-                            <constraint firstItem="Zwt-OC-6UN" firstAttribute="leading" secondItem="xxd-ni-exK" secondAttribute="leading" constant="32" id="RQp-yq-TgC"/>
-                            <constraint firstItem="rvz-qK-ifS" firstAttribute="leading" secondItem="xxd-ni-exK" secondAttribute="leading" constant="87" id="Uit-w8-ckf"/>
-                            <constraint firstItem="ICC-h1-e5r" firstAttribute="leading" secondItem="ih8-NL-1OI" secondAttribute="leadingMargin" id="Wmy-Pu-c8I"/>
-                            <constraint firstItem="ICC-h1-e5r" firstAttribute="top" secondItem="xxd-ni-exK" secondAttribute="top" constant="12" id="YUL-az-DjD"/>
-                            <constraint firstItem="xxd-ni-exK" firstAttribute="trailing" secondItem="rvz-qK-ifS" secondAttribute="trailing" constant="77" id="fio-dE-lvd"/>
-                            <constraint firstItem="xxd-ni-exK" firstAttribute="trailing" secondItem="ICC-h1-e5r" secondAttribute="trailing" constant="7" id="zMv-qb-iK7"/>
+                            <constraint firstItem="Zwt-OC-6UN" firstAttribute="top" secondItem="xxd-ni-exK" secondAttribute="top" constant="121" id="Lig-jc-G6B"/>
+                            <constraint firstItem="Zwt-OC-6UN" firstAttribute="leading" secondItem="xxd-ni-exK" secondAttribute="leading" constant="46" id="RQp-yq-TgC"/>
+                            <constraint firstItem="rvz-qK-ifS" firstAttribute="leading" secondItem="xxd-ni-exK" secondAttribute="leading" constant="109" id="Uit-w8-ckf"/>
+                            <constraint firstItem="ICC-h1-e5r" firstAttribute="leading" secondItem="ih8-NL-1OI" secondAttribute="leadingMargin" constant="11" id="Wmy-Pu-c8I"/>
+                            <constraint firstItem="ICC-h1-e5r" firstAttribute="top" secondItem="xxd-ni-exK" secondAttribute="top" constant="14" id="YUL-az-DjD"/>
+                            <constraint firstItem="xxd-ni-exK" firstAttribute="trailing" secondItem="rvz-qK-ifS" secondAttribute="trailing" constant="108" id="fio-dE-lvd"/>
+                            <constraint firstItem="xxd-ni-exK" firstAttribute="trailing" secondItem="ICC-h1-e5r" secondAttribute="trailing" constant="31" id="zMv-qb-iK7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xxd-ni-exK"/>
                     </view>
@@ -471,7 +445,6 @@ e aumenta il tuo livello!</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Schermata 2017-09-29 alle 19.07.23" width="400" height="709"/>
         <image name="Schermata 2017-09-30 alle 10.30.41" width="930" height="476"/>
         <image name="Schermata 2017-09-30 alle 10.30.50" width="926" height="480"/>
         <image name="Schermata 2017-09-30 alle 10.32.56" width="930" height="576"/>
