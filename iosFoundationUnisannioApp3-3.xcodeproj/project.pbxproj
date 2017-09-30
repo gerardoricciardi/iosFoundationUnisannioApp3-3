@@ -16,6 +16,7 @@
 		0733E1671F7AA7840066F286 /* iosFoundationUnisannioApp3_3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0733E1661F7AA7840066F286 /* iosFoundationUnisannioApp3_3Tests.swift */; };
 		0733E1721F7AA7840066F286 /* iosFoundationUnisannioApp3_3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0733E1711F7AA7840066F286 /* iosFoundationUnisannioApp3_3UITests.swift */; };
 		07505BF71F7E9E0400E1A88B /* Impostazioni.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07505BF51F7E9E0400E1A88B /* Impostazioni.storyboard */; };
+		075207501F7F04FB004EE4FF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752074F1F7F04FB004EE4FF /* MainViewController.swift */; };
 		0797D1E01F7E71F80062A655 /* Utente.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0797D1DF1F7E71F80062A655 /* Utente.storyboard */; };
 		0797D1E21F7E72290062A655 /* Allenamento.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0797D1E11F7E72290062A655 /* Allenamento.storyboard */; };
 		0797D1E41F7E734C0062A655 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0797D1E31F7E734C0062A655 /* TabBarController.swift */; };
@@ -61,6 +62,7 @@
 		0733E1711F7AA7840066F286 /* iosFoundationUnisannioApp3_3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosFoundationUnisannioApp3_3UITests.swift; sourceTree = "<group>"; };
 		0733E1731F7AA7840066F286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07505BF61F7E9E0400E1A88B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "iosFoundationUnisannioApp3-3/Base.lproj/Impostazioni.storyboard"; sourceTree = "<group>"; };
+		0752074F1F7F04FB004EE4FF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0797D1DF1F7E71F80062A655 /* Utente.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Utente.storyboard; sourceTree = "<group>"; };
 		0797D1E11F7E72290062A655 /* Allenamento.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Allenamento.storyboard; sourceTree = "<group>"; };
 		0797D1E31F7E734C0062A655 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -122,21 +124,10 @@
 			isa = PBXGroup;
 			children = (
 				0733E14E1F7AA7840066F286 /* AppDelegate.swift */,
-				0733E1501F7AA7840066F286 /* ViewController.swift */,
-				8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */,
-				8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */,
-				8F2499E31F7E4732001AEA9E /* WorkoutDAO.swift */,
-				8F2499DF1F7BF89D001AEA9E /* Workout.swift */,
-				8F2C49E91F7BAF3A006EC668 /* Utente.swift */,
-				0797D1E31F7E734C0062A655 /* TabBarController.swift */,
-				0797D2061F7E80FE0062A655 /* UtenteViewController.swift */,
-				0797D2081F7E810B0062A655 /* AllenamentoTableViewController.swift */,
-				0733E1521F7AA7840066F286 /* Main.storyboard */,
-				0797D1E11F7E72290062A655 /* Allenamento.storyboard */,
-				07505BF51F7E9E0400E1A88B /* Impostazioni.storyboard */,
-				0797D1DF1F7E71F80062A655 /* Utente.storyboard */,
+				0752074C1F7F02BB004EE4FF /* ViewController */,
+				0752074D1F7F0300004EE4FF /* Model */,
+				0752074E1F7F034B004EE4FF /* storyboard */,
 				0733E1581F7AA7840066F286 /* Assets.xcassets */,
-				0733E15A1F7AA7840066F286 /* LaunchScreen.storyboard */,
 				0733E15D1F7AA7840066F286 /* Info.plist */,
 				0733E1551F7AA7840066F286 /* iosFoundationUnisannioApp3_3.xcdatamodeld */,
 			);
@@ -159,6 +150,42 @@
 				0733E1731F7AA7840066F286 /* Info.plist */,
 			);
 			path = "iosFoundationUnisannioApp3-3UITests";
+			sourceTree = "<group>";
+		};
+		0752074C1F7F02BB004EE4FF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0733E1501F7AA7840066F286 /* ViewController.swift */,
+				0797D1E31F7E734C0062A655 /* TabBarController.swift */,
+				0797D2061F7E80FE0062A655 /* UtenteViewController.swift */,
+				0797D2081F7E810B0062A655 /* AllenamentoTableViewController.swift */,
+				0752074F1F7F04FB004EE4FF /* MainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0752074D1F7F0300004EE4FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */,
+				8F2499E31F7E4732001AEA9E /* WorkoutDAO.swift */,
+				8F2C49E91F7BAF3A006EC668 /* Utente.swift */,
+				8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */,
+				8F2499DF1F7BF89D001AEA9E /* Workout.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0752074E1F7F034B004EE4FF /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				0733E1521F7AA7840066F286 /* Main.storyboard */,
+				07505BF51F7E9E0400E1A88B /* Impostazioni.storyboard */,
+				0797D1DF1F7E71F80062A655 /* Utente.storyboard */,
+				0797D1E11F7E72290062A655 /* Allenamento.storyboard */,
+				0733E15A1F7AA7840066F286 /* LaunchScreen.storyboard */,
+			);
+			path = storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +328,7 @@
 				8F2C49EA1F7BAF3A006EC668 /* Utente.swift in Sources */,
 				0797D2091F7E810B0062A655 /* AllenamentoTableViewController.swift in Sources */,
 				0733E1511F7AA7840066F286 /* ViewController.swift in Sources */,
+				075207501F7F04FB004EE4FF /* MainViewController.swift in Sources */,
 				8F2499E41F7E4732001AEA9E /* WorkoutDAO.swift in Sources */,
 				0797D1E41F7E734C0062A655 /* TabBarController.swift in Sources */,
 				0733E1571F7AA7840066F286 /* iosFoundationUnisannioApp3_3.xcdatamodeld in Sources */,
