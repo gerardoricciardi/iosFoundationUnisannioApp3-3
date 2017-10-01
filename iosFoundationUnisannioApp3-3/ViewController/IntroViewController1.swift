@@ -33,23 +33,48 @@ class IntroViewController1: UIViewController, UITextFieldDelegate {
         self.view.sendSubview(toBack: imageView)
         
         
-       
-        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-        //tap.cancelsTouchesInView = false
-        
-       
     
-    
+        // Create toolBar
+        let toolBar: UIToolbar = UIToolbar(frame:CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 44))
+        //toolBar.isTranslucent = true
+        //toolBar.isOpaque = true
         
-
+        // Add buttons as `UIBarButtonItem` to toolbar
+        // First add some space to the left hand side, so your button is not on the edge of the screen
+        let flexsibleSpace: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil) // flexible space to add left end side
+        
+        // Create your first visible button
+        let doneButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(didPressDoneButton))
+        // Note, that we declared the `didPressDoneButton` to be called, when Done button has been pressed
+        toolBar.items = [flexsibleSpace, doneButton]
+        
+        // Assing toolbar as inputAccessoryView
+        usernameTF.inputAccessoryView = toolBar
+        emailTF.inputAccessoryView = toolBar
+        passwordTF.inputAccessoryView = toolBar
         // Do any additional setup after loading the view.
     }
 
+   
+    @objc func didPressDoneButton(button: UIButton) {
+        // Button has been pressed
+        // Process the containment of the textfield or whatever
+        // Hide keyboard
+        usernameTF.resignFirstResponder()
+        emailTF.resignFirstResponder()
+        passwordTF.resignFirstResponder()
+    }
+//
+    //hide keyboard when user touch outside keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    //presses return key
+    //quando premi sul return key va alla prossima textField (da fare)
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        //usernameTF.resignFirstResponder()
+        usernameTF.resignFirstResponder()
+        emailTF.resignFirstResponder()
+        passwordTF.resignFirstResponder()
         return true
     }
     override func didReceiveMemoryWarning() {
