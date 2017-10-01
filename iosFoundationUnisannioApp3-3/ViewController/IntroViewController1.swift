@@ -10,7 +10,7 @@ import UIKit
 
 //ViewController per inserire dati utente
 
-class IntroViewController1: UIViewController {
+class IntroViewController1: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
@@ -18,6 +18,9 @@ class IntroViewController1: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.usernameTF.delegate = self
+        
         let background = UIImage(named: "terza")
         
         var imageView : UIImageView!
@@ -30,14 +33,11 @@ class IntroViewController1: UIViewController {
         self.view.sendSubview(toBack: imageView)
         
         
-        //Looks for single or multiple taps.
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        
+       
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
         //tap.cancelsTouchesInView = false
         
-        view.addGestureRecognizer(tap)
-    
+       
     
     
         
@@ -45,10 +45,12 @@ class IntroViewController1: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    //Calls this function when the tap is recognized.
-    func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //usernameTF.resignFirstResponder()
+        return true
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
