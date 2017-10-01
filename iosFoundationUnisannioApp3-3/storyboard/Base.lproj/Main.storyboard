@@ -331,7 +331,7 @@ permetterò giorno per giorno
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
                                 <state key="normal" title="Streching" backgroundImage="Schermata 2017-09-30 alle 10.32.56">
-                                    <color key="titleColor" red="0.71280819177627563" green="0.81170368194580078" blue="0.81571298837661743" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.028650529682636261" green="0.044027961790561676" blue="0.017472904175519943" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="n6m-lQ-URq" kind="show" id="TMx-ED-NVJ"/>
@@ -453,6 +453,6 @@ e aumenta il tuo livello!</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eiM-jq-X3K"/>
-        <segue reference="oe2-kf-P7f"/>
+        <segue reference="d2A-H4-kzD"/>
     </inferredMetricsTieBreakers>
 </document>
