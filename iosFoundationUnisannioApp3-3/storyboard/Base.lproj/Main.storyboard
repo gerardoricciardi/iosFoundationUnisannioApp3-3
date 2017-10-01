@@ -363,74 +363,76 @@ e aumenta il tuo livello!</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvz-qK-ifS">
-                                <rect key="frame" x="109" y="642" width="197" height="74"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
-                                <state key="normal" title="Continua" backgroundImage="bott">
-                                    <color key="titleColor" red="0.087580464780330658" green="0.045658774673938751" blue="0.020182790234684944" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonNext:" destination="Nbf-q0-RRv" eventType="touchUpInside" id="OEJ-Rf-AHQ"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zwt-OC-6UN">
-                                <rect key="frame" x="46" y="141" width="323" height="472.66666666666663"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ORA INIZIO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtL-iT-BaC">
-                                        <rect key="frame" x="119" y="0.0" width="85" height="20.666666666666657"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="85" id="qdO-Te-l4z"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="s7k-Rv-vRL">
-                                        <rect key="frame" x="2" y="20.666666666666671" width="319" height="216"/>
-                                        <date key="date" timeIntervalSinceReferenceDate="528475859.02443898">
-                                            <!--2017-09-30 14:50:59 +0000-->
-                                        </date>
-                                    </datePicker>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ORA FINE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WF8-mH-fvW">
-                                        <rect key="frame" x="125" y="236.66666666666669" width="73" height="20"/>
-                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="hcd-FH-rkJ">
-                                        <rect key="frame" x="2" y="256.66666666666663" width="319" height="215.99999999999994"/>
-                                        <date key="date" timeIntervalSinceReferenceDate="528474038.30334598">
-                                            <!--2017-09-30 14:20:38 +0000-->
-                                        </date>
-                                        <connections>
-                                            <segue destination="e7Y-Ch-0NS" kind="show" id="pNo-qZ-9cs"/>
-                                        </connections>
-                                    </datePicker>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="s7k-Rv-vRL" firstAttribute="leading" secondItem="Zwt-OC-6UN" secondAttribute="leading" constant="2" id="6yL-Kg-hfd"/>
-                                    <constraint firstItem="hcd-FH-rkJ" firstAttribute="top" secondItem="s7k-Rv-vRL" secondAttribute="bottom" constant="20" id="7Hc-0y-vIf"/>
-                                    <constraint firstItem="WF8-mH-fvW" firstAttribute="leading" secondItem="Zwt-OC-6UN" secondAttribute="leading" constant="125" id="Kpi-bl-plp"/>
-                                    <constraint firstItem="s7k-Rv-vRL" firstAttribute="leading" secondItem="hcd-FH-rkJ" secondAttribute="leading" id="hBW-qT-vWD"/>
-                                    <constraint firstItem="CtL-iT-BaC" firstAttribute="leading" secondItem="Zwt-OC-6UN" secondAttribute="leading" constant="119" id="xgc-OB-gCh"/>
-                                </constraints>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indicami i tuoi orari di lavoro : " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICC-h1-e5r">
                                 <rect key="frame" x="31" y="34" width="352" height="72"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="410-kk-AQh">
+                                <rect key="frame" x="46" y="137" width="323" height="560.66666666666663"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zwt-OC-6UN">
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="472.66666666666663"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ORA INIZIO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtL-iT-BaC">
+                                                <rect key="frame" x="119" y="0.0" width="85" height="20.666666666666657"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="85" id="qdO-Te-l4z"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="s7k-Rv-vRL">
+                                                <rect key="frame" x="2" y="20.666666666666671" width="319" height="216"/>
+                                                <date key="date" timeIntervalSinceReferenceDate="528475859.02443898">
+                                                    <!--2017-09-30 14:50:59 +0000-->
+                                                </date>
+                                            </datePicker>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ORA FINE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WF8-mH-fvW">
+                                                <rect key="frame" x="125" y="236.66666666666669" width="73" height="20"/>
+                                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="hcd-FH-rkJ">
+                                                <rect key="frame" x="2" y="256.66666666666663" width="319" height="215.99999999999994"/>
+                                                <date key="date" timeIntervalSinceReferenceDate="528474038.30334598">
+                                                    <!--2017-09-30 14:20:38 +0000-->
+                                                </date>
+                                            </datePicker>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="s7k-Rv-vRL" firstAttribute="leading" secondItem="Zwt-OC-6UN" secondAttribute="leading" constant="2" id="6yL-Kg-hfd"/>
+                                            <constraint firstItem="hcd-FH-rkJ" firstAttribute="top" secondItem="s7k-Rv-vRL" secondAttribute="bottom" constant="20" id="7Hc-0y-vIf"/>
+                                            <constraint firstItem="WF8-mH-fvW" firstAttribute="leading" secondItem="Zwt-OC-6UN" secondAttribute="leading" constant="125" id="Kpi-bl-plp"/>
+                                            <constraint firstItem="s7k-Rv-vRL" firstAttribute="leading" secondItem="hcd-FH-rkJ" secondAttribute="leading" id="hBW-qT-vWD"/>
+                                            <constraint firstItem="CtL-iT-BaC" firstAttribute="leading" secondItem="Zwt-OC-6UN" secondAttribute="leading" constant="119" id="xgc-OB-gCh"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvz-qK-ifS">
+                                        <rect key="frame" x="56" y="487.66666666666663" width="211" height="73"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                        <state key="normal" title="Continua" backgroundImage="bott">
+                                            <color key="titleColor" red="0.087580464780330658" green="0.045658774673938751" blue="0.020182790234684944" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonNext:" destination="Nbf-q0-RRv" eventType="touchUpInside" id="OEJ-Rf-AHQ"/>
+                                            <segue destination="e7Y-Ch-0NS" kind="show" id="qKR-pz-V0b"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xxd-ni-exK" firstAttribute="bottom" secondItem="rvz-qK-ifS" secondAttribute="bottom" constant="20" id="D9Q-uc-ye3"/>
-                            <constraint firstItem="Zwt-OC-6UN" firstAttribute="top" secondItem="xxd-ni-exK" secondAttribute="top" constant="121" id="Lig-jc-G6B"/>
-                            <constraint firstItem="Zwt-OC-6UN" firstAttribute="leading" secondItem="xxd-ni-exK" secondAttribute="leading" constant="46" id="RQp-yq-TgC"/>
-                            <constraint firstItem="rvz-qK-ifS" firstAttribute="leading" secondItem="xxd-ni-exK" secondAttribute="leading" constant="109" id="Uit-w8-ckf"/>
+                            <constraint firstItem="410-kk-AQh" firstAttribute="top" secondItem="ICC-h1-e5r" secondAttribute="bottom" constant="31" id="2VA-Sx-xh0"/>
+                            <constraint firstItem="410-kk-AQh" firstAttribute="top" secondItem="xxd-ni-exK" secondAttribute="top" constant="117" id="8ed-Rr-dGp"/>
+                            <constraint firstItem="xxd-ni-exK" firstAttribute="bottom" secondItem="410-kk-AQh" secondAttribute="bottom" constant="38.333333333333371" id="Nkf-r3-qua"/>
+                            <constraint firstItem="410-kk-AQh" firstAttribute="centerX" secondItem="ICC-h1-e5r" secondAttribute="centerX" id="WFh-cJ-t7R"/>
                             <constraint firstItem="ICC-h1-e5r" firstAttribute="leading" secondItem="ih8-NL-1OI" secondAttribute="leadingMargin" constant="11" id="Wmy-Pu-c8I"/>
                             <constraint firstItem="ICC-h1-e5r" firstAttribute="top" secondItem="xxd-ni-exK" secondAttribute="top" constant="14" id="YUL-az-DjD"/>
-                            <constraint firstItem="xxd-ni-exK" firstAttribute="trailing" secondItem="rvz-qK-ifS" secondAttribute="trailing" constant="108" id="fio-dE-lvd"/>
                             <constraint firstItem="xxd-ni-exK" firstAttribute="trailing" secondItem="ICC-h1-e5r" secondAttribute="trailing" constant="31" id="zMv-qb-iK7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xxd-ni-exK"/>
