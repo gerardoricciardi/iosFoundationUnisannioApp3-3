@@ -168,9 +168,9 @@
 				0797D2081F7E810B0062A655 /* AllenamentoTableViewController.swift */,
 				076EDB5C1F7FB8E200A15D6D /* IntroViewController3.swift */,
 				076EDB5A1F7FB84B00A15D6D /* IntroViewController2.swift */,
+				078893771F7FF95F001D8059 /* IntroViewControllerBenvenuto.swift */,
 				076EDB581F7FB61300A15D6D /* IntroViewController1.swift */,
 				0733E1501F7AA7840066F286 /* IntroViewController.swift */,
-				078893771F7FF95F001D8059 /* IntroViewControllerBenvenuto.swift */,
 				0752074F1F7F04FB004EE4FF /* MainViewController.swift */,
 			);
 			path = ViewController;
