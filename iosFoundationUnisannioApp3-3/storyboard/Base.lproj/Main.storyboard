@@ -37,7 +37,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="sLy-op-q0T">
-                                <rect key="frame" x="114" y="142" width="186" height="250"/>
+                                <rect key="frame" x="114" y="120" width="186" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="dyy-hi-QZ1">
@@ -85,7 +85,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDw-cj-riw">
-                                <rect key="frame" x="109" y="556" width="197" height="73"/>
+                                <rect key="frame" x="109" y="557" width="197" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
                                 <state key="normal" title="Crea Account" backgroundImage="bott">
@@ -178,9 +178,9 @@
                                             <constraint firstAttribute="height" constant="54" id="diQ-pJ-Kg6"/>
                                             <constraint firstAttribute="width" constant="153" id="oHK-BR-bjL"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="33"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
                                         <color key="tintColor" red="0.036885924637317657" green="0.030310837551951408" blue="0.073596440255641937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="uomo" backgroundImage="uomo-1"/>
+                                        <state key="normal" title="UOMO" backgroundImage="uomo-1"/>
                                         <connections>
                                             <action selector="actionUomo:" destination="lQk-U1-Img" eventType="touchUpInside" id="tX8-8H-Kc9"/>
                                             <segue destination="Nbf-q0-RRv" kind="presentation" modalTransitionStyle="crossDissolve" id="eiM-jq-X3K"/>
@@ -198,7 +198,7 @@
                                                 <fragment content="DONNA">
                                                     <attributes>
                                                         <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" size="22" name="BodoniSvtyTwoSCITCTT-Book"/>
+                                                        <font key="NSFont" size="22" name="Chalkduster"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -252,7 +252,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuQ-Ov-2Sp">
-                                <rect key="frame" x="109" y="559" width="197" height="70"/>
+                                <rect key="frame" x="109" y="560" width="197" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="19"/>
                                 <state key="normal" title="Registrati" backgroundImage="bott">
@@ -263,7 +263,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="21y-1s-Ujk">
-                                <rect key="frame" x="80" y="112" width="255" height="229"/>
+                                <rect key="frame" x="80" y="86" width="255" height="229"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Grazie ai miei workouts
  ti aiuterò a migliorare 
