@@ -85,15 +85,23 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDw-cj-riw">
-                                <rect key="frame" x="109" y="556" width="197" height="73"/>
+                                <rect key="frame" x="109" y="495" width="197" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
-                                <state key="normal" title="Crea Account" backgroundImage="bott">
+                                <state key="normal" title="Accedi">
                                     <color key="titleColor" red="0.099409423768520355" green="0.057501830160617828" blue="0.027255097404122353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="newAccountButton:" destination="olk-Hv-Kkv" eventType="touchUpInside" id="N4g-Ci-cOs"/>
                                     <segue destination="LOQ-z5-Hrg" kind="presentation" modalTransitionStyle="crossDissolve" id="FNA-98-7mA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1r3-NZ-UoS">
+                                <rect key="frame" x="92" y="576" width="235" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Non hai un account?  Registrati  &gt;"/>
+                                <connections>
+                                    <segue destination="dVY-dD-ld1" kind="presentation" modalTransitionStyle="crossDissolve" id="yNu-eh-WKg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -110,7 +118,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wO-NE-fSi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="U19-aa-vN5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-3396" y="-739"/>
+            <point key="canvasLocation" x="-3010.144927536232" y="-1737.2282608695652"/>
         </scene>
         <!--Intro View Controller Benvenuto-->
         <scene sceneID="IvE-Yw-nsu">
@@ -251,17 +259,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuQ-Ov-2Sp">
-                                <rect key="frame" x="109" y="559" width="197" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="19"/>
-                                <state key="normal" title="Registrati" backgroundImage="bott">
-                                    <color key="titleColor" red="0.07024180144071579" green="0.091585449874401093" blue="0.02827204205095768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="olk-Hv-Kkv" kind="presentation" modalTransitionStyle="crossDissolve" id="A99-Cg-9uH"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="21y-1s-Ujk">
                                 <rect key="frame" x="80" y="112" width="255" height="229"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -276,6 +273,28 @@ permetterò giorno per giorno
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0k-Mx-ibM">
+                                <rect key="frame" x="109" y="595" width="197" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="Skip &gt;">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="n6m-lQ-URq" kind="presentation" modalTransitionStyle="crossDissolve" id="3nP-eY-p8t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuQ-Ov-2Sp">
+                                <rect key="frame" x="109" y="491" width="197" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="19"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" red="0.07024180144071579" green="0.091585449874401093" blue="0.02827204205095768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="olk-Hv-Kkv" kind="show" id="gBW-ap-aHU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="ida-5n-IRo"/>
@@ -283,7 +302,7 @@ permetterò giorno per giorno
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdc-m3-s3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4226" y="-732"/>
+            <point key="canvasLocation" x="-4217.391304347826" y="-719.02173913043487"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZMY-QZ-uOM">
@@ -473,6 +492,93 @@ e aumenta il tuo livello!</string>
             </objects>
             <point key="canvasLocation" x="-458.39999999999998" y="-738.08095952023996"/>
         </scene>
+        <!--Intro View Controller1-->
+        <scene sceneID="QgR-Eo-QRP">
+            <objects>
+                <viewController id="dVY-dD-ld1" customClass="IntroViewController1" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KOL-xU-Bgc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="FGe-xT-ixX">
+                                <rect key="frame" x="114" y="142" width="186" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="TMj-sr-RL2">
+                                        <rect key="frame" x="0.0" y="0.0" width="186" height="30"/>
+                                        <color key="backgroundColor" red="0.84316647050000004" green="0.84314823149999996" blue="0.84315180779999999" alpha="0.86844499139999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="186" id="udt-b4-vml"/>
+                                            <constraint firstAttribute="height" constant="30" id="vaj-BH-epQ"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="yes" keyboardType="namePhonePad" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="username"/>
+                                        <connections>
+                                            <action selector="usurname:" destination="WmV-dW-x8g" eventType="editingDidEnd" id="V8m-OS-aTm"/>
+                                            <action selector="usurname:" destination="U19-aa-vN5" eventType="editingDidEnd" id="lej-Xd-jkr"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="center" minimumFontSize="29" translatesAutoresizingMaskIntoConstraints="NO" id="fNZ-kI-mI2">
+                                        <rect key="frame" x="0.0" y="110" width="186" height="30"/>
+                                        <color key="backgroundColor" red="0.84316647050000004" green="0.84314823149999996" blue="0.84315180779999999" alpha="0.61643835619999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="186" id="bwf-35-E5Y"/>
+                                            <constraint firstAttribute="height" constant="30" id="e6Q-Qz-25H"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="yes" keyboardType="emailAddress" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                        <connections>
+                                            <action selector="mail:" destination="WmV-dW-x8g" eventType="editingDidEnd" id="5vG-L3-BDo"/>
+                                            <action selector="mail:" destination="U19-aa-vN5" eventType="editingDidEnd" id="A5m-Yh-EgD"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="7WJ-3p-PPW">
+                                        <rect key="frame" x="0.0" y="220" width="186" height="30"/>
+                                        <color key="backgroundColor" red="0.84316647050000004" green="0.84314823149999996" blue="0.84315180779999999" alpha="0.61643835619999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="SzC-do-Sk5"/>
+                                            <constraint firstAttribute="width" constant="186" id="cyO-gK-Yd1"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="continue" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                        <connections>
+                                            <action selector="password:" destination="WmV-dW-x8g" eventType="editingDidEnd" id="XQR-oM-ucE"/>
+                                            <action selector="password:" destination="U19-aa-vN5" eventType="editingDidEnd" id="bJn-4u-MBt"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNh-mJ-O9l">
+                                <rect key="frame" x="109" y="495" width="197" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
+                                <state key="normal" title="Registrati">
+                                    <color key="titleColor" red="0.099409423770000005" green="0.057501830160000003" blue="0.027255097400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="newAccountButton:" destination="dVY-dD-ld1" eventType="touchUpInside" id="4Qu-Xx-rMD"/>
+                                    <segue destination="LOQ-z5-Hrg" kind="presentation" modalTransitionStyle="crossDissolve" id="XKs-P1-xuv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="cp7-cZ-mcf"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTF" destination="fNZ-kI-mI2" id="6lk-8e-29E"/>
+                        <outlet property="passwordTF" destination="7WJ-3p-PPW" id="Djs-Ld-sfM"/>
+                        <outlet property="usernameTF" destination="TMj-sr-RL2" id="65e-Ev-73P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gUh-Tk-3lm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="WmV-dW-x8g" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1974" y="-1737"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Schermata 2017-09-30 alle 10.30.41" width="930" height="476"/>
@@ -483,6 +589,7 @@ e aumenta il tuo livello!</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eiM-jq-X3K"/>
-        <segue reference="d2A-H4-kzD"/>
+        <segue reference="3nP-eY-p8t"/>
+        <segue reference="FNA-98-7mA"/>
     </inferredMetricsTieBreakers>
 </document>
