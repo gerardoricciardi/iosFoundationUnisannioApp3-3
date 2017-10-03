@@ -134,6 +134,7 @@
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
                                 <state key="normal" title="Conosciamoci meglio...">
                                     <color key="titleColor" red="0.020977526903152466" green="0.011597387492656708" blue="0.0029874038882553577" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="lQk-U1-Img" kind="presentation" modalTransitionStyle="crossDissolve" id="uGO-kF-mZX"/>
