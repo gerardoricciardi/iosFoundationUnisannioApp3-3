@@ -5,13 +5,19 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Bodoni72-Book-SmallCaps.ttf">
+            <string>BodoniSvtyTwoSCITCTT-Book</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Allenamento-->
         <scene sceneID="Jof-j4-Kk3">
             <objects>
-                <tableViewController id="w8d-Es-GsH" customClass="AllenamentoTableViewController" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="w8d-Es-GsH" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gmf-d8-gD7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,8 +62,60 @@
             </objects>
             <point key="canvasLocation" x="135" y="462"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="UwN-TI-lR6">
+            <objects>
+                <viewController id="RUd-L0-37U" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="blY-j6-JK5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afL-Wo-aft">
+                                <rect key="frame" x="0.0" y="274" width="375" height="198"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
+                                <state key="normal" title="Pilates" backgroundImage="Schermata 2017-09-30 alle 10.30.41">
+                                    <color key="titleColor" red="0.079733543099999998" green="0.037688001989999997" blue="0.021095013249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaD-2g-EV0">
+                                <rect key="frame" x="0.0" y="472" width="375" height="195"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
+                                <state key="normal" title="Total Body" backgroundImage="Schermata 2017-09-30 alle 10.30.50">
+                                    <color key="titleColor" red="0.096333049239999996" green="0.078446127470000002" blue="0.024946436289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dKe-kW-hP9">
+                                <rect key="frame" x="59" y="0.0" width="235" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Allenati con me
+e aumenta il tuo livello!</string>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMX-6C-qLg">
+                                <rect key="frame" x="-59" y="61" width="375" height="205"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
+                                <state key="normal" title="Streching" backgroundImage="Schermata 2017-09-30 alle 10.32.56">
+                                    <color key="titleColor" red="0.028650529680000002" green="0.04402796179" blue="0.017472904179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.71280819179999999" green="0.81170368189999997" blue="0.81571298839999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="ivW-8G-wt5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c4y-kO-K1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2484" y="217"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Schermata 2017-09-30 alle 10.30.41" width="930" height="476"/>
+        <image name="Schermata 2017-09-30 alle 10.30.50" width="926" height="480"/>
+        <image name="Schermata 2017-09-30 alle 10.32.56" width="930" height="576"/>
         <image name="side-bending-posture" width="32" height="32"/>
     </resources>
     <color key="tintColor" red="0.25449371610238758" green="0.74019084991383133" blue="0.80371589467005078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
