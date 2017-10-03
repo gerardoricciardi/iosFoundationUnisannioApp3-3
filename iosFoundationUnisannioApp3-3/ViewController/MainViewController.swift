@@ -31,7 +31,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        TestSaverRecord.loadExerciseByName(nomeEsercizio: "OHS")
+        //TestSaverRecord.loadExerciseByName(nomeEsercizio: "OHS")
         
         let background = UIImage(named: "rtg")
         
