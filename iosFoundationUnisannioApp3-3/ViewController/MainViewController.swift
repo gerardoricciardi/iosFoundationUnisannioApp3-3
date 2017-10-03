@@ -44,9 +44,10 @@ class MainViewController: UIViewController {
         view.addSubview(imageView)
         self.view.sendSubview(toBack: imageView)
         
-        
+        tabBarController?.tabBar.isHidden = true
+        navigationController?.navigationBar.isHidden = true
         //print(segueFirstView)
-        _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
+        _ = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
         
     }
     

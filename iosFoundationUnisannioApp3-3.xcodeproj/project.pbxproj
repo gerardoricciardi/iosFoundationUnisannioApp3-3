@@ -18,8 +18,6 @@
 		0733E1721F7AA7840066F286 /* iosFoundationUnisannioApp3_3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0733E1711F7AA7840066F286 /* iosFoundationUnisannioApp3_3UITests.swift */; };
 		07505BF71F7E9E0400E1A88B /* Impostazioni.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07505BF51F7E9E0400E1A88B /* Impostazioni.storyboard */; };
 		075207501F7F04FB004EE4FF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752074F1F7F04FB004EE4FF /* MainViewController.swift */; };
-		0757B2DB1F839E8C00DBFC9F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0757B2DA1F839E8B00DBFC9F /* CloudKit.framework */; };
-		0757B2DD1F839EB300DBFC9F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0757B2DC1F839EB300DBFC9F /* HealthKit.framework */; };
 		0757B2DF1F83A41400DBFC9F /* CategoriesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0757B2DE1F83A41400DBFC9F /* CategoriesDetailsViewController.swift */; };
 		076EDB591F7FB61300A15D6D /* IntroViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076EDB581F7FB61300A15D6D /* IntroViewController1.swift */; };
 		076EDB5B1F7FB84B00A15D6D /* IntroViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076EDB5A1F7FB84B00A15D6D /* IntroViewController2.swift */; };
@@ -74,9 +72,6 @@
 		0733E1731F7AA7840066F286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07505BF61F7E9E0400E1A88B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "iosFoundationUnisannioApp3-3/Base.lproj/Impostazioni.storyboard"; sourceTree = "<group>"; };
 		0752074F1F7F04FB004EE4FF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		0757B2D71F839DEF00DBFC9F /* iosFoundationUnisannioApp3-3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iosFoundationUnisannioApp3-3.entitlements"; sourceTree = "<group>"; };
-		0757B2DA1F839E8B00DBFC9F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		0757B2DC1F839EB300DBFC9F /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		0757B2DE1F83A41400DBFC9F /* CategoriesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesDetailsViewController.swift; sourceTree = "<group>"; };
 		076EDB581F7FB61300A15D6D /* IntroViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController1.swift; sourceTree = "<group>"; };
 		076EDB5A1F7FB84B00A15D6D /* IntroViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController2.swift; sourceTree = "<group>"; };
