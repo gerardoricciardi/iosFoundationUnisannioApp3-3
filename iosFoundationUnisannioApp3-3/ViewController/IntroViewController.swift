@@ -25,7 +25,7 @@ class IntroViewController: UIViewController {
         //self.view.backgroundColor = UIColor.init(patternImage: UIImage(named: "rtg")!)
         //self.view.backgroundColor = UIColor.init(patternImage: UIImage(named: "1")!)
         
-        let background = UIImage(named: "1")
+        let background = UIImage(named: "terza")
         
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
