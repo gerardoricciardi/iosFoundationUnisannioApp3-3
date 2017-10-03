@@ -24,15 +24,12 @@
 		0797D1E01F7E71F80062A655 /* Utente.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0797D1DF1F7E71F80062A655 /* Utente.storyboard */; };
 		0797D1E21F7E72290062A655 /* Allenamento.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0797D1E11F7E72290062A655 /* Allenamento.storyboard */; };
 		0797D1E41F7E734C0062A655 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0797D1E31F7E734C0062A655 /* TabBarController.swift */; };
-		0797D2071F7E80FE0062A655 /* UtenteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0797D2061F7E80FE0062A655 /* UtenteViewController.swift */; };
-		07A5EB8B1F8393E400337BF1 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A5EB8A1F8393E400337BF1 /* CategoriesTableViewController.swift */; };
-		07A5EB8D1F8393FA00337BF1 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A5EB8C1F8393FA00337BF1 /* CategoriesTableViewCell.swift */; };
-		07A5EB931F8397E000337BF1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A5EB921F8397E000337BF1 /* HealthKit.framework */; };
 		8F2499DE1F7BF59F001AEA9E /* Esercizio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */; };
 		8F2499E01F7BF89D001AEA9E /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499DF1F7BF89D001AEA9E /* Workout.swift */; };
 		8F2499E21F7E4723001AEA9E /* EsercizioDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */; };
 		8F2499E41F7E4732001AEA9E /* WorkoutDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499E31F7E4732001AEA9E /* WorkoutDAO.swift */; };
 		8F2C49EA1F7BAF3A006EC668 /* Utente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2C49E91F7BAF3A006EC668 /* Utente.swift */; };
+		F8A5E9791F83980D009D186F /* ViewControllerProfilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,16 +73,12 @@
 		0797D1DF1F7E71F80062A655 /* Utente.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Utente.storyboard; sourceTree = "<group>"; };
 		0797D1E11F7E72290062A655 /* Allenamento.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Allenamento.storyboard; sourceTree = "<group>"; };
 		0797D1E31F7E734C0062A655 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		0797D2061F7E80FE0062A655 /* UtenteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtenteViewController.swift; sourceTree = "<group>"; };
-		07A5EB8A1F8393E400337BF1 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
-		07A5EB8C1F8393FA00337BF1 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
-		07A5EB8E1F8397CA00337BF1 /* iosFoundationUnisannioApp3-3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iosFoundationUnisannioApp3-3.entitlements"; sourceTree = "<group>"; };
-		07A5EB921F8397E000337BF1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Esercizio.swift; sourceTree = "<group>"; };
 		8F2499DF1F7BF89D001AEA9E /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsercizioDAO.swift; sourceTree = "<group>"; };
 		8F2499E31F7E4732001AEA9E /* WorkoutDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDAO.swift; sourceTree = "<group>"; };
 		8F2C49E91F7BAF3A006EC668 /* Utente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utente.swift; sourceTree = "<group>"; };
+		F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProfilo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,9 +167,9 @@
 				07A5EB8A1F8393E400337BF1 /* CategoriesTableViewController.swift */,
 				07A5EB8C1F8393FA00337BF1 /* CategoriesTableViewCell.swift */,
 				0797D1E31F7E734C0062A655 /* TabBarController.swift */,
-				0797D2061F7E80FE0062A655 /* UtenteViewController.swift */,
 				076EDB5C1F7FB8E200A15D6D /* IntroViewController3.swift */,
 				076EDB5A1F7FB84B00A15D6D /* IntroViewController2.swift */,
+				F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */,
 				078893771F7FF95F001D8059 /* IntroViewControllerBenvenuto.swift */,
 				076EDB581F7FB61300A15D6D /* IntroViewController1.swift */,
 				0733E1501F7AA7840066F286 /* IntroViewController.swift */,
@@ -380,11 +373,11 @@
 				0733E1571F7AA7840066F286 /* iosFoundationUnisannioApp3_3.xcdatamodeld in Sources */,
 				8F2499DE1F7BF59F001AEA9E /* Esercizio.swift in Sources */,
 				0733E14F1F7AA7840066F286 /* AppDelegate.swift in Sources */,
-				0797D2071F7E80FE0062A655 /* UtenteViewController.swift in Sources */,
 				076EDB591F7FB61300A15D6D /* IntroViewController1.swift in Sources */,
 				8F2499E01F7BF89D001AEA9E /* Workout.swift in Sources */,
 				8F2499E21F7E4723001AEA9E /* EsercizioDAO.swift in Sources */,
 				076EDB5D1F7FB8E200A15D6D /* IntroViewController3.swift in Sources */,
+				F8A5E9791F83980D009D186F /* ViewControllerProfilo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

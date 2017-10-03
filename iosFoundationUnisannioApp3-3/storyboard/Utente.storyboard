@@ -5,45 +5,10 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profilo-->
-        <scene sceneID="86s-hI-Zuc">
-            <objects>
-                <tableViewController id="hUs-oS-uQN" customClass="UtenteViewController" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="I0r-Rf-ysb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="425" id="lhT-rL-haQ">
-                                <rect key="frame" x="0.0" y="28" width="375" height="425"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lhT-rL-haQ" id="dvg-oS-N3l">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="424.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hm5-1w-dyc">
-                                            <rect key="frame" x="94" y="8" width="167" height="122"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                    </subviews>
-                                    <color key="backgroundColor" red="0.84316647052764893" green="0.84314823150634766" blue="0.84315180778503418" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="hUs-oS-uQN" id="qNR-L2-dby"/>
-                            <outlet property="delegate" destination="hUs-oS-uQN" id="ook-7P-T7p"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Profilo" id="PGg-e4-BNB"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kiu-we-qRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="184.5" y="98.5"/>
-        </scene>
         <!--Profilo-->
         <scene sceneID="rq9-V0-3gk">
             <objects>
@@ -56,15 +21,41 @@
                         <color key="barTintColor" red="0.67797273397445679" green="0.79216945171356201" blue="0.79218685626983643" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="hUs-oS-uQN" kind="relationship" relationship="rootViewController" id="Skt-Kf-qp2"/>
+                        <segue destination="lFl-79-V60" kind="relationship" relationship="rootViewController" id="oYp-6V-PWJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lH7-5l-BTb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-767" y="99"/>
         </scene>
+        <!--Profilo-->
+        <scene sceneID="nNL-ec-F3s">
+            <objects>
+                <viewController id="lFl-79-V60" customClass="ViewControllerProfilo" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U7c-4y-YU4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Profil" translatesAutoresizingMaskIntoConstraints="NO" id="smH-5j-MRE">
+                                <rect key="frame" x="66" y="75" width="131" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="cQR-Xl-tlf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profilo" id="1xv-fW-Z8o"/>
+                    <connections>
+                        <outlet property="immProfilo" destination="smH-5j-MRE" id="IX9-H6-bM3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fuf-Pw-HOL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="96.7016491754123"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Profil" width="140" height="154"/>
         <image name="us" width="32" height="32"/>
     </resources>
 </document>
