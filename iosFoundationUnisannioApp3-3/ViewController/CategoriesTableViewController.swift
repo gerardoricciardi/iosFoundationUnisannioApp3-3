@@ -10,11 +10,13 @@ import UIKit
 
 class CategoriesTableViewController: UITableViewController {
 
-    let color = UIColor(red: 54.0/255.0, green: 155.0/255.0, blue: 184.0/255.0, alpha: 1.0)
+    let backgroundColor = UIColor(red: 54.0/255.0, green: 155.0/255.0, blue: 184.0/255.0, alpha: 1.0)
     var categoriesImage = ["stretching", "pilates", "totalBody"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.backgroundColor = backgroundColor
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -47,7 +49,7 @@ class CategoriesTableViewController: UITableViewController {
         cell.categoriesImage.image = UIImage(named: categoriesImage[indexPath.row])
         cell.categoriesLabel.text = categoriesImage[indexPath.row]
         
-        
+        cell.backgroundColor = backgroundColor
         // Configure the cell...
 
         return cell
