@@ -26,7 +26,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYm-ls-tfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="362" y="26"/>
+            <point key="canvasLocation" x="-3320" y="902"/>
         </scene>
         <!--Intro View Controller1-->
         <scene sceneID="veT-Ye-FgW">
@@ -118,7 +118,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wO-NE-fSi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="U19-aa-vN5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-3010.144927536232" y="-1737.2282608695652"/>
+            <point key="canvasLocation" x="-3903" y="-1211"/>
         </scene>
         <!--Intro View Controller Benvenuto-->
         <scene sceneID="IvE-Yw-nsu">
@@ -152,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3CA-cL-maw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2482" y="-738"/>
+            <point key="canvasLocation" x="-3320" y="-382"/>
         </scene>
         <!--Intro View Controller2-->
         <scene sceneID="ESv-ka-0Xt">
@@ -230,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oHo-fW-xyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1455.2" y="-738.08095952023996"/>
+            <point key="canvasLocation" x="-1810" y="-382"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="ipC-Jn-G4O">
@@ -249,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wqc-dk-Nf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5058" y="-719"/>
+            <point key="canvasLocation" x="-5552" y="-340"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="3aR-h0-tBe">
@@ -302,7 +302,7 @@ permetterò giorno per giorno
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdc-m3-s3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4217.391304347826" y="-719.02173913043487"/>
+            <point key="canvasLocation" x="-4826" y="-382"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZMY-QZ-uOM">
@@ -331,7 +331,7 @@ permetterò giorno per giorno
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxI-8f-lXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="362" y="589"/>
+            <point key="canvasLocation" x="-4" y="902"/>
         </scene>
         <!--Impostazioni-->
         <scene sceneID="6qG-Hi-pai">
@@ -341,7 +341,7 @@ permetterò giorno per giorno
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzf-AZ-twz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="363" y="297"/>
+            <point key="canvasLocation" x="-1810" y="902"/>
         </scene>
         <!--Intro View Controller3-->
         <scene sceneID="4Bx-Xu-DiJ">
@@ -432,7 +432,7 @@ permetterò giorno per giorno
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zGK-Fy-BEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-458.39999999999998" y="-738.08095952023996"/>
+            <point key="canvasLocation" x="-697" y="-382"/>
         </scene>
         <!--Intro View Controller1-->
         <scene sceneID="QgR-Eo-QRP">
@@ -519,7 +519,7 @@ permetterò giorno per giorno
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUh-Tk-3lm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="WmV-dW-x8g" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1974" y="-1737"/>
+            <point key="canvasLocation" x="-2784" y="-1211"/>
         </scene>
     </scenes>
     <resources>
@@ -528,7 +528,7 @@ permetterò giorno per giorno
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eiM-jq-X3K"/>
-        <segue reference="EqO-V1-7Ro"/>
+        <segue reference="oe2-kf-P7f"/>
         <segue reference="FNA-98-7mA"/>
     </inferredMetricsTieBreakers>
 </document>
