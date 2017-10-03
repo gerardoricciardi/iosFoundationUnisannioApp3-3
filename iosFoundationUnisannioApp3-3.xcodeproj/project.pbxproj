@@ -194,6 +194,7 @@
 		0752074D1F7F0300004EE4FF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8F0B72D61F83B512007E809D /* TestSaverRecord.swift */,
 				8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */,
 				8F2499E31F7E4732001AEA9E /* WorkoutDAO.swift */,
 				8F2C49E91F7BAF3A006EC668 /* Utente.swift */,
@@ -375,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F0B72D71F83B513007E809D /* TestSaverRecord.swift in Sources */,
 				076EDB5B1F7FB84B00A15D6D /* IntroViewController2.swift in Sources */,
 				07A5EB991F839C0900337BF1 /* CategoriesTableViewCell.swift in Sources */,
 				8F2C49EA1F7BAF3A006EC668 /* Utente.swift in Sources */,
