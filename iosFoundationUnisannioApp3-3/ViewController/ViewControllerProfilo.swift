@@ -9,11 +9,31 @@
 import UIKit
 
 class ViewControllerProfilo: UIViewController {
-
+    
+    @IBAction func CambiaImmagineProfilo(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "Action Sheet", message: "What would you like to do?", preferredStyle: .actionSheet)
+        
+        let sendButton = UIAlertAction(title: "Cambia Immagine", style: .default, handler: { (action) -> Void in
+            print("Ok button tapped")
+        })
+        
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) -> Void in
+            print("Cancel button tapped")
+        })
+        
+        
+        alertController.addAction(sendButton)
+        alertController.addAction(cancelButton)
+        
+        self.navigationController!.present(alertController, animated: true, completion: nil)
+    }
+    @IBOutlet weak var InserireCognomeL: UILabel!
+    @IBOutlet weak var InserireNomeL: UILabel!
+    
     @IBOutlet weak var immProfilo: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        immProfilo.layer.cornerRadius = 30.0
+        immProfilo.layer.cornerRadius = 40.0
         immProfilo.clipsToBounds = true
         // Do any additional setup after loading the view.
     }
