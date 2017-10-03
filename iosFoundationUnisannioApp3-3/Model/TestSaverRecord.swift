@@ -40,12 +40,19 @@ class TestSaverRecord{
                 print(record.object(forKey:"nome"))
                 let fotoEsercizio: CKAsset;
                 fotoEsercizio = record.object(forKey: "foto") as! CKAsset
+                
+               url fotoEsercizio.fileURL
+                
             }
             
             
         }
         
     }
+    
+    // fare un metodo che si prende tutti gli esercizi
+//    e fa vedere una lista di immagini
+//   si fa prendendo la foto come asset, poi si fa da asset a url e da url a uiimage
     
     func saveRecord(){
         
