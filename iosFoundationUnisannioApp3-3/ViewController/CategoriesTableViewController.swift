@@ -52,7 +52,7 @@ class CategoriesTableViewController: UITableViewController {
 
         return cell
     }
-    
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetails"{
             if let indexPath = tableView.indexPathForSelectedRow{
@@ -66,6 +66,7 @@ class CategoriesTableViewController: UITableViewController {
             }
         }
     }
+ */
 
     /*
     // Override to support conditional editing of the table view.
