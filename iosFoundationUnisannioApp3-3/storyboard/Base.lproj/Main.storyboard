@@ -267,7 +267,7 @@
                                 </constraints>
                                 <string key="text">Il lavoro ti porta via troppo tempo e non hai modo di dedicarti a te stesso ?                            Health Desk fa al caso tuo! I miei workouts sono pensati appositamente per te!</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuQ-Ov-2Sp">
@@ -531,7 +531,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eiM-jq-X3K"/>
-        <segue reference="EqO-V1-7Ro"/>
+        <segue reference="3nP-eY-p8t"/>
         <segue reference="FNA-98-7mA"/>
     </inferredMetricsTieBreakers>
 </document>
