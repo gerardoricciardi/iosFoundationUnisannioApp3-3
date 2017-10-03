@@ -9,11 +9,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Bodoni72-Book-SmallCaps.ttf">
-            <string>BodoniSvtyTwoSCITCTT-Book</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Allenamento-->
         <scene sceneID="Jof-j4-Kk3">
@@ -23,23 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" rowHeight="220" id="Mt7-ZC-grL" customClass="CategoriesTableViewCell" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="220"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" rowHeight="210" id="Mt7-ZC-grL" customClass="CategoriesTableViewCell" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="210"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mt7-ZC-grL" id="FJN-np-64D">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="219.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="209.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nqh-gb-8kM">
-                                            <rect key="frame" x="0.0" y="8" width="383" height="204"/>
+                                            <rect key="frame" x="0.0" y="8" width="383" height="194"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="204" id="bl0-Og-3os"/>
+                                                <constraint firstAttribute="height" constant="194" id="bl0-Og-3os"/>
                                                 <constraint firstAttribute="width" constant="383" id="hTn-KN-Thy"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H6-bs-8vo">
-                                            <rect key="frame" x="8" y="136" width="359" height="76"/>
+                                            <rect key="frame" x="8" y="136" width="359" height="66"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -57,9 +53,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="categoriesImage" destination="nqh-gb-8kM" id="jN0-h5-ADO"/>
-                                    <outlet property="categoriesLabel" destination="8H6-bs-8vo" id="iot-34-mZc"/>
-                                    <segue destination="PNl-a5-4SV" kind="showDetail" identifier="showdetailsCategories" id="ufb-E1-afF"/>
+                                    <outlet property="categoriesImage" destination="nqh-gb-8kM" id="v3B-kZ-zpf"/>
+                                    <outlet property="categoriesLabel" destination="8H6-bs-8vo" id="QD7-3W-O13"/>
+                                    <segue destination="PNl-a5-4SV" kind="show" identifier="showCategories" id="M8h-Zf-5m9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -72,7 +68,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ooh-US-4K6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989.60000000000002" y="188.45577211394306"/>
+            <point key="canvasLocation" x="1090" y="462"/>
         </scene>
         <!--Allenamento-->
         <scene sceneID="KhB-Pu-kRt">
@@ -93,81 +89,39 @@
             </objects>
             <point key="canvasLocation" x="135" y="462"/>
         </scene>
-        <!--View Controller-->
+        <!--Categories Details View Controller-->
         <scene sceneID="BjK-2F-26u">
             <objects>
-                <viewController id="PNl-a5-4SV" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="PNl-a5-4SV" customClass="CategoriesDetailsViewController" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S77-e3-Ggs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L48-tv-Dv0">
-                                <rect key="frame" x="41" y="71" width="292" height="197"/>
+                                <rect key="frame" x="41" y="124" width="292" height="197"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sY-bN-Pop">
+                                <rect key="frame" x="136" y="449" width="103" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Conferma">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="YFa-Rk-WV8"/>
                     </view>
+                    <connections>
+                        <outlet property="categoryImage" destination="L48-tv-Dv0" id="AO6-wb-fbe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tw8-A2-MPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1792.8" y="176.76161919040482"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="UwN-TI-lR6">
-            <objects>
-                <viewController id="RUd-L0-37U" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="blY-j6-JK5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afL-Wo-aft">
-                                <rect key="frame" x="0.0" y="274" width="375" height="198"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
-                                <state key="normal" title="Pilates" backgroundImage="Schermata 2017-09-30 alle 10.30.41">
-                                    <color key="titleColor" red="0.079733543099999998" green="0.037688001989999997" blue="0.021095013249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaD-2g-EV0">
-                                <rect key="frame" x="0.0" y="472" width="375" height="195"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
-                                <state key="normal" title="Total Body" backgroundImage="Schermata 2017-09-30 alle 10.30.50">
-                                    <color key="titleColor" red="0.096333049239999996" green="0.078446127470000002" blue="0.024946436289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dKe-kW-hP9">
-                                <rect key="frame" x="59" y="0.0" width="235" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Allenati con me
-e aumenta il tuo livello!</string>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="23"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMX-6C-qLg">
-                                <rect key="frame" x="-59" y="61" width="375" height="205"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
-                                <state key="normal" title="Streching" backgroundImage="Schermata 2017-09-30 alle 10.32.56">
-                                    <color key="titleColor" red="0.028650529680000002" green="0.04402796179" blue="0.017472904179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.71280819179999999" green="0.81170368189999997" blue="0.81571298839999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <viewLayoutGuide key="safeArea" id="ivW-8G-wt5"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c4y-kO-K1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2484" y="217"/>
+            <point key="canvasLocation" x="1930" y="461"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Schermata 2017-09-30 alle 10.30.41" width="930" height="476"/>
-        <image name="Schermata 2017-09-30 alle 10.30.50" width="926" height="480"/>
-        <image name="Schermata 2017-09-30 alle 10.32.56" width="930" height="576"/>
         <image name="side-bending-posture" width="32" height="32"/>
     </resources>
     <color key="tintColor" red="0.25449371610238758" green="0.74019084991383133" blue="0.80371589467005078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

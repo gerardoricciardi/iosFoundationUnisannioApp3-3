@@ -259,37 +259,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="21y-1s-Ujk">
-                                <rect key="frame" x="80" y="86" width="255" height="229"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Grazie ai miei workouts
- ti aiuterò a migliorare 
-il tuo benessere
-fisico in pochi minuti.
-Ti seguirò in ufficio e ti
-permetterò giorno per giorno
- di aumentare la tua preparazione</string>
-                                <color key="textColor" red="0.052646175026893616" green="0.10013184696435928" blue="0.027402250096201897" alpha="0.68035637842465757" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="21y-1s-Ujk">
+                                <rect key="frame" x="55" y="86" width="304" height="418"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="418" id="Drw-RT-Fev"/>
+                                    <constraint firstAttribute="width" constant="302" id="lRN-0A-2VU"/>
+                                </constraints>
+                                <string key="text">Il lavoro ti porta via troppo tempo e non hai modo di dedicarti a te stesso ?                            Health Desk fa al caso tuo! I miei workouts sono pensati appositamente per te!</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0k-Mx-ibM">
-                                <rect key="frame" x="109" y="595" width="197" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0k-Mx-ibM">
+                                <rect key="frame" x="108" y="595" width="198" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5jy-3I-fJg"/>
+                                    <constraint firstAttribute="width" constant="197" id="q0d-i5-dmM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="Skip &gt;">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="n6m-lQ-URq" kind="presentation" modalTransitionStyle="crossDissolve" id="3nP-eY-p8t"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuQ-Ov-2Sp">
-                                <rect key="frame" x="109" y="491" width="197" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="19"/>
-                                <state key="normal" title="LOGIN">
-                                    <color key="titleColor" red="0.07024180144071579" green="0.091585449874401093" blue="0.02827204205095768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuQ-Ov-2Sp">
+                                <rect key="frame" x="108" y="549" width="198" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="197" id="Z9V-A3-wUz"/>
+                                    <constraint firstAttribute="height" constant="70" id="xWZ-FO-Spa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <state key="normal" title="Registrati">
+                                    <color key="titleColor" red="0.069992132484912872" green="0.62308233976364136" blue="0.82841664552688599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="olk-Hv-Kkv" kind="show" id="gBW-ap-aHU"/>
@@ -297,6 +301,21 @@ permetterò giorno per giorno
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R0k-Mx-ibM" firstAttribute="top" secondItem="21y-1s-Ujk" secondAttribute="bottom" constant="91" id="3ar-fM-BCd"/>
+                            <constraint firstItem="R0k-Mx-ibM" firstAttribute="top" secondItem="zuQ-Ov-2Sp" secondAttribute="bottom" constant="8" id="5Lc-jF-GjI"/>
+                            <constraint firstItem="ida-5n-IRo" firstAttribute="trailing" secondItem="R0k-Mx-ibM" secondAttribute="trailing" constant="108" id="8te-Se-yfc"/>
+                            <constraint firstItem="21y-1s-Ujk" firstAttribute="top" secondItem="ida-5n-IRo" secondAttribute="top" constant="66" id="FLG-V7-PWP"/>
+                            <constraint firstItem="zuQ-Ov-2Sp" firstAttribute="top" secondItem="21y-1s-Ujk" secondAttribute="bottom" constant="45" id="FzV-tf-blV"/>
+                            <constraint firstItem="ida-5n-IRo" firstAttribute="trailing" secondItem="21y-1s-Ujk" secondAttribute="trailing" constant="55" id="GHX-Xa-pV0"/>
+                            <constraint firstItem="21y-1s-Ujk" firstAttribute="leading" secondItem="ida-5n-IRo" secondAttribute="leading" constant="55" id="KJy-Iz-l6w"/>
+                            <constraint firstItem="zuQ-Ov-2Sp" firstAttribute="leading" secondItem="ida-5n-IRo" secondAttribute="leading" constant="108" id="LUd-2h-nUZ"/>
+                            <constraint firstItem="21y-1s-Ujk" firstAttribute="leading" secondItem="ida-5n-IRo" secondAttribute="leading" constant="55" id="jLf-CZ-1tE"/>
+                            <constraint firstItem="R0k-Mx-ibM" firstAttribute="top" secondItem="zuQ-Ov-2Sp" secondAttribute="bottom" constant="8" id="qIc-X9-2rJ"/>
+                            <constraint firstItem="R0k-Mx-ibM" firstAttribute="leading" secondItem="ida-5n-IRo" secondAttribute="leading" constant="108" id="tH0-SC-YnB"/>
+                            <constraint firstItem="ida-5n-IRo" firstAttribute="trailing" secondItem="zuQ-Ov-2Sp" secondAttribute="trailing" constant="108" id="uDV-06-iTs"/>
+                            <constraint firstItem="ida-5n-IRo" firstAttribute="bottom" secondItem="R0k-Mx-ibM" secondAttribute="bottom" constant="111" id="uWd-9x-RGk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ida-5n-IRo"/>
                     </view>
                 </viewController>

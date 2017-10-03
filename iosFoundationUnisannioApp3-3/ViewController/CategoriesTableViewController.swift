@@ -10,13 +10,12 @@ import UIKit
 
 class CategoriesTableViewController: UITableViewController {
 
-    let color = UIColor(red: 55.0/255.0, green: 153.0/255.0, blue: 178.0/255.0, alpha: 1.0)
-    var categoriesThumb = ["stretching", "pilates", "totalBody"]
+    let color = UIColor(red: 54.0/255.0, green: 155.0/255.0, blue: 184.0/255.0, alpha: 1.0)
+    var categoriesImage = ["stretching", "pilates", "totalBody"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tableView.backgroundColor = color
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -38,35 +37,35 @@ class CategoriesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return categoriesThumb.count
+        return categoriesImage.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell", for: indexPath) as! CategoriesTableViewCell
 
+        cell.categoriesImage.image = UIImage(named: categoriesImage[indexPath.row])
+        cell.categoriesLabel.text = categoriesImage[indexPath.row]
+        
+        
         // Configure the cell...
-        cell.categoriesImage.image = UIImage(named: categoriesThumb[indexPath.row])
-        cell.categoriesLabel.text = categoriesThumb[indexPath.row]
-        cell.backgroundColor = color
 
         return cell
     }
-    /*
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetails"{
+        if segue.identifier == "showCategories"{
             if let indexPath = tableView.indexPathForSelectedRow{
-                let destinationController = segue.destination as!DetailsViewController
+                let destinationController = segue.destination as! CategoriesDetailsViewController
                 // destinationController.restaurantName = immagini[indexPath.row]
                 //destinationController.locationName = location[indexPath.row]
                 //destinationController.typeName = type[indexPath.row]
-                destinationController.ristorante = ristoranti[indexPath.row]
-                
+                //destinationController.ristorante = ristoranti[indexPath.row]
+                destinationController.thumb = categoriesImage[indexPath.row]
                 
             }
         }
     }
- */
 
     /*
     // Override to support conditional editing of the table view.

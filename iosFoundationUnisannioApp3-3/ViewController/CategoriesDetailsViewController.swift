@@ -1,30 +1,24 @@
 //
-//  IntroViewControllerBenvenuto.swift
+//  CategoriesDetailsViewController.swift
 //  iosFoundationUnisannioApp3-3
 //
-//  Created by Ricciardi Gerardo on 30/09/17.
+//  Created by Ricciardi Gerardo on 03/10/17.
 //  Copyright © 2017 Ricciardi Gerardo. All rights reserved.
 //
 
 import UIKit
 
-class IntroViewControllerBenvenuto: UIViewController {
+class CategoriesDetailsViewController: UIViewController {
 
+    @IBOutlet weak var categoryImage: UIImageView!
+    
+    var thumb = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        let background = UIImage(named: "benvenuto")
-        
-        var imageView : UIImageView!
-        imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode =  UIViewContentMode.scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.image = background
-        imageView.center = view.center
-        view.addSubview(imageView)
-        self.view.sendSubview(toBack: imageView)
-        
 
+        categoryImage.image = UIImage(named: thumb)
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {

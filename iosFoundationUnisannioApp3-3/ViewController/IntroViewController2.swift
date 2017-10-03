@@ -18,7 +18,7 @@ class IntroViewController2: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let background = UIImage(named: "2")
+        let background = UIImage(named: "benvenuto")
         
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
