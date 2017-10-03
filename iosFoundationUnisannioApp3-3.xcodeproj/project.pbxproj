@@ -26,6 +26,7 @@
 		0797D1E41F7E734C0062A655 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0797D1E31F7E734C0062A655 /* TabBarController.swift */; };
 		1372FC1E1F83A0CB00FE243F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1372FC1D1F83A0CB00FE243F /* CloudKit.framework */; };
 		1372FC201F83A0D600FE243F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1372FC1F1F83A0D600FE243F /* HealthKit.framework */; };
+		8F0B72D71F83B513007E809D /* TestSaverRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B72D61F83B512007E809D /* TestSaverRecord.swift */; };
 		8F2499DE1F7BF59F001AEA9E /* Esercizio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */; };
 		8F2499E01F7BF89D001AEA9E /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499DF1F7BF89D001AEA9E /* Workout.swift */; };
 		8F2499E21F7E4723001AEA9E /* EsercizioDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */; };
@@ -78,6 +79,7 @@
 		1372FC1C1F839F3900FE243F /* iosFoundationUnisannioApp3-3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iosFoundationUnisannioApp3-3.entitlements"; sourceTree = "<group>"; };
 		1372FC1D1F83A0CB00FE243F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		1372FC1F1F83A0D600FE243F /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		8F0B72D61F83B512007E809D /* TestSaverRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestSaverRecord.swift; path = ../../../../Desktop/TestSaverRecord.swift; sourceTree = "<group>"; };
 		8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Esercizio.swift; sourceTree = "<group>"; };
 		8F2499DF1F7BF89D001AEA9E /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsercizioDAO.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 		0752074D1F7F0300004EE4FF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8F0B72D61F83B512007E809D /* TestSaverRecord.swift */,
 				8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */,
 				8F2499E31F7E4732001AEA9E /* WorkoutDAO.swift */,
 				8F2C49E91F7BAF3A006EC668 /* Utente.swift */,
@@ -366,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F0B72D71F83B513007E809D /* TestSaverRecord.swift in Sources */,
 				076EDB5B1F7FB84B00A15D6D /* IntroViewController2.swift in Sources */,
 				8F2C49EA1F7BAF3A006EC668 /* Utente.swift in Sources */,
 				0733E1511F7AA7840066F286 /* IntroViewController.swift in Sources */,
