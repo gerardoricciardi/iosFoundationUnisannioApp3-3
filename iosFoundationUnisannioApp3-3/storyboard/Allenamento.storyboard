@@ -159,25 +159,33 @@
                                     <action selector="pauseAction:" destination="dH7-y5-Fse" eventType="touchUpInside" id="bXK-Zd-kTa"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76R-w9-NM1">
+                                <rect key="frame" x="250" y="105" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SSl-z5-ht6" firstAttribute="leading" secondItem="lpt-LV-wqt" secondAttribute="trailing" constant="142" id="5cz-jC-o63"/>
+                            <constraint firstItem="SSl-z5-ht6" firstAttribute="leading" secondItem="lpt-LV-wqt" secondAttribute="trailing" constant="42" id="5cz-jC-o63"/>
                             <constraint firstItem="ukE-1j-yW7" firstAttribute="leading" secondItem="X80-51-sX0" secondAttribute="leading" constant="16" id="8N9-hT-tl0"/>
                             <constraint firstItem="X80-51-sX0" firstAttribute="bottom" secondItem="ukE-1j-yW7" secondAttribute="bottom" constant="24" id="A0m-wN-Myr"/>
                             <constraint firstItem="ukE-1j-yW7" firstAttribute="top" secondItem="X80-51-sX0" secondAttribute="top" constant="104" id="E8q-3k-c99"/>
                             <constraint firstItem="lpt-LV-wqt" firstAttribute="top" secondItem="X80-51-sX0" secondAttribute="top" constant="31" id="ETw-4O-ZBe"/>
-                            <constraint firstItem="X80-51-sX0" firstAttribute="trailing" secondItem="SSl-z5-ht6" secondAttribute="trailing" constant="98" id="H3T-D6-f8v"/>
+                            <constraint firstItem="X80-51-sX0" firstAttribute="trailing" secondItem="SSl-z5-ht6" secondAttribute="trailing" constant="198" id="H3T-D6-f8v"/>
                             <constraint firstItem="X80-51-sX0" firstAttribute="trailing" secondItem="ukE-1j-yW7" secondAttribute="trailing" constant="16" id="M6l-1i-Rpr"/>
-                            <constraint firstItem="SSl-z5-ht6" firstAttribute="top" secondItem="X80-51-sX0" secondAttribute="top" constant="31" id="Mof-LM-zZB"/>
-                            <constraint firstItem="SSl-z5-ht6" firstAttribute="leading" secondItem="lpt-LV-wqt" secondAttribute="trailing" constant="142" id="NaY-JU-eal"/>
-                            <constraint firstItem="ukE-1j-yW7" firstAttribute="top" secondItem="SSl-z5-ht6" secondAttribute="bottom" constant="43" id="bs9-5R-EaG"/>
+                            <constraint firstItem="SSl-z5-ht6" firstAttribute="top" secondItem="X80-51-sX0" secondAttribute="top" constant="36" id="Mof-LM-zZB"/>
+                            <constraint firstItem="SSl-z5-ht6" firstAttribute="leading" secondItem="lpt-LV-wqt" secondAttribute="trailing" constant="42" id="NaY-JU-eal"/>
+                            <constraint firstItem="ukE-1j-yW7" firstAttribute="top" secondItem="SSl-z5-ht6" secondAttribute="bottom" constant="38" id="bs9-5R-EaG"/>
                             <constraint firstItem="ukE-1j-yW7" firstAttribute="top" secondItem="lpt-LV-wqt" secondAttribute="bottom" constant="38" id="xqj-zp-jgD"/>
                             <constraint firstItem="lpt-LV-wqt" firstAttribute="leading" secondItem="X80-51-sX0" secondAttribute="leading" constant="63" id="z7B-2w-vmT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X80-51-sX0"/>
                     </view>
                     <connections>
+                        <outlet property="timerLabel" destination="76R-w9-NM1" id="7ZU-O3-lQd"/>
                         <outlet property="videoView" destination="ukE-1j-yW7" id="Ygi-54-Lnh"/>
                     </connections>
                 </viewController>
