@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HealthKit
 
 class IntroViewController: UIViewController {
     
@@ -36,13 +37,28 @@ class IntroViewController: UIViewController {
         view.addSubview(imageView)
         self.view.sendSubview(toBack: imageView)
         
-        //button.backgroundColor = UIColor.gray
-    
         
-        // Do any additional setup after loading the view, typically from a nib.
+        //2. Build the workout using data from your Prancercise workout
+        let workout = HKWorkout(activityType: .other,
+                                start: Date.init(timeIntervalSinceNow: TimeInterval.init(exactly: 5)!),
+                                end: Date.init(timeIntervalSinceNow: TimeInterval.init(exactly: 10)!),
+                                duration: Date.init(timeIntervalSinceNow: TimeInterval.init(exactly: 10)!).timeIntervalSince(Date.init(timeIntervalSinceNow: TimeInterval.init(exactly: 5)!)),
+                                totalEnergyBurned: nil,
+                                totalDistance: nil,
+                                device: HKDevice.local(),
+                                metadata: nil)
+        
+        //3. Save your workout to HealthKit
+        let healthStore = HKHealthStore()
+        healthStore.save(workout) { (success, error) in
+            
+        }
     }
+
+   
     
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
