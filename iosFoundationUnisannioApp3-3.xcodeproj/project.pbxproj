@@ -33,6 +33,7 @@
 		8F2499E21F7E4723001AEA9E /* EsercizioDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */; };
 		8F2499E41F7E4732001AEA9E /* WorkoutDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499E31F7E4732001AEA9E /* WorkoutDAO.swift */; };
 		8F2C49EA1F7BAF3A006EC668 /* Utente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2C49E91F7BAF3A006EC668 /* Utente.swift */; };
+		E6F22FFA1F84C1DD00903A2F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F22FF91F84C1DD00903A2F /* CloudKit.framework */; };
 		F8A5E9791F83980D009D186F /* ViewControllerProfilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */; };
 		F8C3113A1F839F3800C1FFE2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C311391F839F3800C1FFE2 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
@@ -87,6 +88,7 @@
 		8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsercizioDAO.swift; sourceTree = "<group>"; };
 		8F2499E31F7E4732001AEA9E /* WorkoutDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDAO.swift; sourceTree = "<group>"; };
 		8F2C49E91F7BAF3A006EC668 /* Utente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utente.swift; sourceTree = "<group>"; };
+		E6F22FF91F84C1DD00903A2F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProfilo.swift; sourceTree = "<group>"; };
 		F8C311381F839EEB00C1FFE2 /* iosFoundationUnisannioApp3-3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iosFoundationUnisannioApp3-3.entitlements"; sourceTree = "<group>"; };
 		F8C311391F839F3800C1FFE2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -98,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8C3113A1F839F3800C1FFE2 /* HealthKit.framework in Frameworks */,
+				E6F22FFA1F84C1DD00903A2F /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +221,7 @@
 		07A5EB8F1F8397D300337BF1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E6F22FF91F84C1DD00903A2F /* CloudKit.framework */,
 				F8C311391F839F3800C1FFE2 /* HealthKit.framework */,
 			);
 			name = Frameworks;
@@ -300,7 +304,7 @@
 								enabled = 1;
 							};
 							com.apple.Push = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.iCloud = {
 								enabled = 1;
