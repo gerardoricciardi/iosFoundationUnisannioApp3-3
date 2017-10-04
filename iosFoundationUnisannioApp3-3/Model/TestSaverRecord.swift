@@ -12,9 +12,9 @@ import UIKit
 class TestSaverRecord{
     
     
-    static func loadExerciseByName(nomeEsercizio : String){
+    static func loadExerciseFotoByName(nomeEsercizio : String) -> UIImage{
         print("****Load Record*****")
-        
+        var image:UIImage!
         let container = CKContainer.default
         var currentRecord: CKRecord?
         var recordZone: CKRecordZone?
@@ -34,19 +34,43 @@ class TestSaverRecord{
                 return
             }
             print("Found \(records.count) records matching query")
-            
+
             for record in records{
-                print(record.object(forKey:"nome"))
-                let fotoEsercizio: CKAsset;
-                fotoEsercizio = record.object(forKey: "foto") as! CKAsset
+                print(record.object(forKey:"nome")!)
                 
-//               url fotoEsercizio.fileURL
                 
+                guard let asset = record["foto"] as? CKAsset else {
+                    print("Image missing from record")
+                    return
+                }
+                
+                guard let imageData = try?Data(contentsOf: asset.fileURL) else {
+                    print("Invalid Image")
+                    return
+                }
+                
+                 image = UIImage(data: imageData)
+                
+            
+//
+//
+//                let fotoEsercizio :CKAsset! = record.object(forKey: "foto") as! CKAsset
+//                if let file = fotoEsercizio {
+//                     let data=try?Data(contentsOf: file.fileURL) {
+//                       return  image=UIImage(data: data)
+//                    }
+//                }
+//
+//            }
+//
+//        }
+////        image=UIImage(named:"rtg")
+//
             }
-            
-            
-        }
+
         
+    }
+        return image
     }
     
     // fare un metodo che si prende tutti gli esercizi
@@ -86,6 +110,7 @@ class TestSaverRecord{
         
     }
     
-    
-}
+    //fare metodo getEserciziByworkout
+    }
+
 
