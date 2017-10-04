@@ -17,7 +17,6 @@ class TestSaverRecord{
         
         let container = CKContainer.default
         var currentRecord: CKRecord?
-        
         var recordZone: CKRecordZone?
         var privateDatabase: CKDatabase?
         

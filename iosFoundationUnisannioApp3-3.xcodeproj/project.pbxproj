@@ -16,10 +16,11 @@
 		0733E15C1F7AA7840066F286 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0733E15A1F7AA7840066F286 /* LaunchScreen.storyboard */; };
 		0733E1671F7AA7840066F286 /* iosFoundationUnisannioApp3_3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0733E1661F7AA7840066F286 /* iosFoundationUnisannioApp3_3Tests.swift */; };
 		0733E1721F7AA7840066F286 /* iosFoundationUnisannioApp3_3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0733E1711F7AA7840066F286 /* iosFoundationUnisannioApp3_3UITests.swift */; };
+		0736832C1F84239200236D98 /* HealthKitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0736832B1F84239200236D98 /* HealthKitSetupAssistant.swift */; };
+		0736832E1F842F2200236D98 /* ProfileDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0736832D1F842F2200236D98 /* ProfileDataStore.swift */; };
+		073683301F842FC900236D98 /* UserHealthProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0736832F1F842FC900236D98 /* UserHealthProfile.swift */; };
 		07505BF71F7E9E0400E1A88B /* Impostazioni.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07505BF51F7E9E0400E1A88B /* Impostazioni.storyboard */; };
 		075207501F7F04FB004EE4FF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752074F1F7F04FB004EE4FF /* MainViewController.swift */; };
-		0757B2DB1F839E8C00DBFC9F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0757B2DA1F839E8B00DBFC9F /* CloudKit.framework */; };
-		0757B2DD1F839EB300DBFC9F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0757B2DC1F839EB300DBFC9F /* HealthKit.framework */; };
 		0757B2DF1F83A41400DBFC9F /* CategoriesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0757B2DE1F83A41400DBFC9F /* CategoriesDetailsViewController.swift */; };
 		076EDB591F7FB61300A15D6D /* IntroViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076EDB581F7FB61300A15D6D /* IntroViewController1.swift */; };
 		076EDB5B1F7FB84B00A15D6D /* IntroViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076EDB5A1F7FB84B00A15D6D /* IntroViewController2.swift */; };
@@ -36,6 +37,7 @@
 		8F2499E41F7E4732001AEA9E /* WorkoutDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499E31F7E4732001AEA9E /* WorkoutDAO.swift */; };
 		8F2C49EA1F7BAF3A006EC668 /* Utente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2C49E91F7BAF3A006EC668 /* Utente.swift */; };
 		F8A5E9791F83980D009D186F /* ViewControllerProfilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */; };
+		F8C3113A1F839F3800C1FFE2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C311391F839F3800C1FFE2 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,11 +73,11 @@
 		0733E16D1F7AA7840066F286 /* iosFoundationUnisannioApp3-3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iosFoundationUnisannioApp3-3UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0733E1711F7AA7840066F286 /* iosFoundationUnisannioApp3_3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosFoundationUnisannioApp3_3UITests.swift; sourceTree = "<group>"; };
 		0733E1731F7AA7840066F286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0736832B1F84239200236D98 /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSetupAssistant.swift; sourceTree = "<group>"; };
+		0736832D1F842F2200236D98 /* ProfileDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataStore.swift; sourceTree = "<group>"; };
+		0736832F1F842FC900236D98 /* UserHealthProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHealthProfile.swift; sourceTree = "<group>"; };
 		07505BF61F7E9E0400E1A88B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "iosFoundationUnisannioApp3-3/Base.lproj/Impostazioni.storyboard"; sourceTree = "<group>"; };
 		0752074F1F7F04FB004EE4FF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		0757B2D71F839DEF00DBFC9F /* iosFoundationUnisannioApp3-3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iosFoundationUnisannioApp3-3.entitlements"; sourceTree = "<group>"; };
-		0757B2DA1F839E8B00DBFC9F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		0757B2DC1F839EB300DBFC9F /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		0757B2DE1F83A41400DBFC9F /* CategoriesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesDetailsViewController.swift; sourceTree = "<group>"; };
 		076EDB581F7FB61300A15D6D /* IntroViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController1.swift; sourceTree = "<group>"; };
 		076EDB5A1F7FB84B00A15D6D /* IntroViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController2.swift; sourceTree = "<group>"; };
@@ -84,7 +86,7 @@
 		0797D1DF1F7E71F80062A655 /* Utente.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Utente.storyboard; sourceTree = "<group>"; };
 		0797D1E11F7E72290062A655 /* Allenamento.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Allenamento.storyboard; sourceTree = "<group>"; };
 		0797D1E31F7E734C0062A655 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		07A5EB981F839C0900337BF1 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoriesTableViewCell.swift; path = ../storyboard/CategoriesTableViewCell.swift; sourceTree = "<group>"; };
+		07A5EB981F839C0900337BF1 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		07A5EB9A1F839C2400337BF1 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
 		8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Esercizio.swift; sourceTree = "<group>"; };
 		8F2499DF1F7BF89D001AEA9E /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
@@ -92,6 +94,8 @@
 		8F2499E31F7E4732001AEA9E /* WorkoutDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDAO.swift; sourceTree = "<group>"; };
 		8F2C49E91F7BAF3A006EC668 /* Utente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utente.swift; sourceTree = "<group>"; };
 		F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProfilo.swift; sourceTree = "<group>"; };
+		F8C311381F839EEB00C1FFE2 /* iosFoundationUnisannioApp3-3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iosFoundationUnisannioApp3-3.entitlements"; sourceTree = "<group>"; };
+		F8C311391F839F3800C1FFE2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0757B2DB1F839E8C00DBFC9F /* CloudKit.framework in Frameworks */,
-				0757B2DD1F839EB300DBFC9F /* HealthKit.framework in Frameworks */,
+				F8C3113A1F839F3800C1FFE2 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +148,7 @@
 		0733E14D1F7AA7840066F286 /* iosFoundationUnisannioApp3-3 */ = {
 			isa = PBXGroup;
 			children = (
-				0757B2D71F839DEF00DBFC9F /* iosFoundationUnisannioApp3-3.entitlements */,
+				F8C311381F839EEB00C1FFE2 /* iosFoundationUnisannioApp3-3.entitlements */,
 				0733E14E1F7AA7840066F286 /* AppDelegate.swift */,
 				0752074C1F7F02BB004EE4FF /* ViewController */,
 				0752074D1F7F0300004EE4FF /* Model */,
@@ -175,13 +178,31 @@
 			path = "iosFoundationUnisannioApp3-3UITests";
 			sourceTree = "<group>";
 		};
-		0752074C1F7F02BB004EE4FF /* ViewController */ = {
+		073683251F840A4900236D98 /* Workout */ = {
 			isa = PBXGroup;
 			children = (
-				0797D1E31F7E734C0062A655 /* TabBarController.swift */,
 				07A5EB981F839C0900337BF1 /* CategoriesTableViewCell.swift */,
 				07A5EB9A1F839C2400337BF1 /* CategoriesTableViewController.swift */,
 				0757B2DE1F83A41400DBFC9F /* CategoriesDetailsViewController.swift */,
+			);
+			path = Workout;
+			sourceTree = "<group>";
+		};
+		0736832A1F84235000236D98 /* Health Kit */ = {
+			isa = PBXGroup;
+			children = (
+				0736832B1F84239200236D98 /* HealthKitSetupAssistant.swift */,
+				0736832D1F842F2200236D98 /* ProfileDataStore.swift */,
+				0736832F1F842FC900236D98 /* UserHealthProfile.swift */,
+			);
+			path = "Health Kit";
+			sourceTree = "<group>";
+		};
+		0752074C1F7F02BB004EE4FF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				073683251F840A4900236D98 /* Workout */,
+				0797D1E31F7E734C0062A655 /* TabBarController.swift */,
 				076EDB5C1F7FB8E200A15D6D /* IntroViewController3.swift */,
 				076EDB5A1F7FB84B00A15D6D /* IntroViewController2.swift */,
 				F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */,
@@ -189,6 +210,7 @@
 				076EDB581F7FB61300A15D6D /* IntroViewController1.swift */,
 				0733E1501F7AA7840066F286 /* IntroViewController.swift */,
 				0752074F1F7F04FB004EE4FF /* MainViewController.swift */,
+				0736832A1F84235000236D98 /* Health Kit */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -221,8 +243,7 @@
 		07A5EB8F1F8397D300337BF1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0757B2DC1F839EB300DBFC9F /* HealthKit.framework */,
-				0757B2DA1F839E8B00DBFC9F /* CloudKit.framework */,
+				F8C311391F839F3800C1FFE2 /* HealthKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -304,7 +325,7 @@
 								enabled = 1;
 							};
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.iCloud = {
 								enabled = 1;
@@ -382,11 +403,13 @@
 				071E1BAA1F83BFB10097C074 /* TestSaverRecord.swift in Sources */,
 				07A5EB991F839C0900337BF1 /* CategoriesTableViewCell.swift in Sources */,
 				8F2C49EA1F7BAF3A006EC668 /* Utente.swift in Sources */,
+				073683301F842FC900236D98 /* UserHealthProfile.swift in Sources */,
 				0757B2DF1F83A41400DBFC9F /* CategoriesDetailsViewController.swift in Sources */,
 				0733E1511F7AA7840066F286 /* IntroViewController.swift in Sources */,
 				075207501F7F04FB004EE4FF /* MainViewController.swift in Sources */,
 				8F2499E41F7E4732001AEA9E /* WorkoutDAO.swift in Sources */,
 				078893781F7FF95F001D8059 /* IntroViewControllerBenvenuto.swift in Sources */,
+				0736832C1F84239200236D98 /* HealthKitSetupAssistant.swift in Sources */,
 				0797D1E41F7E734C0062A655 /* TabBarController.swift in Sources */,
 				0733E1571F7AA7840066F286 /* iosFoundationUnisannioApp3_3.xcdatamodeld in Sources */,
 				8F2499DE1F7BF59F001AEA9E /* Esercizio.swift in Sources */,
@@ -396,6 +419,7 @@
 				8F2499E21F7E4723001AEA9E /* EsercizioDAO.swift in Sources */,
 				076EDB5D1F7FB8E200A15D6D /* IntroViewController3.swift in Sources */,
 				F8A5E9791F83980D009D186F /* ViewControllerProfilo.swift in Sources */,
+				0736832E1F842F2200236D98 /* ProfileDataStore.swift in Sources */,
 				07A5EB9B1F839C2400337BF1 /* CategoriesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

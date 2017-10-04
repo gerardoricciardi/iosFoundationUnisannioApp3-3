@@ -13,10 +13,15 @@ class MainViewController: UIViewController {
     var segueTabBar = "tabBar"
     var segueFirstView = "intro"
     
+    private enum HealthkitSetupError: Error {
+        case notAvailableOnDevice
+        case dataTypeNotAvailable
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         let defaults = UserDefaults.standard
         
-        if let check = defaults.string(forKey: "scrivi Username"){
+        if defaults.string(forKey: "scrivi Username") != nil{
             //utente gia presente, vai alla tabbar
             print("Sono nel main chiave username trovata")
             
@@ -44,12 +49,29 @@ class MainViewController: UIViewController {
         view.addSubview(imageView)
         self.view.sendSubview(toBack: imageView)
         
+        tabBarController?.tabBar.isHidden = true
+        navigationController?.navigationBar.isHidden = true
         
-        //print(segueFirstView)
-        _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
+        
+        authorizeHealthKit()
+        
+        _ = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
         
     }
-    
+    private func authorizeHealthKit() {
+        HealthKitSetupAssistant.authorizeHealthKit { (authorized, error) in
+            guard authorized else {
+                let baseMessage = "HealthKit Authorization Failed"
+                if let error = error {
+                    print("\(baseMessage). Reason: \(error.localizedDescription)")
+                } else {
+                    print(baseMessage)
+                }
+                return
+            }
+            print("HealthKit Successfully Authorized.")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
