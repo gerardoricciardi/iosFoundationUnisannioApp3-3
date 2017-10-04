@@ -31,6 +31,8 @@
 		0797D1E41F7E734C0062A655 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0797D1E31F7E734C0062A655 /* TabBarController.swift */; };
 		07A5EB991F839C0900337BF1 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A5EB981F839C0900337BF1 /* CategoriesTableViewCell.swift */; };
 		07A5EB9B1F839C2400337BF1 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A5EB9A1F839C2400337BF1 /* CategoriesTableViewController.swift */; };
+		07C5C7721F84DFD7003DCB85 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C5C7711F84DFD7003DCB85 /* CloudKit.framework */; };
+		07C5C7C21F853D51003DCB85 /* VideoWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C5C7C11F853D51003DCB85 /* VideoWorkoutViewController.swift */; };
 		8F2499DE1F7BF59F001AEA9E /* Esercizio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */; };
 		8F2499E01F7BF89D001AEA9E /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499DF1F7BF89D001AEA9E /* Workout.swift */; };
 		8F2499E21F7E4723001AEA9E /* EsercizioDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */; };
@@ -91,6 +93,8 @@
 		0797D1E31F7E734C0062A655 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		07A5EB981F839C0900337BF1 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		07A5EB9A1F839C2400337BF1 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
+		07C5C7711F84DFD7003DCB85 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		07C5C7C11F853D51003DCB85 /* VideoWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoWorkoutViewController.swift; sourceTree = "<group>"; };
 		8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Esercizio.swift; sourceTree = "<group>"; };
 		8F2499DF1F7BF89D001AEA9E /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsercizioDAO.swift; sourceTree = "<group>"; };
@@ -208,7 +212,7 @@
 		0752074C1F7F02BB004EE4FF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				073683251F840A4900236D98 /* Workout */,
+				07C5C7C11F853D51003DCB85 /* VideoWorkoutViewController.swift */,
 				0797D1E31F7E734C0062A655 /* TabBarController.swift */,
 				8FD601BE1F84D148006AE871 /* TableViewControllerAllenamento.swift */,
 				8FD601C01F84D181006AE871 /* TableViewCellAllenamento.swift */,
@@ -219,6 +223,7 @@
 				076EDB581F7FB61300A15D6D /* IntroViewController1.swift */,
 				0733E1501F7AA7840066F286 /* IntroViewController.swift */,
 				0752074F1F7F04FB004EE4FF /* MainViewController.swift */,
+				073683251F840A4900236D98 /* Workout */,
 				0736832A1F84235000236D98 /* Health Kit */,
 			);
 			path = ViewController;
@@ -424,6 +429,7 @@
 				8FD601C11F84D181006AE871 /* TableViewCellAllenamento.swift in Sources */,
 				0797D1E41F7E734C0062A655 /* TabBarController.swift in Sources */,
 				0733E1571F7AA7840066F286 /* iosFoundationUnisannioApp3_3.xcdatamodeld in Sources */,
+				07C5C7C21F853D51003DCB85 /* VideoWorkoutViewController.swift in Sources */,
 				8F2499DE1F7BF59F001AEA9E /* Esercizio.swift in Sources */,
 				0733E14F1F7AA7840066F286 /* AppDelegate.swift in Sources */,
 				076EDB591F7FB61300A15D6D /* IntroViewController1.swift in Sources */,

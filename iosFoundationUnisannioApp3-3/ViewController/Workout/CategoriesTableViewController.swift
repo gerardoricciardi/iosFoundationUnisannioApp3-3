@@ -34,59 +34,28 @@ class CategoriesTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0{
-            return 1
-        }
-        else{
         return categoriesImage.count
-        }
-    }
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        var height = 0.0
-        if section == 0{
-            height = 20
-            
-        }
-        return CGFloat(height)
     }
     
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0{
-            return 0.0
-        }
-        else{
-            return 200.0
-        }
-    }
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        var title = ""
-        if section == 0{
-            title = "Categorie"
-        }
-        return title
+        return 210.0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell", for: indexPath) as! CategoriesTableViewCell
-            cell.backgroundColor = backgroundColor
-            return cell
-        }
-        else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell", for: indexPath) as! CategoriesTableViewCell
-            
-            print("indexPath.row \(indexPath.row)")
-            cell.categoriesImage.image = UIImage(named: categoriesImage[indexPath.row])
-            cell.categoriesLabel.text = categoriesImage[indexPath.row]
-            
-            cell.backgroundColor = backgroundColor
-            // Configure the cell...
-            return cell
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell", for: indexPath) as! CategoriesTableViewCell
+        
+        print("indexPath.row \(indexPath.row)")
+        cell.categoriesImage.image = UIImage(named: categoriesImage[indexPath.row])
+        cell.categoriesLabel.text = categoriesImage[indexPath.row]
+        
+        cell.backgroundColor = backgroundColor
+        // Configure the cell...
+        return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
