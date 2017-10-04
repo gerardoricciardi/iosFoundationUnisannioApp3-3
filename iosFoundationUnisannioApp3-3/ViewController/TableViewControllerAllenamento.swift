@@ -41,15 +41,19 @@ class TableViewControllerAllenamento: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellAllenamento", for: indexPath) as! TableViewCellAllenamento
         // Configure the cell..
-
-        var imageEsercizio: UIImage = TestSaverRecord.loadExerciseFotoByName(nomeEsercizio: "plunk")
         
-        if imageEsercizio != nil {
         
-            
-        cell.imageEsercizio!.image=imageEsercizio
+//        TestSaverRecord.getVideoFromEsercizio(nomeEsercizio: "allungamenti adduttori")
         
-        }
+//
+//        var imageEsercizio: UIImage = TestSaverRecord.loadExerciseFotoByName(nomeEsercizio: "plunk")
+//
+//        if imageEsercizio != nil {
+//
+//
+//        cell.imageEsercizio!.image=imageEsercizio
+//
+//        }
         return cell
         
     }

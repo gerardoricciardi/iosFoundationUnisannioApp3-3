@@ -142,18 +142,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ukE-1j-yW7">
-                                <rect key="frame" x="16" y="168" width="343" height="426"/>
+                                <rect key="frame" x="16" y="124" width="343" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpt-LV-wqt">
-                                <rect key="frame" x="63" y="95" width="30" height="35"/>
+                                <rect key="frame" x="63" y="51" width="30" height="35"/>
                                 <state key="normal" title="Play"/>
                                 <connections>
                                     <action selector="playAction:" destination="dH7-y5-Fse" eventType="touchUpInside" id="5x8-cM-dM2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSl-z5-ht6">
-                                <rect key="frame" x="235" y="95" width="42" height="30"/>
+                                <rect key="frame" x="235" y="51" width="42" height="30"/>
                                 <state key="normal" title="Pausa"/>
                                 <connections>
                                     <action selector="pauseAction:" destination="dH7-y5-Fse" eventType="touchUpInside" id="bXK-Zd-kTa"/>

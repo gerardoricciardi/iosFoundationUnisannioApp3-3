@@ -50,22 +50,7 @@ class TestSaverRecord{
                 }
                 
                  image = UIImage(data: imageData)
-                
-            
-//
-//
-//                let fotoEsercizio :CKAsset! = record.object(forKey: "foto") as! CKAsset
-//                if let file = fotoEsercizio {
-//                     let data=try?Data(contentsOf: file.fileURL) {
-//                       return  image=UIImage(data: data)
-//                    }
-//                }
-//
-//            }
-//
-//        }
-////        image=UIImage(named:"rtg")
-//
+  
             }
 
         
@@ -111,6 +96,58 @@ class TestSaverRecord{
     }
     
     //fare metodo getEserciziByworkout
+    
+    
+    static func getVideoFromEsercizio(nomeEsercizio:String)->URL{
+        var urlVideo : URL!
+        let container = CKContainer.default
+        var currentRecord: CKRecord?
+        var recordZone: CKRecordZone?
+        var privateDatabase: CKDatabase?
+        
+        privateDatabase = container().privateCloudDatabase
+        recordZone = CKRecordZone(zoneName: "_defaultZone")
+        
+        
+        let predicate = NSPredicate(format: "%K == %@", "nome", nomeEsercizio)
+        
+        let query = CKQuery(recordType: "Esercizi", predicate: predicate)
+        privateDatabase?.perform(query, inZoneWith: nil) {
+            (records, error) -> Void in
+            guard let records = records else {
+                print("Error querying records: ", error)
+                return
+            }
+            print("Found \(records.count) records matching query")
+            
+                
+                for record in records{
+                    print(record.object(forKey:"nome")!)
+                    
+                    
+                    guard let asset = record["video"] as? CKAsset else {
+                        print("Video missing from record")
+                        return
+                    }
+                    
+                    guard let videoData = try?Data(contentsOf: asset.fileURL) else {
+                        print("Invalid Video")
+                        return
+                    }
+                    
+                    urlVideo=asset.fileURL
+                    
+                }
+
+        
     }
+        return urlVideo
+
+    }
+
+
+}
+
+
 
 
