@@ -41,10 +41,6 @@
                                         <rect key="frame" x="0.0" y="0.0" width="186" height="30"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.07973354309797287" green="0.037688001990318298" blue="0.021095013245940208" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="7MU-5J-3wM"/>
-                                            <constraint firstAttribute="width" constant="186" id="mYf-B5-oAR"/>
-                                        </constraints>
                                         <color key="textColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="yes" keyboardType="namePhonePad" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="username"/>
@@ -84,19 +80,14 @@
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Pkl-d7-7zn" firstAttribute="top" secondItem="dyy-hi-QZ1" secondAttribute="bottom" constant="80" id="9Lb-11-InO"/>
                                     <constraint firstAttribute="trailing" secondItem="Pkl-d7-7zn" secondAttribute="trailing" id="Gzb-Zf-3uf"/>
-                                    <constraint firstItem="dyy-hi-QZ1" firstAttribute="top" secondItem="sLy-op-q0T" secondAttribute="top" id="Nva-Vl-jeQ"/>
                                     <constraint firstAttribute="height" constant="250" id="Q54-PA-NI0"/>
-                                    <constraint firstItem="Pkl-d7-7zn" firstAttribute="top" secondItem="dyy-hi-QZ1" secondAttribute="bottom" constant="80" id="Qkx-sY-8mH"/>
                                     <constraint firstAttribute="bottom" secondItem="677-rl-s5M" secondAttribute="bottom" id="UHJ-eu-aSJ"/>
                                     <constraint firstItem="Pkl-d7-7zn" firstAttribute="leading" secondItem="sLy-op-q0T" secondAttribute="leading" id="d3L-8x-bda"/>
                                     <constraint firstAttribute="trailing" secondItem="677-rl-s5M" secondAttribute="trailing" id="ezH-ue-dOB"/>
                                     <constraint firstItem="677-rl-s5M" firstAttribute="top" secondItem="Pkl-d7-7zn" secondAttribute="bottom" constant="80" id="hDF-Nv-B2P"/>
                                     <constraint firstItem="677-rl-s5M" firstAttribute="leading" secondItem="sLy-op-q0T" secondAttribute="leading" id="lo6-2N-ac9"/>
                                     <constraint firstItem="677-rl-s5M" firstAttribute="top" secondItem="Pkl-d7-7zn" secondAttribute="bottom" constant="80" id="pZC-TV-9WQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="dyy-hi-QZ1" secondAttribute="trailing" id="tpW-wE-7wY"/>
-                                    <constraint firstItem="dyy-hi-QZ1" firstAttribute="leading" secondItem="sLy-op-q0T" secondAttribute="leading" id="xLQ-Gh-Gjx"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDw-cj-riw">
@@ -606,7 +597,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Cg9-Kv-lf2"/>
-        <segue reference="EqO-V1-7Ro"/>
-        <segue reference="XKs-P1-xuv"/>
+        <segue reference="3nP-eY-p8t"/>
+        <segue reference="FNA-98-7mA"/>
     </inferredMetricsTieBreakers>
 </document>
