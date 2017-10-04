@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Allenamento-->
         <scene sceneID="Jof-j4-Kk3">
@@ -30,26 +35,30 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nqh-gb-8kM">
                                             <rect key="frame" x="0.0" y="8" width="375" height="184"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="184" id="1An-V6-lTk"/>
-                                                <constraint firstAttribute="width" constant="375" id="or5-uU-gc0"/>
+                                                <constraint firstAttribute="height" constant="184" id="IjC-Eh-Xv2"/>
+                                                <constraint firstAttribute="width" constant="375" id="bc2-FP-eUS"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H6-bs-8vo">
-                                            <rect key="frame" x="8" y="136" width="359" height="56"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <rect key="frame" x="8" y="136" width="359" height="46"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="46" id="G39-LX-Cz0"/>
+                                                <constraint firstAttribute="width" constant="359" id="Hfv-zj-N5j"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="8H6-bs-8vo" firstAttribute="trailing" secondItem="FJN-np-64D" secondAttribute="trailingMargin" id="3eL-JN-VhS"/>
-                                        <constraint firstItem="nqh-gb-8kM" firstAttribute="top" secondItem="FJN-np-64D" secondAttribute="top" constant="8" id="6OO-ZJ-uDd"/>
-                                        <constraint firstItem="nqh-gb-8kM" firstAttribute="leading" secondItem="FJN-np-64D" secondAttribute="leading" id="BYF-vh-c3E"/>
-                                        <constraint firstItem="8H6-bs-8vo" firstAttribute="leading" secondItem="FJN-np-64D" secondAttribute="leadingMargin" id="Nu5-2x-YLr"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="8H6-bs-8vo" secondAttribute="bottom" constant="-0.5" id="YI1-wY-hE0"/>
-                                        <constraint firstAttribute="trailing" secondItem="nqh-gb-8kM" secondAttribute="trailing" id="k6n-4b-kRC"/>
-                                        <constraint firstItem="8H6-bs-8vo" firstAttribute="top" secondItem="FJN-np-64D" secondAttribute="topMargin" constant="128" id="mVp-2k-UwG"/>
-                                        <constraint firstAttribute="bottom" secondItem="nqh-gb-8kM" secondAttribute="bottom" constant="7.5" id="qyH-PU-yKT"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="8H6-bs-8vo" secondAttribute="bottom" constant="9.5" id="0XO-qN-5Ri"/>
+                                        <constraint firstAttribute="bottom" secondItem="nqh-gb-8kM" secondAttribute="bottom" constant="7.5" id="7ah-eY-upI"/>
+                                        <constraint firstAttribute="trailing" secondItem="nqh-gb-8kM" secondAttribute="trailing" id="BTi-OV-ZIT"/>
+                                        <constraint firstItem="8H6-bs-8vo" firstAttribute="trailing" secondItem="FJN-np-64D" secondAttribute="trailingMargin" id="Dgk-lo-s2O"/>
+                                        <constraint firstItem="8H6-bs-8vo" firstAttribute="top" secondItem="FJN-np-64D" secondAttribute="topMargin" constant="128" id="Odf-up-Adm"/>
+                                        <constraint firstItem="nqh-gb-8kM" firstAttribute="leading" secondItem="FJN-np-64D" secondAttribute="leading" id="e8U-Sa-goa"/>
+                                        <constraint firstItem="8H6-bs-8vo" firstAttribute="leading" secondItem="FJN-np-64D" secondAttribute="leadingMargin" id="frG-2Z-yRY"/>
+                                        <constraint firstItem="nqh-gb-8kM" firstAttribute="top" secondItem="FJN-np-64D" secondAttribute="top" constant="8" id="y7R-2T-7JO"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -68,7 +77,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ooh-US-4K6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1088.8" y="461.91904047976016"/>
+            <point key="canvasLocation" x="1088.5" y="461.5"/>
         </scene>
         <!--Allenamento-->
         <scene sceneID="KhB-Pu-kRt">
@@ -79,7 +88,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h3t-aW-kuO">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.65888738632202148" green="0.78824770450592041" blue="0.78826683759689331" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.32987073063850403" green="0.67223358154296875" blue="0.7883002758026123" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
                         <segue destination="w8d-Es-GsH" kind="relationship" relationship="rootViewController" id="k7v-wR-2iy"/>
