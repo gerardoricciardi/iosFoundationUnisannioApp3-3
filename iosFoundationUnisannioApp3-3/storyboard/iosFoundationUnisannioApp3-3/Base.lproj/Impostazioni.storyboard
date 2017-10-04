@@ -13,12 +13,15 @@
         <scene sceneID="t4m-n6-vip">
             <objects>
                 <navigationController id="0wV-ql-ucV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Impostazioni" image="settings" id="yhH-VS-Nut"/>
+                    <tabBarItem key="tabBarItem" title="Impostazioni" image="settings" id="yhH-VS-Nut">
+                        <color key="badgeColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WnA-e4-D6W">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.65888738632202148" green="0.78824770450592041" blue="0.78826683759689331" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.46395942568778992" green="0.74742692708969116" blue="0.83142411708831787" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.39677354693412781" green="0.71572017669677734" blue="0.81574428081512451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
                         <segue destination="jaG-bK-hvj" kind="show" id="eOa-iO-rdr"/>
