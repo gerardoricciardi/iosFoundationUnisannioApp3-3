@@ -8,6 +8,8 @@
 
 import UIKit
 import HealthKit
+import AVKit
+import AVFoundation
 
 class IntroViewController: UIViewController {
     
@@ -51,8 +53,17 @@ class IntroViewController: UIViewController {
         //3. Save your workout to HealthKit
         let healthStore = HKHealthStore()
         healthStore.save(workout) { (success, error) in
-            
         }
+        
+/*
+        let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+        let player = AVPlayer(url: videoURL!)
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.frame = self.view.bounds
+        self.view.layer.addSublayer(playerLayer)
+        player.play()
+        player.pause()
+ */
     }
 
    

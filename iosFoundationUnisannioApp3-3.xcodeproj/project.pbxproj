@@ -31,6 +31,7 @@
 		0797D1E41F7E734C0062A655 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0797D1E31F7E734C0062A655 /* TabBarController.swift */; };
 		07A5EB991F839C0900337BF1 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A5EB981F839C0900337BF1 /* CategoriesTableViewCell.swift */; };
 		07A5EB9B1F839C2400337BF1 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A5EB9A1F839C2400337BF1 /* CategoriesTableViewController.swift */; };
+		07C5C7721F84DFD7003DCB85 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C5C7711F84DFD7003DCB85 /* CloudKit.framework */; };
 		8F2499DE1F7BF59F001AEA9E /* Esercizio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */; };
 		8F2499E01F7BF89D001AEA9E /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499DF1F7BF89D001AEA9E /* Workout.swift */; };
 		8F2499E21F7E4723001AEA9E /* EsercizioDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */; };
@@ -88,6 +89,7 @@
 		0797D1E31F7E734C0062A655 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		07A5EB981F839C0900337BF1 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		07A5EB9A1F839C2400337BF1 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
+		07C5C7711F84DFD7003DCB85 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Esercizio.swift; sourceTree = "<group>"; };
 		8F2499DF1F7BF89D001AEA9E /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsercizioDAO.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8C3113A1F839F3800C1FFE2 /* HealthKit.framework in Frameworks */,
+				07C5C7721F84DFD7003DCB85 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +204,6 @@
 		0752074C1F7F02BB004EE4FF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				073683251F840A4900236D98 /* Workout */,
 				0797D1E31F7E734C0062A655 /* TabBarController.swift */,
 				076EDB5C1F7FB8E200A15D6D /* IntroViewController3.swift */,
 				076EDB5A1F7FB84B00A15D6D /* IntroViewController2.swift */,
@@ -210,6 +212,7 @@
 				076EDB581F7FB61300A15D6D /* IntroViewController1.swift */,
 				0733E1501F7AA7840066F286 /* IntroViewController.swift */,
 				0752074F1F7F04FB004EE4FF /* MainViewController.swift */,
+				073683251F840A4900236D98 /* Workout */,
 				0736832A1F84235000236D98 /* Health Kit */,
 			);
 			path = ViewController;
@@ -243,6 +246,7 @@
 		07A5EB8F1F8397D300337BF1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07C5C7711F84DFD7003DCB85 /* CloudKit.framework */,
 				F8C311391F839F3800C1FFE2 /* HealthKit.framework */,
 			);
 			name = Frameworks;
@@ -325,7 +329,7 @@
 								enabled = 1;
 							};
 							com.apple.Push = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.iCloud = {
 								enabled = 1;
