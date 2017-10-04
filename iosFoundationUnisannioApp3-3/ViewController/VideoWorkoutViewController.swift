@@ -14,14 +14,24 @@ import AVKit
 class VideoWorkoutViewController: UIViewController {
     var player = AVPlayer()
     let screenSize : CGRect = UIScreen.main.bounds
+    var url = "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
     
-    
+    @IBOutlet weak var timerLabel: UILabel!
+    var timer = Timer()
+    var secondi :Int = 0
+    var centesimiDisecondo :Int = 0
     @IBOutlet weak var videoView: UIView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         videoView.backgroundColor = UIColor.blue
-        let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+        let videoURL = URL(string: url)
         player = AVPlayer(url: videoURL!)
         let playerLayer = AVPlayerLayer(player: player)
         //        let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: screenSize.width, height: screenSize.height))
@@ -40,7 +50,12 @@ class VideoWorkoutViewController: UIViewController {
     }
     @IBAction func playAction(_ sender: UIButton) {
         player.play()
+        let intervallo :Double = 1
+        timer = Timer.scheduledTimer(timeInterval: intervallo, target:self, selector: Selector("funzioneTimer"), userInfo: nil, repeats: true)
     }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
