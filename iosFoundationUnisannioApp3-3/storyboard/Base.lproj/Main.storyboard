@@ -229,6 +229,10 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaI-Qi-mb4">
                                         <rect key="frame" x="0.0" y="0.0" width="289" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="289" id="asF-Ad-wqa"/>
+                                            <constraint firstAttribute="height" constant="56" id="rbp-Iy-Btf"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
                                         <color key="tintColor" red="0.28654810786247253" green="0.61551463603973389" blue="0.80791771411895752" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="UOMO" backgroundImage="buttt"/>
@@ -239,6 +243,10 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bez-qR-Xb5">
                                         <rect key="frame" x="0.0" y="106" width="289" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="289" id="v01-Cp-4XP"/>
+                                            <constraint firstAttribute="height" constant="56" id="x4m-3U-1tW"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
                                         <color key="tintColor" red="0.29362133145332336" green="0.6195407509803772" blue="0.80791699886322021" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="DONNA" backgroundImage="buttt"/>
@@ -250,7 +258,15 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="270-Lt-rQc"/>
+                                    <constraint firstAttribute="trailing" secondItem="bez-qR-Xb5" secondAttribute="trailing" id="6tr-c6-Mcl"/>
+                                    <constraint firstItem="QaI-Qi-mb4" firstAttribute="leading" secondItem="naU-xk-thn" secondAttribute="leading" id="BAU-1N-77r"/>
                                     <constraint firstAttribute="width" constant="289" id="CzU-jA-Qkx"/>
+                                    <constraint firstAttribute="bottom" secondItem="bez-qR-Xb5" secondAttribute="bottom" id="RhU-uY-nvg"/>
+                                    <constraint firstItem="bez-qR-Xb5" firstAttribute="top" secondItem="QaI-Qi-mb4" secondAttribute="bottom" constant="50" id="cmT-50-c14"/>
+                                    <constraint firstItem="bez-qR-Xb5" firstAttribute="leading" secondItem="naU-xk-thn" secondAttribute="leading" id="dQe-MM-KBf"/>
+                                    <constraint firstItem="QaI-Qi-mb4" firstAttribute="top" secondItem="naU-xk-thn" secondAttribute="top" id="jKW-0C-ejF"/>
+                                    <constraint firstAttribute="trailing" secondItem="QaI-Qi-mb4" secondAttribute="trailing" id="nAM-EU-wxc"/>
+                                    <constraint firstItem="bez-qR-Xb5" firstAttribute="top" secondItem="QaI-Qi-mb4" secondAttribute="bottom" constant="50" id="urG-be-rMp"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -607,6 +623,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="l4P-92-nKC"/>
         <segue reference="EqO-V1-7Ro"/>
-        <segue reference="FNA-98-7mA"/>
+        <segue reference="XKs-P1-xuv"/>
     </inferredMetricsTieBreakers>
 </document>
