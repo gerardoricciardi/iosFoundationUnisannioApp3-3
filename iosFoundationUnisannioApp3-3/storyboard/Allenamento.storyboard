@@ -20,22 +20,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" rowHeight="210" id="Mt7-ZC-grL" customClass="CategoriesTableViewCell" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="210"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" rowHeight="200" id="Mt7-ZC-grL" customClass="CategoriesTableViewCell" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mt7-ZC-grL" id="FJN-np-64D">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="209.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nqh-gb-8kM">
-                                            <rect key="frame" x="0.0" y="8" width="383" height="194"/>
+                                            <rect key="frame" x="0.0" y="8" width="375" height="184"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="194" id="bl0-Og-3os"/>
-                                                <constraint firstAttribute="width" constant="383" id="hTn-KN-Thy"/>
+                                                <constraint firstAttribute="height" constant="184" id="1An-V6-lTk"/>
+                                                <constraint firstAttribute="width" constant="375" id="or5-uU-gc0"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H6-bs-8vo">
-                                            <rect key="frame" x="8" y="136" width="359" height="66"/>
+                                            <rect key="frame" x="8" y="136" width="359" height="56"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -43,13 +43,13 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="8H6-bs-8vo" firstAttribute="trailing" secondItem="FJN-np-64D" secondAttribute="trailingMargin" id="3eL-JN-VhS"/>
-                                        <constraint firstAttribute="trailing" secondItem="nqh-gb-8kM" secondAttribute="trailing" constant="-8" id="CPE-5L-Chq"/>
-                                        <constraint firstAttribute="bottom" secondItem="nqh-gb-8kM" secondAttribute="bottom" constant="7.5" id="IBL-Sr-bxQ"/>
+                                        <constraint firstItem="nqh-gb-8kM" firstAttribute="top" secondItem="FJN-np-64D" secondAttribute="top" constant="8" id="6OO-ZJ-uDd"/>
+                                        <constraint firstItem="nqh-gb-8kM" firstAttribute="leading" secondItem="FJN-np-64D" secondAttribute="leading" id="BYF-vh-c3E"/>
                                         <constraint firstItem="8H6-bs-8vo" firstAttribute="leading" secondItem="FJN-np-64D" secondAttribute="leadingMargin" id="Nu5-2x-YLr"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="8H6-bs-8vo" secondAttribute="bottom" constant="-0.5" id="YI1-wY-hE0"/>
-                                        <constraint firstItem="nqh-gb-8kM" firstAttribute="leading" secondItem="FJN-np-64D" secondAttribute="leading" id="kNE-Wf-zaj"/>
+                                        <constraint firstAttribute="trailing" secondItem="nqh-gb-8kM" secondAttribute="trailing" id="k6n-4b-kRC"/>
                                         <constraint firstItem="8H6-bs-8vo" firstAttribute="top" secondItem="FJN-np-64D" secondAttribute="topMargin" constant="128" id="mVp-2k-UwG"/>
-                                        <constraint firstItem="nqh-gb-8kM" firstAttribute="top" secondItem="FJN-np-64D" secondAttribute="top" constant="8" id="z8P-cX-gbx"/>
+                                        <constraint firstAttribute="bottom" secondItem="nqh-gb-8kM" secondAttribute="bottom" constant="7.5" id="qyH-PU-yKT"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -68,7 +68,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ooh-US-4K6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090" y="462"/>
+            <point key="canvasLocation" x="1088.8" y="461.91904047976016"/>
         </scene>
         <!--Allenamento-->
         <scene sceneID="KhB-Pu-kRt">

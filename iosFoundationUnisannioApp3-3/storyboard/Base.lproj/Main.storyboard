@@ -268,7 +268,7 @@
                                 </constraints>
                                 <string key="text">Il lavoro ti porta via troppo tempo e non hai modo di dedicarti a te stesso ?                            Health Desk fa al caso tuo! I miei workouts sono pensati appositamente per te!</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0k-Mx-ibM">
@@ -277,7 +277,7 @@
                                     <constraint firstAttribute="height" constant="30" id="5jy-3I-fJg"/>
                                     <constraint firstAttribute="width" constant="197" id="q0d-i5-dmM"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <state key="normal" title="Skip &gt;">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -292,7 +292,7 @@
                                     <constraint firstAttribute="height" constant="70" id="xWZ-FO-Spa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
-                                <state key="normal" title="Registrati">
+                                <state key="normal" title="Login">
                                     <color key="titleColor" red="0.069992132484912872" green="0.62308233976364136" blue="0.82841664552688599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -322,7 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdc-m3-s3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4826" y="-382"/>
+            <point key="canvasLocation" x="-4667" y="-341"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZMY-QZ-uOM">
@@ -548,7 +548,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eiM-jq-X3K"/>
-        <segue reference="oe2-kf-P7f"/>
+        <segue reference="3nP-eY-p8t"/>
         <segue reference="FNA-98-7mA"/>
     </inferredMetricsTieBreakers>
 </document>
