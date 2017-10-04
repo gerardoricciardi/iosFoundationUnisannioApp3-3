@@ -179,25 +179,25 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Ciao, ti diamo il benvenuto!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r5c-I2-7CL">
-                                <rect key="frame" x="20" y="168" width="363" height="195"/>
+                                <rect key="frame" x="20" y="204" width="363" height="195"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="195" id="3tg-ea-ULU"/>
-                                    <constraint firstAttribute="width" constant="363" id="xru-XL-zuC"/>
+                                    <constraint firstAttribute="width" constant="363" id="pku-Gk-ibB"/>
+                                    <constraint firstAttribute="height" constant="195" id="uWb-sd-LoS"/>
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="32"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="whe-xm-76b" firstAttribute="top" secondItem="r5c-I2-7CL" secondAttribute="bottom" constant="91" id="4Rm-eL-2cv"/>
-                            <constraint firstItem="jB5-hg-o8e" firstAttribute="trailing" secondItem="r5c-I2-7CL" secondAttribute="trailing" constant="31" id="Amd-Hp-VIY"/>
-                            <constraint firstItem="r5c-I2-7CL" firstAttribute="top" secondItem="jB5-hg-o8e" secondAttribute="top" constant="148" id="XOi-GE-1Xe"/>
+                            <constraint firstItem="jB5-hg-o8e" firstAttribute="trailing" secondItem="r5c-I2-7CL" secondAttribute="trailing" constant="31" id="G8W-Kh-j27"/>
+                            <constraint firstItem="r5c-I2-7CL" firstAttribute="top" secondItem="jB5-hg-o8e" secondAttribute="top" constant="184" id="U4f-d1-0DA"/>
                             <constraint firstItem="whe-xm-76b" firstAttribute="leading" secondItem="jB5-hg-o8e" secondAttribute="leading" constant="10" id="Xfs-Sc-Hor"/>
                             <constraint firstItem="jB5-hg-o8e" firstAttribute="bottom" secondItem="whe-xm-76b" secondAttribute="bottom" constant="247" id="gnD-Km-Qc0"/>
-                            <constraint firstItem="r5c-I2-7CL" firstAttribute="leading" secondItem="jB5-hg-o8e" secondAttribute="leading" constant="20" id="lYJ-Om-lt1"/>
+                            <constraint firstItem="r5c-I2-7CL" firstAttribute="leading" secondItem="jB5-hg-o8e" secondAttribute="leading" constant="20" id="hap-iz-uWX"/>
                             <constraint firstItem="jB5-hg-o8e" firstAttribute="trailing" secondItem="whe-xm-76b" secondAttribute="trailing" constant="31" id="x38-Bt-REU"/>
+                            <constraint firstItem="whe-xm-76b" firstAttribute="top" secondItem="r5c-I2-7CL" secondAttribute="bottom" constant="55" id="yaZ-u3-O9B"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jB5-hg-o8e"/>
                     </view>
@@ -235,7 +235,7 @@
                                     <color key="titleColor" red="0.28654810786247253" green="0.61551463603973389" blue="0.80791771411895752" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Nbf-q0-RRv" kind="show" id="Qet-3h-PcC"/>
+                                    <segue destination="Nbf-q0-RRv" kind="presentation" modalTransitionStyle="crossDissolve" id="Qet-3h-PcC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JN3-SB-moR">
@@ -249,7 +249,7 @@
                                     <color key="titleColor" red="0.28654810786247253" green="0.61551463603973389" blue="0.80791771411895752" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Nbf-q0-RRv" kind="show" id="Cg9-Kv-lf2"/>
+                                    <segue destination="Nbf-q0-RRv" kind="presentation" modalTransitionStyle="crossDissolve" id="Cg9-Kv-lf2"/>
                                 </connections>
                             </button>
                         </subviews>
