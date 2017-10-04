@@ -41,7 +41,7 @@ class TestSaverRecord{
                 let fotoEsercizio: CKAsset;
                 fotoEsercizio = record.object(forKey: "foto") as! CKAsset
                 
-               url fotoEsercizio.fileURL
+//               url fotoEsercizio.fileURL
                 
             }
             
@@ -84,8 +84,6 @@ class TestSaverRecord{
             }
             print("Successfully saved record: ", record)
         }
-        
-        
         
     }
     
