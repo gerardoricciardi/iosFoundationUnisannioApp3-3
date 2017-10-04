@@ -33,9 +33,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nqh-gb-8kM">
-                                            <rect key="frame" x="0.0" y="8" width="375" height="184"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="184" id="IjC-Eh-Xv2"/>
+                                                <constraint firstAttribute="height" constant="200" id="IjC-Eh-Xv2"/>
                                                 <constraint firstAttribute="width" constant="375" id="bc2-FP-eUS"/>
                                             </constraints>
                                         </imageView>
@@ -52,13 +52,13 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="8H6-bs-8vo" secondAttribute="bottom" constant="9.5" id="0XO-qN-5Ri"/>
-                                        <constraint firstAttribute="bottom" secondItem="nqh-gb-8kM" secondAttribute="bottom" constant="7.5" id="7ah-eY-upI"/>
+                                        <constraint firstAttribute="bottom" secondItem="nqh-gb-8kM" secondAttribute="bottom" constant="-0.5" id="7ah-eY-upI"/>
                                         <constraint firstAttribute="trailing" secondItem="nqh-gb-8kM" secondAttribute="trailing" id="BTi-OV-ZIT"/>
                                         <constraint firstItem="8H6-bs-8vo" firstAttribute="trailing" secondItem="FJN-np-64D" secondAttribute="trailingMargin" id="Dgk-lo-s2O"/>
                                         <constraint firstItem="8H6-bs-8vo" firstAttribute="top" secondItem="FJN-np-64D" secondAttribute="topMargin" constant="128" id="Odf-up-Adm"/>
                                         <constraint firstItem="nqh-gb-8kM" firstAttribute="leading" secondItem="FJN-np-64D" secondAttribute="leading" id="e8U-Sa-goa"/>
                                         <constraint firstItem="8H6-bs-8vo" firstAttribute="leading" secondItem="FJN-np-64D" secondAttribute="leadingMargin" id="frG-2Z-yRY"/>
-                                        <constraint firstItem="nqh-gb-8kM" firstAttribute="top" secondItem="FJN-np-64D" secondAttribute="top" constant="8" id="y7R-2T-7JO"/>
+                                        <constraint firstItem="nqh-gb-8kM" firstAttribute="top" secondItem="FJN-np-64D" secondAttribute="top" id="y7R-2T-7JO"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -77,7 +77,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ooh-US-4K6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1088.5" y="461.5"/>
+            <point key="canvasLocation" x="1087.2" y="461.01949025487261"/>
         </scene>
         <!--Allenamento-->
         <scene sceneID="KhB-Pu-kRt">
