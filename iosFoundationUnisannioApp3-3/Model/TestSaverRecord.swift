@@ -99,8 +99,9 @@ class TestSaverRecord{
     //fare metodo getEserciziByworkout
     
     
-    static func getVideoFromEsercizio(nomeEsercizio:String)->URL{
-        var urlVideo : URL!
+    static func getVideoFromEsercizio(nomeEsercizio:String)->Data{
+        
+       var videoData:Data!
         let container = CKContainer.default
         var currentRecord: CKRecord?
         var recordZone: CKRecordZone?
@@ -119,30 +120,32 @@ class TestSaverRecord{
                 print("Error querying records: ", error)
                 return
             }
-//            print("Found \(records.count) records matching query")
+            print("Found \(records.count) records matching query")
             for record in records{
                 var File : CKAsset? = record.object(forKey:"video") as! CKAsset
-            
-            
+                print(record.object(forKey: "nome")!)
+                
                 if let file = File {
                     if let data = try?Data(contentsOf: file.fileURL) {
-                        urlVideo=file.fileURL
+                        videoData=data
+                        
+                        
+                        
                     }
                 }
-//                return urlVideo
-            
+                
+                
             }
-
-    }
-        while urlVideo==nil{
             
         }
-        print(urlVideo)
-    return urlVideo
-    
+        
+        while videoData == nil{
+        }
+//        self.playButton.isHidden=false
+        return videoData
 
+}
 
-    }
 }
 
 
