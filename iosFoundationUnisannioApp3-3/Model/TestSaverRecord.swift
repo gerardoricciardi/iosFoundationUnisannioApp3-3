@@ -118,34 +118,30 @@ class TestSaverRecord{
                 print("Error querying records: ", error)
                 return
             }
-            print("Found \(records.count) records matching query")
+//            print("Found \(records.count) records matching query")
+            for record in records{
+                var File : CKAsset? = record.object(forKey:"video") as! CKAsset
             
-                
-                for record in records{
-                    print(record.object(forKey:"nome")!)
-                    
-                    
-                    guard let asset = record["video"] as? CKAsset else {
-                        print("Video missing from record")
-                        return
+            
+                if let file = File {
+                    if let data = try?Data(contentsOf: file.fileURL) {
+                        urlVideo=file.fileURL
                     }
-                    
-                    guard let videoData = try?Data(contentsOf: asset.fileURL) else {
-                        print("Invalid Video")
-                        return
-                    }
-                    
-                    urlVideo=asset.fileURL
-                    
                 }
+//                return urlVideo
+            
+            }
 
-        
     }
-        return urlVideo
+        while urlVideo==nil{
+            
+        }
+        print(urlVideo)
+    return urlVideo
+    
+
 
     }
-
-
 }
 
 

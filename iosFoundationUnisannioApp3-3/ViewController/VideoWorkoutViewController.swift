@@ -14,7 +14,9 @@ import AVKit
 class VideoWorkoutViewController: UIViewController {
     var player = AVPlayer()
     let screenSize : CGRect = UIScreen.main.bounds
-    var url = "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+//    var url = "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+    
+    
     
     @IBOutlet weak var timerLabel: UILabel!
     var timer = Timer()
@@ -31,19 +33,30 @@ class VideoWorkoutViewController: UIViewController {
         super.viewDidLoad()
 
         videoView.backgroundColor = UIColor.blue
-        let videoURL = URL(string: url)
-        player = AVPlayer(url: videoURL!)
-        let playerLayer = AVPlayerLayer(player: player)
+//        let videoURL = URL(string: url)
+        var videoURL: URL!
+       
+      
+             videoURL = TestSaverRecord.getVideoFromEsercizio(nomeEsercizio: "allungamenti adduttori")
+        
+        
+            
+//        qui bisogna passare un path locale e non un url forse
+            self.player = AVPlayer(url: videoURL)
+        
+        
+            let playerLayer = AVPlayerLayer(player: self.player)
         //        let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: screenSize.width, height: screenSize.height))
         //        self.view.layer.addSublayer(playerLayer)
-        videoView.layer.addSublayer(playerLayer)
-        playerLayer.frame = videoView.bounds
+            self.videoView.layer.addSublayer(playerLayer)
+            playerLayer.frame = self.videoView.bounds
         
         //        playerLayer.frame = self.view.bounds
         //        subView.layer.addSublayer(playerLayer)
         
         
         // Do any additional setup after loading the view.
+      
     }
     @IBAction func pauseAction(_ sender: UIButton) {
         player.pause()
