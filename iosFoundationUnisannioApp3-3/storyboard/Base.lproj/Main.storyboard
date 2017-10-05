@@ -161,7 +161,7 @@
                                     <constraint firstAttribute="height" constant="35" id="Ccz-UQ-v3X"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-LightOblique" family="Helvetica" pointSize="25"/>
-                                <state key="normal" title="Conosciamoci meglio &gt;">
+                                <state key="normal" title="Introduce yourself &gt;">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -623,6 +623,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="Cg9-Kv-lf2"/>
         <segue reference="EqO-V1-7Ro"/>
-        <segue reference="XKs-P1-xuv"/>
+        <segue reference="FNA-98-7mA"/>
     </inferredMetricsTieBreakers>
 </document>
