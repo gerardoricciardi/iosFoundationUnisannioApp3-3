@@ -38,6 +38,9 @@
 		8F2499E21F7E4723001AEA9E /* EsercizioDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */; };
 		8F2499E41F7E4732001AEA9E /* WorkoutDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499E31F7E4732001AEA9E /* WorkoutDAO.swift */; };
 		8F2C49EA1F7BAF3A006EC668 /* Utente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2C49E91F7BAF3A006EC668 /* Utente.swift */; };
+		8FD601BF1F84D148006AE871 /* TableViewControllerAllenamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD601BE1F84D148006AE871 /* TableViewControllerAllenamento.swift */; };
+		8FD601C11F84D181006AE871 /* TableViewCellAllenamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD601C01F84D181006AE871 /* TableViewCellAllenamento.swift */; };
+		8FD601C31F84D66E006AE871 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD601C21F84D66E006AE871 /* CloudKit.framework */; };
 		F8A5E9791F83980D009D186F /* ViewControllerProfilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */; };
 		F8C3113A1F839F3800C1FFE2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C311391F839F3800C1FFE2 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
@@ -97,6 +100,9 @@
 		8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsercizioDAO.swift; sourceTree = "<group>"; };
 		8F2499E31F7E4732001AEA9E /* WorkoutDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDAO.swift; sourceTree = "<group>"; };
 		8F2C49E91F7BAF3A006EC668 /* Utente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utente.swift; sourceTree = "<group>"; };
+		8FD601BE1F84D148006AE871 /* TableViewControllerAllenamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerAllenamento.swift; sourceTree = "<group>"; };
+		8FD601C01F84D181006AE871 /* TableViewCellAllenamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellAllenamento.swift; sourceTree = "<group>"; };
+		8FD601C21F84D66E006AE871 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProfilo.swift; sourceTree = "<group>"; };
 		F8C311381F839EEB00C1FFE2 /* iosFoundationUnisannioApp3-3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iosFoundationUnisannioApp3-3.entitlements"; sourceTree = "<group>"; };
 		F8C311391F839F3800C1FFE2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -108,7 +114,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8C3113A1F839F3800C1FFE2 /* HealthKit.framework in Frameworks */,
-				07C5C7721F84DFD7003DCB85 /* CloudKit.framework in Frameworks */,
+				8FD601C31F84D66E006AE871 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +214,8 @@
 			children = (
 				07C5C7C11F853D51003DCB85 /* VideoWorkoutViewController.swift */,
 				0797D1E31F7E734C0062A655 /* TabBarController.swift */,
+				8FD601BE1F84D148006AE871 /* TableViewControllerAllenamento.swift */,
+				8FD601C01F84D181006AE871 /* TableViewCellAllenamento.swift */,
 				076EDB5C1F7FB8E200A15D6D /* IntroViewController3.swift */,
 				076EDB5A1F7FB84B00A15D6D /* IntroViewController2.swift */,
 				F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */,
@@ -249,7 +257,7 @@
 		07A5EB8F1F8397D300337BF1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				07C5C7711F84DFD7003DCB85 /* CloudKit.framework */,
+				8FD601C21F84D66E006AE871 /* CloudKit.framework */,
 				F8C311391F839F3800C1FFE2 /* HealthKit.framework */,
 			);
 			name = Frameworks;
@@ -411,12 +419,14 @@
 				07A5EB991F839C0900337BF1 /* CategoriesTableViewCell.swift in Sources */,
 				8F2C49EA1F7BAF3A006EC668 /* Utente.swift in Sources */,
 				073683301F842FC900236D98 /* UserHealthProfile.swift in Sources */,
+				8FD601BF1F84D148006AE871 /* TableViewControllerAllenamento.swift in Sources */,
 				0757B2DF1F83A41400DBFC9F /* CategoriesDetailsViewController.swift in Sources */,
 				0733E1511F7AA7840066F286 /* IntroViewController.swift in Sources */,
 				075207501F7F04FB004EE4FF /* MainViewController.swift in Sources */,
 				8F2499E41F7E4732001AEA9E /* WorkoutDAO.swift in Sources */,
 				078893781F7FF95F001D8059 /* IntroViewControllerBenvenuto.swift in Sources */,
 				0736832C1F84239200236D98 /* HealthKitSetupAssistant.swift in Sources */,
+				8FD601C11F84D181006AE871 /* TableViewCellAllenamento.swift in Sources */,
 				0797D1E41F7E734C0062A655 /* TabBarController.swift in Sources */,
 				0733E1571F7AA7840066F286 /* iosFoundationUnisannioApp3_3.xcdatamodeld in Sources */,
 				07C5C7C21F853D51003DCB85 /* VideoWorkoutViewController.swift in Sources */,
