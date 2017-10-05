@@ -10,14 +10,11 @@ import UIKit
 
 class NotificheTableViewCell: UITableViewCell {
 
-
-    var descrizione = " "
     @IBOutlet weak var descrizioneText: UITextView!
     @IBOutlet weak var notificheLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        descrizioneText.text = descrizione
         /*descrizioneNotifiche.text = "Se l'opzione in ufficio è abilitata, riceverai delle notifiche che ti consentiranno di fare un viaggio nel fitness sul posto di lavoro, attraverso alcuni esercizi da fare comodamente alla scrivania."*/
         // Initialization code
     }

@@ -2,18 +2,21 @@
 //  ImpostazioniTableViewController.swift
 //  iosFoundationUnisannioApp3-3
 //
-//  Created by Zabatta Daniela on 05/10/17.
+//  Created by Ricciardi Gerardo on 05/10/17.
 //  Copyright © 2017 Ricciardi Gerardo. All rights reserved.
 //
 
 import UIKit
 
 class ImpostazioniTableViewController: UITableViewController {
+
+//    var impostazioni = ["Helathkit","Notifiche","Modifica Profilo","Info", "Logout"]
+    var impostazioni = ["Helathkit","Notifiche","Modifica Profilo"]
+    var notificheDescrizioni = ["Se l'opzione in ufficio è abilitata, riceverai delle notifiche che ti consentiranno di fare un viaggio nel fitness sul posto di lavoro, attraverso alcuni esercizi da fare comodamente alla scrivania.","Con l'opzione Riepiloghi settimanali, riceverai dei resoconti sugli allenamenti svolti nell'ultima settimana.","L'opzione Promemoria abilitata ti ricorda quando è il momento di allenarsi"]
     
+
+    var segue = ""
     
-    var impostazioni = ["Helathkit","Notifiche","Modifica Profilo","Info", "Logout"]
-    
-   
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,18 +42,38 @@ class ImpostazioniTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return impostazioni.count
-        
     }
 
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cella", for: indexPath) as! ImpostazioniTableViewCell
-
         cell.impostazioniLabel.text = impostazioni[indexPath.row]
+        // Configure the cell...
+
         return cell
     }
     
-   
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segue"{
+            if let indexPath = tableView.indexPathForSelectedRow{
+                print("Prova *** \(indexPath.row)")
+                if indexPath.row == 0 {
+                   let destinationController = segue.destination as! NotificheTableTableViewController
+                   destinationController.notificheDescrizioni = notificheDescrizioni
+                }
+                if indexPath.row == 1 {
+                    let destinationController = segue.destination as! NotificheTableTableViewController
+                    destinationController.notificheDescrizioni = notificheDescrizioni
+                }
+                if indexPath.row == 2 {
+                    let destinationController = segue.destination as! NotificheTableTableViewController
+                    destinationController.notificheDescrizioni = notificheDescrizioni
+                }
+            }
+        }
+    }
     
 
     /*

@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,18 +47,25 @@
                                     <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Healthkit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjZ-6t-XHj">
-                                            <rect key="frame" x="0.0" y="11" width="168" height="33"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Healthkit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjZ-6t-XHj">
+                                            <rect key="frame" x="8" y="11" width="168" height="33"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="168" id="QC8-PY-dao"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="mjZ-6t-XHj" firstAttribute="leading" secondItem="57g-Om-b07" secondAttribute="leadingMargin" id="7gP-PJ-I7k"/>
+                                        <constraint firstItem="mjZ-6t-XHj" firstAttribute="top" secondItem="57g-Om-b07" secondAttribute="topMargin" constant="3" id="ROb-YC-V0m"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="mjZ-6t-XHj" secondAttribute="bottom" constant="-7.5" id="Yzn-oX-hcn"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="impostazioniLabel" destination="mjZ-6t-XHj" id="TUH-tX-m0G"/>
-                                    <segue destination="siM-g5-a1w" kind="show" id="kqR-BM-a0X"/>
+                                    <segue destination="siM-g5-a1w" kind="show" identifier="segue" id="Ofr-T8-2zc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
