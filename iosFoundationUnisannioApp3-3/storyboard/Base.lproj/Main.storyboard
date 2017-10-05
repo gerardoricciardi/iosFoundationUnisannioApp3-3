@@ -34,7 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="sLy-op-q0T">
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="753" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="sLy-op-q0T">
                                 <rect key="frame" x="114" y="120" width="186" height="250"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Name and username" textAlignment="center" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="dyy-hi-QZ1">
@@ -86,7 +86,7 @@
                                     <constraint firstItem="Pkl-d7-7zn" firstAttribute="leading" secondItem="sLy-op-q0T" secondAttribute="leading" id="d3L-8x-bda"/>
                                     <constraint firstAttribute="trailing" secondItem="677-rl-s5M" secondAttribute="trailing" id="ezH-ue-dOB"/>
                                     <constraint firstItem="677-rl-s5M" firstAttribute="top" secondItem="Pkl-d7-7zn" secondAttribute="bottom" constant="80" id="hDF-Nv-B2P"/>
-                                    <constraint firstItem="677-rl-s5M" firstAttribute="leading" secondItem="sLy-op-q0T" secondAttribute="leading" id="lo6-2N-ac9"/>
+                                    <constraint firstItem="677-rl-s5M" firstAttribute="leading" secondItem="sLy-op-q0T" secondAttribute="leading" constant="-2" id="lo6-2N-ac9"/>
                                     <constraint firstItem="677-rl-s5M" firstAttribute="top" secondItem="Pkl-d7-7zn" secondAttribute="bottom" constant="80" id="pZC-TV-9WQ"/>
                                 </constraints>
                             </stackView>
