@@ -159,9 +159,8 @@
                                     <action selector="pauseAction:" destination="dH7-y5-Fse" eventType="touchUpInside" id="bXK-Zd-kTa"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76R-w9-NM1">
-                                <rect key="frame" x="250" y="105" width="68" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76R-w9-NM1">
+                                <rect key="frame" x="230" y="105" width="129" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -173,25 +172,31 @@
                             <constraint firstItem="ukE-1j-yW7" firstAttribute="leading" secondItem="X80-51-sX0" secondAttribute="leading" constant="16" id="8N9-hT-tl0"/>
                             <constraint firstItem="X80-51-sX0" firstAttribute="bottom" secondItem="ukE-1j-yW7" secondAttribute="bottom" constant="24" id="A0m-wN-Myr"/>
                             <constraint firstItem="ukE-1j-yW7" firstAttribute="top" secondItem="X80-51-sX0" secondAttribute="top" constant="104" id="E8q-3k-c99"/>
+                            <constraint firstItem="76R-w9-NM1" firstAttribute="top" secondItem="X80-51-sX0" secondAttribute="top" constant="41" id="ET8-lM-ICP"/>
                             <constraint firstItem="lpt-LV-wqt" firstAttribute="top" secondItem="X80-51-sX0" secondAttribute="top" constant="31" id="ETw-4O-ZBe"/>
                             <constraint firstItem="X80-51-sX0" firstAttribute="trailing" secondItem="SSl-z5-ht6" secondAttribute="trailing" constant="198" id="H3T-D6-f8v"/>
                             <constraint firstItem="X80-51-sX0" firstAttribute="trailing" secondItem="ukE-1j-yW7" secondAttribute="trailing" constant="16" id="M6l-1i-Rpr"/>
+                            <constraint firstItem="X80-51-sX0" firstAttribute="trailing" secondItem="76R-w9-NM1" secondAttribute="trailing" constant="16" id="Mlc-Vh-mWp"/>
                             <constraint firstItem="SSl-z5-ht6" firstAttribute="top" secondItem="X80-51-sX0" secondAttribute="top" constant="36" id="Mof-LM-zZB"/>
                             <constraint firstItem="SSl-z5-ht6" firstAttribute="leading" secondItem="lpt-LV-wqt" secondAttribute="trailing" constant="42" id="NaY-JU-eal"/>
+                            <constraint firstItem="ukE-1j-yW7" firstAttribute="top" secondItem="76R-w9-NM1" secondAttribute="bottom" constant="42" id="REw-11-jCC"/>
                             <constraint firstItem="ukE-1j-yW7" firstAttribute="top" secondItem="SSl-z5-ht6" secondAttribute="bottom" constant="38" id="bs9-5R-EaG"/>
                             <constraint firstItem="ukE-1j-yW7" firstAttribute="top" secondItem="lpt-LV-wqt" secondAttribute="bottom" constant="38" id="xqj-zp-jgD"/>
+                            <constraint firstItem="76R-w9-NM1" firstAttribute="leading" secondItem="SSl-z5-ht6" secondAttribute="trailing" constant="53" id="yEI-SX-E9b"/>
                             <constraint firstItem="lpt-LV-wqt" firstAttribute="leading" secondItem="X80-51-sX0" secondAttribute="leading" constant="63" id="z7B-2w-vmT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X80-51-sX0"/>
                     </view>
                     <connections>
+                        <outlet property="pauseButton" destination="SSl-z5-ht6" id="PkI-LK-Xr0"/>
+                        <outlet property="playButton" destination="lpt-LV-wqt" id="KDK-Nc-wV3"/>
                         <outlet property="timerLabel" destination="76R-w9-NM1" id="7ZU-O3-lQd"/>
                         <outlet property="videoView" destination="ukE-1j-yW7" id="Ygi-54-Lnh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AJY-fT-K28" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2712.8000000000002" y="461.91904047976016"/>
+            <point key="canvasLocation" x="4005.5999999999999" y="459.22038980509751"/>
         </scene>
     </scenes>
     <resources>
