@@ -293,19 +293,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="21y-1s-Ujk">
-                                <rect key="frame" x="55" y="86" width="304" height="418"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="418" id="Y91-NO-Jfx"/>
-                                    <constraint firstAttribute="width" constant="304" id="wsS-re-w8M"/>
-                                </constraints>
-                                <string key="text">Il lavoro ti porta via troppo tempo e non hai modo di dedicarti a te stesso ?                            Health Desk fa al caso tuo! I miei workouts sono pensati appositamente per te!</string>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Does work take you too long and you have no way of dedicating yourself to yourself?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="21y-1s-Ujk">
+                                <rect key="frame" x="37" y="104" width="304" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0k-Mx-ibM">
-                                <rect key="frame" x="108" y="595" width="198" height="30"/>
+                                <rect key="frame" x="108" y="656" width="198" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="198" id="XE4-8O-2QB"/>
                                     <constraint firstAttribute="height" constant="30" id="vCY-qJ-jJx"/>
@@ -319,13 +315,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuQ-Ov-2Sp">
-                                <rect key="frame" x="64" y="549" width="295" height="38"/>
+                                <rect key="frame" x="64" y="610" width="295" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="295" id="6n1-Ty-0xp"/>
                                     <constraint firstAttribute="height" constant="38" id="Xzt-yz-UYj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
-                                <state key="normal" title="Registrati" backgroundImage="buttt">
+                                <state key="normal" title="Go" backgroundImage="buttt">
                                     <color key="titleColor" red="0.069992132484912872" green="0.62308233976364136" blue="0.82841664552688599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -333,20 +329,43 @@
                                     <segue destination="olk-Hv-Kkv" kind="show" id="gBW-ap-aHU"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Health Desk                                               " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Qe6-an-OFF">
+                                <rect key="frame" x="37" y="276" width="304" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="is for you!                                         " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="l7E-fB-vNC">
+                                <rect key="frame" x="40" y="309" width="304" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="My workouts are specially designed for you!                                   " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5tr-wu-sxw">
+                                <rect key="frame" x="37" y="386" width="304" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zuQ-Ov-2Sp" firstAttribute="top" secondItem="21y-1s-Ujk" secondAttribute="bottom" constant="45" id="809-vg-VQQ"/>
-                            <constraint firstItem="21y-1s-Ujk" firstAttribute="leading" secondItem="ida-5n-IRo" secondAttribute="leading" constant="55" id="DI1-ul-8Qk"/>
+                            <constraint firstItem="ida-5n-IRo" firstAttribute="trailing" secondItem="R0k-Mx-ibM" secondAttribute="trailing" constant="108" id="GY0-1a-Sno"/>
+                            <constraint firstItem="R0k-Mx-ibM" firstAttribute="leading" secondItem="ida-5n-IRo" secondAttribute="leading" constant="108" id="Hyt-vE-kzl"/>
                             <constraint firstItem="R0k-Mx-ibM" firstAttribute="top" secondItem="zuQ-Ov-2Sp" secondAttribute="bottom" constant="8" id="KfU-YY-RJD"/>
+                            <constraint firstItem="ida-5n-IRo" firstAttribute="trailing" secondItem="R0k-Mx-ibM" secondAttribute="trailing" constant="108" id="Qrh-iC-isj"/>
                             <constraint firstItem="R0k-Mx-ibM" firstAttribute="top" secondItem="zuQ-Ov-2Sp" secondAttribute="bottom" constant="8" id="RpP-Tw-Ovb"/>
-                            <constraint firstItem="21y-1s-Ujk" firstAttribute="top" secondItem="ida-5n-IRo" secondAttribute="top" constant="66" id="Vtg-C3-OUo"/>
+                            <constraint firstItem="R0k-Mx-ibM" firstAttribute="leading" secondItem="ida-5n-IRo" secondAttribute="leading" constant="108" id="UlX-E3-QNW"/>
+                            <constraint firstItem="zuQ-Ov-2Sp" firstAttribute="leading" secondItem="ida-5n-IRo" secondAttribute="leading" constant="59" id="V9m-oJ-HbK"/>
                             <constraint firstItem="ida-5n-IRo" firstAttribute="trailing" secondItem="R0k-Mx-ibM" secondAttribute="trailing" constant="108" id="WfI-U8-ZV4"/>
-                            <constraint firstItem="zuQ-Ov-2Sp" firstAttribute="top" secondItem="21y-1s-Ujk" secondAttribute="bottom" constant="45" id="Xmg-wQ-TAn"/>
                             <constraint firstItem="zuQ-Ov-2Sp" firstAttribute="leading" secondItem="ida-5n-IRo" secondAttribute="leading" constant="64" id="Yx7-KE-Qyz"/>
-                            <constraint firstItem="ida-5n-IRo" firstAttribute="trailing" secondItem="21y-1s-Ujk" secondAttribute="trailing" constant="55" id="ajX-Bp-JZS"/>
+                            <constraint firstItem="ida-5n-IRo" firstAttribute="trailing" secondItem="zuQ-Ov-2Sp" secondAttribute="trailing" constant="59" id="euG-KI-jPc"/>
                             <constraint firstItem="ida-5n-IRo" firstAttribute="trailing" secondItem="zuQ-Ov-2Sp" secondAttribute="trailing" constant="55" id="fMt-my-2Ak"/>
                             <constraint firstItem="ida-5n-IRo" firstAttribute="bottom" secondItem="R0k-Mx-ibM" secondAttribute="bottom" constant="111" id="g2B-H5-kuY"/>
+                            <constraint firstItem="ida-5n-IRo" firstAttribute="bottom" secondItem="R0k-Mx-ibM" secondAttribute="bottom" constant="50" id="usy-Z8-cx1"/>
                             <constraint firstItem="R0k-Mx-ibM" firstAttribute="leading" secondItem="ida-5n-IRo" secondAttribute="leading" constant="108" id="uuP-ek-ZZp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ida-5n-IRo"/>
