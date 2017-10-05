@@ -18,7 +18,9 @@ class VideoWorkoutViewController: UIViewController {
     let backgroundColor = UIColor(red: 54.0/255.0, green: 155.0/255.0, blue: 184.0/255.0, alpha: 1.0)
     var player = AVPlayer()
     let screenSize : CGRect = UIScreen.main.bounds
-    var url = "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+//    var url = "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+    
+    
     
     var time = 0
     var timer = Timer()
@@ -36,14 +38,58 @@ class VideoWorkoutViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        videoView.backgroundColor = backgroundColor
-        let videoURL = URL(string: url)
-        player = AVPlayer(url: videoURL!)
-        let playerLayer = AVPlayerLayer(player: player)
-        //        let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: screenSize.width, height: screenSize.height))
-        //        self.view.layer.addSublayer(playerLayer)
+
+        videoView.backgroundColor = UIColor.blue
+//        let videoURL = URL(string: url)
+        var videoData: Data!
+        
+        
+        videoData = TestSaverRecord.getVideoFromEsercizio(nomeEsercizio: "allungamenti adduttori")
+        
+        
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as! String
+        let destinationPath = documentsPath + String("/video.mp4")
+        
+        
+        FileManager.default.createFile(atPath: destinationPath,contents:videoData, attributes:nil)
+        
+        let fileURL = URL(fileURLWithPath: destinationPath)
+        print(fileURL)
+        
+        var  asset:AVAsset
+        asset = (AVAsset(url: fileURL) as! AVURLAsset)
+        let playerItem = AVPlayerItem(asset: asset)
+        
+        player = AVPlayer(playerItem: playerItem                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ) 
+        
+        let playerLayer = AVPlayerLayer(player:player)
+        playerLayer.videoGravity=AVLayerVideoGravity.resizeAspectFill
         videoView.layer.addSublayer(playerLayer)
-        playerLayer.frame = videoView.bounds
+        playerLayer.frame=videoView.bounds
+
+        
+        
+//
+//        let playerController = AVPlayerViewController()
+//        playerController.player = player
+//
+//
+//        self.present(playerController, animated: true) {
+//
+//            playerController.player!.play()
+//        }
+//        present(playerController, animated: true) {
+//            self.player.play()
+//        }
+
+        
+        
+        
+//
+//        videoView.addSubview(playerController.view)
+//
+
+        
         //        playerLayer.frame = self.view.bounds
         //        subView.layer.addSublayer(playerLayer)
         timerLabel.textColor = backgroundColor
@@ -53,6 +99,7 @@ class VideoWorkoutViewController: UIViewController {
         pauseButton.isEnabled = false
         
         // Do any additional setup after loading the view.
+      
     }
     @IBAction func pauseAction(_ sender: UIButton) {
         player.pause()
