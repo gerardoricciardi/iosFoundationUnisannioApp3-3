@@ -41,7 +41,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="186" height="30"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.07973354309797287" green="0.037688001990318298" blue="0.021095013245940208" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="textColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.033586161716614639" green="0.033423909727645487" blue="0.033748413705583791" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="yes" keyboardType="namePhonePad" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="username"/>
                                         <connections>
@@ -55,7 +55,7 @@
                                             <constraint firstAttribute="width" constant="186" id="6bi-xR-D2m"/>
                                             <constraint firstAttribute="height" constant="30" id="Nvn-ez-GHZ"/>
                                         </constraints>
-                                        <color key="textColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.0019338683009566227" green="0.0019245259420148035" blue="0.0019432106598984422" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="yes" keyboardType="emailAddress" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                         <connections>
@@ -71,7 +71,7 @@
                                             <constraint firstAttribute="width" constant="186" id="aZA-H6-Bct"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="vpX-f1-h30"/>
                                         </constraints>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.013734411606794231" green="0.013668061792268656" blue="0.013800761421319807" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="continue" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                         <connections>
