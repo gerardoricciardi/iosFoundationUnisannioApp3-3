@@ -118,7 +118,7 @@
                                     <color key="titleColor" red="0.28654810786247253" green="0.61551463603973389" blue="0.80791771411895752" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="dH7-y5-Fse" kind="show" id="hs0-GZ-a4M"/>
+                                    <segue destination="dH7-y5-Fse" kind="show" id="Ztv-4m-zSW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -197,48 +197,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AJY-fT-K28" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4005.5999999999999" y="459.22038980509751"/>
-        </scene>
-        <!--Table View Controller Allenamento-->
-        <scene sceneID="KKp-1t-dK7">
-            <objects>
-                <tableViewController id="PxR-JQ-oQI" customClass="TableViewControllerAllenamento" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zad-aQ-EYo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellAllenamento" rowHeight="228" id="gqu-00-oCl" customClass="TableViewCellAllenamento" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="228"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gqu-00-oCl" id="3q4-Cb-gp0">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="227.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="os0-pT-sZv">
-                                            <rect key="frame" x="8" y="8" width="359" height="211.5"/>
-                                        </imageView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="os0-pT-sZv" firstAttribute="leading" secondItem="3q4-Cb-gp0" secondAttribute="leadingMargin" id="0Wm-Si-Uwr"/>
-                                        <constraint firstItem="os0-pT-sZv" firstAttribute="top" secondItem="3q4-Cb-gp0" secondAttribute="topMargin" id="5Ix-RM-zJ1"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="os0-pT-sZv" secondAttribute="bottom" id="Hc9-N4-fWs"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="os0-pT-sZv" secondAttribute="trailing" id="M2N-zi-0Lc"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="imageEsercizio" destination="os0-pT-sZv" id="hWU-Ei-laF"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="PxR-JQ-oQI" id="A8C-Oi-nxb"/>
-                            <outlet property="delegate" destination="PxR-JQ-oQI" id="nV9-tb-58b"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5xW-QX-FdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2910" y="461"/>
         </scene>
     </scenes>
     <resources>
