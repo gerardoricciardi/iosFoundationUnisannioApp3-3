@@ -18,16 +18,16 @@ class TestSaverRecord{
         let container = CKContainer.default
         var currentRecord: CKRecord?
         var recordZone: CKRecordZone?
-        var privateDatabase: CKDatabase?
+        var publicDatabase: CKDatabase?
         
-        privateDatabase = container().privateCloudDatabase
+        publicDatabase = container().publicCloudDatabase
         recordZone = CKRecordZone(zoneName: "_defaultZone")
         
         
         let predicate = NSPredicate(format: "%K == %@", "nome", nomeEsercizio)
         
         let query = CKQuery(recordType: "Esercizi", predicate: predicate)
-        privateDatabase?.perform(query, inZoneWith: nil) {
+        publicDatabase?.perform(query, inZoneWith: nil) {
             (records, error) -> Void in
             guard let records = records else {
                 print("Error querying records: ", error)
@@ -71,9 +71,9 @@ class TestSaverRecord{
         var currentRecord: CKRecord?
         
         var recordZone: CKRecordZone?
-        var privateDatabase: CKDatabase?
+        var publicDatabase: CKDatabase?
         
-        privateDatabase = container().privateCloudDatabase
+        publicDatabase = container().publicCloudDatabase
         recordZone = CKRecordZone(zoneName: "_defaultZone")
         
         
@@ -86,7 +86,7 @@ class TestSaverRecord{
         myRecord.setObject(2 as CKRecordValue, forKey:"livello")
         myRecord.setObject(10 as CKRecordValue, forKey:"tempo")
         
-        privateDatabase?.save(myRecord) { (myRecord, error) -> Void in
+        publicDatabase?.save(myRecord) { (myRecord, error) -> Void in
             guard let record = myRecord else {
                 print("Error saving record: ", error)
                 return
@@ -105,16 +105,16 @@ class TestSaverRecord{
         let container = CKContainer.default
         var currentRecord: CKRecord?
         var recordZone: CKRecordZone?
-        var privateDatabase: CKDatabase?
+        var publicDatabase: CKDatabase?
         
-        privateDatabase = container().privateCloudDatabase
+        publicDatabase = container().publicCloudDatabase
         recordZone = CKRecordZone(zoneName: "_defaultZone")
         
         
         let predicate = NSPredicate(format: "%K == %@", "nome", nomeEsercizio)
         
         let query = CKQuery(recordType: "Esercizi", predicate: predicate)
-        privateDatabase?.perform(query, inZoneWith: nil) {
+        publicDatabase?.perform(query, inZoneWith: nil) {
             (records, error) -> Void in
             guard let records = records else {
                 print("Error querying records: ", error)
