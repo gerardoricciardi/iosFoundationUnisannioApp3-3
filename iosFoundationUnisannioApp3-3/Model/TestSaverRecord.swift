@@ -100,6 +100,8 @@ class TestSaverRecord{
     
     
     static func getVideoFromEsercizio(nomeEsercizio:String)->Data{
+        let semaphore = DispatchSemaphore(value: 0)
+
         
        var videoData:Data!
         let container = CKContainer.default
@@ -129,7 +131,8 @@ class TestSaverRecord{
                     if let data = try?Data(contentsOf: file.fileURL) {
                         videoData=data
                         
-                        
+                        semaphore.signal()
+
                         
                     }
                 }
@@ -139,10 +142,13 @@ class TestSaverRecord{
             
         }
         
-        while videoData == nil{
-        }
-//        self.playButton.isHidden=false
+//        while videoData == nil{
+//        }
+////        self.playButton.isHidden=false
+        
+        semaphore.wait()
         return videoData
+        
 
 }
 

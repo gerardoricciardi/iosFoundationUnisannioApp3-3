@@ -42,9 +42,9 @@ class VideoWorkoutViewController: UIViewController {
         videoView.backgroundColor = UIColor.blue
 //        let videoURL = URL(string: url)
         var videoData: Data!
-       
-      
-             videoData = TestSaverRecord.getVideoFromEsercizio(nomeEsercizio: "allungamenti adduttori")
+        
+        
+        videoData = TestSaverRecord.getVideoFromEsercizio(nomeEsercizio: "allungamenti adduttori")
         
         
         let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as! String
@@ -60,14 +60,34 @@ class VideoWorkoutViewController: UIViewController {
         asset = (AVAsset(url: fileURL) as! AVURLAsset)
         let playerItem = AVPlayerItem(asset: asset)
         
-         player = AVPlayer(playerItem: playerItem                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ) as! AVPlayer
+        player = AVPlayer(playerItem: playerItem                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ) 
         
         let playerLayer = AVPlayerLayer(player:player)
         playerLayer.videoGravity=AVLayerVideoGravity.resizeAspectFill
         videoView.layer.addSublayer(playerLayer)
         playerLayer.frame=videoView.bounds
+
         
         
+//
+//        let playerController = AVPlayerViewController()
+//        playerController.player = player
+//
+//
+//        self.present(playerController, animated: true) {
+//
+//            playerController.player!.play()
+//        }
+//        present(playerController, animated: true) {
+//            self.player.play()
+//        }
+
+        
+        
+        
+//
+//        videoView.addSubview(playerController.view)
+//
 
         
         //        playerLayer.frame = self.view.bounds
