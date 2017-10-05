@@ -18,16 +18,16 @@ class TestSaverRecord{
         let container = CKContainer.default
         var currentRecord: CKRecord?
         var recordZone: CKRecordZone?
-        var privateDatabase: CKDatabase?
+        var publicDatabase: CKDatabase?
         
-        privateDatabase = container().privateCloudDatabase
+        publicDatabase = container().publicCloudDatabase
         recordZone = CKRecordZone(zoneName: "_defaultZone")
         
         
         let predicate = NSPredicate(format: "%K == %@", "nome", nomeEsercizio)
         
         let query = CKQuery(recordType: "Esercizi", predicate: predicate)
-        privateDatabase?.perform(query, inZoneWith: nil) {
+        publicDatabase?.perform(query, inZoneWith: nil) {
             (records, error) -> Void in
             guard let records = records else {
                 print("Error querying records: ", error)
@@ -50,22 +50,7 @@ class TestSaverRecord{
                 }
                 
                  image = UIImage(data: imageData)
-                
-            
-//
-//
-//                let fotoEsercizio :CKAsset! = record.object(forKey: "foto") as! CKAsset
-//                if let file = fotoEsercizio {
-//                     let data=try?Data(contentsOf: file.fileURL) {
-//                       return  image=UIImage(data: data)
-//                    }
-//                }
-//
-//            }
-//
-//        }
-////        image=UIImage(named:"rtg")
-//
+  
             }
 
         
@@ -86,9 +71,9 @@ class TestSaverRecord{
         var currentRecord: CKRecord?
         
         var recordZone: CKRecordZone?
-        var privateDatabase: CKDatabase?
+        var publicDatabase: CKDatabase?
         
-        privateDatabase = container().privateCloudDatabase
+        publicDatabase = container().publicCloudDatabase
         recordZone = CKRecordZone(zoneName: "_defaultZone")
         
         
@@ -101,7 +86,7 @@ class TestSaverRecord{
         myRecord.setObject(2 as CKRecordValue, forKey:"livello")
         myRecord.setObject(10 as CKRecordValue, forKey:"tempo")
         
-        privateDatabase?.save(myRecord) { (myRecord, error) -> Void in
+        publicDatabase?.save(myRecord) { (myRecord, error) -> Void in
             guard let record = myRecord else {
                 print("Error saving record: ", error)
                 return
@@ -112,6 +97,57 @@ class TestSaverRecord{
     }
     
     //fare metodo getEserciziByworkout
-    }
+    
+    
+    static func getVideoFromEsercizio(nomeEsercizio:String)->Data{
+        
+       var videoData:Data!
+        let container = CKContainer.default
+        var currentRecord: CKRecord?
+        var recordZone: CKRecordZone?
+        var publicDatabase: CKDatabase?
+        
+        publicDatabase = container().publicCloudDatabase
+        recordZone = CKRecordZone(zoneName: "_defaultZone")
+        
+        
+        let predicate = NSPredicate(format: "%K == %@", "nome", nomeEsercizio)
+        
+        let query = CKQuery(recordType: "Esercizi", predicate: predicate)
+        publicDatabase?.perform(query, inZoneWith: nil) {
+            (records, error) -> Void in
+            guard let records = records else {
+                print("Error querying records: ", error)
+                return
+            }
+            print("Found \(records.count) records matching query")
+            for record in records{
+                var File : CKAsset? = record.object(forKey:"video") as! CKAsset
+                print(record.object(forKey: "nome")!)
+                
+                if let file = File {
+                    if let data = try?Data(contentsOf: file.fileURL) {
+                        videoData=data
+                        
+                        
+                        
+                    }
+                }
+                
+                
+            }
+            
+        }
+        
+        while videoData == nil{
+        }
+//        self.playButton.isHidden=false
+        return videoData
+
+}
+
+}
+
+
 
 

@@ -1,14 +1,16 @@
 //
-//  TableViewControllerAllenamento.swift
+//  ImpostazioniTableViewController.swift
 //  iosFoundationUnisannioApp3-3
 //
-//  Created by Pagliaro Antonio on 04/10/2017.
+//  Created by Zabatta Daniela on 05/10/17.
 //  Copyright © 2017 Ricciardi Gerardo. All rights reserved.
 //
 
 import UIKit
 
-class TableViewControllerAllenamento: UITableViewController {
+class ImpostazioniTableViewController: UITableViewController {
+    
+var impostazioni = ["Helathkit","Notifiche","Modifica Profilo","Info", "Logout"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,24 +36,15 @@ class TableViewControllerAllenamento: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return impostazioni.count
     }
 
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellAllenamento", for: indexPath) as! TableViewCellAllenamento
-        // Configure the cell..
 
-        var imageEsercizio: UIImage = TestSaverRecord.loadExerciseFotoByName(nomeEsercizio: "plunk")
-        
-        if imageEsercizio != nil {
-        
-            
-        cell.imageEsercizio!.image=imageEsercizio
-        
-        }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cella", for: indexPath) as! ImpostazioniTableViewCell
+
+        cell.impostazioniLabel.text = impostazioni[indexPath.row]
         return cell
-        
     }
     
 

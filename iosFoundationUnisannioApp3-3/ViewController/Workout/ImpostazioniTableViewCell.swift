@@ -1,16 +1,16 @@
 //
-//  TableViewCellAllenamento.swift
+//  ImpostazioniTableViewCell.swift
 //  iosFoundationUnisannioApp3-3
 //
-//  Created by Pagliaro Antonio on 04/10/2017.
+//  Created by Zabatta Daniela on 05/10/17.
 //  Copyright © 2017 Ricciardi Gerardo. All rights reserved.
 //
 
 import UIKit
 
-class TableViewCellAllenamento: UITableViewCell {
-    
-    @IBOutlet var imageEsercizio : UIImageView!
+class ImpostazioniTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var impostazioniLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
