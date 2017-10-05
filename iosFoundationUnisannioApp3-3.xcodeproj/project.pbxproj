@@ -34,6 +34,8 @@
 		07C5C7C21F853D51003DCB85 /* VideoWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C5C7C11F853D51003DCB85 /* VideoWorkoutViewController.swift */; };
 		212917561F86186C002424B9 /* ImpostazioniTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212917551F86186C002424B9 /* ImpostazioniTableViewController.swift */; };
 		212917581F86188C002424B9 /* ImpostazioniTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212917571F86188C002424B9 /* ImpostazioniTableViewCell.swift */; };
+		212C9AD11F861F5B00235232 /* NotificheTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C9AD01F861F5B00235232 /* NotificheTableTableViewController.swift */; };
+		212C9AD31F861FA500235232 /* NotificheTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C9AD21F861FA500235232 /* NotificheTableViewCell.swift */; };
 		8F2499DE1F7BF59F001AEA9E /* Esercizio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */; };
 		8F2499E01F7BF89D001AEA9E /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499DF1F7BF89D001AEA9E /* Workout.swift */; };
 		8F2499E21F7E4723001AEA9E /* EsercizioDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */; };
@@ -96,6 +98,8 @@
 		07C5C7C11F853D51003DCB85 /* VideoWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoWorkoutViewController.swift; sourceTree = "<group>"; };
 		212917551F86186C002424B9 /* ImpostazioniTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpostazioniTableViewController.swift; sourceTree = "<group>"; };
 		212917571F86188C002424B9 /* ImpostazioniTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpostazioniTableViewCell.swift; sourceTree = "<group>"; };
+		212C9AD01F861F5B00235232 /* NotificheTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificheTableTableViewController.swift; sourceTree = "<group>"; };
+		212C9AD21F861FA500235232 /* NotificheTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificheTableViewCell.swift; sourceTree = "<group>"; };
 		8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Esercizio.swift; sourceTree = "<group>"; };
 		8F2499DF1F7BF89D001AEA9E /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsercizioDAO.swift; sourceTree = "<group>"; };
@@ -191,7 +195,6 @@
 		073683251F840A4900236D98 /* Workout */ = {
 			isa = PBXGroup;
 			children = (
-				212917571F86188C002424B9 /* ImpostazioniTableViewCell.swift */,
 				07A5EB981F839C0900337BF1 /* CategoriesTableViewCell.swift */,
 				07A5EB9A1F839C2400337BF1 /* CategoriesTableViewController.swift */,
 				0757B2DE1F83A41400DBFC9F /* CategoriesDetailsViewController.swift */,
@@ -212,6 +215,8 @@
 		0752074C1F7F02BB004EE4FF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				212C9AD21F861FA500235232 /* NotificheTableViewCell.swift */,
+				212C9AD01F861F5B00235232 /* NotificheTableTableViewController.swift */,
 				07C5C7C11F853D51003DCB85 /* VideoWorkoutViewController.swift */,
 				0797D1E31F7E734C0062A655 /* TabBarController.swift */,
 				8FD601BE1F84D148006AE871 /* TableViewControllerAllenamento.swift */,
@@ -223,6 +228,7 @@
 				076EDB581F7FB61300A15D6D /* IntroViewController1.swift */,
 				0733E1501F7AA7840066F286 /* IntroViewController.swift */,
 				0752074F1F7F04FB004EE4FF /* MainViewController.swift */,
+				212917571F86188C002424B9 /* ImpostazioniTableViewCell.swift */,
 				212917551F86186C002424B9 /* ImpostazioniTableViewController.swift */,
 				073683251F840A4900236D98 /* Workout */,
 				0736832A1F84235000236D98 /* Health Kit */,
@@ -422,6 +428,7 @@
 				212917561F86186C002424B9 /* ImpostazioniTableViewController.swift in Sources */,
 				8FD601BF1F84D148006AE871 /* TableViewControllerAllenamento.swift in Sources */,
 				0757B2DF1F83A41400DBFC9F /* CategoriesDetailsViewController.swift in Sources */,
+				212C9AD31F861FA500235232 /* NotificheTableViewCell.swift in Sources */,
 				0733E1511F7AA7840066F286 /* IntroViewController.swift in Sources */,
 				075207501F7F04FB004EE4FF /* MainViewController.swift in Sources */,
 				212917581F86188C002424B9 /* ImpostazioniTableViewCell.swift in Sources */,
@@ -440,6 +447,7 @@
 				076EDB5D1F7FB8E200A15D6D /* IntroViewController3.swift in Sources */,
 				F8A5E9791F83980D009D186F /* ViewControllerProfilo.swift in Sources */,
 				0736832E1F842F2200236D98 /* ProfileDataStore.swift in Sources */,
+				212C9AD11F861F5B00235232 /* NotificheTableTableViewController.swift in Sources */,
 				07A5EB9B1F839C2400337BF1 /* CategoriesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
