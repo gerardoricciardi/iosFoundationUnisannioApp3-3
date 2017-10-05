@@ -26,6 +26,7 @@
 		076EDB5B1F7FB84B00A15D6D /* IntroViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076EDB5A1F7FB84B00A15D6D /* IntroViewController2.swift */; };
 		076EDB5D1F7FB8E200A15D6D /* IntroViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076EDB5C1F7FB8E200A15D6D /* IntroViewController3.swift */; };
 		078893781F7FF95F001D8059 /* IntroViewControllerBenvenuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078893771F7FF95F001D8059 /* IntroViewControllerBenvenuto.swift */; };
+		078B1D701F8666DA000E4C92 /* ImpostazioniTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B1D6F1F8666DA000E4C92 /* ImpostazioniTableViewController.swift */; };
 		0797D1E01F7E71F80062A655 /* Utente.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0797D1DF1F7E71F80062A655 /* Utente.storyboard */; };
 		0797D1E21F7E72290062A655 /* Allenamento.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0797D1E11F7E72290062A655 /* Allenamento.storyboard */; };
 		0797D1E41F7E734C0062A655 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0797D1E31F7E734C0062A655 /* TabBarController.swift */; };
@@ -88,13 +89,13 @@
 		076EDB5A1F7FB84B00A15D6D /* IntroViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController2.swift; sourceTree = "<group>"; };
 		076EDB5C1F7FB8E200A15D6D /* IntroViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController3.swift; sourceTree = "<group>"; };
 		078893771F7FF95F001D8059 /* IntroViewControllerBenvenuto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewControllerBenvenuto.swift; sourceTree = "<group>"; };
+		078B1D6F1F8666DA000E4C92 /* ImpostazioniTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpostazioniTableViewController.swift; sourceTree = "<group>"; };
 		0797D1DF1F7E71F80062A655 /* Utente.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Utente.storyboard; sourceTree = "<group>"; };
 		0797D1E11F7E72290062A655 /* Allenamento.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Allenamento.storyboard; sourceTree = "<group>"; };
 		0797D1E31F7E734C0062A655 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		07A5EB981F839C0900337BF1 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		07A5EB9A1F839C2400337BF1 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
 		07C5C7C11F853D51003DCB85 /* VideoWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoWorkoutViewController.swift; sourceTree = "<group>"; };
-		212917551F86186C002424B9 /* ImpostazioniTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpostazioniTableViewController.swift; sourceTree = "<group>"; };
 		212917571F86188C002424B9 /* ImpostazioniTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpostazioniTableViewCell.swift; sourceTree = "<group>"; };
 		212C9AD01F861F5B00235232 /* NotificheTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificheTableTableViewController.swift; sourceTree = "<group>"; };
 		212C9AD21F861FA500235232 /* NotificheTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificheTableViewCell.swift; sourceTree = "<group>"; };
@@ -139,6 +140,7 @@
 		0733E1421F7AA7840066F286 = {
 			isa = PBXGroup;
 			children = (
+				078B1D6F1F8666DA000E4C92 /* ImpostazioniTableViewController.swift */,
 				0733E14D1F7AA7840066F286 /* iosFoundationUnisannioApp3-3 */,
 				0733E1651F7AA7840066F286 /* iosFoundationUnisannioApp3-3Tests */,
 				0733E1701F7AA7840066F286 /* iosFoundationUnisannioApp3-3UITests */,
@@ -213,8 +215,6 @@
 		0752074C1F7F02BB004EE4FF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				212C9AD21F861FA500235232 /* NotificheTableViewCell.swift */,
-				212C9AD01F861F5B00235232 /* NotificheTableTableViewController.swift */,
 				07C5C7C11F853D51003DCB85 /* VideoWorkoutViewController.swift */,
 				0797D1E31F7E734C0062A655 /* TabBarController.swift */,
 				076EDB5C1F7FB8E200A15D6D /* IntroViewController3.swift */,
@@ -224,8 +224,9 @@
 				076EDB581F7FB61300A15D6D /* IntroViewController1.swift */,
 				0733E1501F7AA7840066F286 /* IntroViewController.swift */,
 				0752074F1F7F04FB004EE4FF /* MainViewController.swift */,
+				212C9AD21F861FA500235232 /* NotificheTableViewCell.swift */,
+				212C9AD01F861F5B00235232 /* NotificheTableTableViewController.swift */,
 				212917571F86188C002424B9 /* ImpostazioniTableViewCell.swift */,
-				212917551F86186C002424B9 /* ImpostazioniTableViewController.swift */,
 				073683251F840A4900236D98 /* Workout */,
 				0736832A1F84235000236D98 /* Health Kit */,
 			);
@@ -422,6 +423,7 @@
 				07A5EB991F839C0900337BF1 /* CategoriesTableViewCell.swift in Sources */,
 				8F2C49EA1F7BAF3A006EC668 /* Utente.swift in Sources */,
 				073683301F842FC900236D98 /* UserHealthProfile.swift in Sources */,
+				078B1D701F8666DA000E4C92 /* ImpostazioniTableViewController.swift in Sources */,
 				0757B2DF1F83A41400DBFC9F /* CategoriesDetailsViewController.swift in Sources */,
 				212C9AD31F861FA500235232 /* NotificheTableViewCell.swift in Sources */,
 				0733E1511F7AA7840066F286 /* IntroViewController.swift in Sources */,
