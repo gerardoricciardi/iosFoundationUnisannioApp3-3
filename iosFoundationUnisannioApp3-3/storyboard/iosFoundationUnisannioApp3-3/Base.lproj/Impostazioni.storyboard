@@ -65,7 +65,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="impostazioniLabel" destination="mjZ-6t-XHj" id="TUH-tX-m0G"/>
-                                    <segue destination="siM-g5-a1w" kind="show" id="kqR-BM-a0X"/>
+                                    <segue destination="siM-g5-a1w" kind="show" identifier="segue" id="Ofr-T8-2zc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

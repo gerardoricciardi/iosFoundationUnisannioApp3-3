@@ -140,7 +140,6 @@
 		0733E1421F7AA7840066F286 = {
 			isa = PBXGroup;
 			children = (
-				078B1D6F1F8666DA000E4C92 /* ImpostazioniTableViewController.swift */,
 				0733E14D1F7AA7840066F286 /* iosFoundationUnisannioApp3-3 */,
 				0733E1651F7AA7840066F286 /* iosFoundationUnisannioApp3-3Tests */,
 				0733E1701F7AA7840066F286 /* iosFoundationUnisannioApp3-3UITests */,
@@ -226,6 +225,7 @@
 				0752074F1F7F04FB004EE4FF /* MainViewController.swift */,
 				212C9AD21F861FA500235232 /* NotificheTableViewCell.swift */,
 				212C9AD01F861F5B00235232 /* NotificheTableTableViewController.swift */,
+				078B1D6F1F8666DA000E4C92 /* ImpostazioniTableViewController.swift */,
 				212917571F86188C002424B9 /* ImpostazioniTableViewCell.swift */,
 				073683251F840A4900236D98 /* Workout */,
 				0736832A1F84235000236D98 /* Health Kit */,

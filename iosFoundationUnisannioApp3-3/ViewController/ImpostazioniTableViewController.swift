@@ -10,7 +10,12 @@ import UIKit
 
 class ImpostazioniTableViewController: UITableViewController {
 
-    var impostazioni = ["Helathkit","Notifiche","Modifica Profilo","Info", "Logout"]
+//    var impostazioni = ["Helathkit","Notifiche","Modifica Profilo","Info", "Logout"]
+    var impostazioni = ["Helathkit","Notifiche","Modifica Profilo"]
+    var notificheDescrizioni = ["Se l'opzione in ufficio è abilitata, riceverai delle notifiche che ti consentiranno di fare un viaggio nel fitness sul posto di lavoro, attraverso alcuni esercizi da fare comodamente alla scrivania.","Con l'opzione Riepiloghi settimanali, riceverai dei resoconti sugli allenamenti svolti nell'ultima settimana.","L'opzione Promemoria abilitata ti ricorda quando è il momento di allenarsi"]
+    
+
+    var segue = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +51,28 @@ class ImpostazioniTableViewController: UITableViewController {
         // Configure the cell...
 
         return cell
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segue"{
+            if let indexPath = tableView.indexPathForSelectedRow{
+                print("Prova *** \(indexPath.row)")
+                if indexPath.row == 0 {
+                   let destinationController = segue.destination as! NotificheTableTableViewController
+                   destinationController.notificheDescrizioni = notificheDescrizioni
+                }
+                if indexPath.row == 1 {
+                    let destinationController = segue.destination as! NotificheTableTableViewController
+                    destinationController.notificheDescrizioni = notificheDescrizioni
+                }
+                if indexPath.row == 2 {
+                    let destinationController = segue.destination as! NotificheTableTableViewController
+                    destinationController.notificheDescrizioni = notificheDescrizioni
+                }
+            }
+        }
     }
     
 
