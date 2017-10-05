@@ -32,6 +32,8 @@
 		07A5EB991F839C0900337BF1 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A5EB981F839C0900337BF1 /* CategoriesTableViewCell.swift */; };
 		07A5EB9B1F839C2400337BF1 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A5EB9A1F839C2400337BF1 /* CategoriesTableViewController.swift */; };
 		07C5C7C21F853D51003DCB85 /* VideoWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C5C7C11F853D51003DCB85 /* VideoWorkoutViewController.swift */; };
+		212917561F86186C002424B9 /* ImpostazioniTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212917551F86186C002424B9 /* ImpostazioniTableViewController.swift */; };
+		212917581F86188C002424B9 /* ImpostazioniTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212917571F86188C002424B9 /* ImpostazioniTableViewCell.swift */; };
 		8F2499DE1F7BF59F001AEA9E /* Esercizio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */; };
 		8F2499E01F7BF89D001AEA9E /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499DF1F7BF89D001AEA9E /* Workout.swift */; };
 		8F2499E21F7E4723001AEA9E /* EsercizioDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */; };
@@ -92,6 +94,8 @@
 		07A5EB981F839C0900337BF1 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		07A5EB9A1F839C2400337BF1 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
 		07C5C7C11F853D51003DCB85 /* VideoWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoWorkoutViewController.swift; sourceTree = "<group>"; };
+		212917551F86186C002424B9 /* ImpostazioniTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpostazioniTableViewController.swift; sourceTree = "<group>"; };
+		212917571F86188C002424B9 /* ImpostazioniTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpostazioniTableViewCell.swift; sourceTree = "<group>"; };
 		8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Esercizio.swift; sourceTree = "<group>"; };
 		8F2499DF1F7BF89D001AEA9E /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsercizioDAO.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 		073683251F840A4900236D98 /* Workout */ = {
 			isa = PBXGroup;
 			children = (
+				212917571F86188C002424B9 /* ImpostazioniTableViewCell.swift */,
 				07A5EB981F839C0900337BF1 /* CategoriesTableViewCell.swift */,
 				07A5EB9A1F839C2400337BF1 /* CategoriesTableViewController.swift */,
 				0757B2DE1F83A41400DBFC9F /* CategoriesDetailsViewController.swift */,
@@ -218,6 +223,7 @@
 				076EDB581F7FB61300A15D6D /* IntroViewController1.swift */,
 				0733E1501F7AA7840066F286 /* IntroViewController.swift */,
 				0752074F1F7F04FB004EE4FF /* MainViewController.swift */,
+				212917551F86186C002424B9 /* ImpostazioniTableViewController.swift */,
 				073683251F840A4900236D98 /* Workout */,
 				0736832A1F84235000236D98 /* Health Kit */,
 			);
@@ -413,10 +419,12 @@
 				07A5EB991F839C0900337BF1 /* CategoriesTableViewCell.swift in Sources */,
 				8F2C49EA1F7BAF3A006EC668 /* Utente.swift in Sources */,
 				073683301F842FC900236D98 /* UserHealthProfile.swift in Sources */,
+				212917561F86186C002424B9 /* ImpostazioniTableViewController.swift in Sources */,
 				8FD601BF1F84D148006AE871 /* TableViewControllerAllenamento.swift in Sources */,
 				0757B2DF1F83A41400DBFC9F /* CategoriesDetailsViewController.swift in Sources */,
 				0733E1511F7AA7840066F286 /* IntroViewController.swift in Sources */,
 				075207501F7F04FB004EE4FF /* MainViewController.swift in Sources */,
+				212917581F86188C002424B9 /* ImpostazioniTableViewCell.swift in Sources */,
 				8F2499E41F7E4732001AEA9E /* WorkoutDAO.swift in Sources */,
 				078893781F7FF95F001D8059 /* IntroViewControllerBenvenuto.swift in Sources */,
 				0736832C1F84239200236D98 /* HealthKitSetupAssistant.swift in Sources */,
