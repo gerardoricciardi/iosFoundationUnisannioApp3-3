@@ -118,7 +118,7 @@
                                     <color key="titleColor" red="0.28654810786247253" green="0.61551463603973389" blue="0.80791771411895752" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="dH7-y5-Fse" kind="show" id="Ztv-4m-zSW"/>
+                                    <segue destination="vhd-rW-PV0" kind="show" identifier="videoPreview" id="63g-Xg-Q7Q"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -132,6 +132,85 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tw8-A2-MPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1928.8" y="460.11994002998506"/>
+        </scene>
+        <!--Table View Controller Preview Allenamento-->
+        <scene sceneID="J8g-fb-Fbe">
+            <objects>
+                <tableViewController id="vhd-rW-PV0" customClass="TableViewControllerPreviewAllenamento" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="frq-E4-Jrm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPreviewVideo" rowHeight="333" id="yev-qF-rZk" customClass="TableViewCellPreviewVideo" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="333"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yev-qF-rZk" id="ujv-bU-LL7">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="332.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ky5-tP-4bL">
+                                            <rect key="frame" x="23" y="0.0" width="326" height="311"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Ky5-tP-4bL" firstAttribute="leading" secondItem="ujv-bU-LL7" secondAttribute="leading" constant="23" id="23B-Hy-4BC"/>
+                                        <constraint firstItem="Ky5-tP-4bL" firstAttribute="top" secondItem="ujv-bU-LL7" secondAttribute="top" id="6dB-xJ-uNl"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ky5-tP-4bL" secondAttribute="bottom" constant="21.5" id="KJx-Xb-DlO"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ky5-tP-4bL" secondAttribute="trailing" constant="26" id="Txf-iU-NlW"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ky5-tP-4bL" secondAttribute="bottom" constant="21.5" id="bda-x6-qe8"/>
+                                        <constraint firstItem="Ky5-tP-4bL" firstAttribute="leading" secondItem="ujv-bU-LL7" secondAttribute="leading" constant="23" id="ea9-gd-nE4"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ky5-tP-4bL" secondAttribute="trailing" constant="26" id="laH-ZV-BDU"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageVideoPreview" destination="Ky5-tP-4bL" id="HcM-5B-CjL"/>
+                                    <segue destination="dH7-y5-Fse" kind="show" identifier="allenamento" id="MAY-rM-byS"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPreviewEsercizi" rowHeight="93" id="YjQ-Ok-J3t" customClass="TableViewCellPreviewEsercizi" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="361" width="375" height="93"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YjQ-Ok-J3t" id="yVi-yH-q9g">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="92.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dbc-J6-d4b">
+                                            <rect key="frame" x="8" y="0.0" width="87" height="91"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="nomeEsercizio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQo-pR-3YD">
+                                            <rect key="frame" x="115" y="8" width="236" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="descrizione" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86Q-WB-0dU">
+                                            <rect key="frame" x="115" y="29" width="236" height="62"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imagePreviewEsercizio" destination="Dbc-J6-d4b" id="wvu-zs-hZI"/>
+                                    <outlet property="labelDescrizioneEsercizio" destination="86Q-WB-0dU" id="zyF-3g-tDC"/>
+                                    <outlet property="labelNomeEsercizio" destination="UQo-pR-3YD" id="tLe-yM-E31"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vhd-rW-PV0" id="0aJ-lu-CQo"/>
+                            <outlet property="delegate" destination="vhd-rW-PV0" id="SSQ-tR-Wen"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wL4-Ld-Rgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3071.1999999999998" y="1176.1619190404799"/>
         </scene>
         <!--Video Workout View Controller-->
         <scene sceneID="Dv3-gw-Z6P">

@@ -27,6 +27,19 @@ class CategoriesDetailsViewController: UIViewController {
     }
     
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "videoPreview"{
+            
+                let destinationController = segue.destination as! TableViewControllerPreviewAllenamento
+                
+//                destinationController.thumb = categoriesImage[indexPath.row]
+            
+            
+        }
+    }
+    
+    
+
     /*
     // MARK: - Navigation
 
