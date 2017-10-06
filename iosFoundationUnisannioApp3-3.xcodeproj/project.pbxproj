@@ -38,7 +38,6 @@
 		212C9AD31F861FA500235232 /* NotificheTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C9AD21F861FA500235232 /* NotificheTableViewCell.swift */; };
 		2152C7D11F87708B00D87E2D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152C7D01F87708B00D87E2D /* InfoViewController.swift */; };
 		8F2499DE1F7BF59F001AEA9E /* Esercizio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */; };
-		8F2499E01F7BF89D001AEA9E /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499DF1F7BF89D001AEA9E /* Workout.swift */; };
 		8F2499E21F7E4723001AEA9E /* EsercizioDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */; };
 		8F2499E41F7E4732001AEA9E /* WorkoutDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499E31F7E4732001AEA9E /* WorkoutDAO.swift */; };
 		8F2C49EA1F7BAF3A006EC668 /* Utente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2C49E91F7BAF3A006EC668 /* Utente.swift */; };
@@ -107,7 +106,6 @@
 		212C9AD21F861FA500235232 /* NotificheTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificheTableViewCell.swift; sourceTree = "<group>"; };
 		2152C7D01F87708B00D87E2D /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Esercizio.swift; sourceTree = "<group>"; };
-		8F2499DF1F7BF89D001AEA9E /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsercizioDAO.swift; sourceTree = "<group>"; };
 		8F2499E31F7E4732001AEA9E /* WorkoutDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDAO.swift; sourceTree = "<group>"; };
 		8F2C49E91F7BAF3A006EC668 /* Utente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utente.swift; sourceTree = "<group>"; };
@@ -157,6 +155,7 @@
 				0733E1701F7AA7840066F286 /* iosFoundationUnisannioApp3-3UITests */,
 				0733E14C1F7AA7840066F286 /* Products */,
 				07A5EB8F1F8397D300337BF1 /* Frameworks */,
+				8F2E5D5F1F879E7A00182C28 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -258,7 +257,6 @@
 				8F2499E31F7E4732001AEA9E /* WorkoutDAO.swift */,
 				8F2C49E91F7BAF3A006EC668 /* Utente.swift */,
 				8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */,
-				8F2499DF1F7BF89D001AEA9E /* Workout.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,6 +280,14 @@
 				F8C311391F839F3800C1FFE2 /* HealthKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F2E5D5F1F879E7A00182C28 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				2152C7D01F87708B00D87E2D /* InfoViewController.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,7 +467,6 @@
 				8F2E5D561F867D9B00182C28 /* TableViewControllerPreviewAllenamento.swift in Sources */,
 				076EDB591F7FB61300A15D6D /* IntroViewController1.swift in Sources */,
 				8F2E5D5C1F8797EB00182C28 /* DetailsCategoriesTableViewController.swift in Sources */,
-				8F2499E01F7BF89D001AEA9E /* Workout.swift in Sources */,
 				8F2499E21F7E4723001AEA9E /* EsercizioDAO.swift in Sources */,
 				076EDB5D1F7FB8E200A15D6D /* IntroViewController3.swift in Sources */,
 				F8A5E9791F83980D009D186F /* ViewControllerProfilo.swift in Sources */,
