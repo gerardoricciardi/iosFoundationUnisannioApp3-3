@@ -127,7 +127,7 @@
                                     <constraint firstAttribute="height" constant="35" id="Ccz-UQ-v3X"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-LightOblique" family="Helvetica" pointSize="25"/>
-                                <state key="normal" title="Telle me about yourself &gt;">
+                                <state key="normal" title="Tell me about yourself &gt;">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
