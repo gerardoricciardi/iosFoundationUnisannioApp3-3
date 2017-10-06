@@ -33,6 +33,7 @@ class ModificaProfiloViewController: UIViewController {
         popOverVC.view.frame = self.view.frame
         self.view.addSubview(popOverVC.view)
         popOverVC.didMove(toParentViewController: self)
+        
     }
     
     override func viewDidLoad() {
