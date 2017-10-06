@@ -28,6 +28,11 @@ class ModificaProfiloViewController: UIViewController {
         defaults.set(orarioFineP.date, forKey: "oraFine")
         defaults.synchronize()
         print("Tutto registrato")
+        let popOverVC = UIStoryboard(name:"Utente", bundle: nil).instantiateViewController(withIdentifier: "sdPopUpID") as! PopUpViewController
+        self.addChildViewController(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParentViewController: self)
     }
     
     override func viewDidLoad() {
