@@ -48,6 +48,7 @@
 		8F2E5D5C1F8797EB00182C28 /* DetailsCategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E5D5B1F8797EB00182C28 /* DetailsCategoriesTableViewController.swift */; };
 		8F2E5D5E1F87991600182C28 /* DetailsCategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E5D5D1F87991600182C28 /* DetailsCategoriesTableViewCell.swift */; };
 		8F2E5D611F87A13200182C28 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E5D601F87A13200182C28 /* Workout.swift */; };
+		F8A380841F87E4520019F4DF /* ModificaProfiloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A380831F87E4520019F4DF /* ModificaProfiloViewController.swift */; };
 		F8A5E9791F83980D009D186F /* ViewControllerProfilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */; };
 		F8C3113A1F839F3800C1FFE2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C311391F839F3800C1FFE2 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
@@ -117,6 +118,7 @@
 		8F2E5D5B1F8797EB00182C28 /* DetailsCategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCategoriesTableViewController.swift; sourceTree = "<group>"; };
 		8F2E5D5D1F87991600182C28 /* DetailsCategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		8F2E5D601F87A13200182C28 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		F8A380831F87E4520019F4DF /* ModificaProfiloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModificaProfiloViewController.swift; sourceTree = "<group>"; };
 		F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProfilo.swift; sourceTree = "<group>"; };
 		F8C311381F839EEB00C1FFE2 /* iosFoundationUnisannioApp3-3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iosFoundationUnisannioApp3-3.entitlements"; sourceTree = "<group>"; };
 		F8C311391F839F3800C1FFE2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -157,7 +159,6 @@
 				0733E1701F7AA7840066F286 /* iosFoundationUnisannioApp3-3UITests */,
 				0733E14C1F7AA7840066F286 /* Products */,
 				07A5EB8F1F8397D300337BF1 /* Frameworks */,
-				8F2E5D5F1F879E7A00182C28 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -229,10 +230,10 @@
 		0752074C1F7F02BB004EE4FF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F8C567921F84DAF900C75121 /* Profilo */,
 				0797D1E31F7E734C0062A655 /* TabBarController.swift */,
 				076EDB5C1F7FB8E200A15D6D /* IntroViewController3.swift */,
 				076EDB5A1F7FB84B00A15D6D /* IntroViewController2.swift */,
-				F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */,
 				078893771F7FF95F001D8059 /* IntroViewControllerBenvenuto.swift */,
 				076EDB581F7FB61300A15D6D /* IntroViewController1.swift */,
 				0733E1501F7AA7840066F286 /* IntroViewController.swift */,
@@ -286,11 +287,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8F2E5D5F1F879E7A00182C28 /* Recovered References */ = {
+		F8C567921F84DAF900C75121 /* Profilo */ = {
 			isa = PBXGroup;
 			children = (
+				F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */,
+				F8A380831F87E4520019F4DF /* ModificaProfiloViewController.swift */,
 			);
-			name = "Recovered References";
+			path = Profilo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -472,6 +475,7 @@
 				076EDB591F7FB61300A15D6D /* IntroViewController1.swift in Sources */,
 				8F2E5D5C1F8797EB00182C28 /* DetailsCategoriesTableViewController.swift in Sources */,
 				8F2499E21F7E4723001AEA9E /* EsercizioDAO.swift in Sources */,
+				F8A380841F87E4520019F4DF /* ModificaProfiloViewController.swift in Sources */,
 				076EDB5D1F7FB8E200A15D6D /* IntroViewController3.swift in Sources */,
 				F8A5E9791F83980D009D186F /* ViewControllerProfilo.swift in Sources */,
 				0736832E1F842F2200236D98 /* ProfileDataStore.swift in Sources */,
