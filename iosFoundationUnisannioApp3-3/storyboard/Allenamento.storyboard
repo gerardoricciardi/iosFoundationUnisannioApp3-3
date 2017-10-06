@@ -64,7 +64,7 @@
                                 <connections>
                                     <outlet property="categoriesImage" destination="nqh-gb-8kM" id="v3B-kZ-zpf"/>
                                     <outlet property="categoriesLabel" destination="8H6-bs-8vo" id="QD7-3W-O13"/>
-                                    <segue destination="PNl-a5-4SV" kind="show" identifier="showCategories" id="M8h-Zf-5m9"/>
+                                    <segue destination="6RI-k0-BDf" kind="show" identifier="showCategories" id="yxV-9J-a1V"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -99,39 +99,35 @@
             <point key="canvasLocation" x="135" y="462"/>
         </scene>
         <!--Categories Details View Controller-->
-        <scene sceneID="BjK-2F-26u">
+        <scene sceneID="1bk-Mt-jgn">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="PNl-a5-4SV" customClass="CategoriesDetailsViewController" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="S77-e3-Ggs">
+                <tableViewController id="6RI-k0-BDf" customClass="CategoriesDetailsViewController" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MDn-X5-pAu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L48-tv-Dv0">
-                                <rect key="frame" x="41" y="124" width="292" height="197"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sY-bN-Pop">
-                                <rect key="frame" x="80" y="449" width="227" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
-                                <state key="normal" title="Conferma" backgroundImage="buttt">
-                                    <color key="titleColor" red="0.28654810786247253" green="0.61551463603973389" blue="0.80791771411895752" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vhd-rW-PV0" kind="show" identifier="videoPreview" id="63g-Xg-Q7Q"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="YFa-Rk-WV8"/>
-                    </view>
-                    <connections>
-                        <outlet property="categoryImage" destination="L48-tv-Dv0" id="AO6-wb-fbe"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tw8-A2-MPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="oEE-sv-FeF">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oEE-sv-FeF" id="wa9-Ek-6Cj">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="vhd-rW-PV0" kind="show" identifier="videoPreview" id="bDS-F8-LGr"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6RI-k0-BDf" id="otp-fd-BbY"/>
+                            <outlet property="delegate" destination="6RI-k0-BDf" id="5ei-nY-VA1"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SIi-mY-ew6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1928.8" y="460.11994002998506"/>
+            <point key="canvasLocation" x="2393" y="-253"/>
         </scene>
         <!--Table View Controller Preview Allenamento-->
         <scene sceneID="J8g-fb-Fbe">
@@ -304,7 +300,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="buttt" width="289" height="56"/>
         <image name="side-bending-posture" width="32" height="32"/>
     </resources>
     <color key="tintColor" red="0.25449371610238758" green="0.74019084991383133" blue="0.80371589467005078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

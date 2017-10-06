@@ -120,7 +120,10 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
               var  categoria : String
                 categoria=categoriesImage[indexPath.row]
                 print(categoria)
-                TestSaverRecord.getWorkoutsByCategory(categoria:categoria)
+                var workouts: [Workout] = TestSaverRecord.getWorkoutsByCategory(categoria:categoria)
+                
+                destinationController.workouts=workouts
+                
             }
         }
     }

@@ -8,9 +8,11 @@
 
 import UIKit
 
-class CategoriesDetailsViewController: UIViewController {
+class CategoriesDetailsViewController: UITableViewController {
 
     @IBOutlet weak var categoryImage: UIImageView!
+    
+    var workouts : [Workout]!
     
     var thumb = ""
     override func viewDidLoad() {
