@@ -57,11 +57,11 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(red: 230.0/255.0, green: 230.0/255.0, blue: 230.0/255.0, alpha: 49.0)
+        view.backgroundColor = UIColor.white
         _ = UIImage(named: "benvenuto")
         self.picker.delegate = self
         immProfilo.layer.cornerRadius = 30.0
-        immProfilo.clipsToBounds = true
+        immProfilo.clipsToBounds = false
         InserireNomeL?.text = "Fabio"//defaults.object(forKey:"Username") as? String
         InserireCognomeL?.text = "Dell'infante"//defaults.object(forKey: "Username") as? String
         LabelSesso?.text = "Uomo"//defaults.object(forKey:"Sesso") as? String

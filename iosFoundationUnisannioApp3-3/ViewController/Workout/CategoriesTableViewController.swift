@@ -13,7 +13,7 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
     var isGrantedNotificationAccess:Bool = false
     
     let backgroundColor = UIColor(red: 54.0/255.0, green: 155.0/255.0, blue: 184.0/255.0, alpha: 1.0)
-    var categoriesImage = ["stretching", "pilates", "totalBody"]
+    var categoriesImage = ["Stretching", "Pilates", "TotalBody"]
     var categoriesTitle = ["Stretching", "Pilates", "TotalBody"]
     var notifiche: [NotificationHK] = []
     var id = ""
