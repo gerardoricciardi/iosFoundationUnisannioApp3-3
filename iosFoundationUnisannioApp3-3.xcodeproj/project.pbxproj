@@ -36,6 +36,7 @@
 		212917581F86188C002424B9 /* ImpostazioniTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212917571F86188C002424B9 /* ImpostazioniTableViewCell.swift */; };
 		212C9AD11F861F5B00235232 /* NotificheTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C9AD01F861F5B00235232 /* NotificheTableTableViewController.swift */; };
 		212C9AD31F861FA500235232 /* NotificheTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C9AD21F861FA500235232 /* NotificheTableViewCell.swift */; };
+		2152C7D11F87708B00D87E2D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152C7D01F87708B00D87E2D /* InfoViewController.swift */; };
 		8F2499DE1F7BF59F001AEA9E /* Esercizio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */; };
 		8F2499E01F7BF89D001AEA9E /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499DF1F7BF89D001AEA9E /* Workout.swift */; };
 		8F2499E21F7E4723001AEA9E /* EsercizioDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */; };
@@ -104,6 +105,7 @@
 		212917571F86188C002424B9 /* ImpostazioniTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpostazioniTableViewCell.swift; sourceTree = "<group>"; };
 		212C9AD01F861F5B00235232 /* NotificheTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificheTableTableViewController.swift; sourceTree = "<group>"; };
 		212C9AD21F861FA500235232 /* NotificheTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificheTableViewCell.swift; sourceTree = "<group>"; };
+		2152C7D01F87708B00D87E2D /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Esercizio.swift; sourceTree = "<group>"; };
 		8F2499DF1F7BF89D001AEA9E /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsercizioDAO.swift; sourceTree = "<group>"; };
@@ -443,6 +445,7 @@
 				212C9AD31F861FA500235232 /* NotificheTableViewCell.swift in Sources */,
 				0733E1511F7AA7840066F286 /* IntroViewController.swift in Sources */,
 				075207501F7F04FB004EE4FF /* MainViewController.swift in Sources */,
+				2152C7D11F87708B00D87E2D /* InfoViewController.swift in Sources */,
 				212917581F86188C002424B9 /* ImpostazioniTableViewCell.swift in Sources */,
 				8F2499E41F7E4732001AEA9E /* WorkoutDAO.swift in Sources */,
 				8F2E5D5A1F867DC400182C28 /* TableViewCellPreviewEsercizi.swift in Sources */,
