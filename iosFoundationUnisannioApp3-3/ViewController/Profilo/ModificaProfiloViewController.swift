@@ -16,18 +16,22 @@ class ModificaProfiloViewController: UIViewController {
     @IBAction func WomanButton(_ sender: UIButton) {
         defaults.set("donna", forKey: "Sesso")
         defaults.synchronize()
+        print("donna")
     }
     @IBAction func ManButton(_ sender: UIButton) {
         defaults.set("uomo", forKey: "Sesso")
         defaults.synchronize()
+        print("uomo")
     }
     @IBAction func SaveButton(_ sender: UIBarButtonItem) {
-        
+        defaults.set(orarioInizioP.date, forKey: "oraInizio")
+        defaults.set(orarioFineP.date, forKey: "oraFine")
+        defaults.synchronize()
+        print("Tutto registrato")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 

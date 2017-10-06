@@ -320,7 +320,7 @@
                     <navigationItem key="navigationItem" title="Profilo" id="1xv-fW-Z8o">
                         <barButtonItem key="rightBarButtonItem" title="Modifica" id="jhw-P6-wL3">
                             <connections>
-                                <segue destination="Jhc-j0-4o0" kind="push" id="K5c-Lr-08P"/>
+                                <segue destination="Jhc-j0-4o0" kind="push" identifier="segueAO" id="K5c-Lr-08P"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -429,15 +429,19 @@
                     <navigationItem key="navigationItem" id="o2X-d7-tAR">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="7r0-3B-Vga">
                             <connections>
-                                <action selector="SaveButton:" destination="Jhc-j0-4o0" id="8hS-sl-HGg"/>
+                                <action selector="SaveButton:" destination="Jhc-j0-4o0" id="vxE-NO-Nok"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="orarioFineP" destination="KBq-dq-xPJ" id="t6g-aO-abL"/>
+                        <outlet property="orarioInizioP" destination="h7K-gn-wpP" id="2i9-4s-wbR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZC5-aM-iOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="lG8-yZ-WNJ"/>
             </objects>
-            <point key="canvasLocation" x="1671.2" y="-93.103448275862078"/>
+            <point key="canvasLocation" x="1929" y="-322"/>
         </scene>
         <!--Main-->
         <scene sceneID="vkH-zA-eF6">
