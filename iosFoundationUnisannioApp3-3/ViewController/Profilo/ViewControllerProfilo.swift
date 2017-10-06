@@ -58,13 +58,13 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
         super.viewDidLoad()
         
         view.backgroundColor = UIColor(red: 230.0/255.0, green: 230.0/255.0, blue: 230.0/255.0, alpha: 49.0)
-        let background = UIImage(named: "benvenuto")
+        _ = UIImage(named: "benvenuto")
         self.picker.delegate = self
         immProfilo.layer.cornerRadius = 30.0
         immProfilo.clipsToBounds = true
-        InserireNomeL?.text = "fabio"//defaults.object(forKey:"Username") as? String
-        InserireCognomeL?.text = "dell'infante"//defaults.object(forKey: "Username") as? String
-        LabelSesso?.text = "uomo"//defaults.object(forKey:"Sesso") as? String
+        InserireNomeL?.text = "Fabio"//defaults.object(forKey:"Username") as? String
+        InserireCognomeL?.text = "Dell'infante"//defaults.object(forKey: "Username") as? String
+        LabelSesso?.text = "Uomo"//defaults.object(forKey:"Sesso") as? String
         OrariLavLabel?.text = "09:00"//defaults.object(forKey:"oraInizio") as? String
         OrarioLavLabelInizio?.text = "18:00"//defaults.object(forKey:"oraFine") as? String
         

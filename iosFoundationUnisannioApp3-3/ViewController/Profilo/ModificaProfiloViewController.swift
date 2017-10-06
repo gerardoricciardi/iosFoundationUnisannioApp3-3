@@ -9,10 +9,17 @@
 import UIKit
 
 class ModificaProfiloViewController: UIViewController {
+    @IBOutlet weak var orarioFineP: UIDatePicker!
+    @IBOutlet weak var orarioInizioP: UIDatePicker!
+    let defaults=UserDefaults.standard
     
     @IBAction func WomanButton(_ sender: UIButton) {
+        defaults.set("donna", forKey: "Sesso")
+        defaults.synchronize()
     }
     @IBAction func ManButton(_ sender: UIButton) {
+        defaults.set("uomo", forKey: "Sesso")
+        defaults.synchronize()
     }
     @IBAction func SaveButton(_ sender: UIBarButtonItem) {
         
