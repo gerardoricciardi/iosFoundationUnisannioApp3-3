@@ -19,7 +19,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5W4-9l-8iV">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.67797273397445679" green="0.79216945171356201" blue="0.79218685626983643" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.39677354693412781" green="0.71572017669677734" blue="0.81574428081512451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
                         <segue destination="lFl-79-V60" kind="relationship" relationship="rootViewController" id="oYp-6V-PWJ"/>
@@ -149,6 +149,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.39677354693412781" green="0.71572017669677734" blue="0.81574428081512451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Q3D-mJ-8Ac" firstAttribute="centerX" secondItem="U7c-4y-YU4" secondAttribute="centerX" id="0Pf-WK-hSi"/>
                             <constraint firstItem="NDW-tp-fEZ" firstAttribute="top" secondItem="zed-s9-Jjj" secondAttribute="bottom" constant="8" symbolic="YES" id="0SS-qM-sIz"/>
