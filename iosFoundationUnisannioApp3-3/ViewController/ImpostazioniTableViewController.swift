@@ -12,13 +12,14 @@ class ImpostazioniTableViewController: UITableViewController {
 
 
     var impostazioni = ["Healthkit","Notifiche","Info"]
-    var notificheDescrizioni = ["Se l'opzione in ufficio è abilitata, riceverai delle notifiche che ti consentiranno di fare un viaggio nel fitness sul posto di lavoro, attraverso alcuni esercizi da fare comodamente alla scrivania.","Con l'opzione Riepiloghi settimanali, riceverai dei resoconti sugli allenamenti svolti nell'ultima settimana.","L'opzione Promemoria abilitata ti ricorda quando è il momento di allenarsi"]
+    var notificheDescrizioni = ["If the option in the office is enabled, you will receive a notifications that will allow you to make a trip to the gym at work, through some exercises to  comfortably at your desk.", "With Weekly Summaries option you will receive reports on the workouts of the last week.", "The option Reminder enabled  reminds you when it's time to train."]
     
     var segue = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem?.tintColor = UIColor.white
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

@@ -10,8 +10,11 @@ import UIKit
 
 class InfoViewController: UIViewController {
 @IBOutlet weak var infoText: UITextView!
+    @IBOutlet weak var info2: UITextView!
+    @IBOutlet weak var info3: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Info"
 
         // Do any additional setup after loading the view.
     }
