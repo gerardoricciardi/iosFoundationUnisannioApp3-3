@@ -42,6 +42,9 @@ class IntroViewController3: UIViewController {
         
         orarioInizio.date = dateIn!
         orarioFine.date = dateOut!
+        orarioFine.setValue(UIColor.white,forKey: "textColor")
+        orarioInizio.setValue(UIColor.white,forKey: "textColor")
+        
         
         
         
