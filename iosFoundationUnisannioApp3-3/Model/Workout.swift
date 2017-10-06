@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CloudKit
 
 enum Giudizio: Int{
     case uno=1,due,tre,quattro,cinque   //dichiarazione implicita due=2 etc.....

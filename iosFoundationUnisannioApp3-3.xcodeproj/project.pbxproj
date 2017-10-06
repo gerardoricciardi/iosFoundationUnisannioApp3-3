@@ -19,6 +19,7 @@
 		0736832C1F84239200236D98 /* HealthKitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0736832B1F84239200236D98 /* HealthKitSetupAssistant.swift */; };
 		0736832E1F842F2200236D98 /* ProfileDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0736832D1F842F2200236D98 /* ProfileDataStore.swift */; };
 		073683301F842FC900236D98 /* UserHealthProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0736832F1F842FC900236D98 /* UserHealthProfile.swift */; };
+		074BD1D61F87778300CAFF53 /* NotificationHK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074BD1D51F87778300CAFF53 /* NotificationHK.swift */; };
 		07505BF71F7E9E0400E1A88B /* Impostazioni.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07505BF51F7E9E0400E1A88B /* Impostazioni.storyboard */; };
 		075207501F7F04FB004EE4FF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752074F1F7F04FB004EE4FF /* MainViewController.swift */; };
 		0757B2DF1F83A41400DBFC9F /* CategoriesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0757B2DE1F83A41400DBFC9F /* CategoriesDetailsViewController.swift */; };
@@ -85,6 +86,7 @@
 		0736832B1F84239200236D98 /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSetupAssistant.swift; sourceTree = "<group>"; };
 		0736832D1F842F2200236D98 /* ProfileDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataStore.swift; sourceTree = "<group>"; };
 		0736832F1F842FC900236D98 /* UserHealthProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHealthProfile.swift; sourceTree = "<group>"; };
+		074BD1D51F87778300CAFF53 /* NotificationHK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHK.swift; sourceTree = "<group>"; };
 		07505BF61F7E9E0400E1A88B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "iosFoundationUnisannioApp3-3/Base.lproj/Impostazioni.storyboard"; sourceTree = "<group>"; };
 		0752074F1F7F04FB004EE4FF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0757B2DE1F83A41400DBFC9F /* CategoriesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesDetailsViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 		073683251F840A4900236D98 /* Workout */ = {
 			isa = PBXGroup;
 			children = (
+				07C5C7C11F853D51003DCB85 /* VideoWorkoutViewController.swift */,
 				07A5EB981F839C0900337BF1 /* CategoriesTableViewCell.swift */,
 				07A5EB9A1F839C2400337BF1 /* CategoriesTableViewController.swift */,
 				0757B2DE1F83A41400DBFC9F /* CategoriesDetailsViewController.swift */,
@@ -220,7 +223,6 @@
 		0752074C1F7F02BB004EE4FF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				07C5C7C11F853D51003DCB85 /* VideoWorkoutViewController.swift */,
 				0797D1E31F7E734C0062A655 /* TabBarController.swift */,
 				076EDB5C1F7FB8E200A15D6D /* IntroViewController3.swift */,
 				076EDB5A1F7FB84B00A15D6D /* IntroViewController2.swift */,
@@ -245,6 +247,7 @@
 		0752074D1F7F0300004EE4FF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				074BD1D51F87778300CAFF53 /* NotificationHK.swift */,
 				071E1BA91F83BFB10097C074 /* TestSaverRecord.swift */,
 				8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */,
 				8F2499E31F7E4732001AEA9E /* WorkoutDAO.swift */,
@@ -428,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				076EDB5B1F7FB84B00A15D6D /* IntroViewController2.swift in Sources */,
+				074BD1D61F87778300CAFF53 /* NotificationHK.swift in Sources */,
 				071E1BAA1F83BFB10097C074 /* TestSaverRecord.swift in Sources */,
 				07A5EB991F839C0900337BF1 /* CategoriesTableViewCell.swift in Sources */,
 				8F2C49EA1F7BAF3A006EC668 /* Utente.swift in Sources */,

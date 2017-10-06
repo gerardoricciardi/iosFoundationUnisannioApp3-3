@@ -15,6 +15,12 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
     let backgroundColor = UIColor(red: 54.0/255.0, green: 155.0/255.0, blue: 184.0/255.0, alpha: 1.0)
     var categoriesImage = ["stretching", "pilates", "totalBody"]
     var categoriesTitle = ["Stretching", "Pilates", "TotalBody"]
+    var notifiche: [NotificationHK] = []
+    var id = ""
+    var notifica1 = NotificationHK(title: "Esercizio da fare in ufficio", body: "Siediti sulla punta della sedia e stendi le gambe, inclinati con il busto in avanti cercando di toccare le caviglie", id: "String", hour: 1, minute: 1)
+    var notifica2 = NotificationHK(title: "Move!", body: "Alzarsi per prendere un bicchiere d’acqua", id: "String", hour: 1, minute: 15)
+    
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +32,18 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
                 self.isGrantedNotificationAccess = granted
         }
         )
+        notifica1.id = id
+        
+        notifiche.append(notifica1)
+        notifiche.append(notifica2)
         
         
+        
+        
+       
+        
+//        var notifica = NotificationHK(title: "Prova", body: "seijgbsigbnsgosng", id: "id", hour: 1, minute: 1)
+       
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -36,39 +52,57 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
     }
     func createNotification() {
         if isGrantedNotificationAccess{
-            //add notification code here
-            print("*****Prova Notifica******")
-            // unMutableNotificationContent contiene tutto il contenuto della notifica
-            //Set the content of the notification
-            let content = UNMutableNotificationContent()
-            //            content.title = "Prenditi cura di te stesso"
-            content.subtitle = "Esercizio da fare in ufficio"
-            content.body = "Siediti sulla punta della sedia e stendi le gambe, inclinati con il busto in avanti cercando di toccare le caviglie"
-            content.sound = UNNotificationSound.default()
+           
+            for notifica in notifiche{
+                //add notification code here
+                print("*****Prova Notifica******")
+                print(notifica.title)
+                print(notifica.minute)
+                // unMutableNotificationContent contiene tutto il contenuto della notifica
+                //Set the content of the notification
+                let content = UNMutableNotificationContent()
+                content.title = notifica.title
+                //            content.subtitle = "Esercizio da fare in ufficio"
+                content.body = notifica.body
+                content.sound = UNNotificationSound.default()
+                // triggers sono gli eventi che hanno scatenato la notifica
+                // per notifiche locali ci sono triggers per times, dates and locations
+                // usiamo le notifiche per times, repeats ci consente di ripetere la stessa notifica NEW from ios10
+                //Set the trigger of the notification -- here a timer.
+                let trigger = UNTimeIntervalNotificationTrigger(
+                    timeInterval: 10.0,
+                    repeats: false)
+                
+                let date = Date()
+                let formatter = DateFormatter()
+                formatter.dateFormat = "dd.mm.yyyy'T'HH:mm:ss:mmZZZZZ \(notifica.title)"
+                let result = formatter.string(from: date)
+                print(result)
+                
+                // prendiamo il trigger, il content e aggiungiamo una stringa per identificare la notifica
+                // inseriamo tutto in request
+                //Set the request for the notification from the above
+                let request = UNNotificationRequest(
+                    identifier: result,
+                    content: content,
+                    trigger: trigger)
+                //Add the notification to the currnet notification center
+                UNUserNotificationCenter.current().add(
+                    request, withCompletionHandler: nil)
+                
+                var dateComponents = DateComponents()
+                dateComponents.hour = 17
+                dateComponents.minute = 15
+                let trigger1 = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+                
+            }
             
-            // triggers sono gli eventi che hanno scatenato la notifica
-            // per notifiche locali ci sono triggers per times, dates and locations
-            // usiamo le notifiche per times, repeats ci consente di ripetere la stessa notifica NEW from ios10
-            //Set the trigger of the notification -- here a timer.
-            let trigger = UNTimeIntervalNotificationTrigger(
-                timeInterval: 10.0,
-                repeats: false)
             
-            var dateComponents = DateComponents()
-            dateComponents.hour = 17
-            dateComponents.minute = 15
-            let trigger1 = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
             
-            // prendiamo il trigger, il content e aggiungiamo una stringa per identificare la notifica
-            // inseriamo tutto in request
-            //Set the request for the notification from the above
-            let request = UNNotificationRequest(
-                identifier: "10.second.message",
-                content: content,
-                trigger: trigger)
-            //Add the notification to the currnet notification center
-            UNUserNotificationCenter.current().add(
-                request, withCompletionHandler: nil)
+            
+            
+           
+            
         }
     }
     
