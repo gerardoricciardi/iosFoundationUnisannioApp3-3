@@ -48,10 +48,9 @@
 		8F2E5D5C1F8797EB00182C28 /* DetailsCategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E5D5B1F8797EB00182C28 /* DetailsCategoriesTableViewController.swift */; };
 		8F2E5D5E1F87991600182C28 /* DetailsCategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E5D5D1F87991600182C28 /* DetailsCategoriesTableViewCell.swift */; };
 		8F2E5D611F87A13200182C28 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E5D601F87A13200182C28 /* Workout.swift */; };
+		F8A380841F87E4520019F4DF /* ModificaProfiloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A380831F87E4520019F4DF /* ModificaProfiloViewController.swift */; };
 		F8A5E9791F83980D009D186F /* ViewControllerProfilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */; };
 		F8C3113A1F839F3800C1FFE2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C311391F839F3800C1FFE2 /* HealthKit.framework */; };
-		F8C5678D1F84D8D100C75121 /* TableViewControllerModificaProfilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5678C1F84D8D100C75121 /* TableViewControllerModificaProfilo.swift */; };
-		F8C5678F1F84D91000C75121 /* ModificaProfiloTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5678E1F84D91000C75121 /* ModificaProfiloTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,11 +118,10 @@
 		8F2E5D5B1F8797EB00182C28 /* DetailsCategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCategoriesTableViewController.swift; sourceTree = "<group>"; };
 		8F2E5D5D1F87991600182C28 /* DetailsCategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		8F2E5D601F87A13200182C28 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		F8A380831F87E4520019F4DF /* ModificaProfiloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModificaProfiloViewController.swift; sourceTree = "<group>"; };
 		F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProfilo.swift; sourceTree = "<group>"; };
 		F8C311381F839EEB00C1FFE2 /* iosFoundationUnisannioApp3-3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iosFoundationUnisannioApp3-3.entitlements"; sourceTree = "<group>"; };
 		F8C311391F839F3800C1FFE2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		F8C5678C1F84D8D100C75121 /* TableViewControllerModificaProfilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerModificaProfilo.swift; sourceTree = "<group>"; };
-		F8C5678E1F84D91000C75121 /* ModificaProfiloTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModificaProfiloTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +159,6 @@
 				0733E1701F7AA7840066F286 /* iosFoundationUnisannioApp3-3UITests */,
 				0733E14C1F7AA7840066F286 /* Products */,
 				07A5EB8F1F8397D300337BF1 /* Frameworks */,
-				8F2E5D5F1F879E7A00182C28 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -233,9 +230,9 @@
 		0752074C1F7F02BB004EE4FF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F8C567921F84DAF900C75121 /* Profilo */,
 				0797D1E31F7E734C0062A655 /* TabBarController.swift */,
 				076EDB5C1F7FB8E200A15D6D /* IntroViewController3.swift */,
-				F8C567921F84DAF900C75121 /* Profilo */,
 				076EDB5A1F7FB84B00A15D6D /* IntroViewController2.swift */,
 				078893771F7FF95F001D8059 /* IntroViewControllerBenvenuto.swift */,
 				076EDB581F7FB61300A15D6D /* IntroViewController1.swift */,
@@ -293,9 +290,8 @@
 		F8C567921F84DAF900C75121 /* Profilo */ = {
 			isa = PBXGroup;
 			children = (
-				F8C5678E1F84D91000C75121 /* ModificaProfiloTableViewCell.swift */,
-				F8C5678C1F84D8D100C75121 /* TableViewControllerModificaProfilo.swift */,
 				F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */,
+				F8A380831F87E4520019F4DF /* ModificaProfiloViewController.swift */,
 			);
 			path = Profilo;
 			sourceTree = "<group>";
@@ -455,7 +451,6 @@
 				074BD1D61F87778300CAFF53 /* NotificationHK.swift in Sources */,
 				071E1BAA1F83BFB10097C074 /* TestSaverRecord.swift in Sources */,
 				07A5EB991F839C0900337BF1 /* CategoriesTableViewCell.swift in Sources */,
-				F8C5678F1F84D91000C75121 /* ModificaProfiloTableViewCell.swift in Sources */,
 				8F2C49EA1F7BAF3A006EC668 /* Utente.swift in Sources */,
 				073683301F842FC900236D98 /* UserHealthProfile.swift in Sources */,
 				078B1D701F8666DA000E4C92 /* ImpostazioniTableViewController.swift in Sources */,
@@ -480,8 +475,8 @@
 				076EDB591F7FB61300A15D6D /* IntroViewController1.swift in Sources */,
 				8F2E5D5C1F8797EB00182C28 /* DetailsCategoriesTableViewController.swift in Sources */,
 				8F2499E21F7E4723001AEA9E /* EsercizioDAO.swift in Sources */,
+				F8A380841F87E4520019F4DF /* ModificaProfiloViewController.swift in Sources */,
 				076EDB5D1F7FB8E200A15D6D /* IntroViewController3.swift in Sources */,
-				F8C5678D1F84D8D100C75121 /* TableViewControllerModificaProfilo.swift in Sources */,
 				F8A5E9791F83980D009D186F /* ViewControllerProfilo.swift in Sources */,
 				0736832E1F842F2200236D98 /* ProfileDataStore.swift in Sources */,
 				212C9AD11F861F5B00235232 /* NotificheTableTableViewController.swift in Sources */,

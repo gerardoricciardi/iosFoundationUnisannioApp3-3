@@ -11,6 +11,15 @@ import UIKit
 class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     let  picker = UIImagePickerController()
     
+    @IBOutlet weak var OrarioLavLabelInizio: UILabel!
+    @IBOutlet weak var OrariLavLabel: UILabel!
+    @IBOutlet weak var InserireCognomeL: UILabel!
+    @IBOutlet weak var InserireNomeL: UILabel!
+    @IBOutlet weak var immProfilo: UIImageView!
+    @IBOutlet weak var LabelSesso: UILabel!
+    var  u : Utente!
+    let defaults = UserDefaults.standard
+    
     @IBAction func CambiaImmagineProfilo(_ sender: UIButton) {
         
         
@@ -44,16 +53,21 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
         
         self.navigationController!.present(alertController, animated: true, completion: nil)
     }
-    @IBOutlet weak var InserireCognomeL: UILabel!
-    @IBOutlet weak var InserireNomeL: UILabel!
     
-    @IBOutlet weak var immProfilo: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = UIColor(red: 230.0/255.0, green: 230.0/255.0, blue: 230.0/255.0, alpha: 49.0)
         let background = UIImage(named: "benvenuto")
         self.picker.delegate = self
         immProfilo.layer.cornerRadius = 30.0
         immProfilo.clipsToBounds = true
+        InserireNomeL?.text = "fabio"//defaults.object(forKey:"Username") as? String
+        InserireCognomeL?.text = "dell'infante"//defaults.object(forKey: "Username") as? String
+        LabelSesso?.text = "uomo"//defaults.object(forKey:"Sesso") as? String
+        OrariLavLabel?.text = "09:00"//defaults.object(forKey:"oraInizio") as? String
+        OrarioLavLabelInizio?.text = "18:00"//defaults.object(forKey:"oraFine") as? String
+        
         // Do any additional setup after loading the view.
     }
 
@@ -62,16 +76,6 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let immSel = info[UIImagePickerControllerOriginalImage] as? UIImage
         {
