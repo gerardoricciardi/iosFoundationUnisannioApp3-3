@@ -152,7 +152,7 @@ class TestSaverRecord{
     
     static func getWorkoutsByCategory(categoria:String)->[Workout]{
         
-    var workouts : [Workout]!
+    var workouts : [Workout]! 
         var videoData:Data!
         let container = CKContainer.default
         var currentRecord: CKRecord?
