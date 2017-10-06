@@ -7,10 +7,11 @@
 //
 import Foundation
 import CloudKit
+import UIKit
 
 class Workout{
     
-    var anteprima: CKAsset
+    var anteprima: Data?
     var categoria: String?
     var esercizi: String?
     var isBloccato: String?
@@ -19,11 +20,11 @@ class Workout{
     var video: CKAsset?
     var id: String
     
-    init(anteprima: CKAsset, id: String) {
+    init(anteprima: Data, id: String) {
         self.anteprima = anteprima
         self.id = id
     }
-    init(anteprima: CKAsset, categoria: String, esercizi: String, isBloccato: String, livello: Int64, tempo: Int64, video: CKAsset, id: String) {
+    init(anteprima: Data, categoria: String, esercizi: String, isBloccato: String, livello: Int64, tempo: Int64, video: CKAsset, id: String) {
         self.anteprima = anteprima
         self.categoria = categoria
         self.esercizi = esercizi

@@ -10,7 +10,7 @@ import UIKit
 
 class DetailsCategoriesTableViewController: UITableViewController {
 
-    var workouts:[Workout]
+    var workouts:[Workout] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,9 @@ class DetailsCategoriesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellDetailsCategories", for: indexPath) as! DetailsCategoriesTableViewCell
         
-        cell.anteprimaWO.image=workouts[indexPath.row].anteprima
+        
+        
+//        cell.anteprimaWO.image=workouts[indexPath.row].anteprima
         
         
         

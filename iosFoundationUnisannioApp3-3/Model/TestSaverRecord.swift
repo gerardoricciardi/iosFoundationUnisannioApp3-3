@@ -152,7 +152,7 @@ class TestSaverRecord{
     
     static func getWorkoutsByCategory(categoria:String)->[Workout]{
         
-    var workouts : [Workout]
+    var workouts : [Workout]! 
         var videoData:Data!
         let container = CKContainer.default
         var currentRecord: CKRecord?
@@ -174,8 +174,15 @@ class TestSaverRecord{
             }
             print("Found \(records.count) records matching query")
             for record in records{
+                
+                
                 var idWorkout : String=record.object(forKey: "recordName") as! String
-                var anteprima : CKAsset=record.object(forKey: "anteprima") as! CKAsset
+                var asset : CKAsset=record.object(forKey: "anteprima") as! CKAsset
+                
+                
+                var anteprima : Data=try!Data(contentsOf:asset.fileURL)
+                
+                
                 
                 let workout:Workout=Workout(anteprima:anteprima,id:idWorkout)
                 workouts.append(workout)

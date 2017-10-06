@@ -149,6 +149,8 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
         return cell
     }
     
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCategories"{
             if let indexPath = tableView.indexPathForSelectedRow{
@@ -156,7 +158,6 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
 //                dammi i workout disponibili per la categoria scelta
 //                 e passali alla view successiva
                 
-                destinationController.thumb = categoriesImage[indexPath.row]
               var  categoria : String
                 categoria=categoriesImage[indexPath.row]
                 print(categoria)
