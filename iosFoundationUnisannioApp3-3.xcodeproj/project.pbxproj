@@ -48,6 +48,7 @@
 		8F2E5D5C1F8797EB00182C28 /* DetailsCategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E5D5B1F8797EB00182C28 /* DetailsCategoriesTableViewController.swift */; };
 		8F2E5D5E1F87991600182C28 /* DetailsCategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E5D5D1F87991600182C28 /* DetailsCategoriesTableViewCell.swift */; };
 		8F2E5D611F87A13200182C28 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E5D601F87A13200182C28 /* Workout.swift */; };
+		F82F7BC31F87FC020044F1AE /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82F7BC21F87FC020044F1AE /* PopUpViewController.swift */; };
 		F8A380841F87E4520019F4DF /* ModificaProfiloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A380831F87E4520019F4DF /* ModificaProfiloViewController.swift */; };
 		F8A5E9791F83980D009D186F /* ViewControllerProfilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */; };
 		F8C3113A1F839F3800C1FFE2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C311391F839F3800C1FFE2 /* HealthKit.framework */; };
@@ -118,6 +119,7 @@
 		8F2E5D5B1F8797EB00182C28 /* DetailsCategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCategoriesTableViewController.swift; sourceTree = "<group>"; };
 		8F2E5D5D1F87991600182C28 /* DetailsCategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		8F2E5D601F87A13200182C28 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		F82F7BC21F87FC020044F1AE /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		F8A380831F87E4520019F4DF /* ModificaProfiloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModificaProfiloViewController.swift; sourceTree = "<group>"; };
 		F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProfilo.swift; sourceTree = "<group>"; };
 		F8C311381F839EEB00C1FFE2 /* iosFoundationUnisannioApp3-3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iosFoundationUnisannioApp3-3.entitlements"; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 		F8C567921F84DAF900C75121 /* Profilo */ = {
 			isa = PBXGroup;
 			children = (
+				F82F7BC21F87FC020044F1AE /* PopUpViewController.swift */,
 				F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */,
 				F8A380831F87E4520019F4DF /* ModificaProfiloViewController.swift */,
 			);
@@ -477,6 +480,7 @@
 				8F2499E21F7E4723001AEA9E /* EsercizioDAO.swift in Sources */,
 				F8A380841F87E4520019F4DF /* ModificaProfiloViewController.swift in Sources */,
 				076EDB5D1F7FB8E200A15D6D /* IntroViewController3.swift in Sources */,
+				F82F7BC31F87FC020044F1AE /* PopUpViewController.swift in Sources */,
 				F8A5E9791F83980D009D186F /* ViewControllerProfilo.swift in Sources */,
 				0736832E1F842F2200236D98 /* ProfileDataStore.swift in Sources */,
 				212C9AD11F861F5B00235232 /* NotificheTableTableViewController.swift in Sources */,
