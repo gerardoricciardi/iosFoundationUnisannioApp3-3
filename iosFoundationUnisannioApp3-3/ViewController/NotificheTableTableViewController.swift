@@ -17,7 +17,7 @@ class NotificheTableTableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.title = "Notifications"
-        navigationItem.backBarButtonItem?.tintColor = UIColor.white
+        self.navigationItem.backBarButtonItem?.tintColor = UIColor.white
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
