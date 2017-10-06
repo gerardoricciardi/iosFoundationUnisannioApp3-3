@@ -10,6 +10,7 @@ import UIKit
 
 class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     let  picker = UIImagePickerController()
+    
     @IBAction func CambiaImmagineProfilo(_ sender: UIButton) {
         
         
@@ -49,7 +50,7 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
     @IBOutlet weak var immProfilo: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let background = UIImage(named: "benvenuto")
         self.picker.delegate = self
         immProfilo.layer.cornerRadius = 30.0
         immProfilo.clipsToBounds = true
