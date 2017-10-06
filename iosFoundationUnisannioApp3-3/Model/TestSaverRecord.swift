@@ -142,17 +142,48 @@ class TestSaverRecord{
             
         }
         
-//        while videoData == nil{
-//        }
-////        self.playButton.isHidden=false
         
         semaphore.wait()
         return videoData
         
 
 }
+    
+    
+    static func getWorkoutsByCategory(categoria:String){
+        var videoData:Data!
+        let container = CKContainer.default
+        var currentRecord: CKRecord?
+        var recordZone: CKRecordZone?
+        var publicDatabase: CKDatabase?
+        
+        publicDatabase = container().publicCloudDatabase
+        recordZone = CKRecordZone(zoneName: "_defaultZone")
+        
+        
+        let predicate = NSPredicate(format: "%K == %@", "categoria", categoria)
+        
+        let query = CKQuery(recordType: "Workout", predicate: predicate)
+        publicDatabase?.perform(query, inZoneWith: nil) {
+            (records, error) -> Void in
+            guard let records = records else {
+                print("Error querying records: ", error)
+                return
+            }
+            print("Found \(records.count) records matching query")
+            for record in records{
+                print( record.object(forKey:"recordName"))
+            }
+            
+        
+    }
 
 }
+    
+    
+    
+    
+} // chiude classe
 
 
 

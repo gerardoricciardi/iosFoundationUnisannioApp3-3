@@ -19,20 +19,23 @@ enum TipoWorkout:String{
 }
 
 class Workout{      //per ora non e' previsto un id univoco
-    var tempo:Double
-    var data : Date //vedere gestione classe Date
-    var isSvolto: Bool
-    var esercizi : [Esercizio]
-    var giudizio:Giudizio
-    var tipoWorkout : TipoWorkout
+//    var tempo:Double
+//    var data : Date //vedere gestione classe Date
+//    var isSvolto: Bool
+//    var esercizi : [Esercizio]
+//    var giudizio:Giudizio
+//    var tipoWorkout : TipoWorkout
+//
+//    init(tempo:Double,data:Date,isSvolto:Bool,esercizi:[Esercizio],giudizio:Giudizio,tipoWorkout:TipoWorkout){
+//        self.tempo=tempo
+//        self.data=data
+//        self.isSvolto=isSvolto
+//        self.esercizi=[Esercizio]()
+//        self.giudizio=giudizio
+//        self.tipoWorkout=tipoWorkout
+//
+//    }
     
-    init(tempo:Double,data:Date,isSvolto:Bool,esercizi:[Esercizio],giudizio:Giudizio,tipoWorkout:TipoWorkout){
-        self.tempo=tempo
-        self.data=data
-        self.isSvolto=isSvolto
-        self.esercizi=[Esercizio]()
-        self.giudizio=giudizio
-        self.tipoWorkout=tipoWorkout
-        
-    }
+    
+    
 }
