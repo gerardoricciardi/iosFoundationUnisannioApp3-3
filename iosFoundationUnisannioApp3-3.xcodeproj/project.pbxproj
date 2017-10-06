@@ -47,6 +47,7 @@
 		8F2E5D5A1F867DC400182C28 /* TableViewCellPreviewEsercizi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E5D591F867DC400182C28 /* TableViewCellPreviewEsercizi.swift */; };
 		8F2E5D5C1F8797EB00182C28 /* DetailsCategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E5D5B1F8797EB00182C28 /* DetailsCategoriesTableViewController.swift */; };
 		8F2E5D5E1F87991600182C28 /* DetailsCategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E5D5D1F87991600182C28 /* DetailsCategoriesTableViewCell.swift */; };
+		8F2E5D611F87A13200182C28 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E5D601F87A13200182C28 /* Workout.swift */; };
 		F8A5E9791F83980D009D186F /* ViewControllerProfilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */; };
 		F8C3113A1F839F3800C1FFE2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C311391F839F3800C1FFE2 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
@@ -115,6 +116,7 @@
 		8F2E5D591F867DC400182C28 /* TableViewCellPreviewEsercizi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellPreviewEsercizi.swift; sourceTree = "<group>"; };
 		8F2E5D5B1F8797EB00182C28 /* DetailsCategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCategoriesTableViewController.swift; sourceTree = "<group>"; };
 		8F2E5D5D1F87991600182C28 /* DetailsCategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCategoriesTableViewCell.swift; sourceTree = "<group>"; };
+		8F2E5D601F87A13200182C28 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProfilo.swift; sourceTree = "<group>"; };
 		F8C311381F839EEB00C1FFE2 /* iosFoundationUnisannioApp3-3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iosFoundationUnisannioApp3-3.entitlements"; sourceTree = "<group>"; };
 		F8C311391F839F3800C1FFE2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -257,6 +259,7 @@
 				8F2499E31F7E4732001AEA9E /* WorkoutDAO.swift */,
 				8F2C49E91F7BAF3A006EC668 /* Utente.swift */,
 				8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */,
+				8F2E5D601F87A13200182C28 /* Workout.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				078893781F7FF95F001D8059 /* IntroViewControllerBenvenuto.swift in Sources */,
 				8F2E5D5E1F87991600182C28 /* DetailsCategoriesTableViewCell.swift in Sources */,
 				0736832C1F84239200236D98 /* HealthKitSetupAssistant.swift in Sources */,
+				8F2E5D611F87A13200182C28 /* Workout.swift in Sources */,
 				0797D1E41F7E734C0062A655 /* TabBarController.swift in Sources */,
 				8F2E5D581F867DB800182C28 /* TableViewCellPreviewVideo.swift in Sources */,
 				0733E1571F7AA7840066F286 /* iosFoundationUnisannioApp3_3.xcdatamodeld in Sources */,
