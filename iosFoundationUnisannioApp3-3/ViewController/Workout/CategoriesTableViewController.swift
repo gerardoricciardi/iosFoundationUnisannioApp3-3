@@ -73,6 +73,13 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
                     timeInterval: 10.0,
                     repeats: false)
                 
+                
+                var dateComponents = DateComponents()
+                dateComponents.hour = 17
+                dateComponents.minute = 15
+                let trigger1 = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+                
+                
                 let date = Date()
                 let formatter = DateFormatter()
                 formatter.dateFormat = "dd.mm.yyyy'T'HH:mm:ss:mmZZZZZ \(notifica.title)"
@@ -90,10 +97,7 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
                 UNUserNotificationCenter.current().add(
                     request, withCompletionHandler: nil)
                 
-                var dateComponents = DateComponents()
-                dateComponents.hour = 17
-                dateComponents.minute = 15
-                let trigger1 = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+                
                 
             }
             
