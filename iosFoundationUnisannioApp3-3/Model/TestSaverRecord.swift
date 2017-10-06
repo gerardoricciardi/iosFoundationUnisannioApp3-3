@@ -151,8 +151,9 @@ class TestSaverRecord{
     
     
     static func getWorkoutsByCategory(categoria:String)->[Workout]{
-        
-    var workouts : [Workout]! 
+        let semaphore = DispatchSemaphore(value: 0)
+
+    var workouts : [Workout]=[Workout]()
         var videoData:Data!
         let container = CKContainer.default
         var currentRecord: CKRecord?
@@ -175,24 +176,38 @@ class TestSaverRecord{
             print("Found \(records.count) records matching query")
             for record in records{
                 
+                print("***WO categoria= "+String(describing: record.object(forKey: "categoria")!))
                 
-                var idWorkout : String=record.object(forKey: "recordName") as! String
-                var asset : CKAsset=record.object(forKey: "anteprima") as! CKAsset
+                var idWorkout : CKRecordValue=record.recordID.recordName as! CKRecordValue
+//                print(idWorkout)
+                var File : CKAsset?=record.object(forKey: "anteprima") as! CKAsset
+//                print(File)
                 
                 
-                var anteprima : Data=try!Data(contentsOf:asset.fileURL)
+                var anteprima : Data!
                 
-                
+                if let file = File {
+                    if let data = try?Data(contentsOf: file.fileURL) {
+                        anteprima=data
+                        
+                    }
+                }
                 
                 let workout:Workout=Workout(anteprima:anteprima,id:idWorkout)
-                workouts.append(workout)
                 
+                
+                workouts.append(workout)
+                print("Count workouts "+String(workouts.count))
+//                semaphore.signal()
                 
             }
-            
+            semaphore.signal()
         
     }
- return workouts
+//        semaphore.signal()
+        
+        semaphore.wait()
+        return workouts
 }
     
     

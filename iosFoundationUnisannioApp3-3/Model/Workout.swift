@@ -18,13 +18,13 @@ class Workout{
     var livello: Int64?
     var tempo: Int64?
     var video: CKAsset?
-    var id: String
+    var id: CKRecordValue?
     
-    init(anteprima: Data, id: String) {
+    init(anteprima: Data, id: CKRecordValue) {
         self.anteprima = anteprima
         self.id = id
     }
-    init(anteprima: Data, categoria: String, esercizi: String, isBloccato: String, livello: Int64, tempo: Int64, video: CKAsset, id: String) {
+    init(anteprima: Data, categoria: String, esercizi: String, isBloccato: String, livello: Int64, tempo: Int64, video: CKAsset, id: CKRecordValue) {
         self.anteprima = anteprima
         self.categoria = categoria
         self.esercizi = esercizi
