@@ -152,12 +152,17 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCategories"{
             if let indexPath = tableView.indexPathForSelectedRow{
-                let destinationController = segue.destination as! CategoriesDetailsViewController
-                // destinationController.restaurantName = immagini[indexPath.row]
-                //destinationController.locationName = location[indexPath.row]
-                //destinationController.typeName = type[indexPath.row]
-                //destinationController.ristorante = ristoranti[indexPath.row]
+                let destinationController = segue.destination as! DetailsCategoriesTableViewController
+//                dammi i workout disponibili per la categoria scelta
+//                 e passali alla view successiva
+                
                 destinationController.thumb = categoriesImage[indexPath.row]
+              var  categoria : String
+                categoria=categoriesImage[indexPath.row]
+                print(categoria)
+                var workouts: [Workout] = TestSaverRecord.getWorkoutsByCategory(categoria:categoria)
+                
+                destinationController.workouts=workouts
                 
             }
         }
