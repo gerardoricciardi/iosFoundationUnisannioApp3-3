@@ -10,6 +10,7 @@ import UIKit
 
 class DetailsCategoriesTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var anteprimaWO: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
