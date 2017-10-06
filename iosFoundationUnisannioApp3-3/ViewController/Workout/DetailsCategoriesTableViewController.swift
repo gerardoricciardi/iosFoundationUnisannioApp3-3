@@ -57,14 +57,15 @@ class DetailsCategoriesTableViewController: UITableViewController {
      
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      if segue.identifier == "videoPreview"{
-     
-        
-        //in base alla riga selezionata deve passare le info di quello
-        // specifico workout
+        if let indexPath=tableView.indexPathForSelectedRow{
      let destinationController = segue.destination as! TableViewControllerPreviewAllenamento
+            
+            var id=workouts[indexPath.row].id
         
+ destinationController.workout=TestSaverRecord.getWorkoutDetailsById(id)
+        
+     destinationController.
      
-     //                destinationController.thumb = categoriesImage[indexPath.row]
      
      
      }

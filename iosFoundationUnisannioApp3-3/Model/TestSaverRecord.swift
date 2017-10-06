@@ -211,6 +211,11 @@ class TestSaverRecord{
 }
     
     
+    static func getWorkoutDetailsById(id:CKRecordValue){
+        
+    }
+    
+    
     
     
 } // chiude classe

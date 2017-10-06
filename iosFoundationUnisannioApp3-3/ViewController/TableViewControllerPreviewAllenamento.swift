@@ -10,8 +10,15 @@ import UIKit
 
 class TableViewControllerPreviewAllenamento: UITableViewController {
 
-//    var workout : Workout from DB 
+  var workout : Workout!
     
+    @IBOutlet weak var imageAnteprima: UIImageView!
+    
+    @IBOutlet weak var labelNomeEsercizio: UILabel!
+    
+    @IBOutlet weak var imageEsercizio: UIImageView!
+    
+    @IBOutlet weak var labelDescrizione: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
