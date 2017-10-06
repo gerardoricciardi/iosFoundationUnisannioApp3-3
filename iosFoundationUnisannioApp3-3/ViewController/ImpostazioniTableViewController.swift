@@ -19,7 +19,9 @@ class ImpostazioniTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.backBarButtonItem?.tintColor = UIColor.white
+        
+        
+        navigationItem.backBarButtonItem?.tintColor = UIColor.red
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -37,20 +39,22 @@ class ImpostazioniTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
+        
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return impostazioni.count
+        
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cella", for: indexPath) as! ImpostazioniTableViewCell
         cell.impostazioniLabel.text = impostazioni[indexPath.row]
-        tableView.backgroundColor = UIColor(red: 230.0/255.0, green: 230.0/255.0, blue: 230.0/255.0, alpha: 49.0)
-        cell.backgroundColor = UIColor(red: 230.0/255.0, green: 230.0/255.0, blue: 230.0/255.0, alpha: 49.0)
+        tableView.backgroundColor = UIColor.white
+        cell.backgroundColor = UIColor.white
         self.tableView.separatorColor = UIColor(red: 55.0/255.0, green: 153.0/255.0, blue: 178.0/255.0, alpha: 1.0)
         
         
@@ -65,6 +69,7 @@ class ImpostazioniTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80.0
+        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -88,6 +93,7 @@ class ImpostazioniTableViewController: UITableViewController {
                 
         
             navigationController?.pushViewController(controller, animated: true)
+                
             }
         }
     }

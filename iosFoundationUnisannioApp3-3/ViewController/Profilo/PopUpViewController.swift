@@ -1,31 +1,22 @@
 //
-//  TabBarController.swift
+//  PopUpViewController.swift
 //  iosFoundationUnisannioApp3-3
 //
-//  Created by Ricciardi Gerardo on 29/09/17.
+//  Created by Fabio dell'Infante on 06/10/17.
 //  Copyright © 2017 Ricciardi Gerardo. All rights reserved.
 //
 
 import UIKit
 
-class TabBarController: UITabBarController {
-
+class PopUpViewController: UIViewController {
+    @IBAction func closePopUp(_ sender: UIButton) {
+        self.view.removeFromSuperview()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       self.tabBar.tintColor = UIColor.white
-        
-        
-       
-       
-        
-        
-        
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.0)
 
-        let defaults = UserDefaults.standard
-        for (key, value) in defaults.dictionaryRepresentation() {
-            print("\(key) = \(value) \n")
-        }
         // Do any additional setup after loading the view.
     }
 

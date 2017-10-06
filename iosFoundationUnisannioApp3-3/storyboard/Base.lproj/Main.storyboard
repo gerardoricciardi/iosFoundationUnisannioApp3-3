@@ -75,7 +75,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1r3-NZ-UoS">
                                 <rect key="frame" x="43" y="680" width="328" height="30"/>
-                                <state key="normal" title="Don't you have an account? Register &gt;">
+                                <state key="normal" title="Don't  have an account? Register here &gt;">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -127,7 +127,7 @@
                                     <constraint firstAttribute="height" constant="35" id="Ccz-UQ-v3X"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-LightOblique" family="Helvetica" pointSize="25"/>
-                                <state key="normal" title="Introduce yourself &gt;">
+                                <state key="normal" title="Telle me about yourself &gt;">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -135,7 +135,7 @@
                                     <segue destination="lQk-U1-Img" kind="presentation" modalTransitionStyle="crossDissolve" id="uGO-kF-mZX"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello, you are welcome!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r5c-I2-7CL">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello, welcome!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r5c-I2-7CL">
                                 <rect key="frame" x="20" y="204" width="368.66666666666669" height="195"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="363" id="pku-Gk-ibB"/>
@@ -186,7 +186,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqR-kw-iEx">
                                 <rect key="frame" x="74" y="456" width="266" height="56"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
-                                <state key="normal" title="WOMAN" backgroundImage="buttt">
+                                <state key="normal" title="FEMALE" backgroundImage="buttt">
                                     <color key="titleColor" red="0.28654810786247253" green="0.61551463603973389" blue="0.80791771411895752" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
@@ -196,7 +196,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JN3-SB-moR">
                                 <rect key="frame" x="74" y="340" width="266" height="56"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
-                                <state key="normal" title="MAN" backgroundImage="buttt">
+                                <state key="normal" title="MALE" backgroundImage="buttt">
                                     <color key="titleColor" red="0.28654810786247253" green="0.61551463603973389" blue="0.80791771411895752" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
@@ -252,7 +252,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Does work take you too long and you have no way of dedicating yourself to yourself?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="21y-1s-Ujk">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Does work take up all your time  and leave you no time to yourself?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="21y-1s-Ujk">
                                 <rect key="frame" x="37" y="104" width="304" height="129"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -329,6 +329,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <color key="barTintColor" red="0.46395942568778992" green="0.74742692708969116" blue="0.83142411708831787" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.99991267919540405" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="YIA-LD-Dcu" kind="relationship" relationship="viewControllers" id="PaS-wz-EyJ"/>
@@ -412,7 +417,7 @@
                                     <!--2017-09-30 14:50:59 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I will give you some advices while you work!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0O-80-zaE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I will give you some tips while you work!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0O-80-zaE">
                                 <rect key="frame" x="19" y="631" width="376" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
