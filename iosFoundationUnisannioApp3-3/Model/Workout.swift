@@ -7,32 +7,31 @@
 //
 
 import Foundation
+import CloudKit
 
-enum Giudizio: Int{
-    case uno=1,due,tre,quattro,cinque   //dichiarazione implicita due=2 etc.....
-}
-
-enum TipoWorkout:String{
-    case TotalBody
-    case Pilates
-    case Stretching
-}
-
-class Workout{      //per ora non e' previsto un id univoco
-    var tempo:Double
-    var data : Date //vedere gestione classe Date
-    var isSvolto: Bool
-    var esercizi : [Esercizio]
-    var giudizio:Giudizio
-    var tipoWorkout : TipoWorkout
+class Workout{
     
-    init(tempo:Double,data:Date,isSvolto:Bool,esercizi:[Esercizio],giudizio:Giudizio,tipoWorkout:TipoWorkout){
-        self.tempo=tempo
-        self.data=data
-        self.isSvolto=isSvolto
-        self.esercizi=[Esercizio]()
-        self.giudizio=giudizio
-        self.tipoWorkout=tipoWorkout
-        
+    var anteprima: CKAsset
+    var categoria: String?
+    var esercizi: String?
+    var isBloccato: String?
+    var livello: Int64?
+    var tempo: Int64?
+    var video: CKAsset?
+    var id: String
+    
+    init(anteprima: CKAsset, id: String) {
+        self.anteprima = anteprima
+        self.id = id
+    }
+    init(anteprima: CKAsset, categoria: String, esercizi: String, isBloccato: String, livello: Int64, tempo: Int64, video: CKAsset, id: String) {
+        self.anteprima = anteprima
+        self.categoria = categoria
+        self.esercizi = esercizi
+        self.isBloccato = isBloccato
+        self.livello = livello
+        self.tempo = tempo
+        self.video = video
+        self.id = id
     }
 }

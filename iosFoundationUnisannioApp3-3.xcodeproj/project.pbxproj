@@ -229,7 +229,6 @@
 				212C9AD01F861F5B00235232 /* NotificheTableTableViewController.swift */,
 				078B1D6F1F8666DA000E4C92 /* ImpostazioniTableViewController.swift */,
 				212917571F86188C002424B9 /* ImpostazioniTableViewCell.swift */,
-				074BD1D51F87778300CAFF53 /* NotificationHK.swift */,
 				073683251F840A4900236D98 /* Workout */,
 				0736832A1F84235000236D98 /* Health Kit */,
 			);
@@ -239,6 +238,7 @@
 		0752074D1F7F0300004EE4FF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				074BD1D51F87778300CAFF53 /* NotificationHK.swift */,
 				071E1BA91F83BFB10097C074 /* TestSaverRecord.swift */,
 				8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */,
 				8F2499E31F7E4732001AEA9E /* WorkoutDAO.swift */,
