@@ -146,7 +146,7 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCategories"{
             if let indexPath = tableView.indexPathForSelectedRow{
-                let destinationController = segue.destination as! CategoriesDetailsViewController
+                let destinationController = segue.destination as! DetailsCategoriesTableViewController
 //                dammi i workout disponibili per la categoria scelta
 //                 e passali alla view successiva
                 

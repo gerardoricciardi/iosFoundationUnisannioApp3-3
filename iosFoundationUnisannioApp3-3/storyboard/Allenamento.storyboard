@@ -98,16 +98,16 @@
             </objects>
             <point key="canvasLocation" x="135" y="462"/>
         </scene>
-        <!--Categories Details View Controller-->
+        <!--Details Categories Table View Controller-->
         <scene sceneID="1bk-Mt-jgn">
             <objects>
-                <tableViewController id="6RI-k0-BDf" customClass="CategoriesDetailsViewController" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="6RI-k0-BDf" customClass="DetailsCategoriesTableViewController" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MDn-X5-pAu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="oEE-sv-FeF">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellDetailsCategories" id="oEE-sv-FeF">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oEE-sv-FeF" id="wa9-Ek-6Cj">
@@ -141,12 +141,12 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPreviewVideo" rowHeight="293" id="yev-qF-rZk" customClass="TableViewCellPreviewVideo" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="293"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yev-qF-rZk" id="ujv-bU-LL7">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yev-qF-rZk" id="ujv-bU-LL7">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="292.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ky5-tP-4bL">
-                                            <rect key="frame" x="23" y="0.0" width="150" height="150"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ky5-tP-4bL">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="150" id="DnU-4q-L81"/>
                                                 <constraint firstAttribute="height" constant="150" id="mfI-VU-ZvO"/>
@@ -325,6 +325,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pause" width="100" height="100"/>
+        <image name="play" width="100" height="100"/>
         <image name="side-bending-posture" width="32" height="32"/>
     </resources>
     <color key="tintColor" red="0.25449371610238758" green="0.74019084991383133" blue="0.80371589467005078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
