@@ -92,11 +92,12 @@ class VideoWorkoutViewController: UIViewController {
         
         //        playerLayer.frame = self.view.bounds
         //        subView.layer.addSublayer(playerLayer)
-        timerLabel.textColor = backgroundColor
+        timerLabel.textColor = UIColor.white
         timerLabel.text = "00:00,00"
         playButton.setTitleColor(backgroundColor, for: UIControlState.normal)
         pauseButton.setTitleColor(backgroundColor, for: UIControlState.normal)
         pauseButton.isEnabled = false
+        pauseButton.isHidden = true
         
         // Do any additional setup after loading the view.
       
@@ -104,7 +105,10 @@ class VideoWorkoutViewController: UIViewController {
     @IBAction func pauseAction(_ sender: UIButton) {
         player.pause()
         pauseButton.isSelected = true
+        pauseButton.isHidden = true
         pauseButton.isEnabled = false
+        
+        playButton.isHidden = false
         playButton.isSelected = false
         playButton.isEnabled = true
         timer.invalidate()
@@ -113,7 +117,9 @@ class VideoWorkoutViewController: UIViewController {
         player.play()
         playButton.isSelected = true
         playButton.isEnabled = false
+        playButton.isHidden = true
         pauseButton.isSelected = false
+        pauseButton.isHidden = false
         pauseButton.isEnabled = true
         let intervallo :Double = 0.01
         timer = Timer.scheduledTimer(timeInterval: intervallo, target:self, selector: #selector(VideoWorkoutViewController.timerAction), userInfo: nil, repeats: true)
