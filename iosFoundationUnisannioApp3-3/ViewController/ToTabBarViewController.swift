@@ -1,37 +1,35 @@
 //
-//  TabBarController.swift
+//  ToTabBarViewController.swift
 //  iosFoundationUnisannioApp3-3
 //
-//  Created by Ricciardi Gerardo on 29/09/17.
+//  Created by Ricciardi Gerardo on 06/10/17.
 //  Copyright © 2017 Ricciardi Gerardo. All rights reserved.
 //
 
 import UIKit
 
-class TabBarController: UITabBarController {
+class ToTabBarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       self.tabBar.tintColor = UIColor.white
         
         
-       
-       self.selectedIndex = 1
+        _ = Timer.scheduledTimer(timeInterval: 0.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
         
         
-        
-
-        let defaults = UserDefaults.standard
-        for (key, value) in defaults.dictionaryRepresentation() {
-            print("\(key) = \(value) \n")
-        }
+//        self.performSegue(withIdentifier: "toTabBar", sender: self)
+        print("sono qui cazzo")
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @objc func timeToMoveOn() {
+        self.performSegue(withIdentifier: "toTabBar", sender: self)
     }
     
 

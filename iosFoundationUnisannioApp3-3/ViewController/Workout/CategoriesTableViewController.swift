@@ -33,11 +33,12 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
                 self.isGrantedNotificationAccess = granted
         }
         )
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         notifica1.id = id
         notifiche.append(notifica1)
         notifiche.append(notifica2)
         notifiche.append(notifica3)
-        
         
         
         // Uncomment the following line to preserve selection between presentations
@@ -98,17 +99,8 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
                 //Add the notification to the currnet notification center
                 UNUserNotificationCenter.current().add(
                     request, withCompletionHandler: nil)
-                
-                
-                
+            
             }
-            
-            
-            
-            
-            
-           
-            
         }
     }
     

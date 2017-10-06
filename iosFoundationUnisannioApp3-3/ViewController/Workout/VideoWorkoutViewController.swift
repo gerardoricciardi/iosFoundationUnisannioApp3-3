@@ -117,11 +117,11 @@ class VideoWorkoutViewController: UIViewController {
         playButton.isHidden = true
         pauseButton.isHidden = true
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let twop = storyboard.instantiateViewController(withIdentifier: "main") as! MainViewController
+        let twop = storyboard.instantiateViewController(withIdentifier: "toTabBar") as! ToTabBarViewController
         let alertController = UIAlertController(title: "Health Desk", message:
             "Great, workout completed", preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: {(action) -> Void in
-                self.present(twop, animated: true, completion: nil)
+                self.present(twop, animated: false, completion: nil)
             let defaults = UserDefaults.standard
             let isEndedWorkout = true
             defaults.set(isEndedWorkout, forKey: "isEndedWorkout")

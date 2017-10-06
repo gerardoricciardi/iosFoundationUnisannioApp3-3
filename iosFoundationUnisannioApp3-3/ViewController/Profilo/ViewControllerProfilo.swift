@@ -57,6 +57,7 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         view.backgroundColor = UIColor.white
         _ = UIImage(named: "benvenuto")
         self.picker.delegate = self

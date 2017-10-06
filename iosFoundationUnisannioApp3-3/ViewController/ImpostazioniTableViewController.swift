@@ -20,8 +20,8 @@ class ImpostazioniTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        navigationItem.backBarButtonItem?.tintColor = UIColor.red
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+       
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
