@@ -9,7 +9,15 @@
 import UIKit
 
 class ModificaProfiloViewController: UIViewController {
-
+    
+    @IBAction func WomanButton(_ sender: UIButton) {
+    }
+    @IBAction func ManButton(_ sender: UIButton) {
+    }
+    @IBAction func SaveButton(_ sender: UIBarButtonItem) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
