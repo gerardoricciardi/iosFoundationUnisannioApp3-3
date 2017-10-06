@@ -32,14 +32,20 @@ class VideoWorkoutViewController: UIViewController {
     var millesimiDiSecondo :Int = 0
     @IBOutlet weak var videoView: UIView!
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        videoView.backgroundColor = UIColor.blue
+//        videoView.backgroundColor = UIColor.blue
 //        let videoURL = URL(string: url)
         var videoData: Data!
         
@@ -60,13 +66,16 @@ class VideoWorkoutViewController: UIViewController {
         asset = (AVAsset(url: fileURL) as! AVURLAsset)
         let playerItem = AVPlayerItem(asset: asset)
         
-        player = AVPlayer(playerItem: playerItem                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ) 
+        player = AVPlayer(playerItem: playerItem)
         
         let playerLayer = AVPlayerLayer(player:player)
         playerLayer.videoGravity=AVLayerVideoGravity.resizeAspectFill
         videoView.layer.addSublayer(playerLayer)
         playerLayer.frame=videoView.bounds
 
+        NotificationCenter.default.addObserver(self, selector: #selector(self.playerDidFinishPlaying(note:)),
+                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem)
+        
         
         
 //
@@ -102,6 +111,25 @@ class VideoWorkoutViewController: UIViewController {
         // Do any additional setup after loading the view.
       
     }
+    @objc func playerDidFinishPlaying(note: NSNotification) {
+        print("Video Finished")
+        timer.invalidate()
+        playButton.isHidden = true
+        pauseButton.isHidden = true
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let twop = storyboard.instantiateViewController(withIdentifier: "main") as! MainViewController
+        let alertController = UIAlertController(title: "Health Desk", message:
+            "Great, workout completed", preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: {(action) -> Void in
+                self.present(twop, animated: true, completion: nil)
+            let defaults = UserDefaults.standard
+            let isEndedWorkout = true
+            defaults.set(isEndedWorkout, forKey: "isEndedWorkout")
+            defaults.synchronize()
+        }))
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     @IBAction func pauseAction(_ sender: UIButton) {
         player.pause()
         pauseButton.isSelected = true

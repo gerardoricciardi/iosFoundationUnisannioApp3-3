@@ -185,7 +185,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="imageVideoPreview" destination="Ky5-tP-4bL" id="HcM-5B-CjL"/>
-                                    <segue destination="dH7-y5-Fse" kind="show" identifier="allenamento" id="MAY-rM-byS"/>
+                                    <segue destination="dH7-y5-Fse" kind="showDetail" identifier="allenamento" id="NWi-sZ-OuM"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPreviewEsercizi" rowHeight="110" id="YjQ-Ok-J3t" customClass="TableViewCellPreviewEsercizi" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target">
@@ -259,18 +259,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ukE-1j-yW7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="-44" width="375" height="760"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpt-LV-wqt">
-                                <rect key="frame" x="145" y="522" width="80" height="80"/>
+                                <rect key="frame" x="145" y="478" width="80" height="80"/>
                                 <state key="normal" image="play"/>
                                 <connections>
                                     <action selector="playAction:" destination="dH7-y5-Fse" eventType="touchUpInside" id="5x8-cM-dM2"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76R-w9-NM1">
-                                <rect key="frame" x="16" y="613" width="343" height="52"/>
+                                <rect key="frame" x="16" y="569" width="343" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="70h-fC-dg6"/>
                                     <constraint firstAttribute="height" constant="52" id="M1q-EV-diF"/>
@@ -282,7 +282,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSl-z5-ht6">
-                                <rect key="frame" x="145" y="522" width="80" height="80"/>
+                                <rect key="frame" x="145" y="478" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="JGW-HY-RFd"/>
                                     <constraint firstAttribute="height" constant="80" id="bD2-O2-Ltb"/>
@@ -337,7 +337,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AJY-fT-K28" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4005.5999999999999" y="459.22038980509751"/>
+            <point key="canvasLocation" x="4326" y="511"/>
         </scene>
     </scenes>
     <resources>

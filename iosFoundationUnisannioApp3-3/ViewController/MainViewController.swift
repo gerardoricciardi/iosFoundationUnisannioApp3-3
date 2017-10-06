@@ -21,10 +21,9 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         let defaults = UserDefaults.standard
         
-        if defaults.string(forKey: "scrivi Username") != nil{
+        if defaults.string(forKey: "scrivi Username") != nil || defaults.bool(forKey: "isEndedWorkout"){
             //utente gia presente, vai alla tabbar
             print("Sono nel main chiave username trovata")
-            
             segueFirstView = segueTabBar
         }
         else{

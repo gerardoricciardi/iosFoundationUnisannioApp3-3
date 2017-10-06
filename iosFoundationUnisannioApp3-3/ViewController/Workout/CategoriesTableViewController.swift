@@ -14,7 +14,7 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
     
     let backgroundColor = UIColor(red: 54.0/255.0, green: 155.0/255.0, blue: 184.0/255.0, alpha: 1.0)
     var categoriesImage = ["stretching", "pilates", "totalBody"]
-    var categoriesTitle = ["Stretching", "Pilates", "TotalBody"]
+    var categoriesTitle = ["yoga", "Pilates", "TotalBody"]
     var notifiche: [NotificationHK] = []
     var id = ""
     var notifica1 = NotificationHK(title: "Esercizio da fare in ufficio", body: "Siediti sulla punta della sedia e stendi le gambe, inclinati con il busto in avanti cercando di toccare le caviglie", id: "String", hour: 13, minute: 30)
@@ -159,12 +159,12 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
 //                 e passali alla view successiva
                 
               var  categoria : String
-                categoria=categoriesImage[indexPath.row]
+                categoria=categoriesTitle[indexPath.row]
                 print(categoria)
-                var workouts: [Workout] = TestSaverRecord.getWorkoutsByCategory(categoria:categoria)
+//                var workouts: [Workout] = TestSaverRecord.getWorkoutsByCategory(categoria:categoria)
+//                destinationController.workouts=workouts
                 
-                destinationController.workouts=workouts
-                
+                destinationController.categoriesImage = categoriesImage
             }
         }
     }

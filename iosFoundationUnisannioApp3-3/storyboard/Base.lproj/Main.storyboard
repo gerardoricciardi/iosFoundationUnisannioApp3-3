@@ -228,7 +228,7 @@
         <!--Main View Controller-->
         <scene sceneID="ipC-Jn-G4O">
             <objects>
-                <viewController id="VMX-Jj-p6C" customClass="MainViewController" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="main" storyboardIdentifier="main" id="VMX-Jj-p6C" customClass="MainViewController" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WWa-2P-xif">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -544,7 +544,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Cg9-Kv-lf2"/>
-        <segue reference="AtO-Ye-PrV"/>
+        <segue reference="oe2-kf-P7f"/>
         <segue reference="FNA-98-7mA"/>
     </inferredMetricsTieBreakers>
 </document>
