@@ -17,9 +17,10 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
     var categoriesTitle = ["Stretching", "Pilates", "TotalBody"]
     var notifiche: [NotificationHK] = []
     var id = ""
-    var notifica1 = NotificationHK(title: "Esercizio da fare in ufficio", body: "Siediti sulla punta della sedia e stendi le gambe, inclinati con il busto in avanti cercando di toccare le caviglie", id: "String", hour: 1, minute: 1)
-    var notifica2 = NotificationHK(title: "Move!", body: "Alzarsi per prendere un bicchiere d’acqua", id: "String", hour: 1, minute: 15)
+    var notifica1 = NotificationHK(title: "Esercizio da fare in ufficio", body: "Siediti sulla punta della sedia e stendi le gambe, inclinati con il busto in avanti cercando di toccare le caviglie", id: "String", hour: 13, minute: 17)
+    var notifica2 = NotificationHK(title: "Move!", body: "Alzarsi per prendere un bicchiere d’acqua", id: "String", hour: 13, minute: 20)
     
+    var notifica3 = NotificationHK(title: "Countdown", body: "Prova notifica timer", id: "", timer: 10.0)
   
     
     override func viewDidLoad() {
@@ -33,17 +34,12 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
         }
         )
         notifica1.id = id
-        
         notifiche.append(notifica1)
         notifiche.append(notifica2)
+        notifiche.append(notifica3)
         
         
         
-        
-       
-        
-//        var notifica = NotificationHK(title: "Prova", body: "seijgbsigbnsgosng", id: "id", hour: 1, minute: 1)
-       
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -55,9 +51,6 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
            
             for notifica in notifiche{
                 //add notification code here
-                print("*****Prova Notifica******")
-                print(notifica.title)
-                print(notifica.minute)
                 // unMutableNotificationContent contiene tutto il contenuto della notifica
                 //Set the content of the notification
                 let content = UNMutableNotificationContent()
@@ -70,30 +63,42 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
                 // usiamo le notifiche per times, repeats ci consente di ripetere la stessa notifica NEW from ios10
                 //Set the trigger of the notification -- here a timer.
                 let trigger = UNTimeIntervalNotificationTrigger(
-                    timeInterval: 10.0,
+                    timeInterval: notifica.timer,
                     repeats: false)
+                
+                
+                var dateComponents = DateComponents()
+                dateComponents.hour = notifica.hour
+                dateComponents.minute = notifica.minute
+                let trigger1 = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+                
                 
                 let date = Date()
                 let formatter = DateFormatter()
-                formatter.dateFormat = "dd.mm.yyyy'T'HH:mm:ss:mmZZZZZ \(notifica.title)"
+                formatter.dateFormat = "dd.mm.yyyy'T'HH:mm:ss:mmZZZZZ" + notifica.title
                 let result = formatter.string(from: date)
                 print(result)
                 
                 // prendiamo il trigger, il content e aggiungiamo una stringa per identificare la notifica
                 // inseriamo tutto in request
                 //Set the request for the notification from the above
-                let request = UNNotificationRequest(
+                var request = UNNotificationRequest(
                     identifier: result,
                     content: content,
                     trigger: trigger)
+                
+                if notifica.check{
+                    request = UNNotificationRequest(
+                        identifier: result,
+                        content: content,
+                        trigger: trigger1)
+                }
+                
                 //Add the notification to the currnet notification center
                 UNUserNotificationCenter.current().add(
                     request, withCompletionHandler: nil)
                 
-                var dateComponents = DateComponents()
-                dateComponents.hour = 17
-                dateComponents.minute = 15
-                let trigger1 = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+                
                 
             }
             

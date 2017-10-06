@@ -25,7 +25,7 @@ class NotificationHK{
         self.id = id
         self.hour = hour
         self.minute = minute
-        self.timer = 0.0
+        self.timer = 5.0
         self.check = true
     }
     init(title: String, body: String, id: String, timer: Double) {
