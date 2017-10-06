@@ -92,9 +92,9 @@
                                 <rect key="frame" x="67" y="96" width="240" height="419"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Whether you are an employee or a business owner, if you spend many hours in the office, you can not be immune to at least one of the problems of sitting. Tiredness,  back pain and swollen legs.
+                                <string key="text">Whether you are an employee or a business owner, if you spend many hours in the office, you can not be immune to at least one of the problems of sitting. Tiredness,  back pain and swollen legs.
 Certainly, many people go to the gym, run before they enter the office, walk a lot. but if you really lack the strength to do physical activity at the end of the day, you need to find an intelligent expedient to optimize your time and prevent this from endangering your well-being.
-This application will follow you at home, with its short workouts, specially designed for you, and in your office, where you will remember doing exercises, comfortably sitting at your desk.</mutableString>
+This application will follow you at home, with its short workouts, specially designed for you, and in your office, where you will remember doing exercises, comfortably sitting at your desk.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

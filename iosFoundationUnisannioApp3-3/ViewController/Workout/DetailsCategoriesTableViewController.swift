@@ -10,7 +10,7 @@ import UIKit
 
 class DetailsCategoriesTableViewController: UITableViewController {
 
-    var workouts:[Workout]
+    var workouts:[Workout] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
