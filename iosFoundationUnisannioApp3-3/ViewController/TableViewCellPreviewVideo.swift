@@ -1,17 +1,16 @@
 //
-//  ImpostazioniTableViewCell.swift
+//  TableViewCellPreviewVideo.swift
 //  iosFoundationUnisannioApp3-3
 //
-//  Created by Zabatta Daniela on 05/10/17.
+//  Created by Pagliaro Antonio on 05/10/2017.
 //  Copyright © 2017 Ricciardi Gerardo. All rights reserved.
 //
 
 import UIKit
 
-class ImpostazioniTableViewCell: UITableViewCell {
+class TableViewCellPreviewVideo: UITableViewCell {
 
-    @IBOutlet weak var impostazioniLabel: UILabel!
-    
+    @IBOutlet weak var imageVideoPreview: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

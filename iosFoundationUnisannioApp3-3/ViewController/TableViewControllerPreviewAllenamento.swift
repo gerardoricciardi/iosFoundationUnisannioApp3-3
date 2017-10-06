@@ -1,29 +1,25 @@
 //
-//  NotificheTableTableViewController.swift
+//  TableViewControllerPreviewAllenamento.swift
 //  iosFoundationUnisannioApp3-3
 //
-//  Created by Zabatta Daniela on 05/10/17.
+//  Created by Pagliaro Antonio on 05/10/2017.
 //  Copyright © 2017 Ricciardi Gerardo. All rights reserved.
 //
 
 import UIKit
 
-class NotificheTableTableViewController: UITableViewController {
-    
-    var notifiche = ["At office ","Weekly summaries","Reminder"]
-    var notificheDescrizioni: [String] = []
+class TableViewControllerPreviewAllenamento: UITableViewController {
+
+//    var workout : Workout from DB 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.title = "Notifications"
-        navigationItem.backBarButtonItem?.tintColor = UIColor.white
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,33 +31,49 @@ class NotificheTableTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return notifiche.count
+        return 1
     }
 
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellaNotifiche", for: indexPath) as! NotificheTableViewCell
         
-        cell.notificheLabel.text = notifiche[indexPath.row]
-        cell.descrizioneText.text = notificheDescrizioni[indexPath.row]
-        cell.backgroundColor = UIColor(red: 230.0/255.0, green: 230.0/255.0, blue: 230.0/255.0, alpha: 49.0)
-        tableView.backgroundColor = UIColor(red: 230.0/255.0, green: 230.0/255.0, blue: 230.0/255.0, alpha: 49.0)
-        
-        
-    self.tableView.separatorColor = UIColor(red: 55.0/255.0, green: 153.0/255.0, blue: 178.0/255.0, alpha: 1.0)
-        
+        if indexPath.section==0
+        {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellPreviewVideo", for: indexPath) as! TableViewCellPreviewVideo
+
+        cell.imageVideoPreview.image=UIImage(named:"stretching") //bisogna mettere anteprimaVideo da DB
+
         return cell
+        }
+        else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellPreviewEsercizi", for: indexPath) as! TableViewCellPreviewEsercizi
+            
+            cell.imagePreviewEsercizio.image=UIImage(named:"stretching")
+            cell.labelNomeEsercizio.text="Esercizio 1"
+            cell.labelDescrizioneEsercizio.text="Esercizio per migliorare......"
+            
+            return cell
+            
+            
+        }
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150.0
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        deve caricare il video
+        
+        if segue.identifier == "allenamento"{
+            
+        }
     }
     
+    
+    
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

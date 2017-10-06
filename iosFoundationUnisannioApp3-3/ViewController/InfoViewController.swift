@@ -1,24 +1,20 @@
 //
-//  CategoriesDetailsViewController.swift
+//  InfoViewController.swift
 //  iosFoundationUnisannioApp3-3
 //
-//  Created by Ricciardi Gerardo on 03/10/17.
+//  Created by Zabatta Daniela on 06/10/17.
 //  Copyright © 2017 Ricciardi Gerardo. All rights reserved.
 //
 
 import UIKit
 
-class CategoriesDetailsViewController: UIViewController {
+class InfoViewController: UIViewController {
 
-    @IBOutlet weak var categoryImage: UIImageView!
-    
-    var thumb = ""
+    @IBOutlet weak var infoText: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        categoryImage.image = UIImage(named: thumb)
         // Do any additional setup after loading the view.
-        
     }
 
     override func didReceiveMemoryWarning() {
