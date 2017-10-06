@@ -11,11 +11,11 @@ import UIKit
 class ImpostazioniTableViewController: UITableViewController {
 
 //    var impostazioni = ["Helathkit","Notifiche","Modifica Profilo","Info", "Logout"]
-    var impostazioni = ["Helathkit","Notifiche","Modifica Profilo"]
+    var impostazioni = ["Helathkit","Notifiche","Info"]
     var notificheDescrizioni = ["Se l'opzione in ufficio è abilitata, riceverai delle notifiche che ti consentiranno di fare un viaggio nel fitness sul posto di lavoro, attraverso alcuni esercizi da fare comodamente alla scrivania.","Con l'opzione Riepiloghi settimanali, riceverai dei resoconti sugli allenamenti svolti nell'ultima settimana.","L'opzione Promemoria abilitata ti ricorda quando è il momento di allenarsi"]
     
-
     var segue = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,32 +49,32 @@ class ImpostazioniTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cella", for: indexPath) as! ImpostazioniTableViewCell
         cell.impostazioniLabel.text = impostazioni[indexPath.row]
         // Configure the cell...
-
+        
         return cell
     }
     
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segue"{
-            if let indexPath = tableView.indexPathForSelectedRow{
-                print("Prova *** \(indexPath.row)")
-                if indexPath.row == 0 {
-                   let destinationController = segue.destination as! NotificheTableTableViewController
-                   destinationController.notificheDescrizioni = notificheDescrizioni
-                }
-                if indexPath.row == 1 {
-                    let destinationController = segue.destination as! NotificheTableTableViewController
-                    destinationController.notificheDescrizioni = notificheDescrizioni
-                }
-                if indexPath.row == 2 {
-                    let destinationController = segue.destination as! NotificheTableTableViewController
-                    destinationController.notificheDescrizioni = notificheDescrizioni
-                }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Select cell")
+        if indexPath.row == 0{
+            UIApplication.shared.open(URL(string: "x-apple-health://")!)
+            
+        }
+        if indexPath.row == 1{
+            //performSegue(withIdentifier: "segueInfo", sender: self)
+            if let controllerNotification = navigationController?.storyboard?.instantiateViewController(withIdentifier: "notificheController") as? NotificheTableTableViewController {
+                controllerNotification.notificheDescrizioni = notificheDescrizioni
+                navigationController?.pushViewController(controllerNotification, animated: true)
+            }
+        }
+
+        if indexPath.row == 2 {
+            //performSegue(withIdentifier: "segueInfo", sender: self)
+            if let controller = navigationController?.storyboard?.instantiateViewController(withIdentifier: "infoController") as? InfoViewController {
+        
+            navigationController?.pushViewController(controller, animated: true)
             }
         }
     }
-    
 
     /*
     // Override to support conditional editing of the table view.
