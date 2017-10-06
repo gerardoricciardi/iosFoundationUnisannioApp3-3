@@ -52,6 +52,7 @@ class ImpostazioniTableViewController: UITableViewController {
         cell.backgroundColor = UIColor(red: 230.0/255.0, green: 230.0/255.0, blue: 230.0/255.0, alpha: 49.0)
         self.tableView.separatorColor = UIColor(red: 55.0/255.0, green: 153.0/255.0, blue: 178.0/255.0, alpha: 1.0)
         
+        
     
         
         
@@ -82,6 +83,8 @@ class ImpostazioniTableViewController: UITableViewController {
         if indexPath.row == 2 {
             //performSegue(withIdentifier: "segueInfo", sender: self)
             if let controller = navigationController?.storyboard?.instantiateViewController(withIdentifier: "infoController") as? InfoViewController {
+                
+                
         
             navigationController?.pushViewController(controller, animated: true)
             }

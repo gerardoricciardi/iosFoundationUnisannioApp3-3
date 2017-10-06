@@ -10,7 +10,7 @@ import UIKit
 
 class NotificheTableTableViewController: UITableViewController {
     
-    var notifiche = ["In ufficio","Riepiloghi settimanali","Promemoria"]
+    var notifiche = ["At office ","Weekly summaries","Reminder"]
     var notificheDescrizioni: [String] = []
     
     override func viewDidLoad() {
