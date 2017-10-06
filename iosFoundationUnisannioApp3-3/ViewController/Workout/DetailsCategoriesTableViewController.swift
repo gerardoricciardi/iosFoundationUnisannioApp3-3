@@ -43,7 +43,9 @@ class DetailsCategoriesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellDetailsCategories", for: indexPath) as! DetailsCategoriesTableViewCell
         
-        cell.anteprimaWO.image=workouts[indexPath.row].anteprima
+        
+        
+        cell.anteprimaWO.image=UIImage(data:workouts[indexPath.row].anteprima)
         
         
         
