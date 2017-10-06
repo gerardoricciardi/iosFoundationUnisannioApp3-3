@@ -17,8 +17,8 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
     var categoriesTitle = ["Stretching", "Pilates", "TotalBody"]
     var notifiche: [NotificationHK] = []
     var id = ""
-    var notifica1 = NotificationHK(title: "Esercizio da fare in ufficio", body: "Siediti sulla punta della sedia e stendi le gambe, inclinati con il busto in avanti cercando di toccare le caviglie", id: "String", hour: 13, minute: 17)
-    var notifica2 = NotificationHK(title: "Move!", body: "Alzarsi per prendere un bicchiere d’acqua", id: "String", hour: 13, minute: 20)
+    var notifica1 = NotificationHK(title: "Esercizio da fare in ufficio", body: "Siediti sulla punta della sedia e stendi le gambe, inclinati con il busto in avanti cercando di toccare le caviglie", id: "String", hour: 13, minute: 30)
+    var notifica2 = NotificationHK(title: "Move!", body: "Alzarsi per prendere un bicchiere d’acqua", id: "String", hour: 13, minute: 35)
     
     var notifica3 = NotificationHK(title: "Countdown", body: "Prova notifica timer", id: "", timer: 10.0)
   
@@ -75,8 +75,9 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
                 
                 let date = Date()
                 let formatter = DateFormatter()
-                formatter.dateFormat = "dd.mm.yyyy'T'HH:mm:ss:mmZZZZZ" + notifica.title
-                let result = formatter.string(from: date)
+                formatter.dateFormat = "dd.mm.yyyy'T'HH:mm:ss:mmZZZZZ"
+                var result = formatter.string(from: date)
+                result.append(notifica.title)
                 print(result)
                 
                 // prendiamo il trigger, il content e aggiungiamo una stringa per identificare la notifica
