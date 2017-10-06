@@ -19,7 +19,7 @@ import Foundation
 class Esercizio {
     var nome : String
     var tipo: String
-    var foto : String    //foto e video potrebbero essere un URL??
+    var foto : Data
     var video : String
     var descrizione: String
     
@@ -31,6 +31,13 @@ class Esercizio {
         self.video=video
         self.descrizione=descrizione
         
+    }
+    
+    init(nome:String,descrizione:String,foto:Data){
+        self.nome=nome
+        self.descrizione=descrizione
+        self.foto=foto
+
     }
     
     

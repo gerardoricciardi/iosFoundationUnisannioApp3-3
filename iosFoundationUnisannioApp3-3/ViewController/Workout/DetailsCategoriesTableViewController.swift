@@ -61,16 +61,17 @@ class DetailsCategoriesTableViewController: UITableViewController {
      let destinationController = segue.destination as! TableViewControllerPreviewAllenamento
             
             var id=workouts[indexPath.row].id
+            var anteprima=workouts[indexPath.row].anteprima
         
- destinationController.workout=TestSaverRecord.getWorkoutDetailsById(id)
+            destinationController.workout=TestSaverRecord.getWorkoutDetailsById(id:id!)
         
-     destinationController.
+            destinationController.imageAnteprima.image=UIImage(data:anteprima!)
      
      
      
      }
      }
-     
+    }
  
 
     /*

@@ -245,6 +245,12 @@
                             <outlet property="delegate" destination="vhd-rW-PV0" id="SSQ-tR-Wen"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="imageAnteprima" destination="Ky5-tP-4bL" id="JpC-l0-lYz"/>
+                        <outlet property="imageEsercizio" destination="Dbc-J6-d4b" id="P1e-sr-6KG"/>
+                        <outlet property="labelDescrizione" destination="86Q-WB-0dU" id="bQG-07-YDy"/>
+                        <outlet property="labelNomeEsercizio" destination="UQo-pR-3YD" id="skq-vL-pAU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wL4-Ld-Rgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

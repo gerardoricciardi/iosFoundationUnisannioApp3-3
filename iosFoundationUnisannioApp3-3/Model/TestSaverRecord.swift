@@ -211,7 +211,112 @@ class TestSaverRecord{
 }
     
     
-    static func getWorkoutDetailsById(id:CKRecordValue){
+    static func getWorkoutDetailsById(id:CKRecordValue)->Workout{
+        let semaphore = DispatchSemaphore(value: 0)
+        
+        var workout:Workout!
+        
+        var videoData:Data!
+        let container = CKContainer.default
+        var currentRecord: CKRecord?
+        var recordZone: CKRecordZone?
+        var publicDatabase: CKDatabase?
+        
+        publicDatabase = container().publicCloudDatabase
+        recordZone = CKRecordZone(zoneName: "_defaultZone")
+        
+//        ATTENZIONE A RECORDNAME, POTREBBE NON FUNZIONARE COSI'
+        let predicate = NSPredicate(format: "%K == %@", "recordName", id as! CVarArg)
+        
+        let query = CKQuery(recordType: "Workout", predicate: predicate)
+        publicDatabase?.perform(query, inZoneWith: nil) {
+            (records, error) -> Void in
+            guard let records = records else {
+                print("Error querying records: ", error)
+                return
+            }
+            print("Found \(records.count) records matching query")
+            for record in records{
+                
+                var anteprima : Data
+                var categoria : String=record.object(forKey: "categoria") as! String
+                var isBloccato: String=record.object(forKey: "isBloccato") as! String
+                var tempo: Int64=record.object(forKey: "tempo") as! Int64
+                var livello: Int64=record.object(forKey: "livello") as! Int64
+                var video : Data
+                var esercizi : [CKRecordID]
+                var eserciziWorkout:[Esercizio]=[Esercizio]()
+                var idWorkout : CKRecordValue=record.recordID.recordName as! CKRecordValue
+
+                
+                var fileAnteprima:CKAsset?=record.object(forKey:"anteprima") as! CKAsset
+                var fileVideo:CKAsset?=record.object(forKey:"video") as! CKAsset
+
+                
+                if let file = fileAnteprima {
+                    if let data = try?Data(contentsOf: file.fileURL) {
+                        anteprima=data
+                        
+                    }
+                }
+        
+                
+                if let file = fileVideo {
+                    if let data = try?Data(contentsOf: file.fileURL) {
+                        video=data
+                        
+                    }
+                }
+                
+                workout=Workout(anteprima,categoria,eserciziWorkout,isBloccato,livello,tempo,video,idWorkout)
+                
+                
+                for esercizioReference in record["Esercizi"] as! [CKReference] {
+                    esercizi.append(esercizioReference.recordID)
+                }
+                //now you can fetch those employees
+                var fetchOperation = CKFetchRecordsOperation(recordIDs: esercizi)
+                fetchOperation.fetchRecordsCompletionBlock = {
+                    records, error in
+                    if error != nil {
+                        print("\(error!)")
+                    } else {
+                        for (recordId, record) in records! {
+                            var nome:String=record.object(forKey: "nome") as! String
+                            var descrizione:String=record.object(forKey: "descrizione") as! String
+                            var foto:Data
+                            var fotoEsercizio:CKAsset?=record.object(forKey:"foto") as! CKAsset
+                            
+                            if let file = fotoEsercizio {
+                                if let data = try?Data(contentsOf: file.fileURL) {
+                                    foto=data
+                                    
+                                }
+                            }
+                            var  esercizio : Esercizio=Esercizio(nome:nome,descrizione:descrizione, foto:foto)
+                            workout.esercizi.append(esercizio)
+                            
+                        }
+                        
+                        
+                    }
+                }
+                CKContainer.default().publicCloudDatabase.add(fetchOperation)
+                
+                
+                
+                
+                
+            }
+            
+        }
+        
+        
+        semaphore.wait()
+        return videoData
+        
+
+        
         
     }
     
