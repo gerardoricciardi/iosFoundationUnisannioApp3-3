@@ -19,7 +19,7 @@ class IntroViewController1: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.usernameTF.delegate = self
+        //self.usernameTF.delegate = self
         
         let background = UIImage(named: "terza")
         
@@ -50,7 +50,7 @@ class IntroViewController1: UIViewController, UITextFieldDelegate {
         toolBar.items = [flexsibleSpace, doneButton]
         
         // Assing toolbar as inputAccessoryView
-        usernameTF.inputAccessoryView = toolBar
+       // usernameTF.inputAccessoryView = toolBar
         emailTF.inputAccessoryView = toolBar
         passwordTF.inputAccessoryView = toolBar
         // Do any additional setup after loading the view.
@@ -61,7 +61,7 @@ class IntroViewController1: UIViewController, UITextFieldDelegate {
         // Button has been pressed
         // Process the containment of the textfield or whatever
         // Hide keyboard
-        usernameTF.resignFirstResponder()
+        //usernameTF.resignFirstResponder()
         emailTF.resignFirstResponder()
         passwordTF.resignFirstResponder()
     }
@@ -73,7 +73,7 @@ class IntroViewController1: UIViewController, UITextFieldDelegate {
     //presses return key
     //quando premi sul return key va alla prossima textField (da fare)
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        usernameTF.resignFirstResponder()
+        //usernameTF.resignFirstResponder()
         emailTF.resignFirstResponder()
         passwordTF.resignFirstResponder()
         return true
@@ -87,12 +87,12 @@ class IntroViewController1: UIViewController, UITextFieldDelegate {
         //salva in let defaults = UserDefaults.standard le tre label
         //e va alla view successiva
         
-        let username:String = usernameTF.text!
+        //let username:String = usernameTF.text!
         let password:String = passwordTF.text!
         let email:String = emailTF.text!
   
         let defaults = UserDefaults.standard
-        defaults.set(username, forKey: "Username")
+      //  defaults.set(username, forKey: "Username")
         defaults.set(password, forKey: "Password")
         defaults.set(email, forKey: "Email")
         defaults.synchronize()
