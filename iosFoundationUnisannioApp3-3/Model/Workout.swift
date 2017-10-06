@@ -11,7 +11,7 @@ import UIKit
 
 class Workout{
     
-    var anteprima: UIImage?
+    var anteprima: Data?
     var categoria: String?
     var esercizi: String?
     var isBloccato: String?
@@ -20,11 +20,11 @@ class Workout{
     var video: CKAsset?
     var id: String
     
-    init(anteprima: UIImage, id: String) {
+    init(anteprima: Data, id: String) {
         self.anteprima = anteprima
         self.id = id
     }
-    init(anteprima: UIImage, categoria: String, esercizi: String, isBloccato: String, livello: Int64, tempo: Int64, video: CKAsset, id: String) {
+    init(anteprima: Data, categoria: String, esercizi: String, isBloccato: String, livello: Int64, tempo: Int64, video: CKAsset, id: String) {
         self.anteprima = anteprima
         self.categoria = categoria
         self.esercizi = esercizi

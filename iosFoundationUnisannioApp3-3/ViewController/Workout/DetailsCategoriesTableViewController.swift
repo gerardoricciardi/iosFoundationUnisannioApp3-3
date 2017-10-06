@@ -45,7 +45,7 @@ class DetailsCategoriesTableViewController: UITableViewController {
         
         
         
-        cell.anteprimaWO.image=UIImage(data:workouts[indexPath.row].anteprima)
+//        cell.anteprimaWO.image=workouts[indexPath.row].anteprima
         
         
         

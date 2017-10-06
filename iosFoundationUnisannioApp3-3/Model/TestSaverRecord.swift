@@ -180,9 +180,8 @@ class TestSaverRecord{
                 var asset : CKAsset=record.object(forKey: "anteprima") as! CKAsset
                 
                 
-                var data : Data=try!Data(contentsOf:asset.fileURL)
+                var anteprima : Data=try!Data(contentsOf:asset.fileURL)
                 
-                var anteprima : UIImage(data:data)
                 
                 
                 let workout:Workout=Workout(anteprima:anteprima,id:idWorkout)
