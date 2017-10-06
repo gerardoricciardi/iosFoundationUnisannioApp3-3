@@ -12,6 +12,15 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       self.tabBar.tintColor = UIColor.white
+        
+        
+       
+       
+        
+        
+        
 
         let defaults = UserDefaults.standard
         for (key, value) in defaults.dictionaryRepresentation() {
