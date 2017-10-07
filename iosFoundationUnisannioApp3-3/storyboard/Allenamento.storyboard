@@ -341,8 +341,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pause" width="100" height="100"/>
-        <image name="play" width="100" height="100"/>
+        <image name="pause" width="69" height="62"/>
+        <image name="play" width="69" height="62"/>
         <image name="side-bending-posture" width="32" height="32"/>
     </resources>
     <color key="tintColor" red="0.25449371610238758" green="0.74019084991383133" blue="0.80371589467005078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
