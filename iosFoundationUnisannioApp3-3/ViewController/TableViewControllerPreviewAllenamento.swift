@@ -12,13 +12,8 @@ class TableViewControllerPreviewAllenamento: UITableViewController {
 
   var workout : Workout!
     
-    @IBOutlet weak var imageAnteprima: UIImageView!
     
-    @IBOutlet weak var labelNomeEsercizio: UILabel!
     
-    @IBOutlet weak var imageEsercizio: UIImageView!
-    
-    @IBOutlet weak var labelDescrizione: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,7 +38,9 @@ class TableViewControllerPreviewAllenamento: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        if section==0 {return 1}
+        else {return workout.esercizi.count
+        }
     }
 
     
@@ -53,17 +50,25 @@ class TableViewControllerPreviewAllenamento: UITableViewController {
         {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellPreviewVideo", for: indexPath) as! TableViewCellPreviewVideo
 
-        cell.imageVideoPreview.image=UIImage(named:"stretching") //bisogna mettere anteprimaVideo da DB
+//        cell.imageAnteprima.image=UIImage(named:"stretching") //bisogna mettere anteprimaVideo da DB
 
+            cell.imageAnteprima.image=UIImage(data:workout.anteprima!)
+            
         return cell
         }
         else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellPreviewEsercizi", for: indexPath) as! TableViewCellPreviewEsercizi
             
-            cell.imagePreviewEsercizio.image=UIImage(named:"stretching")
-            cell.labelNomeEsercizio.text="Esercizio 1"
-            cell.labelDescrizioneEsercizio.text="Esercizio per migliorare......"
+//            cell.imageEsercizio.image=UIImage(named:"stretching")
+//            cell.labelNomeEsercizio.text="Esercizio 1"
+//            cell.labelDescrizione.text="Esercizio per migliorare......"
             
+            
+            cell.labelNomeEsercizio.text=workout.esercizi[indexPath.row].nome
+           cell.labelDescrizione.text=workout.esercizi[indexPath.row].descrizione
+            cell.imageEsercizio.image=UIImage(data: workout.esercizi[indexPath.row].foto)
+            
+
             return cell
             
             
@@ -74,6 +79,8 @@ class TableViewControllerPreviewAllenamento: UITableViewController {
 //        deve caricare il video
         
         if segue.identifier == "allenamento"{
+            let destinationController=segue.destination as! VideoWorkoutViewController
+            destinationController.videoData=workout.video
             
         }
     }

@@ -38,8 +38,6 @@
 		212C9AD11F861F5B00235232 /* NotificheTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C9AD01F861F5B00235232 /* NotificheTableTableViewController.swift */; };
 		212C9AD31F861FA500235232 /* NotificheTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C9AD21F861FA500235232 /* NotificheTableViewCell.swift */; };
 		8F2499DE1F7BF59F001AEA9E /* Esercizio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */; };
-		8F2499E21F7E4723001AEA9E /* EsercizioDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */; };
-		8F2499E41F7E4732001AEA9E /* WorkoutDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499E31F7E4732001AEA9E /* WorkoutDAO.swift */; };
 		8F2C49EA1F7BAF3A006EC668 /* Utente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2C49E91F7BAF3A006EC668 /* Utente.swift */; };
 		8F2E5D541F86346600182C28 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2E5D531F86346600182C28 /* CloudKit.framework */; };
 		8F2E5D561F867D9B00182C28 /* TableViewControllerPreviewAllenamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E5D551F867D9B00182C28 /* TableViewControllerPreviewAllenamento.swift */; };
@@ -107,8 +105,6 @@
 		212C9AD01F861F5B00235232 /* NotificheTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificheTableTableViewController.swift; sourceTree = "<group>"; };
 		212C9AD21F861FA500235232 /* NotificheTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificheTableViewCell.swift; sourceTree = "<group>"; };
 		8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Esercizio.swift; sourceTree = "<group>"; };
-		8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsercizioDAO.swift; sourceTree = "<group>"; };
-		8F2499E31F7E4732001AEA9E /* WorkoutDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDAO.swift; sourceTree = "<group>"; };
 		8F2C49E91F7BAF3A006EC668 /* Utente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utente.swift; sourceTree = "<group>"; };
 		8F2E5D531F86346600182C28 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		8F2E5D551F867D9B00182C28 /* TableViewControllerPreviewAllenamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerPreviewAllenamento.swift; sourceTree = "<group>"; };
@@ -257,9 +253,7 @@
 				074BD1D51F87778300CAFF53 /* NotificationHK.swift */,
 				071E1BA91F83BFB10097C074 /* TestSaverRecord.swift */,
 				8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */,
-				8F2499E31F7E4732001AEA9E /* WorkoutDAO.swift */,
 				8F2C49E91F7BAF3A006EC668 /* Utente.swift */,
-				8F2499E11F7E4723001AEA9E /* EsercizioDAO.swift */,
 				8F2E5D601F87A13200182C28 /* Workout.swift */,
 			);
 			path = Model;
@@ -456,7 +450,6 @@
 				0733E1511F7AA7840066F286 /* IntroViewController.swift in Sources */,
 				075207501F7F04FB004EE4FF /* MainViewController.swift in Sources */,
 				212917581F86188C002424B9 /* ImpostazioniTableViewCell.swift in Sources */,
-				8F2499E41F7E4732001AEA9E /* WorkoutDAO.swift in Sources */,
 				8F2E5D5A1F867DC400182C28 /* TableViewCellPreviewEsercizi.swift in Sources */,
 				078893781F7FF95F001D8059 /* IntroViewControllerBenvenuto.swift in Sources */,
 				8F2E5D5E1F87991600182C28 /* DetailsCategoriesTableViewCell.swift in Sources */,
@@ -471,7 +464,6 @@
 				8F2E5D561F867D9B00182C28 /* TableViewControllerPreviewAllenamento.swift in Sources */,
 				076EDB591F7FB61300A15D6D /* IntroViewController1.swift in Sources */,
 				8F2E5D5C1F8797EB00182C28 /* DetailsCategoriesTableViewController.swift in Sources */,
-				8F2499E21F7E4723001AEA9E /* EsercizioDAO.swift in Sources */,
 				076EDB5D1F7FB8E200A15D6D /* IntroViewController3.swift in Sources */,
 				F8A5E9791F83980D009D186F /* ViewControllerProfilo.swift in Sources */,
 				0736832E1F842F2200236D98 /* ProfileDataStore.swift in Sources */,

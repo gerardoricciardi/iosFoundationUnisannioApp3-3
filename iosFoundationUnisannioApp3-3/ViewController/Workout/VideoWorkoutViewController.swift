@@ -20,7 +20,8 @@ class VideoWorkoutViewController: UIViewController {
     let screenSize : CGRect = UIScreen.main.bounds
 //    var url = "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
     
-    
+    var videoData: Data!
+
     
     var time = 0
     var timer = Timer()
@@ -30,6 +31,7 @@ class VideoWorkoutViewController: UIViewController {
     var secondi :Int = 0
     var centesimiDiSecondo :Int = 0
     var millesimiDiSecondo :Int = 0
+    
     @IBOutlet weak var videoView: UIView!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,11 +43,9 @@ class VideoWorkoutViewController: UIViewController {
 
         videoView.backgroundColor = UIColor.blue
 //        let videoURL = URL(string: url)
-        var videoData: Data!
         
         
-        videoData = TestSaverRecord.getVideoFromEsercizio(nomeEsercizio: "allungamenti adduttori")
-        
+//        videoData = TestSaverRecord.getVideoFromEsercizio(nomeEsercizio: "allungamenti adduttori")
         
         let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as! String
         let destinationPath = documentsPath + String("/video.mp4")

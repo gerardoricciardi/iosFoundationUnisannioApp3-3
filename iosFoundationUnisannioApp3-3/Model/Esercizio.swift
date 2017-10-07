@@ -17,13 +17,13 @@ import Foundation
 //}
 
 class Esercizio {
-    var nome : String
-    var tipo: String
-    var foto : Data
-    var video : String
-    var descrizione: String
+    var nome : String!
+    var tipo: String!
+    var foto : Data!
+    var video : Data!
+    var descrizione: String!
     
-    init(nome:String, tipo:String,foto:String,video:String,descrizione:String){
+    init(nome:String, tipo:String,foto:Data,video:Data,descrizione:String){
         self.nome=nome
         
         self.tipo=tipo
