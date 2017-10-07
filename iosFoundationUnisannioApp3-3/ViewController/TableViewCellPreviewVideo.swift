@@ -10,7 +10,8 @@ import UIKit
 
 class TableViewCellPreviewVideo: UITableViewCell {
 
-    @IBOutlet weak var imageVideoPreview: UIImageView!
+    
+    @IBOutlet weak var imageAnteprima: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -10,8 +10,7 @@ import UIKit
 
 class DetailsCategoriesTableViewController: UITableViewController {
 
-    var categoriesImage:[String] = []
-    var workouts:[Workout] = []
+    var workouts:[Workout]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,83 +38,30 @@ class DetailsCategoriesTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return categoriesImage.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellDetailsCategories", for: indexPath) as! DetailsCategoriesTableViewCell
-        print(categoriesImage.count)
+        print(workouts.count)
         
-        cell.anteprimaWO.image = UIImage(named: categoriesImage[indexPath.row])
-//        cell.anteprimaWO.image=workouts[indexPath.row].anteprima
+        cell.anteprimaWO.image=UIImage(data:workouts[indexPath.row].anteprima!)
         
-        
-        
-
-        
-
         return cell
     }
-     
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     if segue.identifier == "videoPreview"{
-     
-        
-        //in base alla riga selezionata deve passare le info di quello
-        // specifico workout
-     let destinationController = segue.destination as! TableViewControllerPreviewAllenamento
-        
-     
-     //                destinationController.thumb = categoriesImage[indexPath.row]
-     
-     
-     }
-     }
-     
- 
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+     if segue.identifier == "videoPreview"{
+        if let indexPath=tableView.indexPathForSelectedRow{
+     let destinationController = segue.destination as! TableViewControllerPreviewAllenamento
+            
+            var id=workouts[indexPath.row].id
+            var anteprima=workouts[indexPath.row].anteprima
+        
+            destinationController.workout=TestSaverRecord.getWorkoutDetailsById(id:id!)
+        
+//            destinationController.imageAnteprima.image=UIImage(data:anteprima!)
+     
+     }
+     }
     }
-    */
 
 }

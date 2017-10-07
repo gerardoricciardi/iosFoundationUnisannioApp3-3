@@ -152,7 +152,10 @@ class TestSaverRecord{
     
     static func getWorkoutsByCategory(categoria:String)->[Workout]{
         
-    var workouts : [Workout]! 
+        print("***metodo get WORKOUTBYCATEGORY***")
+        let semaphore = DispatchSemaphore(value: 0)
+
+    var workouts : [Workout]=[Workout]()
         var videoData:Data!
         let container = CKContainer.default
         var currentRecord: CKRecord?
@@ -175,30 +178,170 @@ class TestSaverRecord{
             print("Found \(records.count) records matching query")
             for record in records{
                 
+                print("***WO categoria= "+String(describing: record.object(forKey: "categoria")!))
                 
-                var idWorkout : String=record.object(forKey: "recordName") as! String
-                var asset : CKAsset=record.object(forKey: "anteprima") as! CKAsset
+                var idWorkout : CKRecordID=record.recordID as! CKRecordID
+//                print(idWorkout)
+                var File : CKAsset?=record.object(forKey: "anteprima") as! CKAsset
+//                print(File)
                 
                 
-                var anteprima : Data=try!Data(contentsOf:asset.fileURL)
+                var anteprima : Data!
                 
-                
+                if let file = File {
+                    if let data = try?Data(contentsOf: file.fileURL) {
+                        anteprima=data
+                        
+                    }
+                }
                 
                 let workout:Workout=Workout(anteprima:anteprima,id:idWorkout)
-                workouts.append(workout)
                 
+                
+                workouts.append(workout)
+                print("Count workouts "+String(workouts.count))
+//                semaphore.signal()
                 
             }
-            
+            semaphore.signal()
         
     }
- return workouts
+//        semaphore.signal()
+        
+        semaphore.wait()
+        return workouts
 }
     
     
+    static func getWorkoutDetailsById(id:CKRecordID)->Workout{
+        print("***metodo getWorkoutByID***")
+
+        
+        let semaphore = DispatchSemaphore(value: 0)
+        
+        var workout:Workout!
+        
+        var videoData:Data!
+        let container = CKContainer.default
+        var currentRecord: CKRecord?
+        var recordZone: CKRecordZone?
+        var publicDatabase: CKDatabase?
+        var record:CKRecord?
+        
+        publicDatabase = container().publicCloudDatabase
+        recordZone = CKRecordZone(zoneName: "_defaultZone")
+        
+//        ATTENZIONE A RECORDNAME, POTREBBE NON FUNZIONARE COSI'
+//        let predicate = NSPredicate(format: "%K == %@", "recordName", id as! CVarArg)
+//
+//        let query = CKQuery(recordType: "Workout", predicate: predicate)
+//        publicDatabase?.perform(query, inZoneWith: nil) {
+//            (records, error) -> Void in
+//            guard let records = records else {
+//                print("Error querying records: ", error)
+//                return
+//            }
+        
+        publicDatabase?.fetch(withRecordID: id) { (myrecord, error) -> Void in
+            guard let myrecord = myrecord else {
+                print("Error fetching record: ", error)
+                return
+            }
+            print("Successfully fetched record: ", myrecord)
+            
+            record=myrecord
+            semaphore.signal()
+            
+        }
+
+        semaphore.wait()
+                var anteprima : Data!
+        var categoria : String=record!.object(forKey: "categoria") as! String
+        var isBloccato: String=record!.object(forKey: "isBloccato") as! String
+        var tempo: Int64=record!.object(forKey: "tempo") as! Int64
+        var livello: Int64=record!.object(forKey: "livello") as! Int64
+                var video : Data!
+                var esercizi : [CKRecordID]=[CKRecordID]()
+                var eserciziWorkout:[Esercizio]=[Esercizio]()
+        var idWorkout : CKRecordID=record!.recordID
+
+                
+        var fileAnteprima:CKAsset?=record?.object(forKey:"anteprima") as! CKAsset
+        var fileVideo:CKAsset?=record?.object(forKey:"video") as! CKAsset
+
+                
+                if let file = fileAnteprima {
+                    if let data = try?Data(contentsOf: file.fileURL) {
+                        anteprima=data
+                        
+                    }
+                }
+        
+                
+                if let file = fileVideo {
+                    if let data = try?Data(contentsOf: file.fileURL) {
+                        video=data
+                        
+                    }
+                }
+                
+                workout=Workout(anteprima: anteprima,categoria: categoria,esercizi: eserciziWorkout,isBloccato: isBloccato,livello: livello,tempo: tempo,video: video,id: idWorkout)
+                
+                
+        for esercizioReference in record!["esercizi"] as! [CKReference] {
+                    esercizi.append(esercizioReference.recordID)
+                }
+                //now you can fetch those employees
+                var fetchOperation = CKFetchRecordsOperation(recordIDs: esercizi)
+                fetchOperation.fetchRecordsCompletionBlock = {
+                    records, error in
+                    if error != nil {
+                        print("\(error!)")
+                    } else {
+                        for (recordId, record) in records! {
+                            var nome:String=record.object(forKey: "nome") as! String
+                            var descrizione:String=record.object(forKey: "descrizione") as! String
+                            var foto:Data!
+                            var fotoEsercizio:CKAsset?=record.object(forKey:"foto") as! CKAsset
+                            
+                            if let file = fotoEsercizio {
+                                if let data = try?Data(contentsOf: file.fileURL) {
+                                    foto=data
+                                    
+                                }
+                            }
+                            var  esercizio : Esercizio=Esercizio(nome:nome,descrizione:descrizione, foto:foto)
+                            workout.esercizi.append(esercizio)
+                            
+                        }
+                        
+                    }
+                }
+                CKContainer.default().publicCloudDatabase.add(fetchOperation)
+                
+                
+                semaphore.signal()
+                
+                
+
+        
+        
+        semaphore.wait()
+        return workout
+            
+        }
+
+    
+        
+
+        
+        
+    }
     
     
-} // chiude classe
+    
+    
+
 
 
 
