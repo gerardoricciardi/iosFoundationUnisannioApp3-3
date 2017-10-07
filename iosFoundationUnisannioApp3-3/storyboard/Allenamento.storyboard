@@ -15,7 +15,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Allenamento-->
+        <!--Training-->
         <scene sceneID="Jof-j4-Kk3">
             <objects>
                 <tableViewController id="w8d-Es-GsH" customClass="CategoriesTableViewController" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
@@ -73,7 +73,7 @@
                             <outlet property="delegate" destination="w8d-Es-GsH" id="X7S-ys-9zV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Allenamento" id="9oO-Ap-mZr"/>
+                    <navigationItem key="navigationItem" title="Training" id="9oO-Ap-mZr"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ooh-US-4K6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
