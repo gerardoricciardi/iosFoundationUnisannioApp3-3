@@ -20,7 +20,6 @@
 		0736832E1F842F2200236D98 /* ProfileDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0736832D1F842F2200236D98 /* ProfileDataStore.swift */; };
 		073683301F842FC900236D98 /* UserHealthProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0736832F1F842FC900236D98 /* UserHealthProfile.swift */; };
 		074BD1D61F87778300CAFF53 /* NotificationHK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074BD1D51F87778300CAFF53 /* NotificationHK.swift */; };
-		074E76151F88220B00E8FA0B /* ToTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E76141F88220B00E8FA0B /* ToTabBarViewController.swift */; };
 		07505BF71F7E9E0400E1A88B /* Impostazioni.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07505BF51F7E9E0400E1A88B /* Impostazioni.storyboard */; };
 		075207501F7F04FB004EE4FF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752074F1F7F04FB004EE4FF /* MainViewController.swift */; };
 		076EDB591F7FB61300A15D6D /* IntroViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076EDB581F7FB61300A15D6D /* IntroViewController1.swift */; };
@@ -35,6 +34,7 @@
 		07A5EB9B1F839C2400337BF1 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A5EB9A1F839C2400337BF1 /* CategoriesTableViewController.swift */; };
 		07C5C7C21F853D51003DCB85 /* VideoWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C5C7C11F853D51003DCB85 /* VideoWorkoutViewController.swift */; };
 		07C7EFAD1F87AF51000E3B57 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C7EFAC1F87AF51000E3B57 /* InfoViewController.swift */; };
+		07CBEC901F89211C00D8F451 /* ToTabBarViewControllerNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CBEC8F1F89211C00D8F451 /* ToTabBarViewControllerNew.swift */; };
 		212917581F86188C002424B9 /* ImpostazioniTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212917571F86188C002424B9 /* ImpostazioniTableViewCell.swift */; };
 		212C9AD11F861F5B00235232 /* NotificheTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C9AD01F861F5B00235232 /* NotificheTableTableViewController.swift */; };
 		212C9AD31F861FA500235232 /* NotificheTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C9AD21F861FA500235232 /* NotificheTableViewCell.swift */; };
@@ -48,7 +48,6 @@
 		8F2E5D5E1F87991600182C28 /* DetailsCategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E5D5D1F87991600182C28 /* DetailsCategoriesTableViewCell.swift */; };
 		8F2E5D611F87A13200182C28 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E5D601F87A13200182C28 /* Workout.swift */; };
 		F82F7BC31F87FC020044F1AE /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82F7BC21F87FC020044F1AE /* PopUpViewController.swift */; };
-		F8A380841F87E4520019F4DF /* ModificaProfiloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A380831F87E4520019F4DF /* ModificaProfiloViewController.swift */; };
 		F8A5E9791F83980D009D186F /* ViewControllerProfilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5E9781F83980D009D186F /* ViewControllerProfilo.swift */; };
 		F8C3113A1F839F3800C1FFE2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C311391F839F3800C1FFE2 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
@@ -105,6 +104,7 @@
 		07A5EB9A1F839C2400337BF1 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
 		07C5C7C11F853D51003DCB85 /* VideoWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoWorkoutViewController.swift; sourceTree = "<group>"; };
 		07C7EFAC1F87AF51000E3B57 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InfoViewController.swift; path = Workout/InfoViewController.swift; sourceTree = "<group>"; };
+		07CBEC8F1F89211C00D8F451 /* ToTabBarViewControllerNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToTabBarViewControllerNew.swift; sourceTree = "<group>"; };
 		212917571F86188C002424B9 /* ImpostazioniTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpostazioniTableViewCell.swift; sourceTree = "<group>"; };
 		212C9AD01F861F5B00235232 /* NotificheTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificheTableTableViewController.swift; sourceTree = "<group>"; };
 		212C9AD21F861FA500235232 /* NotificheTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificheTableViewCell.swift; sourceTree = "<group>"; };
@@ -238,6 +238,7 @@
 				076EDB581F7FB61300A15D6D /* IntroViewController1.swift */,
 				0733E1501F7AA7840066F286 /* IntroViewController.swift */,
 				074E76141F88220B00E8FA0B /* ToTabBarViewController.swift */,
+				07CBEC8F1F89211C00D8F451 /* ToTabBarViewControllerNew.swift */,
 				0752074F1F7F04FB004EE4FF /* MainViewController.swift */,
 				212C9AD21F861FA500235232 /* NotificheTableViewCell.swift */,
 				212C9AD01F861F5B00235232 /* NotificheTableTableViewController.swift */,
@@ -448,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				076EDB5B1F7FB84B00A15D6D /* IntroViewController2.swift in Sources */,
+				07CBEC901F89211C00D8F451 /* ToTabBarViewControllerNew.swift in Sources */,
 				074BD1D61F87778300CAFF53 /* NotificationHK.swift in Sources */,
 				071E1BAA1F83BFB10097C074 /* TestSaverRecord.swift in Sources */,
 				07A5EB991F839C0900337BF1 /* CategoriesTableViewCell.swift in Sources */,
