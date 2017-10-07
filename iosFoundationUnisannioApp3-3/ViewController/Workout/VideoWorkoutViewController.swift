@@ -53,7 +53,7 @@ class VideoWorkoutViewController: UIViewController {
         
 //        videoData = TestSaverRecord.getVideoFromEsercizio(nomeEsercizio: "allungamenti adduttori")
         
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as! String
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         let destinationPath = documentsPath + String("/video.mp4")
         
         
@@ -117,7 +117,7 @@ class VideoWorkoutViewController: UIViewController {
         playButton.isHidden = true
         pauseButton.isHidden = true
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let twop = storyboard.instantiateViewController(withIdentifier: "toTabBar") as! ToTabBarViewController
+        let twop = storyboard.instantiateViewController(withIdentifier: "toTabBar") as! ToTabBarViewControllerNew
         let alertController = UIAlertController(title: "Health Desk", message:
             "Great, workout completed", preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: {(action) -> Void in
