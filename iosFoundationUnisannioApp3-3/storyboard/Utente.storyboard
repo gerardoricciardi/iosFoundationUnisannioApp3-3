@@ -16,7 +16,6 @@
             <string>Helvetica-Bold</string>
             <string>Helvetica-BoldOblique</string>
             <string>Helvetica-Light</string>
-            <string>Helvetica-LightOblique</string>
         </array>
     </customFonts>
     <scenes>
@@ -469,9 +468,9 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Modifiche effetuate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLQ-tn-led">
-                                        <rect key="frame" x="40" y="53" width="161" height="21"/>
+                                        <rect key="frame" x="40" y="53" width="183" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-LightOblique" family="Helvetica" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="highlightedColor" red="0.3967735469" green="0.71572017669999999" blue="0.81574428080000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </label>
