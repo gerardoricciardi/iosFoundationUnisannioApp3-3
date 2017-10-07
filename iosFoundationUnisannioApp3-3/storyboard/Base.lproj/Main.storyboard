@@ -16,10 +16,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--To Tab Bar View Controller-->
+        <!--To Tab Bar View Controller New-->
         <scene sceneID="VcE-aB-2Lv">
             <objects>
-                <viewController restorationIdentifier="toTabBar" storyboardIdentifier="toTabBar" id="CuZ-Tw-iIV" customClass="ToTabBarViewController" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="toTabBar" storyboardIdentifier="toTabBar" id="CuZ-Tw-iIV" customClass="ToTabBarViewControllerNew" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iBT-zk-PJ0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -567,7 +567,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Cg9-Kv-lf2"/>
-        <segue reference="3nP-eY-p8t"/>
+        <segue reference="fhh-bI-Pph"/>
         <segue reference="FNA-98-7mA"/>
     </inferredMetricsTieBreakers>
 </document>
