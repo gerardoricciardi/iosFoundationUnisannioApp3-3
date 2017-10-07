@@ -9,6 +9,7 @@
 import UIKit
 
 class ModificaProfiloViewController: UIViewController {
+    
     @IBOutlet weak var orarioFineP: UIDatePicker!
     @IBOutlet weak var orarioInizioP: UIDatePicker!
     let defaults=UserDefaults.standard
@@ -33,8 +34,6 @@ class ModificaProfiloViewController: UIViewController {
         popOverVC.view.frame = self.view.frame
         self.view.addSubview(popOverVC.view)
         popOverVC.didMove(toParentViewController: self)
-//        segue.Utente
-        
     }
     
     override func viewDidLoad() {
