@@ -10,9 +10,9 @@ import UIKit
 
 class TableViewCellPreviewEsercizi: UITableViewCell {
 
-    @IBOutlet weak var labelDescrizioneEsercizio: UILabel!
     @IBOutlet weak var labelNomeEsercizio: UILabel!
-    @IBOutlet weak var imagePreviewEsercizio: UIImageView!
+    @IBOutlet weak var labelDescrizione: UILabel!
+    @IBOutlet weak var imageEsercizio: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

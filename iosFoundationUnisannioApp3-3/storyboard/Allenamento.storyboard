@@ -184,8 +184,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imageVideoPreview" destination="Ky5-tP-4bL" id="HcM-5B-CjL"/>
-                                    <segue destination="dH7-y5-Fse" kind="showDetail" identifier="allenamento" id="NWi-sZ-OuM"/>
+                                    <outlet property="imageAnteprima" destination="Ky5-tP-4bL" id="nn8-S2-d3S"/>
+                                    <segue destination="dH7-y5-Fse" kind="show" identifier="allenamento" id="MAY-rM-byS"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPreviewEsercizi" rowHeight="110" id="YjQ-Ok-J3t" customClass="TableViewCellPreviewEsercizi" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target">
@@ -234,9 +234,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imagePreviewEsercizio" destination="Dbc-J6-d4b" id="wvu-zs-hZI"/>
-                                    <outlet property="labelDescrizioneEsercizio" destination="86Q-WB-0dU" id="zyF-3g-tDC"/>
-                                    <outlet property="labelNomeEsercizio" destination="UQo-pR-3YD" id="tLe-yM-E31"/>
+                                    <outlet property="imageEsercizio" destination="Dbc-J6-d4b" id="AbC-Fx-dOA"/>
+                                    <outlet property="labelDescrizione" destination="86Q-WB-0dU" id="CBB-24-jlf"/>
+                                    <outlet property="labelNomeEsercizio" destination="UQo-pR-3YD" id="Whr-lQ-LLZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

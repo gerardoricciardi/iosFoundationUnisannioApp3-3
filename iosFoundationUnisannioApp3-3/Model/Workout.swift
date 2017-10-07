@@ -13,21 +13,22 @@ class Workout{
     
     var anteprima: Data?
     var categoria: String?
-    var esercizi: String?
+    var esercizi: [Esercizio]!
     var isBloccato: String?
     var livello: Int64?
     var tempo: Int64?
-    var video: CKAsset?
-    var id: String
+    var video: Data?
+    var id: CKRecordID?
     
-    init(anteprima: Data, id: String) {
+    init(anteprima: Data, id: CKRecordID) {
         self.anteprima = anteprima
         self.id = id
     }
-    init(anteprima: Data, categoria: String, esercizi: String, isBloccato: String, livello: Int64, tempo: Int64, video: CKAsset, id: String) {
+    
+    init(anteprima: Data, categoria: String, esercizi: [Esercizio], isBloccato: String, livello: Int64, tempo: Int64, video: Data, id: CKRecordID) {
         self.anteprima = anteprima
         self.categoria = categoria
-        self.esercizi = esercizi
+        self.esercizi = [Esercizio]()
         self.isBloccato = isBloccato
         self.livello = livello
         self.tempo = tempo
