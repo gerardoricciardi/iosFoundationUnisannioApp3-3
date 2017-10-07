@@ -10,15 +10,18 @@ import UIKit
 
 class ImpostazioniTableViewController: UITableViewController {
 
-//    var impostazioni = ["Helathkit","Notifiche","Modifica Profilo","Info", "Logout"]
-    var impostazioni = ["Helathkit","Notifiche","Info"]
-    var notificheDescrizioni = ["Se l'opzione in ufficio è abilitata, riceverai delle notifiche che ti consentiranno di fare un viaggio nel fitness sul posto di lavoro, attraverso alcuni esercizi da fare comodamente alla scrivania.","Con l'opzione Riepiloghi settimanali, riceverai dei resoconti sugli allenamenti svolti nell'ultima settimana.","L'opzione Promemoria abilitata ti ricorda quando è il momento di allenarsi"]
+
+    var impostazioni = ["Healthkit","Notifiche","Info"]
+    var notificheDescrizioni = ["If the option in the office is enabled, you will receive a notifications that will allow you to make a trip to the gym at work, through some exercises to  comfortably at your desk.", "With Weekly Summaries option you will receive reports on the workouts of the last week.", "The option Reminder enabled  reminds you when it's time to train."]
     
     var segue = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+       
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -36,25 +39,37 @@ class ImpostazioniTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
+        
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return impostazioni.count
+        
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cella", for: indexPath) as! ImpostazioniTableViewCell
         cell.impostazioniLabel.text = impostazioni[indexPath.row]
+        tableView.backgroundColor = UIColor.white
+        cell.backgroundColor = UIColor.white
+        self.tableView.separatorColor = UIColor(red: 55.0/255.0, green: 153.0/255.0, blue: 178.0/255.0, alpha: 1.0)
+        
+        
+    
+        
+        
+        
         // Configure the cell...
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150.0
+        return 80.0
+        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -74,8 +89,11 @@ class ImpostazioniTableViewController: UITableViewController {
         if indexPath.row == 2 {
             //performSegue(withIdentifier: "segueInfo", sender: self)
             if let controller = navigationController?.storyboard?.instantiateViewController(withIdentifier: "infoController") as? InfoViewController {
+                
+                
         
             navigationController?.pushViewController(controller, animated: true)
+                
             }
         }
     }

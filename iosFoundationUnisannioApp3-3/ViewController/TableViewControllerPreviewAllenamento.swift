@@ -14,6 +14,10 @@ class TableViewControllerPreviewAllenamento: UITableViewController {
     
     
     
+//    override func viewDidAppear(_ animated: Bool) {
+//        self.navigationController?.isNavigationBarHidden = false
+//        self.tabBarController?.tabBar.isHidden = false
+//    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

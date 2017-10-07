@@ -1,29 +1,25 @@
 //
-//  NotificheTableTableViewController.swift
+//  TableViewControllerModificaProfilo.swift
 //  iosFoundationUnisannioApp3-3
 //
-//  Created by Zabatta Daniela on 05/10/17.
+//  Created by Fabio dell'Infante on 04/10/17.
 //  Copyright © 2017 Ricciardi Gerardo. All rights reserved.
 //
 
 import UIKit
 
-class NotificheTableTableViewController: UITableViewController {
+class TableViewControllerModificaProfilo: UITableViewController {
+
     
-    var notifiche = ["At office ","Weekly summaries","Reminder"]
-    var notificheDescrizioni: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.title = "Notifications"
-        self.navigationItem.backBarButtonItem?.tintColor = UIColor.white
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,28 +36,49 @@ class NotificheTableTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return notifiche.count
+        return 2
     }
-
-
+  /*  orarioInizio.minuteInterval = Int(10)
+    orarioFine.minuteInterval = Int(10)
+    
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat =  "HH:mm"
+    
+    let dateIn = dateFormatter.date(from: "9:00")
+    let dateOut = dateFormatter.date(from: "17:00")
+    
+    orarioInizio.date = dateIn!
+    orarioFine.date = dateOut!*/
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellaNotifiche", for: indexPath) as! NotificheTableViewCell
+       if indexPath.row == 0
+       {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CellModificaProfilo", for: indexPath) as! ModificaProfiloTableViewCell
+            
+            let dateFormatte = DateFormatter()
+            dateFormatte.dateFormat =  "HH:mm"
+            let dateIn = dateFormatte.date(from: "9:00")
+            let dateOut = dateFormatte.date(from: "17:00")
+            
+            cell.OraInizio.date = dateIn!
+            cell.OraFine.date = dateOut!
         
-        cell.notificheLabel.text = notifiche[indexPath.row]
-        cell.descrizioneText.text = notificheDescrizioni[indexPath.row]
-        cell.backgroundColor = UIColor(red: 230.0/255.0, green: 230.0/255.0, blue: 230.0/255.0, alpha: 49.0)
-        tableView.backgroundColor = UIColor.white
-        
-        
-    self.tableView.separatorColor = UIColor(red: 55.0/255.0, green: 153.0/255.0, blue: 178.0/255.0, alpha: 1.0)
-        
-        return cell
+            
+            
+            return cell
+        }
+        else
+      {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CellModificaProfilo1", for: indexPath) as! ModificaProfiloTableViewCell
+                
+            return cell
+        }
     }
-    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150.0
+            return 250.0
     }
+
     
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

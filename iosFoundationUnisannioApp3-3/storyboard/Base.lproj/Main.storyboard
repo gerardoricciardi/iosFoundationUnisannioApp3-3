@@ -16,6 +16,24 @@
         </array>
     </customFonts>
     <scenes>
+        <!--To Tab Bar View Controller-->
+        <scene sceneID="VcE-aB-2Lv">
+            <objects>
+                <viewController restorationIdentifier="toTabBar" storyboardIdentifier="toTabBar" id="CuZ-Tw-iIV" customClass="ToTabBarViewController" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iBT-zk-PJ0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="TZM-76-LPZ"/>
+                    </view>
+                    <connections>
+                        <segue destination="n6m-lQ-URq" kind="presentation" identifier="toTabBar" modalTransitionStyle="crossDissolve" id="fhh-bI-Pph"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rn7-eI-tAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4545" y="448"/>
+        </scene>
         <!--Utente-->
         <scene sceneID="y7J-C5-O3z">
             <objects>
@@ -75,7 +93,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1r3-NZ-UoS">
                                 <rect key="frame" x="43" y="680" width="328" height="30"/>
-                                <state key="normal" title="Don't you have an account? Register &gt;">
+                                <state key="normal" title="Don't  have an account? Register here &gt;">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -127,7 +145,7 @@
                                     <constraint firstAttribute="height" constant="35" id="Ccz-UQ-v3X"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-LightOblique" family="Helvetica" pointSize="25"/>
-                                <state key="normal" title="Introduce yourself &gt;">
+                                <state key="normal" title="Tell me about yourself &gt;">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -135,7 +153,7 @@
                                     <segue destination="lQk-U1-Img" kind="presentation" modalTransitionStyle="crossDissolve" id="uGO-kF-mZX"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello, you are welcome!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r5c-I2-7CL">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello, welcome!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r5c-I2-7CL">
                                 <rect key="frame" x="20" y="204" width="368.66666666666669" height="195"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="363" id="pku-Gk-ibB"/>
@@ -186,7 +204,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqR-kw-iEx">
                                 <rect key="frame" x="74" y="456" width="266" height="56"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
-                                <state key="normal" title="WOMAN" backgroundImage="buttt">
+                                <state key="normal" title="FEMALE" backgroundImage="buttt">
                                     <color key="titleColor" red="0.28654810786247253" green="0.61551463603973389" blue="0.80791771411895752" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
@@ -196,7 +214,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JN3-SB-moR">
                                 <rect key="frame" x="74" y="340" width="266" height="56"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
-                                <state key="normal" title="MAN" backgroundImage="buttt">
+                                <state key="normal" title="MALE" backgroundImage="buttt">
                                     <color key="titleColor" red="0.28654810786247253" green="0.61551463603973389" blue="0.80791771411895752" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
@@ -228,7 +246,7 @@
         <!--Main View Controller-->
         <scene sceneID="ipC-Jn-G4O">
             <objects>
-                <viewController id="VMX-Jj-p6C" customClass="MainViewController" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="main" storyboardIdentifier="main" id="VMX-Jj-p6C" customClass="MainViewController" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WWa-2P-xif">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -242,7 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wqc-dk-Nf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5552" y="-340"/>
+            <point key="canvasLocation" x="-6109" y="-382"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="3aR-h0-tBe">
@@ -252,7 +270,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Does work take you too long and you have no way of dedicating yourself to yourself?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="21y-1s-Ujk">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Does work take up all your time  and leave you no time to yourself?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="21y-1s-Ujk">
                                 <rect key="frame" x="37" y="104" width="304" height="129"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -281,7 +299,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Health Desk                                               " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Qe6-an-OFF">
-                                <rect key="frame" x="37" y="276" width="304" height="54"/>
+                                <rect key="frame" x="37" y="269" width="304" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
@@ -295,7 +313,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="My workouts are specially designed for you!                                   " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5tr-wu-sxw">
-                                <rect key="frame" x="37" y="386" width="304" height="102"/>
+                                <rect key="frame" x="37" y="399" width="304" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
@@ -329,6 +347,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <color key="barTintColor" red="0.46395942568778992" green="0.74742692708969116" blue="0.83142411708831787" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.99991267919540405" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="YIA-LD-Dcu" kind="relationship" relationship="viewControllers" id="PaS-wz-EyJ"/>
@@ -412,7 +435,7 @@
                                     <!--2017-09-30 14:50:59 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I will give you some advices while you work!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0O-80-zaE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I will give you some tips while you work!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0O-80-zaE">
                                 <rect key="frame" x="19" y="631" width="376" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

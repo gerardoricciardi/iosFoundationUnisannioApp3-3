@@ -21,10 +21,10 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         let defaults = UserDefaults.standard
         
-        if defaults.string(forKey: "scrivi Username") != nil{
+//        if defaults.string(forKey: "scrivi Username") != nil || defaults.bool(forKey: "isEndedWorkout"){
+        if defaults.string(forKey: "scrivi Username") != nil {
             //utente gia presente, vai alla tabbar
             print("Sono nel main chiave username trovata")
-            
             segueFirstView = segueTabBar
         }
         else{
@@ -54,6 +54,7 @@ class MainViewController: UIViewController {
         
         
         authorizeHealthKit()
+        
         
         _ = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
         
