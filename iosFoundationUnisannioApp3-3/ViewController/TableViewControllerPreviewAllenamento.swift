@@ -12,6 +12,10 @@ class TableViewControllerPreviewAllenamento: UITableViewController {
 
 //    var workout : Workout from DB 
     
+//    override func viewDidAppear(_ animated: Bool) {
+//        self.navigationController?.isNavigationBarHidden = false
+//        self.tabBarController?.tabBar.isHidden = false
+//    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,14 +50,14 @@ class TableViewControllerPreviewAllenamento: UITableViewController {
         {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellPreviewVideo", for: indexPath) as! TableViewCellPreviewVideo
 
-        cell.imageVideoPreview.image=UIImage(named:"stretching") //bisogna mettere anteprimaVideo da DB
+        cell.imageVideoPreview.image=UIImage(named:"Stretching") //bisogna mettere anteprimaVideo da DB
 
         return cell
         }
         else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellPreviewEsercizi", for: indexPath) as! TableViewCellPreviewEsercizi
             
-            cell.imagePreviewEsercizio.image=UIImage(named:"stretching")
+            cell.imagePreviewEsercizio.image=UIImage(named:"Stretching")
             cell.labelNomeEsercizio.text="Esercizio 1"
             cell.labelDescrizioneEsercizio.text="Esercizio per migliorare......"
             

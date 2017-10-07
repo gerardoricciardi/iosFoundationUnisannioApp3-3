@@ -10,6 +10,7 @@ import UIKit
 
 class DetailsCategoriesTableViewController: UITableViewController {
 
+    var categoriesImage:[String] = []
     var workouts:[Workout] = []
     
     override func viewDidLoad() {
@@ -36,15 +37,15 @@ class DetailsCategoriesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return workouts.count
+        return categoriesImage.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellDetailsCategories", for: indexPath) as! DetailsCategoriesTableViewCell
+        print(categoriesImage.count)
         
-        
-        
+        cell.anteprimaWO.image = UIImage(named: categoriesImage[indexPath.row])
 //        cell.anteprimaWO.image=workouts[indexPath.row].anteprima
         
         
