@@ -65,10 +65,19 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
         immProfilo.clipsToBounds = false
         InserireNomeL?.text = defaults.string(forKey: "name")
         InserireCognomeL?.text = defaults.string(forKey: "surname")
-        let sex = defaults.string(forKey: "Sex")
         LabelSesso?.text = defaults.string(forKey: "Sex")
-        OrariLavLabel?.text = defaults.string(forKey: "oraInizio")
-        OrarioLavLabelInizio?.text = defaults.string(forKey: "oraFine")
+        
+        let oraInizio = defaults.object(forKey: "oraInizio")
+        let oraFine = defaults.object(forKey: "oraFine")
+        
+        let calendar = NSCalendar.current
+        let oraInComponents = calendar.dateComponents([.hour, .minute], from: oraInizio as! Date)
+        let oraOutComponents = calendar.dateComponents([.hour, .minute], from: oraFine as! Date)
+        let oraIn = String(describing: oraInComponents.hour!) + "." + String(describing: oraInComponents.minute!)
+        let oraOut = String(describing: oraOutComponents.hour!) + "." + String(describing: oraOutComponents.minute!)
+        
+        OrariLavLabel?.text = oraIn
+        OrarioLavLabelInizio?.text = oraOut
         
         // Do any additional setup after loading the view.
     }

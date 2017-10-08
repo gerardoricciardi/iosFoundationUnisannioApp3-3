@@ -37,7 +37,7 @@ class IntroViewController3: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat =  "HH:mm"
         
-        let dateIn = dateFormatter.date(from: "9:00")
+        let dateIn = dateFormatter.date(from: "09:00")
         let dateOut = dateFormatter.date(from: "17:00")
         
         orarioInizio.date = dateIn!
