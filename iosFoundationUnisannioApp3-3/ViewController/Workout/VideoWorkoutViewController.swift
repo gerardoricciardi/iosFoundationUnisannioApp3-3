@@ -15,6 +15,21 @@ class VideoWorkoutViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
+    
+    
+    @IBOutlet weak var backgroundButton: UIButton!
+    
+    @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var popUpView: UIView!
+    @IBOutlet weak var timePopUpLabel: UILabel!
+    @IBOutlet weak var resumeButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    
+    
+    @IBOutlet weak var centerYpopUpview: NSLayoutConstraint!
+    @IBOutlet weak var centerxPopUpView: NSLayoutConstraint!
+    
+    
     let backgroundColor = UIColor(red: 54.0/255.0, green: 155.0/255.0, blue: 184.0/255.0, alpha: 1.0)
     var player = AVPlayer()
     let screenSize : CGRect = UIScreen.main.bounds
@@ -32,6 +47,7 @@ class VideoWorkoutViewController: UIViewController {
     var centesimiDiSecondo :Int = 0
     var millesimiDiSecondo :Int = 0
     
+
     @IBOutlet weak var videoView: UIView!
     
     override var prefersStatusBarHidden: Bool {
@@ -47,7 +63,6 @@ class VideoWorkoutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        videoView.backgroundColor = UIColor.blue
 //        let videoURL = URL(string: url)
         
         
@@ -78,6 +93,13 @@ class VideoWorkoutViewController: UIViewController {
         
         
         
+        centerYpopUpview.constant = 0
+        centerxPopUpView.constant = -400
+        continueButton.isHidden = true
+        popUpView.layer.cornerRadius = 20
+        popUpView.layer.masksToBounds = true
+        backgroundButton.backgroundColor = UIColor.white
+        backgroundButton.alpha = 0
 //
 //        let playerController = AVPlayerViewController()
 //        playerController.player = player
@@ -102,7 +124,8 @@ class VideoWorkoutViewController: UIViewController {
         //        playerLayer.frame = self.view.bounds
         //        subView.layer.addSublayer(playerLayer)
         timerLabel.textColor = UIColor.white
-        timerLabel.text = "00:00,00"
+        timerLabel.text = "00:00"
+        timePopUpLabel.text = timerLabel.text
         playButton.setTitleColor(backgroundColor, for: UIControlState.normal)
         pauseButton.setTitleColor(backgroundColor, for: UIControlState.normal)
         pauseButton.isEnabled = false
@@ -116,6 +139,7 @@ class VideoWorkoutViewController: UIViewController {
         timer.invalidate()
         playButton.isHidden = true
         pauseButton.isHidden = true
+        stopButton.isHidden = true
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let twop = storyboard.instantiateViewController(withIdentifier: "toTabBar") as! ToTabBarViewControllerNew
         let alertController = UIAlertController(title: "Health Desk", message:
@@ -127,19 +151,43 @@ class VideoWorkoutViewController: UIViewController {
             defaults.set(isEndedWorkout, forKey: "isEndedWorkout")
             defaults.synchronize()
         }))
+        
         self.present(alertController, animated: true, completion: nil)
     }
     
+    @IBAction func resumeAction(_ sender: Any) {
+        player.play()
+        pauseButton.isSelected = false
+        pauseButton.isHidden = false
+        pauseButton.isEnabled = true
+        centerxPopUpView.constant = -400
+        backgroundButton.alpha = 0
+        UIView.animate(withDuration: 0.1, animations: {
+            self.view.layoutIfNeeded()
+            self.backgroundButton.alpha = 0
+        })
+        let intervallo :Double = 0.01
+        timer = Timer.scheduledTimer(timeInterval: intervallo, target:self, selector: #selector(VideoWorkoutViewController.timerAction), userInfo: nil, repeats: true)
+    }
+    
+    
+  
     @IBAction func pauseAction(_ sender: UIButton) {
         player.pause()
         pauseButton.isSelected = true
         pauseButton.isHidden = true
         pauseButton.isEnabled = false
         
-        playButton.isHidden = false
-        playButton.isSelected = false
-        playButton.isEnabled = true
+
+        centerxPopUpView.constant = 0
         timer.invalidate()
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        UIView.animate(withDuration: 0.3, animations: {
+            self.backgroundButton.alpha = 0.5
+        })
+        
     }
     @IBAction func playAction(_ sender: UIButton) {
         player.play()
@@ -175,7 +223,8 @@ class VideoWorkoutViewController: UIViewController {
             }
         }
         
-        timerLabel.text = "\(minutiD)\(minuti):\(secondiD)\(secondi),\(centesimiDiSecondo)\(millesimiDiSecondo)"
+        timerLabel.text = "\(minutiD)\(minuti):\(secondiD)\(secondi)"
+        timePopUpLabel.text = timerLabel.text
     }
     
     
