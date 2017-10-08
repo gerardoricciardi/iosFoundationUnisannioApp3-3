@@ -12,21 +12,25 @@ class ToTabBarViewControllerNew: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.view.backgroundColor = UIColor(red: 55.0/255.0, green: 153.0/255.0, blue: 178.0/255.0, alpha: 1.0)
         
         
-        _ = Timer.scheduledTimer(timeInterval: 0.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
+//        _ = Timer.scheduledTimer(timeInterval: 0.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
         
         
-        //        self.performSegue(withIdentifier: "toTabBar", sender: self)
+        // self.performSegue(withIdentifier: "toTabBar", sender: self)
        
         // Do any additional setup after loading the view.
     }
 
-    
-    @objc func timeToMoveOn() {
-        self.performSegue(withIdentifier: "toTabBar", sender: self)
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
+    
+//    @objc func timeToMoveOn() {
+//        self.performSegue(withIdentifier: "toTabBar", sender: self)
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

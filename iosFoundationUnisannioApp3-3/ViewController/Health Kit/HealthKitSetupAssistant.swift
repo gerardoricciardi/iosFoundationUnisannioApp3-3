@@ -35,7 +35,6 @@ class HealthKitSetupAssistant {
                 return
         }
         print("Sono in HealthKitSetupAssistant")
-        print("Stampa data \(dateOfBirth)")
         //3. Prepare a list of types you want HealthKit to read and write
         let healthKitTypesToWrite: Set<HKSampleType> = [bodyMassIndex,
                                                         activeEnergy,

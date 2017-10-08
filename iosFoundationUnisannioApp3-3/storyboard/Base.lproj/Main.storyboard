@@ -23,16 +23,42 @@
                     <view key="view" contentMode="scaleToFill" id="iBT-zk-PJ0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMK-5g-Acb">
+                                <rect key="frame" x="20" y="20" width="374" height="696"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feU-ml-faC">
+                                        <rect key="frame" x="81" y="518" width="212" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <state key="normal" title="Continue">
+                                            <color key="titleColor" red="0.25449371609999999" green="0.74019084989999995" blue="0.80371589470000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="n6m-lQ-URq" kind="show" id="yxc-HM-xIa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="696" id="8LJ-Ml-037"/>
+                                    <constraint firstAttribute="width" constant="374" id="ven-fp-GpX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qMK-5g-Acb" firstAttribute="top" secondItem="TZM-76-LPZ" secondAttribute="top" id="0S7-e9-smc"/>
+                            <constraint firstItem="TZM-76-LPZ" firstAttribute="trailing" secondItem="qMK-5g-Acb" secondAttribute="trailing" constant="20" id="9Vx-wp-YV7"/>
+                            <constraint firstItem="qMK-5g-Acb" firstAttribute="leading" secondItem="TZM-76-LPZ" secondAttribute="leading" constant="20" id="EGm-mZ-K1l"/>
+                            <constraint firstItem="TZM-76-LPZ" firstAttribute="bottom" secondItem="qMK-5g-Acb" secondAttribute="bottom" constant="20" id="qgW-tP-R0q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TZM-76-LPZ"/>
                     </view>
-                    <connections>
-                        <segue destination="n6m-lQ-URq" kind="presentation" identifier="toTabBar" modalTransitionStyle="crossDissolve" id="fhh-bI-Pph"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rn7-eI-tAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4545" y="448"/>
+            <point key="canvasLocation" x="-4546.376811594203" y="447.554347826087"/>
         </scene>
         <!--Utente-->
         <scene sceneID="y7J-C5-O3z">
@@ -567,7 +593,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Cg9-Kv-lf2"/>
-        <segue reference="fhh-bI-Pph"/>
+        <segue reference="yxc-HM-xIa"/>
         <segue reference="FNA-98-7mA"/>
     </inferredMetricsTieBreakers>
 </document>

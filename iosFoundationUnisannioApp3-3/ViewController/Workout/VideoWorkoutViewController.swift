@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import AVKit
+import HealthKit
 
 
 class VideoWorkoutViewController: UIViewController {
@@ -46,6 +47,7 @@ class VideoWorkoutViewController: UIViewController {
     var secondi :Int = 0
     var centesimiDiSecondo :Int = 0
     var millesimiDiSecondo :Int = 0
+    var dateStart = Date()
     
 
     @IBOutlet weak var videoView: UIView!
@@ -140,22 +142,22 @@ class VideoWorkoutViewController: UIViewController {
         playButton.isHidden = true
         pauseButton.isHidden = true
         stopButton.isHidden = true
+        player.pause()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let twop = storyboard.instantiateViewController(withIdentifier: "toTabBar") as! ToTabBarViewControllerNew
-        let alertController = UIAlertController(title: "Health Desk", message:
-            "Great, workout completed", preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: {(action) -> Void in
-                self.present(twop, animated: false, completion: nil)
-            let defaults = UserDefaults.standard
-            let isEndedWorkout = true
-            defaults.set(isEndedWorkout, forKey: "isEndedWorkout")
-            defaults.synchronize()
-        }))
-        
-        self.present(alertController, animated: true, completion: nil)
+//        let alertController = UIAlertController(title: "Health Desk", message:
+//            "Great, workout completed", preferredStyle: UIAlertControllerStyle.alert)
+//        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: {(action) -> Void in
+//        }))
+//        self.present(alertController, animated: true, completion: nil)
+        self.present(twop, animated: false, completion: nil)
+        let defaults = UserDefaults.standard
+        let isEndedWorkout = true
+        defaults.set(isEndedWorkout, forKey: "isEndedWorkout")
+        defaults.synchronize()
     }
     
-    @IBAction func resumeAction(_ sender: Any) {
+    @IBAction func resumeAction(_ sender: UIButton) {
         player.play()
         pauseButton.isSelected = false
         pauseButton.isHidden = false
@@ -168,6 +170,47 @@ class VideoWorkoutViewController: UIViewController {
         })
         let intervallo :Double = 0.01
         timer = Timer.scheduledTimer(timeInterval: intervallo, target:self, selector: #selector(VideoWorkoutViewController.timerAction), userInfo: nil, repeats: true)
+    }
+    
+    @IBAction func stopAction(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let twop = storyboard.instantiateViewController(withIdentifier: "toTabBar") as! ToTabBarViewControllerNew
+
+        timer.invalidate()
+        player.pause()
+        let defaults = UserDefaults.standard
+        let isEndedWorkout = true
+        defaults.set(isEndedWorkout, forKey: "isEndedWorkout")
+        if defaults.integer(forKey: "counterWorkout") >= 0 {
+            var counter = defaults.integer(forKey: "counterWorkout")
+            counter += 1
+            defaults.set(counter, forKey: "counterWorkout")
+        }
+        else{
+            defaults.set(1, forKey: "counterWorkout")
+        }
+        defaults.synchronize()
+        
+        print("***Tempo workout \(minutiD)\(minuti).\(secondiD)\(secondi)")
+        let durationWorkout = Double((minutiD * 10 + minuti) * 60 + (secondiD * 10 + secondi))
+        let endDate = Date()
+        
+        //2. Build the workout using data from your Prancercise workout
+        let workout = HKWorkout(activityType: .pilates,
+                                start: dateStart,
+                                end: endDate,
+                                duration: durationWorkout,
+                                totalEnergyBurned: nil,
+                                totalDistance: nil,
+                                device: HKDevice.local(),
+                                metadata: nil)
+        
+        //3. Save your workout to HealthKit
+        let healthStore = HKHealthStore()
+        healthStore.save(workout) { (success, error) in
+        }
+        
+        self.present(twop, animated: false, completion: nil)
     }
     
     
@@ -187,9 +230,9 @@ class VideoWorkoutViewController: UIViewController {
         UIView.animate(withDuration: 0.3, animations: {
             self.backgroundButton.alpha = 0.5
         })
-        
     }
     @IBAction func playAction(_ sender: UIButton) {
+        dateStart = Date()
         player.play()
         playButton.isSelected = true
         playButton.isEnabled = false

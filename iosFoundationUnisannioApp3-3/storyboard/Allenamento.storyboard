@@ -353,6 +353,9 @@
                                                         <state key="normal" image="stop">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="stopAction:" destination="dH7-y5-Fse" eventType="touchUpInside" id="bkq-Ac-dk7"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
