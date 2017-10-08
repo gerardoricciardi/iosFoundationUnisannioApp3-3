@@ -35,6 +35,7 @@
 		07C5C7C21F853D51003DCB85 /* VideoWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C5C7C11F853D51003DCB85 /* VideoWorkoutViewController.swift */; };
 		07C7EFAD1F87AF51000E3B57 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C7EFAC1F87AF51000E3B57 /* InfoViewController.swift */; };
 		07CBEC901F89211C00D8F451 /* ToTabBarViewControllerNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CBEC8F1F89211C00D8F451 /* ToTabBarViewControllerNew.swift */; };
+		07CBEC921F8A734000D8F451 /* IntroRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CBEC911F8A734000D8F451 /* IntroRegisterViewController.swift */; };
 		212917581F86188C002424B9 /* ImpostazioniTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212917571F86188C002424B9 /* ImpostazioniTableViewCell.swift */; };
 		212C9AD11F861F5B00235232 /* NotificheTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C9AD01F861F5B00235232 /* NotificheTableTableViewController.swift */; };
 		212C9AD31F861FA500235232 /* NotificheTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C9AD21F861FA500235232 /* NotificheTableViewCell.swift */; };
@@ -105,6 +106,7 @@
 		07C5C7C11F853D51003DCB85 /* VideoWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoWorkoutViewController.swift; sourceTree = "<group>"; };
 		07C7EFAC1F87AF51000E3B57 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InfoViewController.swift; path = Workout/InfoViewController.swift; sourceTree = "<group>"; };
 		07CBEC8F1F89211C00D8F451 /* ToTabBarViewControllerNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToTabBarViewControllerNew.swift; sourceTree = "<group>"; };
+		07CBEC911F8A734000D8F451 /* IntroRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroRegisterViewController.swift; sourceTree = "<group>"; };
 		212917571F86188C002424B9 /* ImpostazioniTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpostazioniTableViewCell.swift; sourceTree = "<group>"; };
 		212C9AD01F861F5B00235232 /* NotificheTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificheTableTableViewController.swift; sourceTree = "<group>"; };
 		212C9AD21F861FA500235232 /* NotificheTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificheTableViewCell.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				0733E1521F7AA7840066F286 /* Main.storyboard */,
+				07CBEC911F8A734000D8F451 /* IntroRegisterViewController.swift */,
 				07505BF51F7E9E0400E1A88B /* Impostazioni.storyboard */,
 				0797D1DF1F7E71F80062A655 /* Utente.storyboard */,
 				0797D1E11F7E72290062A655 /* Allenamento.storyboard */,
@@ -462,6 +465,7 @@
 				075207501F7F04FB004EE4FF /* MainViewController.swift in Sources */,
 				212917581F86188C002424B9 /* ImpostazioniTableViewCell.swift in Sources */,
 				8F2E5D5A1F867DC400182C28 /* TableViewCellPreviewEsercizi.swift in Sources */,
+				07CBEC921F8A734000D8F451 /* IntroRegisterViewController.swift in Sources */,
 				078893781F7FF95F001D8059 /* IntroViewControllerBenvenuto.swift in Sources */,
 				8F2E5D5E1F87991600182C28 /* DetailsCategoriesTableViewCell.swift in Sources */,
 				0736832C1F84239200236D98 /* HealthKitSetupAssistant.swift in Sources */,
