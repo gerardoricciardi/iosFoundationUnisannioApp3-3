@@ -63,11 +63,12 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
         self.picker.delegate = self
         immProfilo.layer.cornerRadius = 30.0
         immProfilo.clipsToBounds = false
-        InserireNomeL?.text = "Fabio"//defaults.object(forKey:"Username") as? String
-        InserireCognomeL?.text = "Dell'infante"//defaults.object(forKey: "Username") as? String
-        LabelSesso?.text = "Uomo"//defaults.object(forKey:"Sesso") as? String
-        OrariLavLabel?.text = "09:00"//defaults.object(forKey:"oraInizio") as? String
-        OrarioLavLabelInizio?.text = "18:00"//defaults.object(forKey:"oraFine") as? String
+        InserireNomeL?.text = defaults.string(forKey: "name")
+        InserireCognomeL?.text = defaults.string(forKey: "surname")
+        let sex = defaults.string(forKey: "Sex")
+        LabelSesso?.text = defaults.string(forKey: "Sex")
+        OrariLavLabel?.text = defaults.string(forKey: "oraInizio")
+        OrarioLavLabelInizio?.text = defaults.string(forKey: "oraFine")
         
         // Do any additional setup after loading the view.
     }
@@ -85,4 +86,16 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
         }
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func logout(_ sender: UIButton) {
+        let domain = Bundle.main.bundleIdentifier!
+        UserDefaults.standard.removePersistentDomain(forName: domain)
+        
+//        defaults.removeObject(forKey: "name")
+//        defaults.removeObject(forKey: "surname")
+//        defaults.removeObject(forKey: "email")
+//        defaults.removeObject(forKey: "password")
+//        defaults.synchronize()
+    }
+    
 }

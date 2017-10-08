@@ -1,28 +1,27 @@
 //
-//  IntroViewController1.swift
+//  IntroRegisterViewController.swift
 //  iosFoundationUnisannioApp3-3
 //
-//  Created by Ricciardi Gerardo on 30/09/17.
+//  Created by Ricciardi Gerardo on 08/10/17.
 //  Copyright © 2017 Ricciardi Gerardo. All rights reserved.
 //
 
 import UIKit
 
-//ViewController per inserire dati utente
+class IntroRegisterViewController: UIViewController, UITextFieldDelegate {
 
-class IntroViewController1: UIViewController, UITextFieldDelegate {
-    @IBOutlet weak var usernameTF: UITextField!
-    @IBOutlet weak var emailTF: UITextField!
+    
+    @IBOutlet weak var nameTF: UITextField!
+    @IBOutlet weak var surnameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var registerButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //self.usernameTF.delegate = self
-        
+
         let background = UIImage(named: "terza")
-        
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode =  UIViewContentMode.scaleAspectFill
@@ -31,10 +30,17 @@ class IntroViewController1: UIViewController, UITextFieldDelegate {
         imageView.center = view.center
         view.addSubview(imageView)
         self.view.sendSubview(toBack: imageView)
+        registerButton.isEnabled = false
         
+        self.nameTF.delegate = self
+        self.surnameTF.delegate = self
+        self.emailTF.delegate = self
+        self.passwordTF.delegate = self
+        nameTF.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        surnameTF.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        emailTF.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        passwordTF.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         
-        
-    
         // Create toolBar
         let toolBar: UIToolbar = UIToolbar(frame:CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 44))
         //toolBar.isTranslucent = true
@@ -50,59 +56,66 @@ class IntroViewController1: UIViewController, UITextFieldDelegate {
         toolBar.items = [flexsibleSpace, doneButton]
         
         // Assing toolbar as inputAccessoryView
-       // usernameTF.inputAccessoryView = toolBar
+        nameTF.inputAccessoryView = toolBar
+        surnameTF.inputAccessoryView = toolBar
         emailTF.inputAccessoryView = toolBar
         passwordTF.inputAccessoryView = toolBar
+        
         // Do any additional setup after loading the view.
     }
-
-   
     @objc func didPressDoneButton(button: UIButton) {
         // Button has been pressed
         // Process the containment of the textfield or whatever
         // Hide keyboard
-        //usernameTF.resignFirstResponder()
+        nameTF.resignFirstResponder()
+        surnameTF.resignFirstResponder()
         emailTF.resignFirstResponder()
         passwordTF.resignFirstResponder()
     }
-//
-    //hide keyboard when user touch outside keyboard
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+    
+    @objc func editingChanged(_ textField: UITextField) {
+        if textField.text?.characters.count == 1 {
+            if textField.text?.characters.first == " " {
+                textField.text = ""
+                return
+            }
+        }
+        guard
+            let name = nameTF.text, !name.isEmpty,
+            let surname = surnameTF.text, !surname.isEmpty,
+            let email = emailTF.text, !email.isEmpty,
+            let password = passwordTF.text, !password.isEmpty
+            else {
+                registerButton.isEnabled = false
+                return
+        }
+        registerButton.isEnabled = true
+        
     }
-    //presses return key
-    //quando premi sul return key va alla prossima textField (da fare)
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        //usernameTF.resignFirstResponder()
-        emailTF.resignFirstResponder()
-        passwordTF.resignFirstResponder()
-        return true
-    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func newAccountButton(_ sender: UIButton) {
-        //salva in let defaults = UserDefaults.standard le tre label
-        //e va alla view successiva
-        
-        //let username:String = usernameTF.text!
-        let password:String = passwordTF.text!
-        let email:String = emailTF.text!
-  
+    @IBAction func registerAction(_ sender: UIButton) {
         let defaults = UserDefaults.standard
-      //  defaults.set(username, forKey: "Username")
-        defaults.set(password, forKey: "Password")
-        defaults.set(email, forKey: "Email")
+        defaults.set(nameTF.text!, forKey: "name")
+        
+        defaults.set(surnameTF.text!, forKey: "surname")
+        defaults.set(emailTF.text!, forKey: "email")
+        defaults.set(passwordTF.text!, forKey: "password")
         defaults.synchronize()
-        
-//        verifica del salvataggio in defaults dei dati dalle label
-//        print(defaults.string(forKey: "Username"))
-//        print(defaults.string(forKey: "Password"))
-//        print(defaults.string(forKey: "Email"))
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let twop = storyboard.instantiateViewController(withIdentifier: "welcome") as! IntroViewControllerBenvenuto
+        self.present(twop, animated: false, completion: nil)
     }
+    //hide keyboard when user touch outside keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+ 
     
     /*
     // MARK: - Navigation

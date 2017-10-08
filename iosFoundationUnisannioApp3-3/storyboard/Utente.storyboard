@@ -74,6 +74,7 @@
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                 <state key="normal" title="Logout" backgroundImage="buttt"/>
                                 <connections>
+                                    <action selector="logout:" destination="lFl-79-V60" eventType="touchUpInside" id="5Ft-5o-jXB"/>
                                     <segue destination="z4F-vP-EBA" kind="show" id="As7-xF-ox5"/>
                                 </connections>
                             </button>
@@ -154,7 +155,7 @@
                                 </constraints>
                                 <color key="tintColor" red="0.46784701943397522" green="0.75134843587875366" blue="0.83534514904022217" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <items>
-                                    <navigationItem title="Categories level" id="UbZ-7k-m6h"/>
+                                    <navigationItem title="Categories levels" id="UbZ-7k-m6h"/>
                                 </items>
                             </navigationBar>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SKd-RL-3ki">
@@ -211,7 +212,7 @@
                                 </constraints>
                                 <color key="trackTintColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profil" translatesAutoresizingMaskIntoConstraints="NO" id="smH-5j-MRE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="smH-5j-MRE">
                                 <rect key="frame" x="10" y="82" width="129" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="129" id="MgK-50-66y"/>
@@ -504,8 +505,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Profil" width="140" height="154"/>
         <image name="buttt" width="289" height="56"/>
+        <image name="defaultPhoto" width="640" height="640"/>
         <image name="us" width="32" height="32"/>
     </resources>
 </document>
