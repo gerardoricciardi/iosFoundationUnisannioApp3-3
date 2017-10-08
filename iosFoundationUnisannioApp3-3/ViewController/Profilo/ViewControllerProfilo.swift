@@ -99,12 +99,6 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
     @IBAction func logout(_ sender: UIButton) {
         let domain = Bundle.main.bundleIdentifier!
         UserDefaults.standard.removePersistentDomain(forName: domain)
-        
-//        defaults.removeObject(forKey: "name")
-//        defaults.removeObject(forKey: "surname")
-//        defaults.removeObject(forKey: "email")
-//        defaults.removeObject(forKey: "password")
-//        defaults.synchronize()
     }
     
 }
