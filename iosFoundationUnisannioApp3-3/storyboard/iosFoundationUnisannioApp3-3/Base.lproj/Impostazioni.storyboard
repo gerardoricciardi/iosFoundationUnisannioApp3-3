@@ -189,9 +189,6 @@
                                     </subviews>
                                     <color key="backgroundColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </tableViewCellContentView>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" staticText="YES"/>
-                                </accessibility>
                                 <connections>
                                     <outlet property="descrizioneText" destination="Zxr-l9-RcZ" id="X6W-U0-dhF"/>
                                     <outlet property="notificheLabel" destination="jMg-5S-arW" id="Fu4-Dp-aFn"/>

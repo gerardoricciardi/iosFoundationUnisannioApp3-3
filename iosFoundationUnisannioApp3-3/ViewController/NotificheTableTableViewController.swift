@@ -47,6 +47,7 @@ class NotificheTableTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellaNotifiche", for: indexPath) as! NotificheTableViewCell
         
+        cell.selectionStyle  = UITableViewCellSelectionStyle.none
         cell.notificheLabel.text = notifiche[indexPath.row]
         cell.descrizioneText.text = notificheDescrizioni[indexPath.row]
         cell.backgroundColor = UIColor(red: 230.0/255.0, green: 230.0/255.0, blue: 230.0/255.0, alpha: 49.0)
