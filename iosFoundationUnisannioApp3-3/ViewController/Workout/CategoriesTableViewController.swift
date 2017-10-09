@@ -8,6 +8,7 @@
 
 import UIKit
 import UserNotifications
+import CloudKit
 
 class CategoriesTableViewController: UITableViewController, UNUserNotificationCenterDelegate {
     var isGrantedNotificationAccess:Bool = false
@@ -22,6 +23,8 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
     
     var notifica3 = NotificationHK(title: "Countdown", body: "Prova notifica timer", id: "", timer: 10.0)
   
+    
+    var activityIndicator : UIActivityIndicatorView=UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +42,8 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
         notifiche.append(notifica1)
         notifiche.append(notifica2)
         notifiche.append(notifica3)
+        
+        
         
         
         // Uncomment the following line to preserve selection between presentations
@@ -144,21 +149,97 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var workouts:[Workout]!
         if segue.identifier == "showCategories"{
             if let indexPath = tableView.indexPathForSelectedRow{
                 let destinationController = segue.destination as! DetailsCategoriesTableViewController
 //                dammi i workout disponibili per la categoria scelta
 //                 e passali alla view successiva
                 
+//
+//                activityIndicator.center=view.center
+//                activityIndicator.activityIndicatorViewStyle=UIActivityIndicatorViewStyle.whiteLarge
+//                view.addSubview(activityIndicator)
+//
+//                activityIndicator.startAnimating()
+                
               var  categoria : String
                 categoria=categoriesTitle[indexPath.row]
                 print(categoria)
-                var workouts: [Workout] = TestSaverRecord.getWorkoutsByCategory(categoria:categoria)
-                destinationController.workouts=workouts
+                 let concurrentQueue = DispatchQueue(label: "concurrentQueue", attributes: .concurrent)
+        
+//                workouts = TestSaverRecord.getWorkoutsByCategory(categoria:categoria)
                 
-//                destinationController.categoriesImage = categoriesImage
+                workouts=getWorkoutsByCategory(categoria: categoria)
+                destinationController.workouts=workouts
+
             }
         }
+    }
+    
+    
+     func getWorkoutsByCategory(categoria:String)->[Workout]{
+        
+        print("***metodo get WORKOUTBYCATEGORY***")
+        let semaphore = DispatchSemaphore(value: 0)
+        
+        var workouts : [Workout]=[Workout]()
+        var videoData:Data!
+        let container = CKContainer.default
+        var currentRecord: CKRecord?
+        var recordZone: CKRecordZone?
+        var publicDatabase: CKDatabase?
+        
+        publicDatabase = container().publicCloudDatabase
+        recordZone = CKRecordZone(zoneName: "_defaultZone")
+        
+        
+        let predicate = NSPredicate(format: "%K == %@", "categoria", categoria)
+        
+        let query = CKQuery(recordType: "Workout", predicate: predicate)
+        
+        
+        publicDatabase?.perform(query, inZoneWith: nil) {
+            (records, error) -> Void in
+            guard let records = records else {
+                print("Error querying records: ", error)
+                return
+            }
+            print("Found \(records.count) records matching query")
+            for record in records{
+                
+                print("***WO categoria= "+String(describing: record.object(forKey: "categoria")!))
+                
+                var idWorkout : CKRecordID=record.recordID as! CKRecordID
+                //                print(idWorkout)
+                var File : CKAsset?=record.object(forKey: "anteprima") as! CKAsset
+                //                print(File)
+                
+                
+                var anteprima : Data!
+                
+                if let file = File {
+                    if let data = try?Data(contentsOf: file.fileURL) {
+                        anteprima=data
+                        
+                    }
+                }
+                
+                let workout:Workout=Workout(anteprima:anteprima,id:idWorkout)
+                
+                
+                workouts.append(workout)
+                print("Count workouts "+String(workouts.count))
+                //                semaphore.signal()
+                
+            }
+            semaphore.signal()
+            
+        }
+        //        semaphore.signal()
+        
+        semaphore.wait()
+        return workouts
     }
     
     /*

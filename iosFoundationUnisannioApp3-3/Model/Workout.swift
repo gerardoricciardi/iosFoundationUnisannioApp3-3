@@ -13,7 +13,7 @@ class Workout{
     
     var anteprima: Data?
     var categoria: String?
-    var esercizi: [Esercizio]!
+    var esercizi: [Esercizio]=[Esercizio]()
     var isBloccato: String?
     var livello: Int64?
     var tempo: Int64?
@@ -34,5 +34,23 @@ class Workout{
         self.tempo = tempo
         self.video = video
         self.id = id
+    }
+    
+    
+    func addEsercizio(esercizio:Esercizio){
+        
+        self.esercizi.append(esercizio)
+        print("ESercizi count "+String(esercizi.count))
+        print("Workout->esercizio nome"+String(esercizio.nome))
+        print("Workout->esercizio descrizione"+String(esercizio.descrizione))
+        
+
+    }
+    
+    func getEsercizi(esercizi:[Esercizio])->[Esercizio]{
+        print("ESercizi count "+String(esercizi.count))
+       var  esercizi=self.esercizi
+
+        return esercizi
     }
 }
