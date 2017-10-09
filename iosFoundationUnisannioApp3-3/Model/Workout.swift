@@ -47,10 +47,9 @@ class Workout{
 
     }
     
-    func getEsercizi(esercizi:[Esercizio])->[Esercizio]{
-        print("ESercizi count "+String(esercizi.count))
-       var  esercizi=self.esercizi
+    func getEsercizi()->[Esercizio]{
+        print("ESERCIZI GETESERCIZI count "+String(esercizi.count))
 
-        return esercizi
+        return self.esercizi
     }
 }
