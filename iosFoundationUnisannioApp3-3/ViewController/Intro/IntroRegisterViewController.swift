@@ -17,6 +17,7 @@ class IntroRegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     
+    @IBOutlet weak var scroll: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,7 +116,11 @@ class IntroRegisterViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
- 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
     
     /*
     // MARK: - Navigation
@@ -126,5 +131,13 @@ class IntroRegisterViewController: UIViewController, UITextFieldDelegate {
         // Pass the selected object to the new view controller.
     }
     */
-
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        scroll.setContentOffset(CGPoint(x:0,y:0), animated:true)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if(textField==passwordTF){
+        scroll.setContentOffset(CGPoint(x:0,y:250), animated: true)
+        }
+    }
 }
