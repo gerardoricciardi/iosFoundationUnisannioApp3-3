@@ -68,6 +68,7 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
         self.picker.delegate = self
         immProfilo.layer.cornerRadius = 30.0
         immProfilo.clipsToBounds = false
+        navigationItem.hidesBackButton = true
         
         
         
