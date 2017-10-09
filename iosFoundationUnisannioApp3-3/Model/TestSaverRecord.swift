@@ -231,16 +231,6 @@ class TestSaverRecord{
         publicDatabase = container().publicCloudDatabase
         recordZone = CKRecordZone(zoneName: "_defaultZone")
         
-//        ATTENZIONE A RECORDNAME, POTREBBE NON FUNZIONARE COSI'
-//        let predicate = NSPredicate(format: "%K == %@", "recordName", id as! CVarArg)
-//
-//        let query = CKQuery(recordType: "Workout", predicate: predicate)
-//        publicDatabase?.perform(query, inZoneWith: nil) {
-//            (records, error) -> Void in
-//            guard let records = records else {
-//                print("Error querying records: ", error)
-//                return
-//            }
         
         publicDatabase?.fetch(withRecordID: id) { (myrecord, error) -> Void in
             guard let myrecord = myrecord else {
@@ -291,7 +281,7 @@ class TestSaverRecord{
         for esercizioReference in record!["esercizi"] as! [CKReference] {
                     esercizi.append(esercizioReference.recordID)
                 }
-                //now you can fetch those employees
+        
                 var fetchOperation = CKFetchRecordsOperation(recordIDs: esercizi)
                 fetchOperation.fetchRecordsCompletionBlock = {
                     records, error in
@@ -311,20 +301,19 @@ class TestSaverRecord{
                                 }
                             }
                             var  esercizio : Esercizio=Esercizio(nome:nome,descrizione:descrizione, foto:foto)
-                            workout.esercizi.append(esercizio)
+                            
+                            print("*****Esercizio nome: "+String(esercizio.nome))
+//                            workout.esercizi.append(esercizio)
+                            workout.addEsercizio(esercizio: esercizio)
                             
                         }
                         
                     }
                 }
                 CKContainer.default().publicCloudDatabase.add(fetchOperation)
-                
-                
-                semaphore.signal()
-                
-                
+        semaphore.signal()
 
-        
+
         
         semaphore.wait()
         return workout

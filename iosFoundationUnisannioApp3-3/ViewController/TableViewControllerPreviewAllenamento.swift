@@ -20,6 +20,14 @@ class TableViewControllerPreviewAllenamento: UITableViewController {
 //    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        var esercizi:[Esercizio]=workout.esercizi
+        
+        for e in esercizi{
+            print("****Esercizio nome prova"+String(e.nome))
+            
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -58,20 +66,26 @@ class TableViewControllerPreviewAllenamento: UITableViewController {
 
             cell.imageAnteprima.image=UIImage(data:workout.anteprima!)
             
+            print("********STAMPA STRONZA*********************")
+            
+            
+            
         return cell
         }
         else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellPreviewEsercizi", for: indexPath) as! TableViewCellPreviewEsercizi
             
-//            cell.imageEsercizio.image=UIImage(named:"stretching")
-//            cell.labelNomeEsercizio.text="Esercizio 1"
-//            cell.labelDescrizione.text="Esercizio per migliorare......"
+            cell.imageEsercizio.image=UIImage(named:"stretching")
+            cell.labelNomeEsercizio.text="Esercizio 1"
+            cell.labelDescrizione.text="Esercizio per migliorare......"
             
             
-            cell.labelNomeEsercizio.text=workout.esercizi[indexPath.row].nome
-           cell.labelDescrizione.text=workout.esercizi[indexPath.row].descrizione
-            cell.imageEsercizio.image=UIImage(data: workout.esercizi[indexPath.row].foto)
             
+            
+//            cell.labelNomeEsercizio.text=workout.esercizi[indexPath.row].nome
+//           cell.labelDescrizione.text=workout.esercizi[indexPath.row].descrizione
+//            cell.imageEsercizio.image=UIImage(data: workout.esercizi[indexPath.row].foto)
+//
 
             return cell
             
