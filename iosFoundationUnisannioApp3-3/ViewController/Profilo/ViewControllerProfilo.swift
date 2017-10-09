@@ -9,8 +9,12 @@
 import UIKit
 
 class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
-    let  picker = UIImagePickerController()
     
+    @IBOutlet weak var BarStretching: UIProgressView!
+    @IBOutlet weak var BarYoga: UIProgressView!
+    @IBOutlet weak var BarTotalBody: UIProgressView!
+    
+    let  picker = UIImagePickerController()
     @IBOutlet weak var OrarioLavLabelInizio: UILabel!
     @IBOutlet weak var OrariLavLabel: UILabel!
     @IBOutlet weak var InserireCognomeL: UILabel!
@@ -80,6 +84,22 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
         OrarioLavLabelInizio?.text = oraOut
         
         // Do any additional setup after loading the view.
+        self.BarStretching.progress=0.0
+        self.BarYoga.progress=0.0
+        self.BarTotalBody.progress=0.0
+//        if {
+//            self.BarStretching.progress += 0.2
+//            defaults.set(self.BarStretching.progress, forKey: "Stretching")
+//            defaults.synchronize()
+//        }
+        defaults.set(self.BarStretching.progress, forKey: "Stretching")
+        defaults.synchronize()
+        defaults.set(self.BarStretching.progress, forKey: "TotalBody")
+        defaults.synchronize()
+        defaults.set(self.BarStretching.progress, forKey: "Yoga")
+        defaults.synchronize()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -61,11 +61,10 @@ class IntroViewController1: UIViewController, UITextFieldDelegate {
         // Button has been pressed
         // Process the containment of the textfield or whatever
         // Hide keyboard
-        //usernameTF.resignFirstResponder()
+//        usernameTF.resignFirstResponder()
         emailTF.resignFirstResponder()
         passwordTF.resignFirstResponder()
     }
-//
     //hide keyboard when user touch outside keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -92,7 +91,7 @@ class IntroViewController1: UIViewController, UITextFieldDelegate {
         let email:String = emailTF.text!
   
         let defaults = UserDefaults.standard
-      //  defaults.set(username, forKey: "Username")
+//        defaults.set(username, forKey: "username")
         defaults.set(password, forKey: "Password")
         defaults.set(email, forKey: "Email")
         defaults.synchronize()
