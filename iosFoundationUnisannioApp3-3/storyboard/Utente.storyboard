@@ -326,6 +326,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="BarStretching" destination="SKd-RL-3ki" id="7jr-cM-7Ig"/>
+                        <outlet property="BarTotalBody" destination="IuK-o9-x18" id="qpl-aR-7FE"/>
+                        <outlet property="BarYoga" destination="54s-l5-hu7" id="245-ye-tHG"/>
                         <outlet property="InserireCognomeL" destination="NDW-tp-fEZ" id="TcG-DJ-Xu7"/>
                         <outlet property="InserireNomeL" destination="zed-s9-Jjj" id="5Ix-KQ-jO1"/>
                         <outlet property="LabelSesso" destination="ZpO-sA-1WC" id="OqK-cn-Ux6"/>
@@ -338,10 +341,10 @@
             </objects>
             <point key="canvasLocation" x="168.80000000000001" y="76.911544227886068"/>
         </scene>
-        <!--Modifica Profilo View Controller-->
+        <!--Modifica Profilo2 View Controller-->
         <scene sceneID="0yC-Xn-OnA">
             <objects>
-                <viewController id="Jhc-j0-4o0" customClass="ModificaProfiloViewController" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Jhc-j0-4o0" customClass="ModificaProfilo2ViewController" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" semanticContentAttribute="playback" id="nHq-IZ-a9t" customClass="Modi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -486,7 +489,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mke-kT-XVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2256.8000000000002" y="323.38830584707648"/>
+            <point key="canvasLocation" x="2364" y="406"/>
         </scene>
         <!--Main-->
         <scene sceneID="vkH-zA-eF6">
