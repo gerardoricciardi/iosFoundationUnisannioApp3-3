@@ -12,7 +12,34 @@ class ModificaProfilo2ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        orarioInizioP.minuteInterval = Int(10)
+        orarioFineP.minuteInterval = Int(10)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat =  "HH:mm"
+        
+        let oraInizio = defaults.object(forKey: "oraInizio")
+        let oraFine = defaults.object(forKey: "oraFine")
+        
+        let calendar = NSCalendar.current
+        let oraInComponents = calendar.dateComponents([.hour, .minute], from: oraInizio as! Date)
+        let oraOutComponents = calendar.dateComponents([.hour, .minute], from: oraFine as! Date)
+        let oraIn = String(describing: oraInComponents.hour!) + "." + String(describing: oraInComponents.minute!)
+        let oraOut = String(describing: oraOutComponents.hour!) + "." + String(describing: oraOutComponents.minute!)
+        
+        
+        
+        let dateIn = dateFormatter.date(from: oraIn)
+        let dateOut = dateFormatter.date(from: oraOut)
+        
+        orarioInizioP.date = dateIn!
+        orarioFineP.date = dateOut!
     }
     
     override func didReceiveMemoryWarning() {
@@ -25,12 +52,12 @@ class ModificaProfilo2ViewController: UIViewController {
     let defaults=UserDefaults.standard
     
     @IBAction func WomanButton(_ sender: UIButton) {
-        defaults.set("donna", forKey: "Sesso")
+        defaults.set("Female", forKey: "Sex")
         defaults.synchronize()
         print("donna")
     }
     @IBAction func ManButton(_ sender: UIButton) {
-        defaults.set("uomo", forKey: "Sesso")
+        defaults.set("Male", forKey: "Sex")
         defaults.synchronize()
         print("uomo")
     }

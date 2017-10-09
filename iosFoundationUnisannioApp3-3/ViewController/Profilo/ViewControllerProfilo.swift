@@ -24,6 +24,8 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
     var  u : Utente!
     let defaults = UserDefaults.standard
     
+    
+    
     @IBAction func CambiaImmagineProfilo(_ sender: UIButton) {
         
         
@@ -67,6 +69,31 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
         self.picker.delegate = self
         immProfilo.layer.cornerRadius = 30.0
         immProfilo.clipsToBounds = false
+        
+        
+        
+        
+        // Do any additional setup after loading the view.
+//        self.BarStretching.progress=0.0
+//        self.BarYoga.progress=0.0
+//        self.BarTotalBody.progress=0.0
+//        if {
+//            self.BarStretching.progress += 0.2
+//            defaults.set(self.BarStretching.progress, forKey: "Stretching")
+//            defaults.synchronize()
+//        }
+        defaults.set(self.BarStretching.progress, forKey: "Stretching")
+        defaults.synchronize()
+        defaults.set(self.BarStretching.progress, forKey: "TotalBody")
+        defaults.synchronize()
+        defaults.set(self.BarStretching.progress, forKey: "Yoga")
+        defaults.synchronize()
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("***PROVA viewDidAppear***")
         InserireNomeL?.text = defaults.string(forKey: "name")
         InserireCognomeL?.text = defaults.string(forKey: "surname")
         LabelSesso?.text = defaults.string(forKey: "Sex")
@@ -83,23 +110,11 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
         OrariLavLabel?.text = oraIn
         OrarioLavLabelInizio?.text = oraOut
         
-        // Do any additional setup after loading the view.
-        self.BarStretching.progress=0.0
-        self.BarYoga.progress=0.0
-        self.BarTotalBody.progress=0.0
-//        if {
-//            self.BarStretching.progress += 0.2
-//            defaults.set(self.BarStretching.progress, forKey: "Stretching")
-//            defaults.synchronize()
-//        }
-        defaults.set(self.BarStretching.progress, forKey: "Stretching")
-        defaults.synchronize()
-        defaults.set(self.BarStretching.progress, forKey: "TotalBody")
-        defaults.synchronize()
-        defaults.set(self.BarStretching.progress, forKey: "Yoga")
-        defaults.synchronize()
-        
-        
+        var counter = defaults.integer(forKey: "counterWorkout")
+        print("***COUNTER \(counter)")
+        self.BarStretching.progress += Float(1/100)
+        self.BarYoga.progress = Float(counter/5)
+        self.BarTotalBody.progress = Float(counter)
     }
 
     override func didReceiveMemoryWarning() {
