@@ -67,11 +67,21 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
         self.picker.delegate = self
         immProfilo.layer.cornerRadius = 30.0
         immProfilo.clipsToBounds = false
-        InserireNomeL?.text = "Fabio"//defaults.object(forKey:"Username") as? String
-        InserireCognomeL?.text = "Dell'infante"//defaults.object(forKey: "Username") as? String
-        LabelSesso?.text = "Uomo"//defaults.object(forKey:"Sesso") as? String
-        OrariLavLabel?.text = "09:00"//defaults.object(forKey:"oraInizio") as? String
-        OrarioLavLabelInizio?.text = "18:00"//defaults.object(forKey:"oraFine") as? String
+        InserireNomeL?.text = defaults.string(forKey: "name")
+        InserireCognomeL?.text = defaults.string(forKey: "surname")
+        LabelSesso?.text = defaults.string(forKey: "Sex")
+        
+        let oraInizio = defaults.object(forKey: "oraInizio")
+        let oraFine = defaults.object(forKey: "oraFine")
+        
+        let calendar = NSCalendar.current
+        let oraInComponents = calendar.dateComponents([.hour, .minute], from: oraInizio as! Date)
+        let oraOutComponents = calendar.dateComponents([.hour, .minute], from: oraFine as! Date)
+        let oraIn = String(describing: oraInComponents.hour!) + "." + String(describing: oraInComponents.minute!)
+        let oraOut = String(describing: oraOutComponents.hour!) + "." + String(describing: oraOutComponents.minute!)
+        
+        OrariLavLabel?.text = oraIn
+        OrarioLavLabelInizio?.text = oraOut
         
         // Do any additional setup after loading the view.
         self.BarStretching.progress=0.0
@@ -105,4 +115,10 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
         }
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func logout(_ sender: UIButton) {
+        let domain = Bundle.main.bundleIdentifier!
+        UserDefaults.standard.removePersistentDomain(forName: domain)
+    }
+    
 }

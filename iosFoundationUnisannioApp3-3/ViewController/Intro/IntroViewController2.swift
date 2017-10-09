@@ -1,5 +1,5 @@
 //
-//  IntroViewControllerBenvenuto.swift
+//  IntroViewController2.swift
 //  iosFoundationUnisannioApp3-3
 //
 //  Created by Ricciardi Gerardo on 30/09/17.
@@ -8,7 +8,13 @@
 
 import UIKit
 
-class IntroViewControllerBenvenuto: UIViewController {
+//ViewController per scelta uomo/donna
+
+class IntroViewController2: UIViewController {
+
+    @IBOutlet weak var buttonDonna: UIButton!
+    @IBOutlet weak var buttonUomo: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +29,22 @@ class IntroViewControllerBenvenuto: UIViewController {
         view.addSubview(imageView)
         self.view.sendSubview(toBack: imageView)
         
-
         // Do any additional setup after loading the view.
     }
-
+  
+    @IBAction func maleAction(_ sender: UIButton) {
+        let defaults = UserDefaults.standard
+        let male = "Male"
+        defaults.set(male, forKey: "Sex")
+        defaults.synchronize()
+    }
+    @IBAction func femaleAction(_ sender: UIButton) {
+        let defaults = UserDefaults.standard
+        let female = "Female"
+        defaults.set(female, forKey: "Sex")
+        defaults.synchronize()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

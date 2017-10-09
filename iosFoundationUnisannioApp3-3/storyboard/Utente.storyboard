@@ -16,7 +16,6 @@
             <string>Helvetica-Bold</string>
             <string>Helvetica-BoldOblique</string>
             <string>Helvetica-Light</string>
-            <string>Helvetica-LightOblique</string>
         </array>
     </customFonts>
     <scenes>
@@ -56,6 +55,7 @@
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                 <state key="normal" title="Logout" backgroundImage="buttt"/>
                                 <connections>
+                                    <action selector="logout:" destination="lFl-79-V60" eventType="touchUpInside" id="5Ft-5o-jXB"/>
                                     <segue destination="z4F-vP-EBA" kind="show" id="As7-xF-ox5"/>
                                 </connections>
                             </button>
@@ -136,7 +136,7 @@
                                 </constraints>
                                 <color key="tintColor" red="0.46784701943397522" green="0.75134843587875366" blue="0.83534514904022217" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <items>
-                                    <navigationItem title="Categories level" id="UbZ-7k-m6h"/>
+                                    <navigationItem title="Categories levels" id="UbZ-7k-m6h"/>
                                 </items>
                             </navigationBar>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SKd-RL-3ki">
@@ -193,7 +193,7 @@
                                 </constraints>
                                 <color key="trackTintColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profil" translatesAutoresizingMaskIntoConstraints="NO" id="smH-5j-MRE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="smH-5j-MRE">
                                 <rect key="frame" x="10" y="82" width="129" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="129" id="MgK-50-66y"/>
@@ -364,9 +364,9 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ud-fY-KcZ">
-                                <rect key="frame" x="43" y="117" width="289" height="56"/>
+                                <rect key="frame" x="86" y="122" width="218" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
                                 <state key="normal" title="MALE" backgroundImage="buttt">
                                     <color key="titleColor" red="0.28654810790000002" green="0.615514636" blue="0.80791771410000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -375,9 +375,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wM-m9-Fa6">
-                                <rect key="frame" x="43" y="181" width="289" height="55"/>
+                                <rect key="frame" x="86" y="182" width="218" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
                                 <state key="normal" title="FEMALE" backgroundImage="buttt">
                                     <color key="titleColor" red="0.28654810790000002" green="0.615514636" blue="0.80791771410000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -386,17 +386,10 @@
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="h7K-gn-wpP">
-                                <rect key="frame" x="129" y="292" width="230" height="86"/>
+                                <rect key="frame" x="122" y="300" width="182" height="71"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="529000470.03911">
                                     <!--2017-10-06 16:34:30 +0000-->
-                                </date>
-                            </datePicker>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="KBq-dq-xPJ">
-                                <rect key="frame" x="129" y="400" width="230" height="83"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="529001584.99479902">
-                                    <!--2017-10-06 16:53:04 +0000-->
                                 </date>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="START" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZr-GH-X2I">
@@ -415,6 +408,13 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.28654810790000002" green="0.615514636" blue="0.80791771410000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="KBq-dq-xPJ">
+                                <rect key="frame" x="122" y="396" width="182" height="65"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="529001584.99479902">
+                                    <!--2017-10-06 16:53:04 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -440,7 +440,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZC5-aM-iOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="lG8-yZ-WNJ"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="-322"/>
+            <point key="canvasLocation" x="1928.8" y="-322.48875562218893"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="IwE-cd-yjt">
@@ -465,9 +465,9 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Modifiche effetuate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLQ-tn-led">
-                                        <rect key="frame" x="40" y="53" width="161" height="21"/>
+                                        <rect key="frame" x="40" y="53" width="183" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-LightOblique" family="Helvetica" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="highlightedColor" red="0.3967735469" green="0.71572017669999999" blue="0.81574428080000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </label>
@@ -501,8 +501,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Profil" width="140" height="154"/>
         <image name="buttt" width="289" height="56"/>
+        <image name="defaultPhoto" width="640" height="640"/>
         <image name="us" width="32" height="32"/>
     </resources>
 </document>

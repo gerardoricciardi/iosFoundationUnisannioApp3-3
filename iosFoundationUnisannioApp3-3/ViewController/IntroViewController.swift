@@ -41,19 +41,20 @@ class IntroViewController: UIViewController {
         
         
         //2. Build the workout using data from your Prancercise workout
-        let workout = HKWorkout(activityType: .other,
-                                start: Date.init(timeIntervalSinceNow: TimeInterval.init(exactly: 5)!),
-                                end: Date.init(timeIntervalSinceNow: TimeInterval.init(exactly: 10)!),
-                                duration: Date.init(timeIntervalSinceNow: TimeInterval.init(exactly: 10)!).timeIntervalSince(Date.init(timeIntervalSinceNow: TimeInterval.init(exactly: 5)!)),
-                                totalEnergyBurned: nil,
-                                totalDistance: nil,
-                                device: HKDevice.local(),
-                                metadata: nil)
+//        let workout = HKWorkout(activityType: .other,
+//                                start: Date.init(timeIntervalSinceNow: TimeInterval.init(exactly: 5)!),
+//                                end: Date.init(timeIntervalSinceNow: TimeInterval.init(exactly: 10)!),
+//                                duration: Date.init(timeIntervalSinceNow: TimeInterval.init(exactly: 10)!).timeIntervalSince(Date.init(timeIntervalSinceNow: TimeInterval.init(exactly: 5)!)),
+//                                totalEnergyBurned: nil,
+//                                totalDistance: nil,
+//                                device: HKDevice.local(),
+//                                metadata: nil)
         
-        //3. Save your workout to HealthKit
-        let healthStore = HKHealthStore()
-        healthStore.save(workout) { (success, error) in
-        }
+        
+//        //3. Save your workout to HealthKit
+//        let healthStore = HKHealthStore()
+//        healthStore.save(workout) { (success, error) in
+//        }
         
 
 //        let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")

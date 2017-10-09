@@ -37,7 +37,7 @@ class IntroViewController3: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat =  "HH:mm"
         
-        let dateIn = dateFormatter.date(from: "9:00")
+        let dateIn = dateFormatter.date(from: "09:00")
         let dateOut = dateFormatter.date(from: "17:00")
         
         orarioInizio.date = dateIn!
@@ -50,25 +50,25 @@ class IntroViewController3: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func buttonNext(_ sender: Any) {
+    @IBAction func goButton(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         defaults.set(orarioInizio.date, forKey: "oraInizio")
         defaults.set(orarioFine.date, forKey: "oraFine")
         defaults.synchronize()
-/*
-     Da un DATE ottengo ore e minuti
+        /*
+         Da un DATE ottengo ore e minuti
          
-        let calendar = NSCalendar.current
-        let oraInComponents = calendar.dateComponents([.hour, .minute], from: orarioInizio.date)
-        let oraOutComponents = calendar.dateComponents([.hour, .minute], from: orarioFine.date)
-        
-        print(oraInComponents.hour)
-        print(oraInComponents.minute)
-        print(oraOutComponents.hour)
-        print(oraOutComponents.minute)
-*/
+         let calendar = NSCalendar.current
+         let oraInComponents = calendar.dateComponents([.hour, .minute], from: orarioInizio.date)
+         let oraOutComponents = calendar.dateComponents([.hour, .minute], from: orarioFine.date)
+         
+         print(oraInComponents.hour)
+         print(oraInComponents.minute)
+         print(oraOutComponents.hour)
+         print(oraOutComponents.minute)
+         */
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

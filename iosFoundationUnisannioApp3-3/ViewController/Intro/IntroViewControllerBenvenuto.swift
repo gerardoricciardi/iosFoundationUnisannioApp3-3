@@ -1,5 +1,5 @@
 //
-//  IntroViewController2.swift
+//  IntroViewControllerBenvenuto.swift
 //  iosFoundationUnisannioApp3-3
 //
 //  Created by Ricciardi Gerardo on 30/09/17.
@@ -8,14 +8,9 @@
 
 import UIKit
 
-//ViewController per scelta uomo/donna
+class IntroViewControllerBenvenuto: UIViewController {
 
-class IntroViewController2: UIViewController {
-
-    @IBOutlet weak var buttonDonna: UIButton!
-    @IBOutlet weak var buttonUomo: UIButton!
-    let defaults=UserDefaults.standard
-
+    @IBOutlet weak var labelWelcome: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         let background = UIImage(named: "benvenuto")
@@ -28,34 +23,16 @@ class IntroViewController2: UIViewController {
         imageView.center = view.center
         view.addSubview(imageView)
         self.view.sendSubview(toBack: imageView)
-        
+        let defaults = UserDefaults.standard
+        let name = defaults.string(forKey: "name")
+//        let surname = defaults.string(forKey: "surname")
+//        labelWelcome.lineBreakMode = NSLineBreakMode.byWordWrapping
+//        labelWelcome.numberOfLines = 2
+        labelWelcome.text = "Hello, " + name!
+
         // Do any additional setup after loading the view.
     }
-    @IBAction func actionUomo(_ sender: Any) {
-        
-        
-        defaults.set("uomo", forKey: "Sesso")
-        defaults.synchronize()
-/*
-        //        stampa tutte le coppie
-        for (key, value) in defaults.dictionaryRepresentation() {
-            print("\(key) = \(value) \n")
-        }
-*/
-        
-    }
-    
-    @IBAction func actionDonna(_ sender: Any) {
-        defaults.set("donna", forKey: "Sesso")
-        defaults.synchronize()
- /*
-//        stampa tutte le coppie
-        for (key, value) in defaults.dictionaryRepresentation() {
-            print("\(key) = \(value) \n")
-        }
-*/
 
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
