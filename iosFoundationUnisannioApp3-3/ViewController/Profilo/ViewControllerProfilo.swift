@@ -9,16 +9,21 @@
 import UIKit
 
 class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
-    let  picker = UIImagePickerController()
     
+    @IBOutlet weak var BarStretching: UIProgressView!
+    @IBOutlet weak var BarYoga: UIProgressView!
+    @IBOutlet weak var BarTotalBody: UIProgressView!
+    
+    let  picker = UIImagePickerController()
     @IBOutlet weak var OrarioLavLabelInizio: UILabel!
     @IBOutlet weak var OrariLavLabel: UILabel!
     @IBOutlet weak var InserireCognomeL: UILabel!
     @IBOutlet weak var InserireNomeL: UILabel!
     @IBOutlet weak var immProfilo: UIImageView!
     @IBOutlet weak var LabelSesso: UILabel!
-    var  u : Utente!
     let defaults = UserDefaults.standard
+    
+    
     
     @IBAction func CambiaImmagineProfilo(_ sender: UIButton) {
         
@@ -63,6 +68,32 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
         self.picker.delegate = self
         immProfilo.layer.cornerRadius = 30.0
         immProfilo.clipsToBounds = false
+        navigationItem.hidesBackButton = true
+        
+        
+        
+        
+        // Do any additional setup after loading the view.
+//        self.BarStretching.progress=0.0
+//        self.BarYoga.progress=0.0
+//        self.BarTotalBody.progress=0.0
+//        if {
+//            self.BarStretching.progress += 0.2
+//            defaults.set(self.BarStretching.progress, forKey: "Stretching")
+//            defaults.synchronize()
+//        }
+        defaults.set(self.BarStretching.progress, forKey: "Stretching")
+        defaults.synchronize()
+        defaults.set(self.BarStretching.progress, forKey: "TotalBody")
+        defaults.synchronize()
+        defaults.set(self.BarStretching.progress, forKey: "Yoga")
+        defaults.synchronize()
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("***PROVA viewDidAppear***")
         InserireNomeL?.text = defaults.string(forKey: "name")
         InserireCognomeL?.text = defaults.string(forKey: "surname")
         LabelSesso?.text = defaults.string(forKey: "Sex")
@@ -79,7 +110,11 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
         OrariLavLabel?.text = oraIn
         OrarioLavLabelInizio?.text = oraOut
         
-        // Do any additional setup after loading the view.
+        var counter = Float(defaults.integer(forKey: "counterWorkout"))
+                print("***COUNTER \(counter)")
+        self.BarStretching?.progress=counter/5.0
+        self.BarYoga?.progress = counter/5.0
+        self.BarTotalBody?.progress = counter/5.0
     }
 
     override func didReceiveMemoryWarning() {
