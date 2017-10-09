@@ -169,20 +169,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPreviewVideo" rowHeight="293" id="yev-qF-rZk" customClass="TableViewCellPreviewVideo" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="293"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPreviewVideo" rowHeight="289" id="yev-qF-rZk" customClass="TableViewCellPreviewVideo" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="289"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yev-qF-rZk" id="ujv-bU-LL7">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="292.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yev-qF-rZk" id="ujv-bU-LL7">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="288.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ky5-tP-4bL">
-                                            <rect key="frame" x="112" y="8" width="150" height="239"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="anteprimaEsempio" translatesAutoresizingMaskIntoConstraints="NO" id="Ky5-tP-4bL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="285"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="285" id="9zZ-UR-Doe"/>
+                                                <constraint firstAttribute="width" constant="375" id="ugc-4h-V04"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Ky5-tP-4bL" secondAttribute="trailing" id="1Gh-J4-cTl"/>
+                                        <constraint firstItem="Ky5-tP-4bL" firstAttribute="top" secondItem="ujv-bU-LL7" secondAttribute="top" id="3aT-TC-kjl"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Ky5-tP-4bL" secondAttribute="trailing" constant="104.5" id="HtI-wp-ypf"/>
                                         <constraint firstItem="Ky5-tP-4bL" firstAttribute="leading" secondItem="ujv-bU-LL7" secondAttribute="leadingMargin" constant="104.5" id="U7F-qW-dnR"/>
+                                        <constraint firstItem="Ky5-tP-4bL" firstAttribute="leading" secondItem="ujv-bU-LL7" secondAttribute="leading" id="XbI-cX-3K5"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ky5-tP-4bL" secondAttribute="bottom" id="k09-To-BDY"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ky5-tP-4bL" secondAttribute="bottom" constant="-0.5" id="yJx-15-jPS"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -191,34 +200,20 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPreviewEsercizi" rowHeight="110" id="YjQ-Ok-J3t" customClass="TableViewCellPreviewEsercizi" customModule="iosFoundationUnisannioApp3_3" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="321" width="375" height="110"/>
+                                <rect key="frame" x="0.0" y="317" width="375" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YjQ-Ok-J3t" id="yVi-yH-q9g">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="e97-dD-eEl">
-                                            <rect key="frame" x="117" y="5" width="110.5" height="41"/>
+                                            <rect key="frame" x="117" y="5" width="87.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="nomeEsercizio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQo-pR-3YD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="110.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="descrizione" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86Q-WB-0dU">
-                                                    <rect key="frame" x="0.0" y="20.5" width="87.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                         </stackView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIz-Jh-L3g">
-                                            <rect key="frame" x="8" y="0.0" width="87" height="50"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HIz-Jh-L3g">
+                                            <rect key="frame" x="8" y="22" width="87" height="50"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dbc-J6-d4b">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anteprimaEsempio" translatesAutoresizingMaskIntoConstraints="NO" id="Dbc-J6-d4b">
                                                     <rect key="frame" x="0.0" y="0.0" width="87" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="87" id="8aJ-FP-df0"/>
@@ -230,6 +225,20 @@
                                                 </imageView>
                                             </subviews>
                                         </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="descrizione" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86Q-WB-0dU">
+                                            <rect key="frame" x="109" y="51" width="87.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="nomeEsercizio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQo-pR-3YD">
+                                            <rect key="frame" x="109" y="22" width="120" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="HIz-Jh-L3g" firstAttribute="leading" secondItem="yVi-yH-q9g" secondAttribute="leadingMargin" id="JGy-og-R72"/>
@@ -488,6 +497,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="anteprimaEsempio" width="1200" height="1600"/>
         <image name="pause" width="100" height="100"/>
         <image name="play" width="100" height="100"/>
         <image name="side-bending-posture" width="32" height="32"/>
