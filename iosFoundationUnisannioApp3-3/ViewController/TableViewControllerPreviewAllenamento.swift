@@ -22,12 +22,8 @@ class TableViewControllerPreviewAllenamento: UITableViewController {
         super.viewDidLoad()
         
         
-        var esercizi:[Esercizio]=workout.esercizi
         
-        for e in esercizi{
-            print("****Esercizio nome prova"+String(e.nome))
-            
-        }
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -51,11 +47,21 @@ class TableViewControllerPreviewAllenamento: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if section==0 {return 1}
-        else {return workout.esercizi.count
+        else {
+            print("Count esercizi"+String(workout.getEsercizi().count))
+            return workout.getEsercizi().count
         }
     }
-
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0{
+            return CGFloat(300)
+        }
+        else{
+            return CGFloat(75)
+        }
+
+    }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section==0

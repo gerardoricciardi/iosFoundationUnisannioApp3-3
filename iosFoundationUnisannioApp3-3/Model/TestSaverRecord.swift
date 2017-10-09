@@ -276,7 +276,8 @@ class TestSaverRecord{
                 }
                 
                 workout=Workout(anteprima: anteprima,categoria: categoria,esercizi: eserciziWorkout,isBloccato: isBloccato,livello: livello,tempo: tempo,video: video,id: idWorkout)
-                
+        
+        
                 
         for esercizioReference in record!["esercizi"] as! [CKReference] {
                     esercizi.append(esercizioReference.recordID)
@@ -305,13 +306,17 @@ class TestSaverRecord{
                             print("*****Esercizio nome: "+String(esercizio.nome))
 //                            workout.esercizi.append(esercizio)
                             workout.addEsercizio(esercizio: esercizio)
-                            
+                            semaphore.signal()
                         }
                         
                     }
                 }
+        
+//        semaphore.wait()
+        
+        
                 CKContainer.default().publicCloudDatabase.add(fetchOperation)
-        semaphore.signal()
+//        semaphore.signal()
 
 
         
