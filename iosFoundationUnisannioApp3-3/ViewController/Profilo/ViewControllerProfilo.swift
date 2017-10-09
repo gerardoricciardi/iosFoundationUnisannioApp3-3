@@ -87,11 +87,11 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
         self.BarStretching.progress=0.0
         self.BarYoga.progress=0.0
         self.BarTotalBody.progress=0.0
-        if {
-            self.BarStretching.progress += 0.2
-            defaults.set(self.BarStretching.progress, forKey: "Stretching")
-            defaults.synchronize()
-        }
+//        if {
+//            self.BarStretching.progress += 0.2
+//            defaults.set(self.BarStretching.progress, forKey: "Stretching")
+//            defaults.synchronize()
+//        }
         defaults.set(self.BarStretching.progress, forKey: "Stretching")
         defaults.synchronize()
         defaults.set(self.BarStretching.progress, forKey: "TotalBody")
