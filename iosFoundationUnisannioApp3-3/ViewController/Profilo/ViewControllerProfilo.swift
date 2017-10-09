@@ -28,17 +28,17 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
     @IBAction func CambiaImmagineProfilo(_ sender: UIButton) {
         
         
-       let alertController = UIAlertController(title: "Action Sheet", message: "What would you like to do?", preferredStyle: .actionSheet)
+       let alertController = UIAlertController(title: "Change image📸", message: "What would you like to do?", preferredStyle: .actionSheet)
         
-        let ChangeImage = UIAlertAction(title: "Cambia Immagine", style: .default, handler: { (action) -> Void in
-            print("Ok button tapped")
+        let ChangeImage = UIAlertAction(title: "Change image📸", style: .default, handler: { (action) -> Void in
+            print("change image tapped")
             self.picker.allowsEditing = false
             self.picker.sourceType = .photoLibrary
             self.present(self.picker,animated: true,completion: nil)
         })
         
-        let  cameraButton = UIAlertAction(title: "Scatta una foto", style: .default, handler: { (action) -> Void in
-            print("Delete button tapped")
+        let  cameraButton = UIAlertAction(title: "Take a photo📸", style: .default, handler: { (action) -> Void in
+            print("Take a photo tapped")
             self.picker.allowsEditing = false
             self.picker.sourceType = UIImagePickerControllerSourceType.camera
             self.picker.cameraCaptureMode = .photo

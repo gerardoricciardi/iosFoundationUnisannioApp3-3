@@ -115,7 +115,7 @@
                                     <constraint firstAttribute="width" constant="151" id="QzZ-2J-VSn"/>
                                     <constraint firstAttribute="height" constant="42" id="taC-xJ-g7P"/>
                                 </constraints>
-                                <state key="normal" title="Cambia immagine">
+                                <state key="normal" title="📸 Change image 📸">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
