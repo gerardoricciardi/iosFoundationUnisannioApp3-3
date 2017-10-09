@@ -12,6 +12,8 @@ class ModificaProfilo2ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       navigationItem.hidesBackButton = true
+        self.title = "Edit"
        
         
         // Do any additional setup after loading the view.
