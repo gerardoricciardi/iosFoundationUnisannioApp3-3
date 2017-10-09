@@ -21,7 +21,6 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
     @IBOutlet weak var InserireNomeL: UILabel!
     @IBOutlet weak var immProfilo: UIImageView!
     @IBOutlet weak var LabelSesso: UILabel!
-    var  u : Utente!
     let defaults = UserDefaults.standard
     
     
@@ -110,11 +109,11 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
         OrariLavLabel?.text = oraIn
         OrarioLavLabelInizio?.text = oraOut
         
-        var counter = defaults.integer(forKey: "counterWorkout")
-        print("***COUNTER \(counter)")
-        self.BarStretching.progress += Float(1/100)
-        self.BarYoga.progress = Float(counter/5)
-        self.BarTotalBody.progress = Float(counter)
+        var counter = Float(defaults.integer(forKey: "counterWorkout"))
+                print("***COUNTER \(counter)")
+        self.BarStretching?.progress=counter/5.0
+        self.BarYoga?.progress = counter/5.0
+        self.BarTotalBody?.progress = counter/5.0
     }
 
     override func didReceiveMemoryWarning() {
