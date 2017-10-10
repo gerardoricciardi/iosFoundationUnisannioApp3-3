@@ -148,7 +148,6 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var workouts:[Workout]!
         if segue.identifier == "showCategories"{
             if let indexPath = tableView.indexPathForSelectedRow{
                 let destinationController = segue.destination as! DetailsCategoriesTableViewController
@@ -167,12 +166,12 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
                 destinationController.title = categoria.uppercased()
                 
                 print(categoria)
-                 let concurrentQueue = DispatchQueue(label: "concurrentQueue", attributes: .concurrent)
+               
         
 //                workouts = TestSaverRecord.getWorkoutsByCategory(categoria:categoria)
                 
-                workouts=getWorkoutsByCategory(categoria: categoria)
-                destinationController.workouts=workouts
+//                workouts=getWorkoutsByCategory(categoria: categoria)
+                destinationController.categoria=categoria
 
             }
         }

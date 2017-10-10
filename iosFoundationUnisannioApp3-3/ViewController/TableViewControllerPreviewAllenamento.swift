@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import CloudKit
 
 class TableViewControllerPreviewAllenamento: UITableViewController {
 
-  var workout : Workout!
-    
+  var workout : Workout! 
+    var id :CKRecordID!
     
     
 //    override func viewDidAppear(_ animated: Bool) {
@@ -21,7 +22,28 @@ class TableViewControllerPreviewAllenamento: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.backgroundView = UIImageView.init(image: UIImage(named:"benvenuto"))
+        //        self.tableView.backgroundView(UIImageView.init(image: UIImage(named: "benvenuto")))
+        //        self.tableView.backgroundView = UIImageView.init(image: UIImage(named: "benvenuto"))
+        //        self.tableView.addSubview(UIImageView.init(image: UIImage(named: "benvenuto")))
+        var activityIndicator : UIActivityIndicatorView=UIActivityIndicatorView()
+        activityIndicator.center=tableView.center
+        activityIndicator.activityIndicatorViewStyle=UIActivityIndicatorViewStyle.whiteLarge
+        tableView.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        self.tableView.tableFooterView = nil
+        self.tableView.separatorStyle = .none
         
+        
+        let concurrentQueue = DispatchQueue(label: "concurrentQueue", attributes: .concurrent)
+        concurrentQueue.async {
+            self.workout = TestSaverRecord.getWorkoutDetailsById(id: self.id)
+        }
+        concurrentQueue.async(flags: .barrier){
+            activityIndicator.stopAnimating()
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
+            self.tableView.reloadData()
+        }
         
         
 

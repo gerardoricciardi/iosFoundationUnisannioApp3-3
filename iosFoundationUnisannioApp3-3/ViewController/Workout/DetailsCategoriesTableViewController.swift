@@ -10,10 +10,33 @@ import UIKit
 
 class DetailsCategoriesTableViewController: UITableViewController {
 
-    var workouts:[Workout]!
+    var workouts:[Workout] = []
+    var categoria:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.backgroundView = UIImageView.init(image: UIImage(named:"benvenuto"))
+//        self.tableView.backgroundView(UIImageView.init(image: UIImage(named: "benvenuto")))
+//        self.tableView.backgroundView = UIImageView.init(image: UIImage(named: "benvenuto"))
+//        self.tableView.addSubview(UIImageView.init(image: UIImage(named: "benvenuto")))
+        var activityIndicator : UIActivityIndicatorView=UIActivityIndicatorView()
+        activityIndicator.center=tableView.center
+        activityIndicator.activityIndicatorViewStyle=UIActivityIndicatorViewStyle.whiteLarge
+        tableView.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        self.tableView.tableFooterView = nil
+        self.tableView.separatorStyle = .none
+    
+        
+          let concurrentQueue = DispatchQueue(label: "concurrentQueue", attributes: .concurrent)
+        concurrentQueue.async {
+            self.workouts = TestSaverRecord.getWorkoutsByCategory(categoria: self.categoria)
+        }
+        concurrentQueue.async(flags: .barrier){
+            activityIndicator.stopAnimating()
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
+         self.tableView.reloadData()
+        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -36,7 +59,12 @@ class DetailsCategoriesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return workouts.count
+        if workouts.isEmpty{
+            return 0
+        }
+        else{
+            return workouts.count
+        }
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200.0
@@ -71,8 +99,7 @@ class DetailsCategoriesTableViewController: UITableViewController {
             var id=workouts[indexPath.row].id
             var anteprima=workouts[indexPath.row].anteprima
         
-            destinationController.workout=TestSaverRecord.getWorkoutDetailsById(id:id!)
-        
+            destinationController.id=id
 //            destinationController.imageAnteprima.image=UIImage(data:anteprima!)
      
      }
