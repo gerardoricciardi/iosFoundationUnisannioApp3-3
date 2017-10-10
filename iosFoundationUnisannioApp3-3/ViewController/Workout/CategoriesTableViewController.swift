@@ -16,6 +16,10 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
     let backgroundColor = UIColor(red: 54.0/255.0, green: 155.0/255.0, blue: 184.0/255.0, alpha: 1.0)
     var categoriesImage = ["stretching", "pilates", "totalBody"]
     var categoriesTitle = ["stretching", "pilates", "totalBody"]
+    var colorStretching = UIColor(red: 255.0/255.0, green: 102.0/255.0, blue: 102.0/255.0, alpha: 1.0)
+    var colorPilates = UIColor(red: 204.0/255.0, green: 128.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+    var colorTotalBody = UIColor(red: 128.0/255.0, green: 128.0/255.0, blue: 128.0/255.0, alpha: 1.0)
+    var colors: [UIColor]=[]
     var notifiche: [NotificationHK] = []
     var id = ""
     var notifica1 = NotificationHK(title: "Esercizio da fare in ufficio", body: "Siediti sulla punta della sedia e stendi le gambe, inclinati con il busto in avanti cercando di toccare le caviglie", id: "String", hour: 13, minute: 30)
@@ -29,7 +33,9 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundColor = backgroundColor
-        
+        self.colors.append(colorStretching)
+        self.colors.append(colorPilates)
+        self.colors.append(colorTotalBody)
         UNUserNotificationCenter.current().requestAuthorization(
             options: [.alert,.sound,.badge],
             completionHandler: { (granted,error) in
@@ -163,7 +169,8 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
                 
                 var  categoria : String
                 categoria=categoriesTitle[indexPath.row]
-                destinationController.title = categoria.uppercased()
+                destinationController.title = categoria
+//                destinationController.colorRow = colors[indexPath.row]
                 
                 print(categoria)
                

@@ -12,6 +12,9 @@ class DetailsCategoriesTableViewController: UITableViewController {
 
     var workouts:[Workout] = []
     var categoria:String = ""
+    var colorRow = UIColor(red: 55.0/255.0, green: 153.0/255.0, blue: 178.0/255.0, alpha: 1.0)
+    var titleWorkouts = ["Workout 1", "Workout 2", "Workout 3"]
+    var workout1 = ["1", "2", "3"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +26,11 @@ class DetailsCategoriesTableViewController: UITableViewController {
         activityIndicator.center=tableView.center
         activityIndicator.activityIndicatorViewStyle=UIActivityIndicatorViewStyle.whiteLarge
         tableView.addSubview(activityIndicator)
+        activityIndicator.color = UIColor(red: 55.0/255.0, green: 153.0/255.0, blue: 178.0/255.0, alpha: 1.0)
         activityIndicator.startAnimating()
         self.tableView.tableFooterView = nil
         self.tableView.separatorStyle = .none
-    
+        self.tableView.isUserInteractionEnabled = false
         
           let concurrentQueue = DispatchQueue(label: "concurrentQueue", attributes: .concurrent)
         concurrentQueue.async {
@@ -34,6 +38,7 @@ class DetailsCategoriesTableViewController: UITableViewController {
         }
         concurrentQueue.async(flags: .barrier){
             activityIndicator.stopAnimating()
+            self.tableView.isUserInteractionEnabled = true
             self.tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
          self.tableView.reloadData()
         }
@@ -59,27 +64,40 @@ class DetailsCategoriesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if workouts.isEmpty{
-            return 0
-        }
-        else{
-            return workouts.count
-        }
+//        if workouts.isEmpty{
+//            return 0
+//        }
+//        else{
+//            return workouts.count
+//        }
+        return workout1.count
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200.0
+        return 185.0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellDetailsCategories", for: indexPath) as! DetailsCategoriesTableViewCell
         print(workouts.count)
+        if indexPath.row != 0 {
+            cell.isUserInteractionEnabled = false
+            cell.backgroundColor = UIColor.white
+            
+        }
+        else{
+            cell.backgroundColor = UIColor.white
+            cell.backgroundColor?.withAlphaComponent(0.7)
+        }
         
-        cell.anteprimaWO.image=UIImage(data:workouts[indexPath.row].anteprima!)
+//        cell.anteprimaWO.image=UIImage(data:workouts[indexPath.row].anteprima!)
+        let imageName = categoria + workout1[indexPath.row]
+        cell.anteprimaWO.image = UIImage(named: imageName)
         cell.anteprimaWO.layer.cornerRadius = 30.0
         cell.anteprimaWO.clipsToBounds = true
-        self.title = workouts[indexPath.row].categoria
+//        self.title = workouts[indexPath.row].categoria
+        cell.titleEse.text = titleWorkouts[indexPath.row]
         
-        print(workouts[indexPath.row].categoria)
+//        print(workouts[indexPath.row].categoria)
         if indexPath.row == 0 {
             cell.lockImage.image = UIImage(named: "unlock")
         }
@@ -98,7 +116,7 @@ class DetailsCategoriesTableViewController: UITableViewController {
             
             var id=workouts[indexPath.row].id
             var anteprima=workouts[indexPath.row].anteprima
-        
+            
             destinationController.id=id
 //            destinationController.imageAnteprima.image=UIImage(data:anteprima!)
      
