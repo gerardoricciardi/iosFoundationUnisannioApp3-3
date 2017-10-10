@@ -170,13 +170,17 @@ class TestSaverRecord{
         
         let query = CKQuery(recordType: "Workout", predicate: predicate)
         publicDatabase?.perform(query, inZoneWith: nil) {
-            (records, error) -> Void in
-            guard let records = records else {
-                print("Error querying records: ", error)
+            (records, error) in
+            
+            if let error = error {
+                DispatchQueue.main.async {
+                    print("Error querying records: ", error)
+                }
+                
                 return
             }
-            print("Found \(records.count) records matching query")
-            for record in records{
+            print("Found \(records?.count) records matching query")
+            for record in records!{
                 
                 print("***WO categoria= "+String(describing: record.object(forKey: "categoria")!))
                 
@@ -232,9 +236,12 @@ class TestSaverRecord{
         recordZone = CKRecordZone(zoneName: "_defaultZone")
         
         
-        publicDatabase?.fetch(withRecordID: id) { (myrecord, error) -> Void in
-            guard let myrecord = myrecord else {
-                print("Error fetching record: ", error)
+        publicDatabase?.fetch(withRecordID: id) { (myrecord, error) in
+            
+            if let error = error{
+                DispatchQueue.main.async {
+                    print("Error querying records: ", error)
+                }
                 return
             }
             print("Successfully fetched record: ", myrecord)

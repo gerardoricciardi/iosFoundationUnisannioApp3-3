@@ -87,7 +87,7 @@ class TableViewControllerPreviewAllenamento: UITableViewController {
             return CGFloat(300)
         }
         else{
-            return CGFloat(75)
+            return CGFloat(110)
         }
 
     }
