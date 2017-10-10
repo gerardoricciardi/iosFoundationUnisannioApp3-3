@@ -20,6 +20,7 @@ class TestSaverRecord{
         var recordZone: CKRecordZone?
         var publicDatabase: CKDatabase?
         
+        
         publicDatabase = container().publicCloudDatabase
         recordZone = CKRecordZone(zoneName: "_defaultZone")
         
@@ -154,8 +155,8 @@ class TestSaverRecord{
         
         print("***metodo get WORKOUTBYCATEGORY***")
         let semaphore = DispatchSemaphore(value: 0)
-
-    var workouts : [Workout]=[Workout]()
+        
+        var workouts : [Workout]=[Workout]()
         var videoData:Data!
         let container = CKContainer.default
         var currentRecord: CKRecord?
@@ -250,9 +251,9 @@ class TestSaverRecord{
             semaphore.signal()
             
         }
-
+        
         semaphore.wait()
-                var anteprima : Data!
+        var anteprima : Data!
         var categoria : String=record!.object(forKey: "categoria") as! String
         var isBloccato: String=record!.object(forKey: "isBloccato") as! String
         var tempo: Int64=record!.object(forKey: "tempo") as! Int64
@@ -265,69 +266,73 @@ class TestSaverRecord{
                 
         var fileAnteprima:CKAsset?=record?.object(forKey:"anteprima") as! CKAsset
         var fileVideo:CKAsset?=record?.object(forKey:"video") as! CKAsset
-
-                
-                if let file = fileAnteprima {
-                    if let data = try?Data(contentsOf: file.fileURL) {
-                        anteprima=data
-                        
-                    }
-                }
-        
-                
-                if let file = fileVideo {
-                    if let data = try?Data(contentsOf: file.fileURL) {
-                        video=data
-                        
-                    }
-                }
-                
-                workout=Workout(anteprima: anteprima,categoria: categoria,esercizi: eserciziWorkout,isBloccato: isBloccato,livello: livello,tempo: tempo,video: video,id: idWorkout)
         
         
+        if let file = fileAnteprima {
+            if let data = try?Data(contentsOf: file.fileURL) {
+                anteprima=data
                 
+            }
+        }
+        
+        
+        if let file = fileVideo {
+            if let data = try?Data(contentsOf: file.fileURL) {
+                video=data
+                
+            }
+        }
+        
+        workout=Workout(anteprima: anteprima,categoria: categoria,esercizi: eserciziWorkout,isBloccato: isBloccato,livello: livello,tempo: tempo,video: video,id: idWorkout)
+        
+        
+        
         for esercizioReference in record!["esercizi"] as! [CKReference] {
-                    esercizi.append(esercizioReference.recordID)
-                }
+            esercizi.append(esercizioReference.recordID)
+        }
         
-                var fetchOperation = CKFetchRecordsOperation(recordIDs: esercizi)
-                fetchOperation.fetchRecordsCompletionBlock = {
-                    records, error in
-                    if error != nil {
-                        print("\(error!)")
-                    } else {
-                        for (recordId, record) in records! {
-                            var nome:String=record.object(forKey: "nome") as! String
-                            var descrizione:String=record.object(forKey: "descrizione") as! String
-                            var foto:Data!
-                            var fotoEsercizio:CKAsset?=record.object(forKey:"foto") as! CKAsset
+        var fetchOperation = CKFetchRecordsOperation(recordIDs: esercizi)
+        fetchOperation.fetchRecordsCompletionBlock = {
+            records, error in
+            if error != nil {
+                print("\(error!)")
+            } else {
+                for (recordId, record) in records! {
+                    var nome:String=record.object(forKey: "nome") as! String
+                    var descrizione:String=record.object(forKey: "descrizione") as! String
+                    var foto:Data!
+                    var fotoEsercizio:CKAsset?=record.object(forKey:"foto") as! CKAsset
+                    
+                    if let file = fotoEsercizio {
+                        if let data = try?Data(contentsOf: file.fileURL) {
+                            foto=data
                             
-                            if let file = fotoEsercizio {
-                                if let data = try?Data(contentsOf: file.fileURL) {
-                                    foto=data
-                                    
-                                }
-                            }
-                            var  esercizio : Esercizio=Esercizio(nome:nome,descrizione:descrizione, foto:foto)
-                            
-                            print("*****Esercizio nome: "+String(esercizio.nome))
-//                            workout.esercizi.append(esercizio)
-                            workout.addEsercizio(esercizio: esercizio)
-                            semaphore.signal()
                         }
-                        
                     }
+                    var  esercizio : Esercizio=Esercizio(nome:nome,descrizione:descrizione, foto:foto)
+                    
+                    print("*****Esercizio nome: "+String(esercizio.nome))
+                    //                            workout.esercizi.append(esercizio)
+                    workout.addEsercizio(esercizio: esercizio)
+                    print("***Conta1: \(workout.esercizi.count)")
+                    
                 }
+                semaphore.signal()
+            }
+           
+        }
         
-//        semaphore.wait()
+        
+        //        semaphore.wait()
         
         
                 CKContainer.default().publicCloudDatabase.add(fetchOperation)
 //        semaphore.signal()
 
-
+        
         
         semaphore.wait()
+        print("***Conta \(workout.esercizi.count)")
         return workout
             
         }

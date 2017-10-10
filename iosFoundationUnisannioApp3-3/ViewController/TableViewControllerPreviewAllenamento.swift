@@ -14,7 +14,7 @@ class TableViewControllerPreviewAllenamento: UITableViewController {
   var workout : Workout!
     var esercizi: [Esercizio]=[]
     var id :CKRecordID!
-    
+    var wait = true
     
 //    override func viewDidAppear(_ animated: Bool) {
 //        self.navigationController?.isNavigationBarHidden = false
@@ -44,6 +44,7 @@ class TableViewControllerPreviewAllenamento: UITableViewController {
             
             self.esercizi=self.workout.getEsercizi()
 
+            self.wait = false
             activityIndicator.stopAnimating()
             self.tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
             self.tableView.reloadData()
@@ -72,14 +73,25 @@ class TableViewControllerPreviewAllenamento: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if esercizi.isEmpty{
+        if wait {
             return 0
+        }else{
+            if section == 0{
+                return 1
+            }
+            else{
+                if esercizi.isEmpty{
+                    return 0
+                }
+                else{
+                    print("*************count esercizi"+String(self.esercizi.count))
+                    return self.esercizi.count
+                }
+            }
         }
-        else{
-            print("*************count esercizi"+String(self.esercizi.count))
-            
-            return self.esercizi.count
-        }
+        
+        
+        
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
