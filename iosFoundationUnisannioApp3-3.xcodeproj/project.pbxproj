@@ -241,11 +241,10 @@
 				0752074F1F7F04FB004EE4FF /* MainViewController.swift */,
 				212C9AD21F861FA500235232 /* NotificheTableViewCell.swift */,
 				212C9AD01F861F5B00235232 /* NotificheTableTableViewController.swift */,
-				078B1D6F1F8666DA000E4C92 /* ImpostazioniTableViewController.swift */,
-				212917571F86188C002424B9 /* ImpostazioniTableViewCell.swift */,
 				8F2E5D551F867D9B00182C28 /* TableViewControllerPreviewAllenamento.swift */,
 				8F2E5D571F867DB800182C28 /* TableViewCellPreviewVideo.swift */,
 				8F2E5D591F867DC400182C28 /* TableViewCellPreviewEsercizi.swift */,
+				07AD06F11F8C0A520058F422 /* Impostazioni */,
 				07CBEC931F8A8A0000D8F451 /* Intro */,
 				073683251F840A4900236D98 /* Workout */,
 				0736832A1F84235000236D98 /* Health Kit */,
@@ -284,6 +283,15 @@
 				F8C311391F839F3800C1FFE2 /* HealthKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07AD06F11F8C0A520058F422 /* Impostazioni */ = {
+			isa = PBXGroup;
+			children = (
+				078B1D6F1F8666DA000E4C92 /* ImpostazioniTableViewController.swift */,
+				212917571F86188C002424B9 /* ImpostazioniTableViewCell.swift */,
+			);
+			path = Impostazioni;
 			sourceTree = "<group>";
 		};
 		07CBEC931F8A8A0000D8F451 /* Intro */ = {

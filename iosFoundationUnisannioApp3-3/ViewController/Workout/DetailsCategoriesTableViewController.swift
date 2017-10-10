@@ -14,7 +14,7 @@ class DetailsCategoriesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -38,12 +38,26 @@ class DetailsCategoriesTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return workouts.count
     }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200.0
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellDetailsCategories", for: indexPath) as! DetailsCategoriesTableViewCell
         print(workouts.count)
         
         cell.anteprimaWO.image=UIImage(data:workouts[indexPath.row].anteprima!)
+        cell.anteprimaWO.layer.cornerRadius = 30.0
+        cell.anteprimaWO.clipsToBounds = true
+        self.title = workouts[indexPath.row].categoria
+        print(workouts[indexPath.row].categoria)
+        if indexPath.row == 0 {
+            cell.lockImage.image = UIImage(named: "unlock")
+        }
+        else{
+            cell.lockImage.image = UIImage(named: "lock")
+        }
+        
         
         return cell
     }

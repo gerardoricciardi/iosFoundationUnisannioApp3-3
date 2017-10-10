@@ -10,6 +10,11 @@ import UIKit
 
 class DetailsCategoriesTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var titleEse: UILabel!
+    @IBOutlet weak var lockImage: UIImageView!
+    
+    @IBOutlet weak var viewIm: UIView!
     @IBOutlet weak var anteprimaWO: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()

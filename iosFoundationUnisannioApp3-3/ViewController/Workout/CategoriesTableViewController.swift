@@ -72,19 +72,17 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
                     timeInterval: notifica.timer,
                     repeats: false)
                 
-                
                 var dateComponents = DateComponents()
                 dateComponents.hour = notifica.hour
                 dateComponents.minute = notifica.minute
                 let trigger1 = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-                
                 
                 let date = Date()
                 let formatter = DateFormatter()
                 formatter.dateFormat = "dd.mm.yyyy'T'HH:mm:ss:mmZZZZZ"
                 var result = formatter.string(from: date)
                 result.append(notifica.title)
-                print(result)
+//                print(result)
                 
                 // prendiamo il trigger, il content e aggiungiamo una stringa per identificare la notifica
                 // inseriamo tutto in request
@@ -142,6 +140,7 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
         cell.categoriesLabel.text = categoriesTitle[indexPath.row]
         
         cell.backgroundColor = backgroundColor
+        
         // Configure the cell...
         return cell
     }
@@ -163,8 +162,10 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
 //
 //                activityIndicator.startAnimating()
                 
-              var  categoria : String
+                var  categoria : String
                 categoria=categoriesTitle[indexPath.row]
+                destinationController.title = categoria.uppercased()
+                
                 print(categoria)
                  let concurrentQueue = DispatchQueue(label: "concurrentQueue", attributes: .concurrent)
         

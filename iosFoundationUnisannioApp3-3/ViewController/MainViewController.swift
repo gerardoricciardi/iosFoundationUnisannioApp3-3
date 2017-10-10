@@ -22,13 +22,28 @@ class MainViewController: UIViewController {
         let defaults = UserDefaults.standard
         
 //        if defaults.string(forKey: "scrivi Username") != nil || defaults.bool(forKey: "isEndedWorkout"){
-        if defaults.string(forKey: "scrivi Username") != nil {
+        if defaults.string(forKey: "name") != nil {
             //utente gia presente, vai alla tabbar
             print("Sono nel main chiave username trovata")
+            defaults.set("noSkip", forKey: "skip")
             segueFirstView = segueTabBar
         }
         else{
             //non ci sta nessuno vai all introduzione
+            defaults.set("skip", forKey: "skip")
+            if defaults.string(forKey: "skip") == "skip"{
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat =  "HH:mm"
+                
+                let oraInizio = dateFormatter.date(from: "09:00")!
+                let oraFine = dateFormatter.date(from: "17:00")!
+                defaults.set(oraInizio, forKey: "oraInizio")
+                defaults.set(oraFine, forKey: "oraFine")
+                defaults.set("Name", forKey: "name")
+                defaults.set("Surname", forKey: "surname")
+                defaults.set("default", forKey: "Sex")
+                
+            }
             print("Sono nel main chiave username non trovata")
         }
         

@@ -61,7 +61,7 @@ class IntroRegisterViewController: UIViewController, UITextFieldDelegate {
         surnameTF.inputAccessoryView = toolBar
         emailTF.inputAccessoryView = toolBar
         passwordTF.inputAccessoryView = toolBar
-        
+        scroll.isScrollEnabled = false
         // Do any additional setup after loading the view.
     }
     @objc func didPressDoneButton(button: UIButton) {
@@ -132,12 +132,18 @@ class IntroRegisterViewController: UIViewController, UITextFieldDelegate {
     }
     */
     func textFieldDidEndEditing(_ textField: UITextField) {
+        scroll.isScrollEnabled = false
         scroll.setContentOffset(CGPoint(x:0,y:0), animated:true)
+        
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        scroll.isScrollEnabled = true
         if(textField==passwordTF){
-        scroll.setContentOffset(CGPoint(x:0,y:250), animated: true)
+        scroll.setContentOffset(CGPoint(x:0,y:220), animated: true)
+        }
+        else if textField == emailTF{
+            scroll.setContentOffset(CGPoint(x:0,y:100), animated: true)
         }
     }
 }

@@ -93,25 +93,23 @@ class ViewControllerProfilo: UIViewController,UIImagePickerControllerDelegate,UI
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("***PROVA viewDidAppear***")
         InserireNomeL?.text = defaults.string(forKey: "name")
         InserireCognomeL?.text = defaults.string(forKey: "surname")
         LabelSesso?.text = defaults.string(forKey: "Sex")
-        
-        let oraInizio = defaults.object(forKey: "oraInizio")
-        let oraFine = defaults.object(forKey: "oraFine")
+       
+        let oraInizio = defaults.object(forKey: "oraInizio") as! Date
+        let oraFine = defaults.object(forKey: "oraFine") as! Date
         
         let calendar = NSCalendar.current
-        let oraInComponents = calendar.dateComponents([.hour, .minute], from: oraInizio as! Date)
-        let oraOutComponents = calendar.dateComponents([.hour, .minute], from: oraFine as! Date)
+        let oraInComponents = calendar.dateComponents([.hour, .minute], from: oraInizio)
+        let oraOutComponents = calendar.dateComponents([.hour, .minute], from: oraFine)
         let oraIn = String(describing: oraInComponents.hour!) + ":" + String(describing: oraInComponents.minute!)
         let oraOut = String(describing: oraOutComponents.hour!) + ":" + String(describing: oraOutComponents.minute!)
         
         OrariLavLabel?.text = oraIn
         OrarioLavLabelInizio?.text = oraOut
         
-        var counter = Float(defaults.integer(forKey: "counterWorkout"))
-                print("***COUNTER \(counter)")
+        let counter = Float(defaults.integer(forKey: "counterWorkout"))
         self.BarStretching?.progress=counter/5.0
         self.BarYoga?.progress = counter/5.0
         self.BarTotalBody?.progress = counter/5.0
