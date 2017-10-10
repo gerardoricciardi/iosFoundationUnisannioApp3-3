@@ -11,7 +11,8 @@ import CloudKit
 
 class TableViewControllerPreviewAllenamento: UITableViewController {
 
-  var workout : Workout! 
+  var workout : Workout!
+    var esercizi: [Esercizio]=[]
     var id :CKRecordID!
     
     
@@ -40,6 +41,9 @@ class TableViewControllerPreviewAllenamento: UITableViewController {
             self.workout = TestSaverRecord.getWorkoutDetailsById(id: self.id)
         }
         concurrentQueue.async(flags: .barrier){
+            
+            self.esercizi=self.workout.getEsercizi()
+
             activityIndicator.stopAnimating()
             self.tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
             self.tableView.reloadData()
@@ -68,10 +72,13 @@ class TableViewControllerPreviewAllenamento: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if section==0 {return 1}
-        else {
-            print("Count esercizi"+String(workout.getEsercizi().count))
-            return workout.getEsercizi().count
+        if esercizi.isEmpty{
+            return 0
+        }
+        else{
+            print("*************count esercizi"+String(self.esercizi.count))
+            
+            return self.esercizi.count
         }
     }
     
@@ -94,7 +101,6 @@ class TableViewControllerPreviewAllenamento: UITableViewController {
 
             cell.imageAnteprima.image=UIImage(data:workout.anteprima!)
             
-            print("********STAMPA STRONZA*********************")
             
             
             
