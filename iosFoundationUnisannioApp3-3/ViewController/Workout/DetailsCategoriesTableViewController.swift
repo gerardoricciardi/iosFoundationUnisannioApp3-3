@@ -50,6 +50,7 @@ class DetailsCategoriesTableViewController: UITableViewController {
         cell.anteprimaWO.layer.cornerRadius = 30.0
         cell.anteprimaWO.clipsToBounds = true
         self.title = workouts[indexPath.row].categoria
+        
         print(workouts[indexPath.row].categoria)
         if indexPath.row == 0 {
             cell.lockImage.image = UIImage(named: "unlock")
