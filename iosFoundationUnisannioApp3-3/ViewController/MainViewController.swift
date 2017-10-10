@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HealthKit
 
 class MainViewController: UIViewController {
 
@@ -69,7 +70,31 @@ class MainViewController: UIViewController {
         
         
         authorizeHealthKit()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat =  "yyyy-MM-dd'T'HH:mm"
         
+        var day = "2017-10-05T17:00"
+        var dayEnd = "2017-10-05T17:10"
+        
+        let dateIn = dateFormatter.date(from: "2017-10-03T19:00")
+        let dateOut = dateFormatter.date(from: "2017-10-03T19:15")
+        
+        
+        
+        //2. Build the workout using data from your Prancercise workout
+        let workout = HKWorkout(activityType: .gymnastics,
+                                start: dateIn!,
+                                end: dateOut!,
+                                duration: (dateIn?.timeIntervalSince(dateOut!))!,
+                                totalEnergyBurned: nil,
+                                totalDistance: nil,
+                                device: HKDevice.local(),
+                                metadata: nil)
+        
+        //3. Save your workout to HealthKit
+        let healthStore = HKHealthStore()
+        healthStore.save(workout) { (success, error) in
+        }
         
         _ = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
         

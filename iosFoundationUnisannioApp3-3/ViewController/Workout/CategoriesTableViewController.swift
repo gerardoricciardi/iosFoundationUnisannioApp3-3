@@ -163,7 +163,8 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
                 
                 var  categoria : String
                 categoria=categoriesTitle[indexPath.row]
-                destinationController.title = categoria.uppercased()
+                destinationController.title = categoria
+                
                 
                 print(categoria)
                

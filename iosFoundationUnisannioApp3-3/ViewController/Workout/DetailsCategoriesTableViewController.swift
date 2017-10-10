@@ -12,6 +12,7 @@ class DetailsCategoriesTableViewController: UITableViewController {
 
     var workouts:[Workout] = []
     var categoria:String = ""
+    var titleWorkouts = ["Workout 1", "Workout 2", "Workout 3"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +79,7 @@ class DetailsCategoriesTableViewController: UITableViewController {
         cell.anteprimaWO.layer.cornerRadius = 30.0
         cell.anteprimaWO.clipsToBounds = true
         self.title = workouts[indexPath.row].categoria
+        cell.titleEse.text = titleWorkouts[indexPath.row]
         
         print(workouts[indexPath.row].categoria)
         if indexPath.row == 0 {
