@@ -11,6 +11,8 @@ import UserNotifications
 import CloudKit
 
 class CategoriesTableViewController: UITableViewController, UNUserNotificationCenterDelegate {
+   
+    
     var isGrantedNotificationAccess:Bool = false
     
     let backgroundColor = UIColor(red: 54.0/255.0, green: 155.0/255.0, blue: 184.0/255.0, alpha: 1.0)
@@ -25,13 +27,15 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
     var notifica1 = NotificationHK(title: "Esercizio da fare in ufficio", body: "Siediti sulla punta della sedia e stendi le gambe, inclinati con il busto in avanti cercando di toccare le caviglie", id: "String", hour: 13, minute: 30)
     var notifica2 = NotificationHK(title: "Move!", body: "Alzarsi per prendere un bicchiere d’acqua", id: "String", hour: 13, minute: 35)
     
-    var notifica3 = NotificationHK(title: "Countdown", body: "Prova notifica timer", id: "", timer: 10.0)
+    var notifica3 = NotificationHK(title: "An Advice for you!", body: "Raise your arms and joins your hands. Keep the position for 30 seconds", id: "", timer: 10.0)
   
     
     var activityIndicator : UIActivityIndicatorView=UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         self.tableView.backgroundColor = backgroundColor
         self.colors.append(colorStretching)
         self.colors.append(colorPilates)
@@ -45,8 +49,8 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
         notifica1.id = id
-        notifiche.append(notifica1)
-        notifiche.append(notifica2)
+//        notifiche.append(notifica1)
+//        notifiche.append(notifica2)
         notifiche.append(notifica3)
         
         
@@ -87,6 +91,7 @@ class CategoriesTableViewController: UITableViewController, UNUserNotificationCe
                 let formatter = DateFormatter()
                 formatter.dateFormat = "dd.mm.yyyy'T'HH:mm:ss:mmZZZZZ"
                 var result = formatter.string(from: date)
+//                var result = ""
                 result.append(notifica.title)
 //                print(result)
                 

@@ -121,18 +121,19 @@ class TableViewControllerPreviewAllenamento: UITableViewController {
         else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellPreviewEsercizi", for: indexPath) as! TableViewCellPreviewEsercizi
             
-//            cell.imageEsercizio.image=UIImage(named:"stretching")
-//            cell.labelNomeEsercizio.text="Esercizio 1"
-//            cell.labelDescrizione.text="Esercizio per migliorare......"
-//
+            //            cell.imageEsercizio.image=UIImage(named:"stretching")
+            //            cell.labelNomeEsercizio.text="Esercizio 1"
+            //            cell.labelDescrizione.text="Esercizio per migliorare......"
+            //
             
             
             
             cell.labelNomeEsercizio.text=workout.esercizi[indexPath.row].nome
-           cell.labelDescrizione.text=workout.esercizi[indexPath.row].descrizione
+            cell.labelDescrizione.text=workout.esercizi[indexPath.row].descrizione
             cell.imageEsercizio.image=UIImage(data: workout.esercizi[indexPath.row].foto)
-
-
+            cell.imageEsercizio.layer.cornerRadius = 10.0
+            cell.imageEsercizio.clipsToBounds = true
+            
             return cell
             
             

@@ -11,7 +11,6 @@ import CloudKit
 import UIKit
 class TestSaverRecord{
     
-    
     static func loadExerciseFotoByName(nomeEsercizio : String) -> UIImage{
         print("****Load Record*****")
         var image:UIImage!
@@ -20,10 +19,8 @@ class TestSaverRecord{
         var recordZone: CKRecordZone?
         var publicDatabase: CKDatabase?
         
-        
         publicDatabase = container().publicCloudDatabase
         recordZone = CKRecordZone(zoneName: "_defaultZone")
-        
         
         let predicate = NSPredicate(format: "%K == %@", "nome", nomeEsercizio)
         
@@ -35,28 +32,19 @@ class TestSaverRecord{
                 return
             }
             print("Found \(records.count) records matching query")
-
             for record in records{
                 print(record.object(forKey:"nome")!)
-                
-                
                 guard let asset = record["foto"] as? CKAsset else {
                     print("Image missing from record")
                     return
                 }
-                
                 guard let imageData = try?Data(contentsOf: asset.fileURL) else {
                     print("Invalid Image")
                     return
                 }
-                
                  image = UIImage(data: imageData)
-  
             }
-
-        
-    }
-        
+        }
         return image
     }
     
@@ -65,21 +53,16 @@ class TestSaverRecord{
 //   si fa prendendo la foto come asset, poi si fa da asset a url e da url a uiimage
     
     func saveRecord(){
-        
         //        print("****Save Record*****")
-        
         let container = CKContainer.default
         var currentRecord: CKRecord?
-        
         var recordZone: CKRecordZone?
         var publicDatabase: CKDatabase?
         
         publicDatabase = container().publicCloudDatabase
         recordZone = CKRecordZone(zoneName: "_defaultZone")
         
-        
-        let myRecord = CKRecord(recordType: "Workout",
-                                zoneID: (recordZone?.zoneID)!)
+        let myRecord = CKRecord(recordType: "Workout", zoneID: (recordZone?.zoneID)!)
         
         myRecord.setObject("yoga" as CKRecordValue, forKey:"categoria")
         //        myRecord.setObject("E858F82D-1D45-4182-AFE4-BF9013136FFD" as CKRecordValue, forKey:"esercizi")
@@ -94,7 +77,6 @@ class TestSaverRecord{
             }
             print("Successfully saved record: ", record)
         }
-        
     }
     
     //fare metodo getEserciziByworkout
@@ -102,9 +84,7 @@ class TestSaverRecord{
     
     static func getVideoFromEsercizio(nomeEsercizio:String)->Data{
         let semaphore = DispatchSemaphore(value: 0)
-
-        
-       var videoData:Data!
+        var videoData:Data!
         let container = CKContainer.default
         var currentRecord: CKRecord?
         var recordZone: CKRecordZone?
@@ -112,8 +92,7 @@ class TestSaverRecord{
         
         publicDatabase = container().publicCloudDatabase
         recordZone = CKRecordZone(zoneName: "_defaultZone")
-        
-        
+    
         let predicate = NSPredicate(format: "%K == %@", "nome", nomeEsercizio)
         
         let query = CKQuery(recordType: "Esercizi", predicate: predicate)
@@ -131,28 +110,16 @@ class TestSaverRecord{
                 if let file = File {
                     if let data = try?Data(contentsOf: file.fileURL) {
                         videoData=data
-                        
                         semaphore.signal()
-
-                        
                     }
                 }
-                
-                
             }
-            
         }
-        
-        
         semaphore.wait()
         return videoData
-        
-
-}
-    
+    }
     
     static func getWorkoutsByCategory(categoria:String)->[Workout]{
-        
         print("***metodo get WORKOUTBYCATEGORY***")
         let semaphore = DispatchSemaphore(value: 0)
         
@@ -166,66 +133,48 @@ class TestSaverRecord{
         publicDatabase = container().publicCloudDatabase
         recordZone = CKRecordZone(zoneName: "_defaultZone")
         
-        
         let predicate = NSPredicate(format: "%K == %@", "categoria", categoria)
         
         let query = CKQuery(recordType: "Workout", predicate: predicate)
         publicDatabase?.perform(query, inZoneWith: nil) {
             (records, error) in
-            
             if let error = error {
                 DispatchQueue.main.async {
                     print("Error querying records: ", error)
                 }
-                
                 return
             }
             print("Found \(records?.count) records matching query")
             for record in records!{
-                
                 print("***WO categoria= "+String(describing: record.object(forKey: "categoria")!))
                 
                 var idWorkout : CKRecordID=record.recordID as! CKRecordID
 //                print(idWorkout)
                 var File : CKAsset?=record.object(forKey: "anteprima") as! CKAsset
 //                print(File)
-                
-                
                 var anteprima : Data!
-                
                 if let file = File {
                     if let data = try?Data(contentsOf: file.fileURL) {
                         anteprima=data
-                        
                     }
                 }
-                
                 let workout:Workout=Workout(anteprima:anteprima,id:idWorkout)
-                
-                
                 workouts.append(workout)
                 print("Count workouts "+String(workouts.count))
 //                semaphore.signal()
-                
             }
             semaphore.signal()
-        
     }
 //        semaphore.signal()
-        
         semaphore.wait()
         return workouts
-}
+    }
     
     
     static func getWorkoutDetailsById(id:CKRecordID)->Workout{
         print("***metodo getWorkoutByID***")
-
-        
         let semaphore = DispatchSemaphore(value: 0)
-        
         var workout:Workout!
-        
         var videoData:Data!
         let container = CKContainer.default
         var currentRecord: CKRecord?
@@ -235,10 +184,7 @@ class TestSaverRecord{
         
         publicDatabase = container().publicCloudDatabase
         recordZone = CKRecordZone(zoneName: "_defaultZone")
-        
-        
         publicDatabase?.fetch(withRecordID: id) { (myrecord, error) in
-            
             if let error = error{
                 DispatchQueue.main.async {
                     print("Error querying records: ", error)
@@ -246,12 +192,9 @@ class TestSaverRecord{
                 return
             }
             print("Successfully fetched record: ", myrecord)
-            
             record=myrecord
             semaphore.signal()
-            
         }
-        
         semaphore.wait()
         var anteprima : Data!
         var categoria : String=record!.object(forKey: "categoria") as! String
@@ -262,35 +205,23 @@ class TestSaverRecord{
                 var esercizi : [CKRecordID]=[CKRecordID]()
                 var eserciziWorkout:[Esercizio]=[Esercizio]()
         var idWorkout : CKRecordID=record!.recordID
-
-                
         var fileAnteprima:CKAsset?=record?.object(forKey:"anteprima") as! CKAsset
         var fileVideo:CKAsset?=record?.object(forKey:"video") as! CKAsset
-        
-        
         if let file = fileAnteprima {
             if let data = try?Data(contentsOf: file.fileURL) {
                 anteprima=data
-                
             }
         }
-        
-        
         if let file = fileVideo {
             if let data = try?Data(contentsOf: file.fileURL) {
                 video=data
-                
             }
         }
-        
         workout=Workout(anteprima: anteprima,categoria: categoria,esercizi: eserciziWorkout,isBloccato: isBloccato,livello: livello,tempo: tempo,video: video,id: idWorkout)
-        
-        
         
         for esercizioReference in record!["esercizi"] as! [CKReference] {
             esercizi.append(esercizioReference.recordID)
         }
-        
         var fetchOperation = CKFetchRecordsOperation(recordIDs: esercizi)
         fetchOperation.fetchRecordsCompletionBlock = {
             records, error in
@@ -319,33 +250,19 @@ class TestSaverRecord{
                 }
                 semaphore.signal()
             }
-           
         }
-        
-        
         //        semaphore.wait()
-        
-        
-                CKContainer.default().publicCloudDatabase.add(fetchOperation)
-//        semaphore.signal()
-
-        
-        
+        CKContainer.default().publicCloudDatabase.add(fetchOperation)
+        //        semaphore.signal()
         semaphore.wait()
         print("***Conta \(workout.esercizi.count)")
         return workout
-            
-        }
-
-    
-        
-
-        
         
     }
-    
-    
-    
+}
+
+
+
     
 
 

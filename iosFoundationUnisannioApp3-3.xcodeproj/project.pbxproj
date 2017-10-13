@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		071E1BAA1F83BFB10097C074 /* TestSaverRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071E1BA91F83BFB10097C074 /* TestSaverRecord.swift */; };
+		0720981B1F8FBCA600E9A4D5 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0720981A1F8FBCA600E9A4D5 /* CloudKit.framework */; };
 		0733E14F1F7AA7840066F286 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0733E14E1F7AA7840066F286 /* AppDelegate.swift */; };
 		0733E1511F7AA7840066F286 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0733E1501F7AA7840066F286 /* IntroViewController.swift */; };
 		0733E1541F7AA7840066F286 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0733E1521F7AA7840066F286 /* Main.storyboard */; };
@@ -41,7 +42,6 @@
 		212C9AD31F861FA500235232 /* NotificheTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C9AD21F861FA500235232 /* NotificheTableViewCell.swift */; };
 		8F2499DE1F7BF59F001AEA9E /* Esercizio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */; };
 		8F2C49EA1F7BAF3A006EC668 /* Utente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2C49E91F7BAF3A006EC668 /* Utente.swift */; };
-		8F2E5D541F86346600182C28 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2E5D531F86346600182C28 /* CloudKit.framework */; };
 		8F2E5D561F867D9B00182C28 /* TableViewControllerPreviewAllenamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E5D551F867D9B00182C28 /* TableViewControllerPreviewAllenamento.swift */; };
 		8F2E5D581F867DB800182C28 /* TableViewCellPreviewVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E5D571F867DB800182C28 /* TableViewCellPreviewVideo.swift */; };
 		8F2E5D5A1F867DC400182C28 /* TableViewCellPreviewEsercizi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E5D591F867DC400182C28 /* TableViewCellPreviewEsercizi.swift */; };
@@ -73,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		071E1BA91F83BFB10097C074 /* TestSaverRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSaverRecord.swift; sourceTree = "<group>"; };
+		0720981A1F8FBCA600E9A4D5 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		0733E14B1F7AA7840066F286 /* iosFoundationUnisannioApp3-3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iosFoundationUnisannioApp3-3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0733E14E1F7AA7840066F286 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0733E1501F7AA7840066F286 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
@@ -113,7 +114,6 @@
 		212C9AD21F861FA500235232 /* NotificheTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificheTableViewCell.swift; sourceTree = "<group>"; };
 		8F2499DD1F7BF59F001AEA9E /* Esercizio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Esercizio.swift; sourceTree = "<group>"; };
 		8F2C49E91F7BAF3A006EC668 /* Utente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utente.swift; sourceTree = "<group>"; };
-		8F2E5D531F86346600182C28 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		8F2E5D551F867D9B00182C28 /* TableViewControllerPreviewAllenamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerPreviewAllenamento.swift; sourceTree = "<group>"; };
 		8F2E5D571F867DB800182C28 /* TableViewCellPreviewVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellPreviewVideo.swift; sourceTree = "<group>"; };
 		8F2E5D591F867DC400182C28 /* TableViewCellPreviewEsercizi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellPreviewEsercizi.swift; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8C3113A1F839F3800C1FFE2 /* HealthKit.framework in Frameworks */,
-				8F2E5D541F86346600182C28 /* CloudKit.framework in Frameworks */,
+				0720981B1F8FBCA600E9A4D5 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +279,7 @@
 		07A5EB8F1F8397D300337BF1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8F2E5D531F86346600182C28 /* CloudKit.framework */,
+				0720981A1F8FBCA600E9A4D5 /* CloudKit.framework */,
 				F8C311391F839F3800C1FFE2 /* HealthKit.framework */,
 			);
 			name = Frameworks;
